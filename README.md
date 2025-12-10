@@ -1,2 +1,0 @@
-# WikIA
-School
