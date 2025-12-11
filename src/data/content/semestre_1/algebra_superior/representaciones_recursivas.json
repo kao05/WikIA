@@ -1,0 +1,167 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "representaciones_recursivas",
+      "titulo": "Representaciones Recursivas y Estructuras de Datos",
+      "materia": "Matemáticas Discretas / Estructuras de Datos",
+      "semestre": 2,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "3-5 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Definiendo el Infinito con Finitud",
+        "definicion": "Una representación recursiva define un objeto, conjunto o estructura en términos de sí mismo. Permite describir estructuras de complejidad infinita o arbitraria usando una regla finita.",
+        "puntos_clave": [
+          "Paso Base (Semilla): El elemento mínimo que pertenece al conjunto (ej. 'El nodo vacío es un árbol').",
+          "Paso Recursivo (Regla de Construcción): Cómo generar nuevos elementos a partir de los existentes (ej. 'Si tienes un árbol y le agregas una raíz, tienes un nuevo árbol').",
+          "Cierre (Exclusión): Nada más pertenece al conjunto a menos que se construya con los pasos anteriores.",
+          "Inducción Estructural: La técnica para probar propiedades sobre estas estructuras (similar a la inducción matemática, pero sobre la forma del objeto, no solo números)."
+        ],
+        "formulas": [
+          "Definición recursiva de Strings (Σ*): 1. λ ∈ Σ*. 2. Si w ∈ Σ* y x ∈ Σ, entonces wx ∈ Σ*.",
+          "Árbol Binario (T): T es vacío O T = (Raíz, T_izq, T_der)",
+          "Factorial: f(0)=1, f(n) = n * f(n-1)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "La Arquitectura de la Información",
+        "descripcion": "Casi toda la información organizada en computación es recursiva. No podríamos tener internet sin árboles DOM ni JSONs anidados.",
+        "aplicaciones_comunes": [
+          "HTML y DOM: Una etiqueta <div> puede contener otros <div>, que contienen <p>, etc.",
+          "JSON y XML: Formatos de intercambio de datos que permiten objetos dentro de objetos indefinidamente.",
+          "Sistemas de Archivos: Carpetas que contienen carpetas.",
+          "Compiladores: El código fuente se convierte en un 'Árbol de Sintaxis Abstracta' (AST) recursivo."
+        ],
+        "ejemplos_vida_real": [
+          "Tu árbol genealógico: Tu padre es una persona que tiene un padre, que es una persona...",
+          "Matrioskas (Muñecas rusas): El ejemplo físico clásico.",
+          "Menús desplegables: Un ítem de menú puede tener un submenú."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Conexiones del Sistema",
+        "prerequisitos": [
+          {
+            "id": "induccion_matematica",
+            "nombre": "Inducción Matemática",
+            "razon": "Para entender la validez de la definición base + paso recursivo."
+          },
+          {
+            "id": "teoria_conjuntos",
+            "nombre": "Teoría de Conjuntos",
+            "razon": "Las definiciones recursivas generan conjuntos de elementos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "arboles_y_grafos",
+            "nombre": "Árboles y Grafos",
+            "razon": "Son la encarnación visual de las representaciones recursivas."
+          },
+          {
+            "id": "gramaticas_lenguajes",
+            "nombre": "Teoría de Autómatas (Gramáticas)",
+            "razon": "Las gramáticas libres de contexto (BNF) son definiciones recursivas de lenguajes de programación."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Fractales (Geometría recursiva)",
+          "Backtracking",
+          "Pila de memoria (Stack)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Dónde se aplica en el trabajo",
+          "sectores": [
+            {
+              "nombre": "Desarrollo Frontend (React/Vue)",
+              "descripcion": "El 'Virtual DOM' es un árbol recursivo que representa la UI. Los componentes de React suelen renderizarse a sí mismos (ej. comentarios anidados).",
+              "ejemplos": ["Renderizado de hilos de comentarios (Reddit)", "Menús de navegación multinivel"]
+            },
+            {
+              "nombre": "Desarrollo de Compiladores y DSLs",
+              "descripcion": "Parseo de configuraciones y scripts.",
+              "ejemplos": ["Parsers de JSON", "Linters de código (ESLint)"]
+            },
+            {
+              "nombre": "Videojuegos (Motores Gráficos)",
+              "descripcion": "Grafos de Escena (Scene Graphs). Un objeto 'Auto' contiene 'Ruedas', si mueves el Auto, se mueven las Ruedas.",
+              "ejemplos": ["Unity Transform hierarchy", "Unreal Engine Actor attachments"]
+            }
+          ],
+          "empresas_referencia": [
+            "Meta (Creadores de React - estructura de árbol)",
+            "Adobe (Estructura de documentos PDF/PS)",
+            "Unity Technologies (Jerarquías de objetos 3D)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles Técnicos",
+          "salario_promedio_mx": "$35,000 - $75,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Frontend Architect",
+              "importancia": "Alta",
+              "uso": "Diseño de componentes recursivos y optimización del árbol de renderizado."
+            },
+            {
+              "nombre": "Backend Engineer (API)",
+              "importancia": "Media",
+              "uso": "Serialización y deserialización de estructuras de datos complejas (JSONs profundos)."
+            },
+            {
+              "nombre": "Systems Engineer",
+              "importancia": "Alta",
+              "uso": "Gestión de sistemas de archivos y directorios."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: El Explorador de Archivos (Calculadora de Peso)",
+      "descripcion": "Imagina que estás programando una función para Dropbox. Tienes una estructura de carpetas anidadas (recursiva). Algunas contienen archivos (con peso en MB) y otras contienen MÁS carpetas. Debes calcular el peso TOTAL de una carpeta raíz.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Define una estructura (Diccionario o Clase) que pueda representar un Archivo (con tamaño) o una Carpeta (con contenido).",
+        "Implementa una función recursiva 'calcular_peso(elemento)'",
+        "Caso Base: Si el elemento es un archivo, devuelve su tamaño.",
+        "Caso Recursivo: Si es una carpeta, suma el resultado de llamar a 'calcular_peso' en cada uno de sus hijos."
+      ],
+      "codigo_plantilla": "# Representación Recursiva del Sistema de Archivos\n# Diccionario: Nombre -> (Tipo, Valor)\n# Si es 'file', Valor es int (MB). Si es 'folder', Valor es otro diccionario.\n\nsistema_archivos = {\n    \"root\": {\n        \"tipo\": \"folder\",\n        \"contenido\": {\n            \"fotos\": {\n                \"tipo\": \"folder\",\n                \"contenido\": {\n                    \"vacaciones.jpg\": {\"tipo\": \"file\", \"size\": 5},\n                    \"perfil.png\": {\"tipo\": \"file\", \"size\": 2}\n                }\n            },\n            \"documentos\": {\n                \"tipo\": \"folder\",\n                \"contenido\": {\n                    \"tesis.pdf\": {\"tipo\": \"file\", \"size\": 10}\n                }\n            },\n            \"notas.txt\": {\"tipo\": \"file\", \"size\": 1}\n        }\n    }\n}\n\ndef calcular_peso_total(elemento):\n    # Tu lógica recursiva aquí\n    pass\n\n# Llamada inicial (Debes pasar el contenido de root)\n# print(calcular_peso_total(sistema_archivos[\"root\"]))",
+      "solucion_referencia": "def calcular_peso_total(nodo):\n    # 1. Caso Base: Es un archivo\n    if nodo[\"tipo\"] == \"file\":\n        return nodo[\"size\"]\n    \n    # 2. Caso Recursivo: Es una carpeta\n    total = 0\n    for nombre_hijo, info_hijo in nodo[\"contenido\"].items():\n        total += calcular_peso_total(info_hijo)\n    return total",
+      "casos_prueba": [
+        {
+          "entrada": "Solo archivo: {'tipo': 'file', 'size': 5}",
+          "salida_esperada": "5",
+          "nota": "Caso base simple"
+        },
+        {
+          "entrada": "Carpeta raíz del ejemplo",
+          "salida_esperada": "18 (5+2+10+1)",
+          "nota": "Recursión multinivel correcta"
+        },
+        {
+          "entrada": "Carpeta vacía: {'tipo': 'folder', 'contenido': {}}",
+          "salida_esperada": "0",
+          "nota": "Manejo de colecciones vacías"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Recursive Data Structures (Trees)",
+          "url": "https://www.youtube.com/watch?v=qH6yxkw0u78"
+        },
+        {
+            "tipo": "imagen",
+            "titulo": "Diagrama de estructura de árbol recursivo",
+            "url": ""
+        }
+      ]
+    }
+  }
+}
