@@ -1,0 +1,159 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "logica_proposicional",
+      "titulo": "Lógica Proposicional y Tablas de Verdad",
+      "materia": "Matemáticas Discretas / Lógica Computacional",
+      "semestre": 1,
+      "dificultad": "básico",
+      "tiempo_estudio": "3-4 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "El Átomo del Razonamiento",
+        "definicion": "La lógica proposicional estudia las proposiciones (afirmaciones que tienen un valor de verdad único: V o F) y cómo se combinan mediante conectores lógicos para formar sentencias más complejas.",
+        "puntos_clave": [
+          "Proposición Atómica: La unidad mínima (ej. 'Hoy es lunes').",
+          "Conectores Lógicos: Operadores que unen proposiciones (Y, O, NO, SI... ENTONCES).",
+          "Tablas de Verdad: La herramienta gráfica para visualizar todas las combinaciones posibles de verdad de una expresión.",
+          "Tautología vs. Contradicción: Una proposición que siempre es verdadera vs. una que siempre es falsa."
+        ],
+        "formulas": [
+          "Conjunción (AND): p ∧ q (Verdadero solo si ambos son V)",
+          "Disyunción (OR): p ∨ q (Falso solo si ambos son F)",
+          "Negación (NOT): ¬p (Invierte el valor)",
+          "Implicación (Condicional): p → q (Solo es falso si p=V y q=F. 'Si llueve, me mojo').",
+          "Equivalencia (Bicondicional): p ↔ q (Verdadero si ambos tienen el mismo valor)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "La base del Control de Flujo",
+        "descripcion": "Cada vez que escribes una sentencia 'if' en código, estás escribiendo una expresión de lógica proposicional.",
+        "aplicaciones_comunes": [
+          "Control de flujo en programación (if/else, while).",
+          "Validación de datos (ej. Edad > 18 AND tiene_tarjeta).",
+          "Motores de búsqueda (Uso de operadores booleanos avanzados).",
+          "Sistemas de seguridad y alarmas (Sensores lógicos)."
+        ],
+        "ejemplos_vida_real": [
+          "Login: (Usuario Existe) ∧ (Contraseña Correcta) → Acceso Concedido.",
+          "Ecommerce: Si (Total > 500) ∨ (Tiene Cupon Premium) → Envio Gratis.",
+          "Diagnóstico Médico: Si (Síntoma A) ∧ (Síntoma B) ∧ ¬(Síntoma C) → Diagnóstico X."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Ubicación en el Plan de Estudios",
+        "prerequisitos": [
+          {
+            "id": "matematicas_basicas",
+            "nombre": "Aritmética Básica",
+            "razon": "Noción de variables y valores."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "algebra_booleana",
+            "nombre": "Álgebra Booleana",
+            "razon": "Es la aplicación directa de la lógica proposicional al hardware (0 y 1)."
+          },
+          {
+            "id": "logica_predicados",
+            "nombre": "Lógica de Predicados",
+            "razon": "Añade cuantificadores (todos/algunos) a las proposiciones simples."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Leyes de Morgan",
+          "Inferencia Lógica (Modus Ponens)",
+          "Satisfacibilidad (SAT Solvers)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Relevancia Laboral",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Software",
+              "descripcion": "Escritura de lógica de negocio limpia y sin errores.",
+              "ejemplos": ["Refactorización de 'if' anidados", "Validaciones de formularios"]
+            },
+            {
+              "nombre": "Quality Assurance (QA)",
+              "descripcion": "Creación de matrices de prueba para cubrir todos los escenarios posibles.",
+              "ejemplos": ["Testing de reglas de negocio"]
+            },
+            {
+              "nombre": "Sistemas Legales / Smart Contracts",
+              "descripcion": "La ley es lógica proposicional escrita en lenguaje natural.",
+              "ejemplos": ["Contratos inteligentes en Ethereum"]
+            }
+          ],
+          "empresas_referencia": [
+            "Empresas SaaS (Validación de reglas de negocio)",
+            "Consultoras de Software (Lógica de clientes)",
+            "Sector Fintech (Reglas de aprobación de crédito)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles Relacionados",
+          "salario_promedio_mx": "$15,000 - $40,000 MXN/mes (Junior/Mid)",
+          "roles": [
+            {
+              "nombre": "Junior Developer",
+              "importancia": "Crítica",
+              "uso": "Fundamental para escribir cualquier código funcional."
+            },
+            {
+              "nombre": "QA Tester",
+              "importancia": "Alta",
+              "uso": "Para diseñar casos de prueba que rompan la lógica."
+            },
+            {
+              "nombre": "Analista de Negocios",
+              "importancia": "Media",
+              "uso": "Traducir requisitos de negocio a lógica 'Si sucede X, entonces Y'."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: El Validador de Verdad (Generador de Tablas)",
+      "descripcion": "Las tablas de verdad manuales son tediosas. Tu reto es crear un pequeño script que demuestre la equivalencia lógica conocida como la 'Contrapositiva': (P → Q) es equivalente a (¬Q → ¬P).",
+      "dificultad": "básico",
+      "instrucciones": [
+        "Crea un bucle que itere sobre los valores de verdad posibles para P y Q (True/False).",
+        "Calcula el resultado de la Implicación Directa: P → Q.",
+        "Calcula el resultado de la Contrapositiva: (not Q) → (not P).",
+        "Imprime una tabla comparativa y verifica si ambas columnas son idénticas en todos los casos."
+      ],
+      "codigo_plantilla": "def implicacion(a, b):\n    # En lógica, A -> B es equivalente a (not A) or B\n    return (not a) or b\n\nprint(f\"| {'P':^5} | {'Q':^5} | {'P->Q':^5} | {'¬Q->¬P':^7} | {'¿Iguales?':^9} |\")\nprint(\"-\" * 45)\n\nvalores = [True, False]\n\nfor p in valores:\n    for q in valores:\n        # 1. Calcular Directa\n        directa = implicacion(p, q)\n        \n        # 2. Calcular Contrapositiva\n        contra = implicacion(not q, not p)\n        \n        # 3. Comparar\n        es_igual = (directa == contra)\n        \n        print(f\"| {str(p):^5} | {str(q):^5} | {str(directa):^5} | {str(contra):^7} | {str(es_igual):^9} |\")",
+      "solucion_referencia": "# La salida del código anterior demostrará que en las 4 filas,\n# la columna P->Q y la columna ¬Q->¬P son idénticas (True, False, True, True).\n# Esto prueba programáticamente la equivalencia lógica.",
+      "casos_prueba": [
+        {
+          "entrada": "P=True, Q=False",
+          "salida_esperada": "Directa: False, Contrapositiva: False -> Iguales",
+          "nota": "El único caso donde la implicación falla"
+        },
+        {
+          "entrada": "P=False, Q=True",
+          "salida_esperada": "Directa: True, Contrapositiva: True -> Iguales",
+          "nota": "Falso implica cualquier cosa (verdad vacía)"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "imagen",
+          "titulo": "Tablas de Verdad de Conectores Lógicos",
+          "url": ""
+        },
+        {
+          "tipo": "articulo",
+          "titulo": "Logic in Computer Science",
+          "url": "https://en.wikipedia.org/wiki/Logic_in_computer_science"
+        }
+      ]
+    }
+  }
+}
