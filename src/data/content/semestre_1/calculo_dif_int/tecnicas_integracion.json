@@ -1,0 +1,154 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "tecnicas_integracion",
+      "titulo": "Técnicas de Integración",
+      "materia": "Cálculo diferencial e integral",
+      "semestre": 1,
+      "dificultad": "difícil",
+      "tiempo_estudio": "8-10 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "La Caja de Herramientas del Cálculo",
+        "definicion": "Conjunto de métodos algorítmicos para transformar integrales complejas en formas más simples y resolubles. Son el reverso de reglas de derivación específicas.",
+        "puntos_clave": [
+          "Sustitución (Cambio de Variable): Es la Regla de la Cadena a la inversa. Se usa para simplificar funciones compuestas.",
+          "Integración por Partes: Es la Regla del Producto a la inversa. Vital para integrar productos de funciones de distinta naturaleza (ej. x * e^x). Fórmula: ∫u dv = uv - ∫v du.",
+          "Fracciones Parciales: Descompone funciones racionales complejas en sumas de fracciones simples (fundamental para Transformadas de Laplace).",
+          "Sustitución Trigonométrica: Usa identidades (Pitágoras) para eliminar raíces cuadradas complejas."
+        ],
+        "formulas": [
+          "Por Partes: ∫ u dv = uv - ∫ v du (Regla ILATE para elegir u)",
+          "Sustitución: ∫ f(g(x))g'(x) dx = ∫ f(u) du",
+          "Identidad clave: sin^2(x) + cos^2(x) = 1"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "Resolviendo lo 'Irresoluble'",
+        "descripcion": "Muchas ecuaciones que modelan la realidad no son integrales directas. Estas técnicas permiten encontrar soluciones exactas para sistemas físicos y probabilísticos.",
+        "aplicaciones_comunes": [
+          "Estadística y Probabilidad: Calcular la Esperanza Matemática E[X] = ∫ x*f(x) dx requiere a menudo Integración por Partes.",
+          "Procesamiento de Señales: La Transformada de Fourier (base de MP3, JPEG y reconocimiento de voz) es una integral que suele resolverse por partes.",
+          "Ingeniería de Control: Las Fracciones Parciales son indispensables para analizar la estabilidad de sistemas (polos y ceros) en el dominio de Laplace.",
+          "Física de Motores (Videojuegos): Resolver ecuaciones de movimiento con resistencia del aire."
+        ],
+        "ejemplos_vida_real": [
+          "Calcular el centro de gravedad de un objeto con densidad variable.",
+          "Determinar la vida media de un componente electrónico (distribución exponencial).",
+          "Analizar la vibración de un puente (series de Fourier)."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "integrales",
+            "nombre": "Integrales Básicas",
+            "razon": "Debes saber integrar polinomios y exponenciales antes de combinarlos."
+          },
+          {
+            "id": "regla_cadena",
+            "nombre": "Regla de la Cadena",
+            "razon": "Entenderla es fundamental para aplicar el método de Sustitución."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "ecuaciones_diferenciales",
+            "nombre": "Ecuaciones Diferenciales",
+            "razon": "Las técnicas de integración son la herramienta principal para resolver EDOs."
+          },
+          {
+            "id": "probabilidad_estadistica",
+            "nombre": "Variables Aleatorias Continuas",
+            "razon": "Integrar densidades de probabilidad."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Identidades Trigonométricas",
+          "Álgebra (Polinomios)",
+          "Regla ILATE (Inversa, Log, Alg, Trig, Exp)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Computación Simbólica y Numérica",
+          "sectores": [
+            {
+              "nombre": "Software de Matemáticas (CAS)",
+              "descripcion": "Desarrollo de herramientas como WolframAlpha o SymPy.",
+              "ejemplos": ["Algoritmo de Risch (método general para integrar indefinidas)"]
+            },
+            {
+              "nombre": "Robótica",
+              "descripcion": "Control PID y modelado de sistemas dinámicos.",
+              "ejemplos": ["Transformadas inversas de Laplace para respuesta en el tiempo"]
+            },
+            {
+              "nombre": "Simulación Financiera",
+              "descripcion": "Pricing de derivados complejos.",
+              "ejemplos": ["Integración de Monte Carlo cuando las técnicas analíticas fallan"]
+            }
+          ],
+          "empresas_referencia": [
+            "Wolfram Research (Mathematica)",
+            "Maplesoft",
+            "Cualquier Hedge Fund (Simulaciones estocásticas)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles Especializados",
+          "salario_promedio_mx": "$35,000 - $90,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Algoritmos",
+              "importancia": "Alta",
+              "uso": "Implementación de soluciones numéricas eficientes."
+            },
+            {
+              "nombre": "Ingeniero de Control",
+              "importancia": "Crítica",
+              "uso": "Diseño de sistemas estables usando transformadas."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Integración de Monte Carlo (Cuando la técnica falla)",
+      "descripcion": "A veces, una integral es tan difícil que ninguna técnica analítica funciona (o es computacionalmente costosa). En IA, usamos el azar. Vamos a calcular el área bajo una curva disparando puntos aleatorios.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Queremos integrar f(x) = sin(x) en [0, PI]. Sabemos que el área exacta es 2.",
+        "Imagina un rectángulo que encierra la curva (base PI, altura 1).",
+        "Genera N puntos aleatorios (x, y) dentro del rectángulo.",
+        "Cuenta cuántos puntos caen DEBAJO de la curva (y < sin(x)).",
+        "El área aproximada es: (Puntos Debajo / Puntos Totales) * Área del Rectángulo.",
+        "Este es el principio básico de cómo se resuelven integrales en Física Cuántica y Rendering."
+      ],
+      "codigo_plantilla": "import random\nimport math\n\ndef funcion_objetivo(x):\n    return math.sin(x)\n\ndef integracion_monte_carlo(n_puntos):\n    \"\"\"\n    Calcula la integral de sin(x) de 0 a PI usando números aleatorios.\n    \"\"\"\n    a = 0\n    b = math.pi\n    y_max = 1.0 # Altura máxima de sin(x)\n    \n    puntos_debajo = 0\n    \n    for _ in range(n_puntos):\n        # 1. Generar punto aleatorio (x, y) en la caja\n        rand_x = random.uniform(a, b)\n        rand_y = random.uniform(0, y_max)\n        \n        # 2. Verificar si está bajo la curva\n        # Tu código aquí\n        # if ...:\n        #     puntos_debajo += 1\n            \n    area_caja = (b - a) * y_max\n    proporcion = puntos_debajo / n_puntos\n    \n    return area_caja * proporcion\n\nprint(f\"Aprox (1000 pts): {integracion_monte_carlo(1000)}\")\nprint(f\"Aprox (100000 pts): {integracion_monte_carlo(100000)}\")\nprint(\"Valor Real: 2.0\")",
+      "solucion_referencia": "def integracion_monte_carlo(n_puntos):\n    a, b, y_max = 0, math.pi, 1.0\n    debajo = 0\n    for _ in range(n_puntos):\n        x = random.uniform(a, b)\n        y = random.uniform(0, y_max)\n        if y <= math.sin(x):\n            debajo += 1\n    return (b-a) * y_max * (debajo / n_puntos)",
+      "casos_prueba": [
+        {
+          "entrada": "10 puntos",
+          "salida_esperada": "Variable (ej. 1.8 o 2.3)",
+          "nota": "Poca precisión con pocos puntos."
+        },
+        {
+          "entrada": "1,000,000 puntos",
+          "salida_esperada": "1.999...",
+          "nota": "Ley de los Grandes Números asegura convergencia."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Monte Carlo Integration explained",
+          "url": "https://www.youtube.com/watch?v=..."
+        }
+      ]
+    }
+  }
+}
