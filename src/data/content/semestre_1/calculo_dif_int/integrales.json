@@ -1,0 +1,165 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "integrales",
+      "titulo": "Integrales Definidas e Indefinidas",
+      "materia": "Cálculo diferencial e integral",
+      "semestre": 1,
+      "dificultad": "intermedio-avanzado",
+      "tiempo_estudio": "6-8 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Acumulación y Área",
+        "definicion": "La integración es el proceso de calcular la acumulación de cantidades continuas. Matemáticamente, tiene dos interpretaciones conectadas por el Teorema Fundamental del Cálculo: la operación inversa a derivar (Antiderivada) y el cálculo del área bajo una curva.",
+        "puntos_clave": [
+          "Integral Indefinida: Encuentra la familia de funciones f(x) + C cuya derivada es la función dada.",
+          "Integral Definida: Calcula un valor numérico que representa el área neta entre la curva y el eje X en un intervalo [a, b].",
+          "Teorema Fundamental del Cálculo: Relaciona la acumulación (integral) con la tasa de cambio (derivada).",
+          "La constante de integración (+ C) representa la incertidumbre del estado inicial."
+        ],
+        "formulas": [
+          "Regla de Potencia: ∫ x^n dx = (x^(n+1))/(n+1) + C, para n ≠ -1",
+          "Logaritmo: ∫ (1/x) dx = ln|x| + C",
+          "Exponencial: ∫ e^x dx = e^x + C",
+          "Definida: ∫[a,b] f(x) dx = F(b) - F(a)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "Del Cambio a la Totalidad",
+        "descripcion": "Si la derivada te da la velocidad instantánea, la integral te dice qué tan lejos llegaste. Permite sumar infinitos elementos infinitesimales para obtener un total.",
+        "aplicaciones_comunes": [
+          "Probabilidad y Estadística: El área bajo una Función de Densidad de Probabilidad (PDF) debe sumar 1. Integrar la PDF da la probabilidad de un evento.",
+          "Física: Calcular trabajo, energía, desplazamiento y centro de masa.",
+          "Economía: Calcular el excedente del consumidor o el capital acumulado a partir de flujos de inversión.",
+          "Electrónica: Cálculo de carga en un capacitor (integral de la corriente)."
+        ],
+        "ejemplos_vida_real": [
+          "Calcular la distancia total recorrida por un coche sabiendo solo su historial de velocidades.",
+          "Determinar el volumen de un objeto con forma irregular (rebanándolo infinitesimalmente).",
+          "Medir la energía total consumida en una casa integrando la potencia (watts) en el tiempo."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "derivadas_basicas",
+            "nombre": "Derivadas",
+            "razon": "Para integrar, a menudo necesitas pensar '¿qué función derivada me daría esto?'"
+          },
+          {
+            "id": "limites_continuidad",
+            "nombre": "Límites",
+            "razon": "La integral definida es el límite de una Suma de Riemann cuando el ancho de los rectángulos tiende a cero."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "tecnicas_integracion",
+            "nombre": "Técnicas de Integración",
+            "razon": "Aprender métodos (sustitución, partes) para integrales que no son directas."
+          },
+          {
+            "id": "ecuaciones_diferenciales",
+            "nombre": "Ecuaciones Diferenciales",
+            "razon": "Resolver ecuaciones que relacionan una función con sus derivadas (modelado de sistemas dinámicos)."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Sumas de Riemann",
+          "Área bajo la curva",
+          "Valor Promedio de una función"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Integrales en Tecnología y Data Science",
+          "sectores": [
+            {
+              "nombre": "Machine Learning",
+              "descripcion": "Evaluación de modelos y funciones de probabilidad.",
+              "ejemplos": ["Métrica AUC-ROC (Area Under the Curve)", "Marginalización de variables en Inferencia Bayesiana"]
+            },
+            {
+              "nombre": "Simulación y Gráficos 3D",
+              "descripcion": "Renderizado basado en física.",
+              "ejemplos": ["Ecuación de renderizado (integrar luz sobre un hemisferio)"]
+            },
+            {
+              "nombre": "Ingeniería de Control",
+              "descripcion": "Controladores PID.",
+              "ejemplos": ["Componente 'I' (Integral) para corregir el error acumulado en el tiempo"]
+            }
+          ],
+          "empresas_referencia": [
+            "Tesla (Sistemas de control en Autopilot)",
+            "NVIDIA (Cálculo de iluminación global en Ray Tracing)",
+            "Cualquier aseguradora (Cálculo de riesgo acumulado)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles Analíticos",
+          "salario_promedio_mx": "$30,000 - $75,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Científico de Datos",
+              "importancia": "Alta",
+              "uso": "Comprensión profunda de distribuciones de probabilidad."
+            },
+            {
+              "nombre": "Ingeniero de Gráficos",
+              "importancia": "Crítica",
+              "uso": "Implementación de shaders y simulación de luz."
+            },
+            {
+              "nombre": "Ingeniero de Robótica",
+              "importancia": "Alta",
+              "uso": "Odometría (integrar velocidad para estimar posición)."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Integración Numérica (Sumas de Riemann)",
+      "descripcion": "A veces las integrales son imposibles de resolver analíticamente. Las computadoras las resuelven numéricamente sumando miles de pequeños rectángulos. Implementa este algoritmo.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Vamos a aproximar el área bajo f(x) = x^2 en el intervalo [0, 2].",
+        "Matemáticamente sabemos que la integral exacta es x^3/3 evaluada en 0 y 2 -> 8/3 ≈ 2.666.",
+        "Crea una función `integral_riemann(f, a, b, n)` donde 'n' es la cantidad de rectángulos.",
+        "Calcula el ancho de cada rectángulo: delta = (b - a) / n.",
+        "Suma el área de los 'n' rectángulos (base * altura).",
+        "Observa cómo al aumentar 'n', el error disminuye."
+      ],
+      "codigo_plantilla": "def funcion_objetivo(x):\n    return x**2\n\ndef integral_riemann(f, a, b, n):\n    \"\"\"\n    Calcula la aproximación de la integral definida usando sumas de rectángulos.\n    Args:\n        f: Función a integrar\n        a: Límite inferior\n        b: Límite superior\n        n: Número de rectángulos (precisión)\n    \"\"\"\n    ancho = (b - a) / n\n    area_total = 0\n    \n    for i in range(n):\n        # Tu código aquí\n        # Calcula la altura en el punto actual y suma al area_total\n        pass\n        \n    return area_total\n\n# Prueba\nprint(f\"Con 10 rectángulos: {integral_riemann(funcion_objetivo, 0, 2, 10)}\")\nprint(f\"Con 1000 rectángulos: {integral_riemann(funcion_objetivo, 0, 2, 1000)}\")\nprint(\"Valor Real: 2.6666...\")",
+      "solucion_referencia": "def integral_riemann(f, a, b, n):\n    ancho = (b - a) / n\n    area_total = 0\n    for i in range(n):\n        # Usamos el punto izquierdo del rectángulo (Left Riemann Sum)\n        altura = f(a + i * ancho)\n        area_total += ancho * altura\n    return area_total",
+      "casos_prueba": [
+        {
+          "entrada": "f(x)=x^2, [0, 2], n=10",
+          "salida_esperada": "~2.28",
+          "nota": "Baja precisión (subestima el área en curvas crecientes)."
+        },
+        {
+          "entrada": "f(x)=x^2, [0, 2], n=1000",
+          "salida_esperada": "~2.662",
+          "nota": "Alta precisión (muy cerca del valor real 2.666)."
+        },
+        {
+          "entrada": "f(x)=x, [0, 5], n=100",
+          "salida_esperada": "~12.5",
+          "nota": "Área de un triángulo de base 5 y altura 5 (25/2)."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "La esencia del cálculo: Integrales",
+          "url": "https://www.youtube.com/watch?v=..."
+        }
+      ]
+    }
+  }
+}
