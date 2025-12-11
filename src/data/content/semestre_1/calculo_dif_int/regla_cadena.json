@@ -1,0 +1,151 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "regla_cadena",
+      "titulo": "Regla de la Cadena",
+      "materia": "Cálculo diferencial e integral",
+      "semestre": 1,
+      "dificultad": "difícil",
+      "tiempo_estudio": "6-8 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Derivando por Capas",
+        "definicion": "La Regla de la Cadena es el método para derivar funciones compuestas (funciones dentro de otras funciones). Establece que la derivada de f(g(x)) es la derivada de la función exterior evaluada en la interior, multiplicada por la derivada de la función interior.",
+        "puntos_clave": [
+          "Analogía de la cebolla: Debes derivar capa por capa, de afuera hacia adentro.",
+          "Es el principio fundamental detrás de la 'Diferenciación Automática' en programación.",
+          "Si y depende de u, y u depende de x, entonces dy/dx es el producto de sus tasas de cambio.",
+          "Formalmente: d/dx [f(g(x))] = f'(g(x)) * g'(x)."
+        ],
+        "formulas": [
+          "Notación de Leibniz: dy/dx = (dy/du) * (du/dx)",
+          "Notación de Lagrange: (f ∘ g)'(x) = f'(g(x)) · g'(x)",
+          "Regla Generalizada: d/dx f(g(h(x))) = f'(...) · g'(...) · h'(x)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "El Algoritmo de la Inteligencia",
+        "descripcion": "Sin la regla de la cadena, no existiría el Deep Learning. Permite calcular cómo un pequeño cambio en un parámetro al inicio de un sistema complejo afecta el resultado final.",
+        "aplicaciones_comunes": [
+          "Backpropagation (IA): Calcular el gradiente del error respecto a cada peso en una red neuronal profunda.",
+          "Sistemas Dinámicos Relacionados: Si la presión afecta al volumen y el volumen a la temperatura, ¿cómo afecta la presión a la temperatura?",
+          "Simulaciones Físicas: Cinemática de brazos robóticos (cinemática inversa)."
+        ],
+        "ejemplos_vida_real": [
+          "Engranajes de una bicicleta: Si mueves los pedales (x) mueves el plato (u), que mueve la cadena (v), que mueve la rueda (y). La velocidad final depende de la relación de cada etapa multiplicada.",
+          "Conversión de monedas: Pesos -> Dólares -> Euros. El cambio total es el producto de las tasas de cambio intermedias."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "derivadas_basicas",
+            "nombre": "Derivadas Básicas",
+            "razon": "Debes saber derivar las partes externas e internas por separado."
+          },
+          {
+            "id": "funciones_tipos",
+            "nombre": "Composición de Funciones",
+            "razon": "Identificar quién es f(x) y quién es g(x) es el 80% del problema."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "calculo_multivariable",
+            "nombre": "Derivadas Parciales",
+            "razon": "La regla de la cadena se expande a múltiples variables (camino total)."
+          },
+          {
+            "id": "aprendizaje_automatico",
+            "nombre": "Redes Neuronales",
+            "razon": "Implementación práctica del algoritmo de Backpropagation."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Función Compuesta (f ∘ g)",
+          "Variable Intermedia (u)",
+          "Árboles de Computación (Computational Graphs)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Base del Deep Learning Frameworks",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de IA",
+              "descripcion": "Creación de arquitecturas de redes neuronales.",
+              "ejemplos": ["TensorFlow (Grafos estáticos)", "PyTorch (Grafos dinámicos/Autograd)"]
+            },
+            {
+              "nombre": "Robótica",
+              "descripcion": "Control de movimiento.",
+              "ejemplos": ["Cinemática de robots articulados"]
+            },
+            {
+              "nombre": "Simulación Económica",
+              "descripcion": "Modelos macroeconómicos en cadena.",
+              "ejemplos": ["Efecto dominó en mercados"]
+            }
+          ],
+          "empresas_referencia": [
+            "Meta AI (Desarrolladores de PyTorch)",
+            "Google (Desarrolladores de TensorFlow/JAX)",
+            "Boston Dynamics (Control robótico complejo)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Roles Técnicos",
+          "salario_promedio_mx": "$45,000 - $110,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Deep Learning",
+              "importancia": "Crítica",
+              "uso": "Depuración de gradientes que explotan o desaparecen (Vanishing Gradient Problem)."
+            },
+            {
+              "nombre": "Investigador de IA",
+              "importancia": "Crítica",
+              "uso": "Derivación matemática de nuevas arquitecturas."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Construye tu propio 'Autograd' (Mini-PyTorch)",
+      "descripcion": "Vas a simular cómo una computadora calcula derivadas de funciones compuestas usando una estructura de datos. Esto es una simplificación extrema de lo que hace PyTorch.",
+      "dificultad": "avanzado",
+      "instrucciones": [
+        "Vamos a calcular la derivada de f(x) = (3x + 1)^2 en x=2.",
+        "Analíticamente: u = 3x+1, f = u^2. f'(x) = 2u * 3. En x=2, u=7. f'(2) = 2(7)*3 = 42.",
+        "Crea una clase `Variable` que almacene un valor y su gradiente.",
+        "Implementa una 'forward pass' (calcular el valor) y un 'backward pass' manual (regla de la cadena) multiplicando gradientes locales.",
+        "El objetivo es entender cómo el gradiente local de 'u' se multiplica por el gradiente que viene de arriba."
+      ],
+      "codigo_plantilla": "class Nodo:\n    def __init__(self, valor, gradiente=0):\n        self.valor = valor\n        self.gradiente = gradiente\n\ndef forward_backward_pass(x_val):\n    # 1. Forward Pass (Calculamos los valores de adentro hacia afuera)\n    # f(x) = (3x + 1)^2\n    \n    x = Nodo(x_val)\n    \n    # Paso 1: Multiplicar por 3 (Operacion lineal)\n    # u1 = 3 * x\n    u1 = Nodo(3 * x.valor)\n    \n    # Paso 2: Sumar 1\n    # u2 = u1 + 1\n    u2 = Nodo(u1.valor + 1)\n    \n    # Paso 3: Elevar al cuadrado\n    # y = u2^2\n    y = Nodo(u2.valor ** 2)\n    \n    print(f\"Valor final (Forward): {y.valor}\")\n    \n    # 2. Backward Pass (Regla de la Cadena: De afuera hacia adentro)\n    # Queremos dy/dx. \n    \n    # Inicializamos el gradiente final como 1 (dy/dy = 1)\n    y.gradiente = 1.0\n    \n    # Derivada de y = u2^2 es 2*u2. \n    # Regla cadena: grad_u2 = grad_y * (derivada local)\n    u2.gradiente = y.gradiente * (2 * u2.valor)\n    \n    # Derivada de u2 = u1 + 1 es 1.\n    # Regla cadena: grad_u1 = grad_u2 * 1\n    u1.gradiente = u2.gradiente * 1\n    \n    # Derivada de u1 = 3x es 3.\n    # Regla cadena: grad_x = grad_u1 * 3\n    x.gradiente = u1.gradiente * 3\n    \n    return x.gradiente\n\nprint(f\"Gradiente calculado por software: {forward_backward_pass(2)}\")\nprint(\"Gradiente esperado: 42\")",
+      "solucion_referencia": "# El código plantilla ya incluye la lógica lógica del 'Computational Graph' manual.\n# Este ejercicio es conceptual para entender el flujo de gradientes.",
+      "casos_prueba": [
+        {
+          "entrada": "x = 2",
+          "salida_esperada": "42",
+          "nota": "La cadena de multiplicaciones debe dar exacto."
+        },
+        {
+          "entrada": "x = 0",
+          "salida_esperada": "6",
+          "nota": "u=1, 2(1)*3 = 6."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Backpropagation Calculus | Deep Learning",
+          "url": "https://www.youtube.com/watch?v=tIeHLnjs5U8"
+        }
+      ]
+    }
+  }
+}
