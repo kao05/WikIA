@@ -1,0 +1,167 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "optimizacion",
+      "titulo": "Optimización: Máximos, Mínimos y Concavidad",
+      "materia": "Cálculo diferencial e integral",
+      "semestre": 1,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "6-8 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "La Búsqueda de la Eficiencia",
+        "definicion": "La optimización es el proceso matemático de encontrar los valores máximos (máxima ganancia, precisión) o mínimos (mínimo costo, error, tiempo) de una función en un intervalo dado.",
+        "puntos_clave": [
+          "Puntos Críticos: Valores donde la derivada es cero (pendiente plana) o no existe. Son candidatos a máximos o mínimos.",
+          "Criterio de la Primera Derivada: Analiza si la función pasa de crecer a decrecer (máximo) o viceversa (mínimo).",
+          "Criterio de la Segunda Derivada (Concavidad): Si f''(x) > 0, es cóncava hacia arriba (mínimo local). Si f''(x) < 0, es cóncava hacia abajo (máximo local).",
+          "Óptimos Globales vs. Locales: Un gran desafío en IA es no quedarse atascado en un 'mínimo local' cuando existe uno mejor (global) más adelante."
+        ],
+        "formulas": [
+          "Condición necesaria: f'(x) = 0",
+          "Mínimo Relativo: f'(c) = 0 y f''(c) > 0",
+          "Máximo Relativo: f'(c) = 0 y f''(c) < 0",
+          "Punto de Inflexión: f''(x) = 0 (cambio de concavidad)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "El Motor del Aprendizaje Automático",
+        "descripcion": "En el mundo real, los recursos son limitados. La optimización nos permite hacer 'lo mejor posible' con lo que tenemos. En IA, 'aprender' es sinónimo de 'optimizar los pesos para minimizar el error'.",
+        "aplicaciones_comunes": [
+          "Entrenamiento de Redes Neuronales: Minimizar la función de pérdida (Loss Function) usando Descenso de Gradiente.",
+          "Logística y Transporte: Encontrar la ruta más corta (Problema del Agente Viajero) o minimizar el consumo de combustible.",
+          "Economía: Maximizar beneficios sujeto a restricciones presupuestarias.",
+          "Ingeniería: Diseñar estructuras con la máxima resistencia y el mínimo material."
+        ],
+        "ejemplos_vida_real": [
+          "Waze encontrando la ruta con menos tráfico.",
+          "Una aerolínea asignando precios para maximizar ingresos (Yield Management).",
+          "Tu cerebro ajustando el movimiento de tu mano para agarrar un objeto con el mínimo gasto de energía."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "derivadas_basicas",
+            "nombre": "Derivadas",
+            "razon": "Necesitas saber derivar para encontrar donde la pendiente es cero."
+          },
+          {
+            "id": "funciones_tipos",
+            "nombre": "Funciones",
+            "razon": "Debes entender qué estás optimizando (el modelo matemático)."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "calculo_multivariable",
+            "nombre": "Cálculo Multivariable",
+            "razon": "En IA optimizamos funciones de millones de variables, no solo de una. Aquí entra el vector Gradiente."
+          },
+          {
+            "id": "aprendizaje_automatico",
+            "nombre": "Machine Learning",
+            "razon": "Aplicación directa de algoritmos de optimización (SGD, Adam, RMSprop)."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Gradiente",
+          "Tasa de Aprendizaje (Learning Rate)",
+          "Convexidad",
+          "Multiplicadores de Lagrange (Optimización con restricciones)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Roles basados en Optimización",
+          "sectores": [
+            {
+              "nombre": "Inteligencia Artificial (Deep Learning)",
+              "descripcion": "Ajuste de hiperparámetros y entrenamiento de modelos.",
+              "ejemplos": ["Optimización de LLMs (Large Language Models)", "Reducción de coste computacional"]
+            },
+            {
+              "nombre": "Investigación de Operaciones",
+              "descripcion": "Optimización de cadenas de suministro.",
+              "ejemplos": ["Gestión de inventarios de Amazon", "Rutas de entrega de FedEx"]
+            },
+            {
+              "nombre": "Finanzas Algorítmicas",
+              "descripcion": "Optimización de portafolios (Markowitz).",
+              "ejemplos": ["Maximizar retorno dado un nivel de riesgo"]
+            }
+          ],
+          "empresas_referencia": [
+            "Uber (Optimización de asignación conductor-pasajero)",
+            "DeepMind (AlphaGo - Optimización de búsqueda en árboles)",
+            "Amazon (Logística y Fulfillment)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles de Alta Demanda",
+          "salario_promedio_mx": "$40,000 - $100,000+ MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Machine Learning",
+              "importancia": "Crítica",
+              "uso": "Diagnosticar por qué un modelo no converge (no llega al mínimo)."
+            },
+            {
+              "nombre": "Data Scientist (Optimization Specialist)",
+              "importancia": "Crítica",
+              "uso": "Modelado de problemas complejos de negocio para tomar la mejor decisión."
+            },
+            {
+              "nombre": "Ingeniero de Logística",
+              "importancia": "Alta",
+              "uso": "Minimizar costos operativos."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Tu primer Descenso de Gradiente",
+      "descripcion": "En lugar de usar cálculo analítico (igualar a cero y despejar), en IA usamos métodos iterativos porque las ecuaciones son muy complejas. Vas a implementar el algoritmo 'Gradient Descent' para encontrar el mínimo de una función cuadrática paso a paso.",
+      "dificultad": "avanzado",
+      "instrucciones": [
+        "Queremos minimizar la función de costo: J(w) = w^2 + 4w + 4. (Sabemos que el mínimo está en w = -2).",
+        "La derivada (el gradiente) es: J'(w) = 2w + 4.",
+        "Regla de actualización: w_nuevo = w_actual - (learning_rate * gradiente).",
+        "1. Empieza con un w aleatorio (ej. 0).",
+        "2. En un bucle, calcula el gradiente en ese punto.",
+        "3. Actualiza w moviéndote en dirección opuesta al gradiente.",
+        "4. Repite y observa cómo w se acerca a -2."
+      ],
+      "codigo_plantilla": "def costo(w):\n    return w**2 + 4*w + 4\n\ndef gradiente(w):\n    # Derivada de w^2 + 4w + 4\n    return 2*w + 4\n\ndef descenso_gradiente(w_inicial, learning_rate, iteraciones):\n    w = w_inicial\n    historial = []\n    \n    print(f\"Inicio en w = {w}\")\n    \n    for i in range(iteraciones):\n        # 1. Calcular Gradiente\n        grad = gradiente(w)\n        \n        # 2. Actualizar w (El paso mágico de la IA)\n        w = w - (learning_rate * grad)\n        \n        historial.append(w)\n        \n        # Opcional: imprimir cada 10 pasos\n        if i % 10 == 0:\n            print(f\"Iter {i}: w = {w:.4f}, grad = {grad:.4f}, Costo = {costo(w):.4f}\")\n            \n    return w\n\n# Prueba con Learning Rate alto y bajo\n# w_final = descenso_gradiente(0, 0.1, 50)",
+      "solucion_referencia": "def descenso_gradiente(w_inicial, learning_rate, iteraciones):\n    w = w_inicial\n    for i in range(iteraciones):\n        grad = 2*w + 4\n        w = w - learning_rate * grad\n    return w",
+      "casos_prueba": [
+        {
+          "entrada": "LR=0.1, Iter=50, Inicio=0",
+          "salida_esperada": "w ≈ -2.0",
+          "nota": "Convergencia exitosa al mínimo."
+        },
+        {
+          "entrada": "LR=0.001, Iter=50, Inicio=0",
+          "salida_esperada": "w ≈ -0.1 (lejos de -2)",
+          "nota": "Learning Rate muy pequeño, aprendizaje demasiado lento."
+        },
+        {
+          "entrada": "LR=1.1, Iter=50, Inicio=0",
+          "salida_esperada": "Explosión / Divergencia",
+          "nota": "Learning Rate muy grande, salta de un lado a otro y se aleja (Overshooting)."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Gradient Descent, how neural networks learn",
+          "url": "https://www.youtube.com/watch?v=IHZwWFHWa-w"
+        }
+      ]
+    }
+  }
+}
