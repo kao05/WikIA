@@ -1,0 +1,150 @@
+{
+  "version": "1.1",
+  "ultima_actualizacion": "2024-12-10",
+  "semestres": [
+    {
+      "numero": 1,
+      "nombre": "Primer Semestre",
+      "materias": [
+        {
+          "id": "algebra_superior",
+          "nombre": "Álgebra superior",
+          "creditos": 8,
+          "temas": [
+            { "id": "teoria_conjuntos", "nombre": "Teoría de conjuntos y operaciones fundamentales", "archivo": "teoria_conjuntos.json" },
+            { "id": "algebra_booleana", "nombre": "Álgebra booleana y circuitos lógicos digitales", "archivo": "algebra_booleana.json" },
+            { "id": "logica_proposicional", "nombre": "Lógica proposicional y reglas de inferencia", "archivo": "logica_proposicional.json" },
+            { "id": "logica_predicados", "nombre": "Lógica de predicados y cuantificadores", "archivo": "logica_predicados.json" },
+            { "id": "metodos_demostracion", "nombre": "Métodos de demostración (directa, contradicción, inducción)", "archivo": "metodos_demostracion.json" },
+            { "id": "teoria_numeros", "nombre": "Teoría de números y algoritmos clásicos", "archivo": "teoria_numeros.json" },
+            { "id": "sucesiones_recurrencia", "nombre": "Sucesiones y relaciones de recurrencia", "archivo": "sucesiones_recurrencia.json" },
+            { "id": "induccion_matematica", "nombre": "Inducción matemática y su aplicación en algoritmos", "archivo": "induccion_matematica.json" },
+            { "id": "representaciones_recursivas", "nombre": "Representaciones recursivas y estructuras definidas recursivamente", "archivo": "representaciones_recursivas.json" },
+            { "id": "aplicaciones_algoritmicas", "nombre": "Aplicaciones algorítmicas (análisis de complejidad)", "archivo": "aplicaciones_algoritmicas.json" }
+          ]
+        },
+        {
+          "id": "geometria",
+          "nombre": "Geometría",
+          "creditos": 8,
+          "temas": [
+            { "id": "sistemas_coordenadas", "nombre": "Sistemas de coordenadas", "archivo": "sistemas_coordenadas.json" },
+            { "id": "linea_recta", "nombre": "Línea recta", "archivo": "linea_recta.json" },
+            { "id": "angulos_distancias", "nombre": "Ángulos y distancias entre rectas", "archivo": "angulos_distancias.json" },
+            { "id": "circunferencia", "nombre": "Circunferencia", "archivo": "circunferencia.json" },
+            { "id": "parabola", "nombre": "Parábola", "archivo": "parabola.json" },
+            { "id": "elipse", "nombre": "Elipse", "archivo": "elipse.json" },
+            { "id": "hiperbola", "nombre": "Hipérbola", "archivo": "hiperbola.json" },
+            { "id": "transformaciones_coordenadas", "nombre": "Transformaciones de coordenadas", "archivo": "transformaciones_coordenadas.json" },
+            { "id": "ecuacion_general_segundo_grado", "nombre": "Ecuación general de segundo grado (cónicas)", "archivo": "ecuacion_general_segundo_grado.json" },
+            { "id": "coordenadas_polares", "nombre": "Coordenadas polares", "archivo": "coordenadas_polares.json" }
+          ]
+        },
+        {
+          "id": "calculo_dif_int",
+          "nombre": "Cálculo diferencial e integral",
+          "creditos": 8,
+          "temas": [
+            { "id": "funciones_tipos", "nombre": "Funciones y tipos de funciones", "archivo": "funciones_tipos.json" },
+            { "id": "limites_continuidad", "nombre": "Límites y continuidad", "archivo": "limites_continuidad.json" },
+            { "id": "derivadas_basicas", "nombre": "Derivadas básicas", "archivo": "derivadas_basicas.json" },
+            { "id": "regla_cadena", "nombre": "Regla de la cadena y derivadas de composiciones", "archivo": "regla_cadena.json" },
+            { "id": "derivadas_trig_log", "nombre": "Derivadas trigonométricas y logarítmicas", "archivo": "derivadas_trig_log.json" },
+            { "id": "optimizacion", "nombre": "Optimización", "archivo": "optimizacion.json" },
+            { "id": "sucesiones_series", "nombre": "Sucesiones y series", "archivo": "sucesiones_series.json" },
+            { "id": "series_taylor", "nombre": "Series de Taylor", "archivo": "series_taylor.json" },
+            { "id": "integrales", "nombre": "Integrales", "archivo": "integrales.json" },
+            { "id": "tecnicas_integracion", "nombre": "Técnicas de integración", "archivo": "tecnicas_integracion.json" }
+          ]
+        },
+        {
+          "id": "intro_programacion",
+          "nombre": "Introducción a la programación",
+          "creditos": 8,
+          "temas": [
+            { "id": "sistemas_operativos", "nombre": "Sistemas Operativos", "archivo": "sistemas_operativos.json" },
+            { "id": "lenguajes_programacion", "nombre": "Lenguajes de programación", "archivo": "lenguajes_programacion.json" },
+            { "id": "sistemas_numeracion", "nombre": "Sistemas de numeración", "archivo": "sistemas_numeracion.json" },
+            { "id": "punteros", "nombre": "Punteros", "archivo": "punteros.json" },
+            { "id": "estructuras_datos_basicas", "nombre": "Estructuras de datos", "archivo": "estructuras_datos_basicas.json" },
+            { "id": "matrices_vectores", "nombre": "Matrices y vectores", "archivo": "matrices_vectores.json" },
+            { "id": "modularidad", "nombre": "Modularidad", "archivo": "modularidad.json" },
+            { "id": "recursividad", "nombre": "Recursividad", "archivo": "recursividad.json" },
+            { "id": "archivos_io", "nombre": "Lectura y escritura de archivos", "archivo": "archivos_io.json" },
+            { "id": "interfaces_graficas", "nombre": "Interfaces gráficas", "archivo": "interfaces_graficas.json" }
+          ]
+        },
+        {
+          "id": "paradigmas_lenguajes",
+          "nombre": "Paradigmas y lenguajes de programación",
+          "creditos": 8,
+          "temas": [
+            { "id": "tipos_estructuras_datos", "nombre": "Tipos de datos y estructuras de datos", "archivo": "tipos_estructuras_datos.json" },
+            { "id": "resolucion_problemas_algoritmos", "nombre": "Resolución de problemas y algoritmos", "archivo": "resolucion_problemas_algoritmos.json" },
+            { "id": "sintaxis_gramaticas", "nombre": "Sintaxis y gramáticas formales", "archivo": "sintaxis_gramaticas.json" },
+            { "id": "semantica_alcance", "nombre": "Semántica y alcance de variables", "archivo": "semantica_alcance.json" },
+            { "id": "tipos_datos_abstractos", "nombre": "Tipos de datos abstractos (TDA)", "archivo": "tipos_datos_abstractos.json" },
+            { "id": "poo", "nombre": "Programación orientada a objetos (POO)", "archivo": "poo.json" },
+            { "id": "programacion_funcional", "nombre": "Programación funcional", "archivo": "programacion_funcional.json" },
+            { "id": "calculo_lambda", "nombre": "Cálculo lambda y fundamentos matemáticos", "archivo": "calculo_lambda.json" },
+            { "id": "programacion_logica", "nombre": "Programación lógica", "archivo": "programacion_logica.json" },
+            { "id": "integracion_paradigmas", "nombre": "Integración de paradigmas y aplicaciones en IA", "archivo": "integracion_paradigmas.json" }
+          ]
+        },
+        {
+          "id": "ia_sociedad",
+          "nombre": "Inteligencia artificial y sociedad",
+          "creditos": 8,
+          "temas": [
+            { "id": "penetracion_ia", "nombre": "Penetración de la IA en la sociedad", "archivo": "penetracion_ia.json" },
+            { "id": "oportunidades_retos", "nombre": "Oportunidades y retos de la IA", "archivo": "oportunidades_retos.json" },
+            { "id": "profesional_ia", "nombre": "El profesional de la IA como actor social", "archivo": "profesional_ia.json" },
+            { "id": "sesgo_discriminacion", "nombre": "Sesgo y discriminación en IA", "archivo": "sesgo_discriminacion.json" },
+            { "id": "autonomia_derechos", "nombre": "Autonomía y derechos individuales", "archivo": "autonomia_derechos.json" },
+            { "id": "transparencia_explicabilidad", "nombre": "Transparencia y explicabilidad en IA", "archivo": "transparencia_explicabilidad.json" },
+            { "id": "privacidad_datos", "nombre": "Privacidad y protección de datos", "archivo": "privacidad_datos.json" },
+            { "id": "conexion_social", "nombre": "Conexión social y aislamiento por IA", "archivo": "conexion_social.json" },
+            { "id": "fiabilidad_calidad", "nombre": "Fiabilidad y calidad de resultados en IA", "archivo": "fiabilidad_calidad.json" },
+            { "id": "analisis_tematico", "nombre": "Análisis temático en investigación cualitativa", "archivo": "analisis_tematico.json" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "nombre": "Segundo Semestre",
+      "materias": [
+        { "id": "algebra_lineal", "nombre": "Álgebra lineal", "creditos": 8, "temas": [] },
+        { "id": "algebra_moderna", "nombre": "Álgebra moderna", "creditos": 8, "temas": [] },
+        { "id": "calculo_multivariable", "nombre": "Cálculo multivariable", "creditos": 8, "temas": [] },
+        { "id": "estructuras_datos", "nombre": "Estructuras de datos", "creditos": 8, "temas": [] },
+        { "id": "logica_ciencia_comp", "nombre": "Lógica para la ciencia computacional", "creditos": 8, "temas": [] },
+        { "id": "diseno_logico", "nombre": "Diseño lógico", "creditos": 8, "temas": [] }
+      ]
+    },
+    {
+      "numero": 3,
+      "nombre": "Tercer Semestre",
+      "materias": [
+        { "id": "probabilidad_estadistica", "nombre": "Probabilidad y estadística", "creditos": 8, "temas": [] },
+        { "id": "metodos_numericos", "nombre": "Métodos numéricos", "creditos": 8, "temas": [] },
+        { "id": "poo_eventos", "nombre": "Programación orientada a objetos y eventos", "creditos": 8, "temas": [] },
+        { "id": "matematicas_discretas", "nombre": "Matemáticas discretas", "creditos": 8, "temas": [] },
+        { "id": "sistemas_distribuidos", "nombre": "Sistemas distribuidos", "creditos": 8, "temas": [] },
+        { "id": "bases_datos", "nombre": "Bases de datos", "creditos": 8, "temas": [] }
+      ]
+    },
+    {
+      "numero": 4,
+      "nombre": "Cuarto Semestre",
+      "materias": [
+        { "id": "aprendizaje_automatico", "nombre": "Aprendizaje automático", "creditos": 8, "temas": [] },
+        { "id": "proc_digital_imagenes", "nombre": "Procesamiento digital de imágenes", "creditos": 8, "temas": [] },
+        { "id": "busqueda_inferencia", "nombre": "Búsqueda de soluciones e inferencia bayesiana", "creditos": 8, "temas": [] },
+        { "id": "redes_arboles_grafos", "nombre": "Redes, árboles y grafos", "creditos": 8, "temas": [] },
+        { "id": "sistemas_paralelos", "nombre": "Sistemas paralelos", "creditos": 8, "temas": [] },
+        { "id": "manejo_datos_masivos", "nombre": "Manejo de datos masivos", "creditos": 8, "temas": [] }
+      ]
+    }
+  ]
+}
