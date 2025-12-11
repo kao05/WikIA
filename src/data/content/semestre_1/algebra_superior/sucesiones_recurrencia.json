@@ -1,0 +1,163 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "sucesiones_recurrencia",
+      "titulo": "Sucesiones y Ecuaciones de Recurrencia",
+      "materia": "Matemáticas Discretas / Análisis de Algoritmos",
+      "semestre": 2,
+      "dificultad": "intermedio-avanzado",
+      "tiempo_estudio": "4-5 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Modelando el Cambio Paso a Paso",
+        "definicion": "Una relación de recurrencia es una ecuación que define los términos de una secuencia basándose en uno o más términos anteriores. Es la forma matemática de describir bucles y procesos recursivos.",
+        "puntos_clave": [
+          "Sucesión: Una lista ordenada de elementos (ej. 2, 4, 8, 16...).",
+          "Relación de Recurrencia: La regla que conecta el presente con el pasado (ej. $a_n = 2 \\cdot a_{n-1}$).",
+          "Condiciones Iniciales: El punto de partida necesario para que la recurrencia no sea ambigua (ej. $a_0 = 1$).",
+          "Solución General (Fórmula Cerrada): Convertir una recurrencia lenta (paso a paso) en una fórmula directa que calcula el resultado instantáneamente."
+        ],
+        "formulas": [
+          "Progresión Geométrica: $a_n = r \\cdot a_{n-1}$ (Solución: $a_n = a_0 \\cdot r^n$)",
+          "Torres de Hanoí: $H_n = 2H_{n-1} + 1$ (Solución: $2^n - 1$)",
+          "Teorema Maestro (Complejidad): Resuelve recurrencias tipo $T(n) = aT(n/b) + f(n)$ (Usado para MergeSort, BinarySearch)."
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Cómo se usa en Ingeniería?",
+        "descripcion": "Es la herramienta principal para medir la eficiencia de los algoritmos recursivos y modelar fenómenos financieros o biológicos.",
+        "aplicaciones_comunes": [
+          "Análisis de Algoritmos: Calcular cuántas operaciones hace MergeSort ($T(n) = 2T(n/2) + n$).",
+          "Finanzas (Interés Compuesto): El dinero de mañana es el de hoy más el interés ($M_{n} = M_{n-1} \\cdot (1+i)$).",
+          "Criptografía: Generadores de números pseudoaleatorios (LFSR) usan recurrencias lineales.",
+          "Gráficos por Computadora: Curvas fractales generadas iterativamente."
+        ],
+        "ejemplos_vida_real": [
+          "Crecimiento Viral: Si cada usuario invita a 2 amigos, la base de usuarios sigue una recurrencia exponencial.",
+          "Amortización de Préstamos: Calcular cuánto debes mes a mes.",
+          "La Leyenda de Hanoí: Los monjes mueven 64 discos; la recurrencia predice que el universo acabará antes de que terminen ($2^{64}$ movimientos)."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Mapa Mental",
+        "prerequisitos": [
+          {
+            "id": "induccion_matematica",
+            "nombre": "Inducción Matemática",
+            "razon": "Necesaria para demostrar que una fórmula cerrada es la solución correcta de una recurrencia."
+          },
+          {
+            "id": "funciones_exponenciales",
+            "nombre": "Álgebra y Exponentes",
+            "razon": "Las soluciones suelen involucrar potencias y logaritmos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "complejidad_algoritmica",
+            "nombre": "Notación Big O",
+            "razon": "Las recurrencias nos dan la fórmula exacta; Big O nos da la clasificación de eficiencia."
+          },
+          {
+            "id": "programacion_dinamica",
+            "nombre": "Programación Dinámica",
+            "razon": "Es la técnica para resolver recurrencias complejas en código sin repetir cálculos."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Series y Sumatorias",
+          "Raíces características",
+          "Sucesión de Fibonacci"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "En el Mercado Laboral",
+          "sectores": [
+            {
+              "nombre": "Fintech / Trading Algorítmico",
+              "descripcion": "Modelado de precios y riesgos basados en series de tiempo.",
+              "ejemplos": ["Predicción de stocks", "Cálculo de riesgo crediticio"]
+            },
+            {
+              "nombre": "Ingeniería de Software (Performance)",
+              "descripcion": "Optimización de sistemas críticos mediante análisis de complejidad.",
+              "ejemplos": ["Bases de datos distribuidas", "Motores de búsqueda"]
+            },
+            {
+              "nombre": "Epidemiología Computacional",
+              "descripcion": "Modelado de expansión de virus (R0).",
+              "ejemplos": ["Simulaciones COVID-19", "Expansión de malware"]
+            }
+          ],
+          "empresas_referencia": [
+            "Hedge Funds (Two Sigma, Citadel)",
+            "Google (Análisis de eficiencia de algoritmos)",
+            "Bancos (Modelos de inversión)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan esto",
+          "salario_promedio_mx": "$40,000 - $85,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Quantitative Analyst (Quant)",
+              "importancia": "Crítica",
+              "uso": "Creación de modelos matemáticos financieros."
+            },
+            {
+              "nombre": "Senior Backend Engineer",
+              "importancia": "Alta",
+              "uso": "Entender por qué un servicio se cae cuando los usuarios se duplican (Escalabilidad)."
+            },
+            {
+              "nombre": "Data Scientist",
+              "importancia": "Alta",
+              "uso": "Análisis de series temporales (Time Series Analysis)."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: La Explosión de las Torres de Hanoí",
+      "descripcion": "La leyenda dice que el mundo acabará cuando los monjes terminen de mover 64 discos de oro. Tu misión es calcular cuánto tiempo tardarían realmente, comparando la simulación recursiva (imposible de ejecutar) contra la fórmula matemática derivada de la relación de recurrencia.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "La recurrencia es $H_n = 2H_{n-1} + 1$ (Para mover n discos, mueves n-1, mueves el base, y mueves n-1 otra vez).",
+        "Implementa una función `calcular_movimientos_recursivo(n)`.",
+        "Implementa una función `calcular_movimientos_formula(n)` usando la solución $2^n - 1$.",
+        "Intenta calcular para n=30 con ambas. ¿Qué pasa?",
+        "Calcula para n=64 SOLO con la fórmula y estima los años (asumiendo 1 movimiento/segundo)."
+      ],
+      "codigo_plantilla": "import time\n\n# 1. Enfoque Recursivo (La definición matemática directa)\ndef hanoi_recursivo(n):\n    if n == 1:\n        return 1\n    return 2 * hanoi_recursivo(n - 1) + 1\n\n# 2. Enfoque Fórmula Cerrada (La solución eficiente)\ndef hanoi_formula(n):\n    return (2 ** n) - 1\n\n# Prueba de estrés\nn_pequeno = 20\nstart = time.time()\nprint(f\"Recursivo ({n_pequeno}): {hanoi_recursivo(n_pequeno)} movs. Tiempo: {time.time()-start:.5f}s\")\n\n# El Fin del Mundo\nn_fin = 64\nprint(f\"\\nCalculando para {n_fin} discos con fórmula...\")\nmovimientos = hanoi_formula(n_fin)\nprint(f\"Total movimientos: {movimientos}\")\n\nsegundos_en_un_anio = 365 * 24 * 3600\nanios = movimientos / segundos_en_un_anio\nprint(f\"Años necesarios (1 mov/seg): {anios:,.0f}\")",
+      "solucion_referencia": "El código de plantilla ya incluye la lógica correcta. El punto clave es observar que la función recursiva se vuelve exponencialmente lenta. Para n=64, la recursión tardaría billones de años, mientras que la fórmula es instantánea (O(1)).\nResultado aproximado: 584 mil millones de siglos.",
+      "casos_prueba": [
+        {
+          "entrada": "n = 3",
+          "salida_esperada": "7 movimientos",
+          "nota": "Verificación manual simple"
+        },
+        {
+          "entrada": "n = 64 (Recursivo)",
+          "salida_esperada": "Timeout / Stack Overflow / Congelamiento",
+          "nota": "Demostración de ineficiencia algorítmica"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "The Tower of Hanoi - Recursive Solution",
+          "url": "https://www.youtube.com/watch?v=rf6uf3jNjbo"
+        },
+        {
+            "tipo": "imagen",
+            "titulo": "Diagrama de visualización de los pasos de las Torres de Hanoí",
+            "url": ""
+        }
+      ]
+    }
+  }
+}
