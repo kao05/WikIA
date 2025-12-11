@@ -1,0 +1,166 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "coordenadas_polares",
+      "titulo": "Coordenadas Polares",
+      "materia": "Geometría",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "3-4 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Navegando con Distancia y Dirección",
+        "definicion": "Sistema de coordenadas bidimensional en el que cada punto del plano se determina por una distancia al origen (radio vector 'r') y un ángulo respecto al eje horizontal positivo (azimut o ángulo polar 'θ').",
+        "puntos_clave": [
+          "A diferencia de las cartesianas (x, y), usa (r, θ).",
+          "r: Distancia desde el polo (origen).",
+          "θ: Ángulo medido en sentido antihorario desde el eje polar.",
+          "Un mismo punto puede tener múltiples representaciones (debido a la periodicidad del ángulo).",
+          "Crucial para simplificar ecuaciones de curvas circulares (círculos, espirales, rosas)."
+        ],
+        "formulas": [
+          "De Polar a Cartesiano (x): x = r * cos(θ)",
+          "De Polar a Cartesiano (y): y = r * sin(θ)",
+          "De Cartesiano a Polar (r): r = √(x² + y²)",
+          "De Cartesiano a Polar (θ): θ = arctan(y/x) (usar atan2 en programación)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "Las coordenadas polares son el estándar nativo para radares, sonares y brazos robóticos rotatorios, donde 'girar y extender' es más natural que 'moverse en grilla'.",
+        "aplicaciones_comunes": [
+          "Lectura de sensores LIDAR en vehículos autónomos.",
+          "Movimiento de cámaras de seguridad rotatorias (PTZ).",
+          "Generación de gráficos procedurales (espirales, mandalas).",
+          "Análisis de números complejos (Forma polar).",
+          "Sistemas de audio espacial (ubicación de sonido 360°)."
+        ],
+        "ejemplos_vida_real": [
+          "Pantalla de un radar de aeropuerto (distancia y dirección del avión).",
+          "Cortar una pizza (se piensa en radio y ángulo, no en cuadrícula).",
+          "Micrófonos direccionales."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "trigonometria_basica",
+            "nombre": "Trigonometría",
+            "razon": "Indispensable conocer Seno, Coseno y Tangente."
+          },
+          {
+            "id": "sistemas_coordenadas",
+            "nombre": "Sistemas de Coordenadas Cartesianas",
+            "razon": "Necesario para entender la conversión entre sistemas."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "numeros_complejos",
+            "nombre": "Números Complejos",
+            "razon": "La forma polar de un número complejo (Fórmula de Euler) es la base de la electrónica y cuántica."
+          },
+          {
+            "id": "calculo_multivariable",
+            "nombre": "Integrales Dobles",
+            "razon": "El cambio a coordenadas polares simplifica integrales sobre regiones circulares."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Teorema de Pitágoras",
+          "Radianes vs Grados",
+          "Función Atan2"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Robótica y Automatización",
+              "descripcion": "Navegación SLAM (Simultaneous Localization and Mapping).",
+              "ejemplos": ["Roomba mapeando una casa", "Coches autónomos escaneando calles"]
+            },
+            {
+              "nombre": "Defensa y Aeroespacial",
+              "descripcion": "Sistemas de radar y sonar.",
+              "ejemplos": ["Detección de misiles", "Navegación submarina"]
+            },
+            {
+              "nombre": "Ingeniería de Audio",
+              "descripcion": "Procesamiento de señales.",
+              "ejemplos": ["Filtros de audio", "Representación espectral"]
+            }
+          ],
+          "empresas_referencia": [
+            "Boston Dynamics (Robótica)",
+            "Tesla (Autopilot - Sensores)",
+            "Dolby (Audio posicional)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$30,000 - $70,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Robótica / Percepción",
+              "importancia": "Crítica",
+              "uso": "Interpretación de nubes de puntos de sensores."
+            },
+            {
+              "nombre": "Desarrollador de Gameplay (Math)",
+              "importancia": "Alta",
+              "uso": "Movimientos circulares de enemigos y cámaras."
+            },
+            {
+              "nombre": "Ingeniero de Procesamiento de Señales",
+              "importancia": "Alta",
+              "uso": "Transformadas de Fourier y análisis espectral."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Intérprete de Radar (Polar a Cartesiano)",
+      "descripcion": "Un robot explorador envía datos en formato polar (distancia, ángulo). Tu tarea es convertir estos datos a coordenadas cartesianas (x, y) para dibujar un mapa del entorno.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Recibirás una lista de tuplas: [(r1, angulo1), (r2, angulo2), ...].",
+        "Los ángulos estarán en **grados**, pero las funciones de Python (math.cos, math.sin) esperan **radianes**.",
+        "Debes convertir grados a radianes primero: rad = deg * (pi / 180).",
+        "Usa math.cos() y math.sin().",
+        "Redondea los resultados a 2 decimales."
+      ],
+      "codigo_plantilla": "import math\n\ndef procesar_datos_radar(lecturas_polares):\n    \"\"\"\n    Convierte una lista de lecturas (distancia, angulo_grados) a (x, y)\n    \"\"\"\n    coordenadas_mapa = []\n    \n    for r, angulo_grados in lecturas_polares:\n        # Tu código aquí\n        pass\n        \n    return coordenadas_mapa\n\n# Datos de prueba: [(Distancia, Grados)]\ndatos = [(10, 0), (10, 90), (14.14, 45)]\nprint(procesar_datos_radar(datos))",
+      "solucion_referencia": "import math\n\ndef procesar_datos_radar(lecturas_polares):\n    coordenadas_mapa = []\n    \n    for r, angulo_grados in lecturas_polares:\n        # 1. Convertir grados a radianes\n        angulo_rad = math.radians(angulo_grados)\n        \n        # 2. Aplicar fórmulas de conversión\n        x = r * math.cos(angulo_rad)\n        y = r * math.sin(angulo_rad)\n        \n        # 3. Guardar tupla redondeada\n        coordenadas_mapa.append((round(x, 2), round(y, 2)))\n        \n    return coordenadas_mapa",
+      "casos_prueba": [
+        {
+          "entrada": "[(10, 0)]",
+          "salida_esperada": "[(10.0, 0.0)]",
+          "nota": "Punto sobre el eje X positivo."
+        },
+        {
+          "entrada": "[(10, 90)]",
+          "salida_esperada": "[(0.0, 10.0)]",
+          "nota": "Punto sobre el eje Y positivo (cos(90)=0)."
+        },
+        {
+          "entrada": "[(5, 180)]",
+          "salida_esperada": "[(-5.0, 0.0)]",
+          "nota": "Punto sobre el eje X negativo."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "simulador",
+          "titulo": "Calculadora Gráfica de Coordenadas Polares (Desmos)",
+          "url": "https://www.desmos.com/calculator/polar"
+        }
+      ]
+    }
+  }
+}
