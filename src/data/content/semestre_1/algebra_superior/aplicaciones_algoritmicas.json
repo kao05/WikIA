@@ -1,0 +1,163 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "aplicaciones_algoritmicas",
+      "titulo": "Aplicaciones Algorítmicas y Optimización",
+      "materia": "Análisis de Algoritmos / Estructuras de Datos Avanzadas",
+      "semestre": 3,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "4-6 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Paradigmas de Resolución de Problemas",
+        "definicion": "No basta con que el código funcione, debe ser eficiente. Las aplicaciones algorítmicas estudian estrategias estándar para resolver problemas complejos optimizando tiempo y memoria.",
+        "puntos_clave": [
+          "Algoritmos Voraces (Greedy): Toman la mejor decisión inmediata en cada paso (ej. Algoritmo de Dijkstra).",
+          "Programación Dinámica: Resuelve problemas complejos dividiéndolos en subproblemas superpuestos y guardando los resultados (Memoización).",
+          "Divide y Vencerás: Divide el problema en partes independientes (ej. Merge Sort, Binary Search).",
+          "Grafos y Recorridos: Modelado de relaciones (BFS para camino más corto en grafos no ponderados, DFS para laberintos)."
+        ],
+        "formulas": [
+          "Complejidad Temporal (Big O): O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n)",
+          "Ecuación de Bellman (Prog. Dinámica): V(x) = max(u + V(x-1))",
+          "Relajación de aristas (Dijkstra): si d[u] + w(u,v) < d[v], entonces d[v] = d[u] + w(u,v)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "El motor del software moderno",
+        "descripcion": "Cualquier aplicación que maneje grandes volúmenes de datos o necesite respuestas en tiempo real depende de estos algoritmos.",
+        "aplicaciones_comunes": [
+          "Sistemas de Navegación (GPS): Calcular la ruta más rápida (Dijkstra / A*).",
+          "Redes Sociales: Sugerencia de amigos o cálculo de grados de separación (Grafos).",
+          "Compresión de Datos: ZIP, JPEG (Codificación de Huffman - Greedy).",
+          "Finanzas: Detección de arbitraje en cambio de divisas (Bellman-Ford).",
+          "Videojuegos: IA de enemigos buscando al jugador (Pathfinding)."
+        ],
+        "ejemplos_vida_real": [
+          "Uber/Rappi: Asignar el repartidor más cercano (Problema del viajante / Optimización).",
+          "Google: El algoritmo PageRank original es un algoritmo de grafos.",
+          "Netflix: Optimización del flujo de datos (Network Flow) para que el video no se corte."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Ecosistema Algorítmico",
+        "prerequisitos": [
+          {
+            "id": "estructuras_datos",
+            "nombre": "Estructuras de Datos",
+            "razon": "Imposible aplicar algoritmos sin dominar Arreglos, Listas Enlazadas, Hash Maps y Grafos."
+          },
+          {
+            "id": "recursividad",
+            "nombre": "Recursividad",
+            "razon": "Base fundamental para la Programación Dinámica y recorridos de árboles."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "inteligencia_artificial",
+            "nombre": "Inteligencia Artificial",
+            "razon": "Los algoritmos de búsqueda (A*) son la base de la IA clásica."
+          },
+          {
+            "id": "computacion_paralela",
+            "nombre": "Computación Paralela",
+            "razon": "Cómo ejecutar estos algoritmos en múltiples procesadores simultáneamente."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Notación Asintótica (Big O)",
+          "Teoría de Grafos",
+          "NP-Completitud (Problemas imposibles de resolver rápido)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Impacto en la Industria",
+          "sectores": [
+            {
+              "nombre": "Logística y Transporte",
+              "descripcion": "Optimización de rutas de entrega y gestión de flotas.",
+              "ejemplos": ["Amazon Logistics", "DHL"]
+            },
+            {
+              "nombre": "Telecomunicaciones",
+              "descripcion": "Enrutamiento de paquetes de datos en internet.",
+              "ejemplos": ["Protocolos OSPF/BGP en Routers Cisco"]
+            },
+            {
+              "nombre": "Bioinformática",
+              "descripcion": "Alineamiento de secuencias de ADN.",
+              "ejemplos": ["Algoritmos de alineamiento genético"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (Maps, Search)",
+            "Amazon (Logística de almacenes)",
+            "Cloudflare (Enrutamiento de tráfico web)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Roles de Alta Ingeniería",
+          "salario_promedio_mx": "$40,000 - $90,000+ MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Software Backend (Senior)",
+              "importancia": "Crítica",
+              "uso": "Optimización de servicios que escalan a millones de usuarios."
+            },
+            {
+              "nombre": "Ingeniero de Machine Learning",
+              "importancia": "Alta",
+              "uso": "Entendimiento de la eficiencia de los modelos matemáticos."
+            },
+            {
+              "nombre": "Site Reliability Engineer (SRE)",
+              "importancia": "Media",
+              "uso": "Diagnóstico de cuellos de botella en sistemas distribuidos."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: El GPS Simplificado (Dijkstra)",
+      "descripcion": "Implementa un sistema de navegación básico. Tienes un mapa representado como un Grafo donde los nodos son 'Ciudades' y las aristas son 'Carreteras' con un peso (distancia en km). Debes encontrar la ruta más corta desde una ciudad de origen a todas las demás.",
+      "dificultad": "avanzado",
+      "instrucciones": [
+        "Utiliza el Algoritmo de Dijkstra.",
+        "Representa el grafo usando un diccionario de diccionarios o listas de adyacencia.",
+        "Usa una 'Cola de Prioridad' (heapq en Python) para seleccionar siempre el nodo más cercano no visitado.",
+        "Retorna un diccionario con las distancias mínimas a cada ciudad."
+      ],
+      "codigo_plantilla": "import heapq\n\ndef ruta_mas_corta(grafo, inicio):\n    \"\"\"\n    Calcula la distancia más corta desde 'inicio' a todos los nodos.\n    Args:\n        grafo: Dict { 'A': {'B': 1, 'C': 4}, ... }\n        inicio: Nodo de partida (str)\n    Returns:\n        Dict con distancias { 'B': 1, 'C': 3 ... }\n    \"\"\"\n    # Distancias iniciales infinitas\n    distancias = {nodo: float('inf') for nodo in grafo}\n    distancias[inicio] = 0\n    \n    # Cola de prioridad: tuplas (distancia_actual, nodo)\n    pq = [(0, inicio)]\n    \n    while pq:\n        # Tu lógica del algoritmo de Dijkstra aquí\n        pass\n        \n    return distancias\n\n# Mapa de prueba\nmapa_mexico = {\n    'CDMX': {'Queretaro': 220, 'Puebla': 130},\n    'Queretaro': {'CDMX': 220, 'Leon': 180, 'SanLuis': 200},\n    'Puebla': {'CDMX': 130, 'Veracruz': 280},\n    'Leon': {'Queretaro': 180},\n    'SanLuis': {'Queretaro': 200},\n    'Veracruz': {'Puebla': 280}\n}",
+      "solucion_referencia": "import heapq\n\ndef ruta_mas_corta(grafo, inicio):\n    distancias = {nodo: float('inf') for nodo in grafo}\n    distancias[inicio] = 0\n    pq = [(0, inicio)]\n    \n    while pq:\n        distancia_actual, nodo_actual = heapq.heappop(pq)\n        \n        # Optimización: Si ya encontramos un camino más corto antes, ignorar\n        if distancia_actual > distancias[nodo_actual]:\n            continue\n        \n        for vecino, peso in grafo[nodo_actual].items():\n            distancia = distancia_actual + peso\n            # Relajación\n            if distancia < distancias[vecino]:\n                distancias[vecino] = distancia\n                heapq.heappush(pq, (distancia, vecino))\n                \n    return distancias",
+      "casos_prueba": [
+        {
+          "entrada": "Inicio: 'CDMX'",
+          "salida_esperada": "{'CDMX': 0, 'Queretaro': 220, 'Puebla': 130, 'Leon': 400, 'SanLuis': 420, 'Veracruz': 410}",
+          "nota": "Cálculo correcto de rutas acumuladas"
+        },
+        {
+          "entrada": "Grafo desconectado (Isla)",
+          "salida_esperada": "Distancia 'inf' para nodos inalcanzables",
+          "nota": "Manejo de nodos sin conexión"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Dijkstra's Algorithm - Computerphile",
+          "url": "https://www.youtube.com/watch?v=GazC3A4OQTE"
+        },
+        {
+          "tipo": "simulador",
+          "titulo": "Pathfinding Visualizer",
+          "url": "https://clementmihailescu.github.io/Pathfinding-Visualizer/"
+        }
+      ]
+    }
+  }
+}
