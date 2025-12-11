@@ -1,0 +1,163 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "transformaciones_coordenadas",
+      "titulo": "Transformaciones de Coordenadas (Traslación y Rotación)",
+      "materia": "Geometría",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "3-4 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Moviendo el Mundo Matemático",
+        "definicion": "Operaciones geométricas que cambian la posición (traslación), orientación (rotación) o tamaño (escalado) de una figura o punto en el plano sin alterar su forma intrínseca (en el caso de movimientos rígidos).",
+        "puntos_clave": [
+          "Traslación: Mover un punto (x, y) sumándole valores constantes (h, k). Nuevo punto: (x+h, y+k).",
+          "Rotación: Girar un punto alrededor del origen un ángulo θ. Requiere trigonometría (Seno y Coseno).",
+          "Las fórmulas de rotación son: x' = x·cos(θ) - y·sen(θ)  y  y' = x·sen(θ) + y·cos(θ).",
+          "En computación, se suelen combinar estas operaciones usando Matrices (Coordenadas Homogéneas)."
+        ],
+        "formulas": [
+          "Traslación: x' = x + dx,  y' = y + dy",
+          "Rotación (Antihoraria): x' = x·cos(θ) - y·sin(θ)",
+          "Rotación (Antihoraria): y' = x·sin(θ) + y·cos(θ)",
+          "Escalado: x' = x·sx,  y' = y·sy"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Por qué es fundamental en Software?",
+        "descripcion": "Sin estas ecuaciones, no existirían los videojuegos, ni las interfaces gráficas modernas, ni los robots capaces de mover sus brazos.",
+        "aplicaciones_comunes": [
+          "Videojuegos: Mover la cámara o el personaje (es puramente multiplicar matrices de coordenadas).",
+          "Visión Artificial: 'Data Augmentation' (rotar y mover imágenes de entrenamiento para que la IA aprenda mejor).",
+          "Robótica: Cinemática directa (calcular dónde está la mano del robot sabiendo el ángulo de sus articulaciones).",
+          "Diseño CSS: La propiedad 'transform: rotate(45deg) translate(10px)' usa estas fórmulas internamente."
+        ],
+        "ejemplos_vida_real": [
+          "Girar la pantalla de tu celular (el sistema recalcula todas las coordenadas).",
+          "El filtro de 'orejas de perro' en Snapchat (sigue y rota con tu cara).",
+          "Arquitectura: Mover planos sobre un mapa."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "trigonometria_basica",
+            "nombre": "Seno y Coseno",
+            "razon": "Indispensables para calcular las nuevas posiciones al rotar."
+          },
+          {
+            "id": "sistemas_coordenadas",
+            "nombre": "Plano Cartesiano",
+            "razon": "Debes entender dónde están los puntos antes de moverlos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "matrices_vectores",
+            "nombre": "Álgebra Lineal (Matrices)",
+            "razon": "Aprenderás a empaquetar todas estas fórmulas en una sola matriz de 3x3 o 4x4 para eficiencia extrema."
+          },
+          {
+            "id": "proc_digital_imagenes",
+            "nombre": "Procesamiento de Imágenes",
+            "razon": "Aplicar estas transformaciones a matrices de píxeles."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Grados vs Radianes",
+          "Origen de coordenadas",
+          "Vectores"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Videojuegos y VFX",
+              "descripcion": "El motor gráfico (Unity/Unreal) hace millones de estas operaciones por segundo.",
+              "ejemplos": ["Renderizado 3D", "Animación de esqueletos"]
+            },
+            {
+              "nombre": "Robótica Industrial",
+              "descripcion": "Control de brazos mecánicos.",
+              "ejemplos": ["Soldadura automática", "Pick and place"]
+            },
+            {
+              "nombre": "Conducción Autónoma",
+              "descripcion": "Transformación de coordenadas de sensores.",
+              "ejemplos": ["Pasar datos del LIDAR (local) al mapa global (mundial)"]
+            }
+          ],
+          "empresas_referencia": [
+            "Pixar (Animación basada en geometría)",
+            "Boston Dynamics (Cinemática de robots)",
+            "Adobe (Photoshop: Transformación de capas)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$25,000 - $65,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Programador de Gráficos (Graphics Programmer)",
+              "importancia": "Crítica",
+              "uso": "Shaders y pipelines de renderizado."
+            },
+            {
+              "nombre": "Ingeniero de Visión Artificial",
+              "importancia": "Alta",
+              "uso": "Normalización de imágenes para reconocimiento facial."
+            },
+            {
+              "nombre": "Desarrollador Frontend (Animaciones)",
+              "importancia": "Media",
+              "uso": "Canvas y animaciones CSS complejas."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Motor Gráfico 2D (Rotación)",
+      "descripcion": "Vas a escribir el núcleo de un motor gráfico simple. Tienes un punto (vértice) de un personaje y necesitas rotarlo alrededor del centro del mundo (0,0) un cierto número de grados.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Crea una función 'rotar_punto(x, y, grados)'.",
+        "Convierte los grados a radianes: rad = grados * (pi / 180).",
+        "Aplica la matriz de rotación 2D:\n   nuevo_x = x * cos(rad) - y * sin(rad)\n   nuevo_y = x * sin(rad) + y * cos(rad)",
+        "Retorna las nuevas coordenadas redondeadas a 2 decimales."
+      ],
+      "codigo_plantilla": "import math\n\ndef rotar_punto(x, y, grados):\n    \"\"\"\n    Rota un punto (x, y) alrededor del origen (0,0).\n    \"\"\"\n    # 1. Convertir a radianes\n    \n    # 2. Aplicar fórmulas\n    nuevo_x = 0\n    nuevo_y = 0\n    \n    return nuevo_x, nuevo_y\n\n# Pruebas\n# Punto (10, 0) rotado 90 grados debería quedar en (0, 10)\nprint(rotar_punto(10, 0, 90))",
+      "solucion_referencia": "import math\n\ndef rotar_punto(x, y, grados):\n    # Conversión a radianes\n    rad = math.radians(grados)\n    \n    # Fórmulas de rotación\n    nuevo_x = x * math.cos(rad) - y * math.sin(rad)\n    nuevo_y = x * math.sin(rad) + y * math.cos(rad)\n    \n    # Redondeo para evitar errores de punto flotante (ej. 6.12e-17)\n    return round(nuevo_x, 2), round(nuevo_y, 2)",
+      "casos_prueba": [
+        {
+          "entrada": "x=10, y=0, grados=90",
+          "salida_esperada": "(0.0, 10.0)",
+          "nota": "Rotación de 90° antihoraria sobre el eje X."
+        },
+        {
+          "entrada": "x=10, y=0, grados=180",
+          "salida_esperada": "(-10.0, 0.0)",
+          "nota": "Media vuelta completa."
+        },
+        {
+          "entrada": "x=5, y=5, grados=-90",
+          "salida_esperada": "(5.0, -5.0)",
+          "nota": "Rotación horaria (negativa)."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "interactivo",
+          "titulo": "Visualizador de Matrices de Transformación",
+          "url": "https://ciechanow.ski/cameras-and-lenses/"
+        }
+      ]
+    }
+  }
+}
