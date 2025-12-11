@@ -1,0 +1,159 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "series_taylor",
+      "titulo": "Series de Taylor y Maclaurin",
+      "materia": "Cálculo diferencial e integral",
+      "semestre": 1,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "5-7 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "La Magia de la Aproximación Polinómica",
+        "definicion": "Una Serie de Taylor es una representación de una función como una suma infinita de términos calculados a partir de los valores de las derivadas de la función en un solo punto.",
+        "puntos_clave": [
+          "Cualquier función suave (diferenciable) puede aproximarse mediante polinomios.",
+          "Serie de Maclaurin: Es un caso especial de la Serie de Taylor centrada en el origen (a = 0).",
+          "Orden de aproximación: Cuantos más términos sumes, más se parecerá el polinomio a la función original.",
+          "Radio de Convergencia: El intervalo donde la serie funciona (fuera de él, la serie puede explotar a infinito)."
+        ],
+        "formulas": [
+          "Fórmula General: f(x) = Σ [f^(n)(a) / n!] * (x - a)^n",
+          "Exponencial: e^x = 1 + x + x^2/2! + x^3/3! + ...",
+          "Seno: sin(x) = x - x^3/3! + x^5/5! - ... (Solo potencias impares)",
+          "Coseno: cos(x) = 1 - x^2/2! + x^4/4! - ... (Solo potencias pares)"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Cómo calculan las computadoras?",
+        "descripcion": "Las CPUs solo saben sumar y multiplicar. No saben qué es un 'seno' o un 'logaritmo'. Las Series de Taylor permiten convertir estas funciones trascendentes en sumas y multiplicaciones simples que el hardware puede ejecutar.",
+        "aplicaciones_comunes": [
+          "Calculadoras y Librerías Math: Implementación de funciones trigonométricas y exponenciales bajo el capó.",
+          "Física y Robótica: 'Linealización'. Convertir un problema físico complejo en uno lineal simple (usando solo los dos primeros términos de Taylor) para hacerlo controlable.",
+          "Finanzas: Aproximación de la convexidad de bonos.",
+          "Optimización (IA): El Método de Newton utiliza la expansión de Taylor de segundo grado para encontrar mínimos más rápido que el Descenso de Gradiente simple."
+        ],
+        "ejemplos_vida_real": [
+          "Cuando calculas sin(30°) en Python, la librería C subyacente usa una variante optimizada de series polinómicas (como Taylor o Chebyshev).",
+          "El péndulo simple: En física decimos que sin(θ) ≈ θ para ángulos pequeños. Eso es el primer término de la Serie de Taylor."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "derivadas_basicas",
+            "nombre": "Derivadas de Orden Superior",
+            "razon": "Necesitas la primera, segunda, tercera... n-ésima derivada."
+          },
+          {
+            "id": "sucesiones_series",
+            "nombre": "Sucesiones y Series",
+            "razon": "Entender la notación Sigma (Σ) y el concepto de factorial (!)."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "metodos_numericos",
+            "nombre": "Métodos Numéricos",
+            "razon": "Análisis del error de truncamiento (¿cuánto error cometo si solo sumo 5 términos?)."
+          },
+          {
+            "id": "aprendizaje_automatico",
+            "nombre": "Optimización de Segundo Orden",
+            "razon": "Uso de la Matriz Hessiana (segundas derivadas)."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Factorial (n!)",
+          "Polinomio",
+          "Resto de Lagrange (Error)",
+          "Serie Alternante"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Matemáticas Computacionales",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Motores de Juego",
+              "descripcion": "Optimización de cálculos físicos.",
+              "ejemplos": ["Fast Inverse Square Root (Quake III)", "Aproximaciones trigonométricas rápidas"]
+            },
+            {
+              "nombre": "Robótica y Control",
+              "descripcion": "Filtros de Kalman Extendidos (EKF).",
+              "ejemplos": ["Linealizar sistemas no lineales para navegación de drones"]
+            },
+            {
+              "nombre": "High Frequency Trading",
+              "descripcion": "Cálculo ultrarrápido de precios de opciones.",
+              "ejemplos": ["Aproximaciones de griegas financieras"]
+            }
+          ],
+          "empresas_referencia": [
+            "Boston Dynamics (Control linealizado)",
+            "NVIDIA (Hardware para operaciones polinómicas)",
+            "SpaceX (Simulaciones de trayectoria)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles de Investigación",
+          "salario_promedio_mx": "$40,000 - $95,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Simulación",
+              "importancia": "Alta",
+              "uso": "Reducir complejidad computacional simplificando fórmulas."
+            },
+            {
+              "nombre": "Investigador en Criptografía",
+              "importancia": "Media",
+              "uso": "Análisis de funciones generadoras."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Reconstruyendo la Exponencial (e^x)",
+      "descripcion": "Vas a implementar tu propia función exponencial usando la Serie de Taylor y verás con tus propios ojos cuántos términos se necesitan para igualar a la función 'perfecta' de la librería math.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "La serie de Taylor para e^x es: 1 + x + (x^2/2!) + (x^3/3!) + ... + (x^n/n!).",
+        "Crea una función `mi_exponencial(x, n_terminos)`.",
+        "Usa un bucle para sumar los términos. Puedes usar `math.factorial`.",
+        "Compara tu resultado con `math.exp(x)` calculando el error absoluto.",
+        "Prueba con x pequeños (ej. 1) y x grandes (ej. 10). Observa que los x grandes requieren más términos para converger."
+      ],
+      "codigo_plantilla": "import math\n\ndef mi_exponencial(x, n_terminos):\n    \"\"\"\n    Aproxima e^x usando n términos de la serie de Taylor.\n    \"\"\"\n    suma = 0\n    for i in range(n_terminos):\n        # Termino: (x^i) / i!\n        # Tu código aquí\n        pass\n    return suma\n\n# Prueba de precisión\nx_test = 2\nvalor_real = math.exp(x_test)\n\nprint(f\"--- Calculando e^{x_test} ---\")\nfor n in [1, 3, 5, 10, 20]:\n    aprox = mi_exponencial(x_test, n)\n    error = abs(valor_real - aprox)\n    print(f\"Terminos: {n} | Valor: {aprox:.5f} | Error: {error:.10f}\")",
+      "solucion_referencia": "import math\n\ndef mi_exponencial(x, n_terminos):\n    suma = 0\n    for i in range(n_terminos):\n        numerador = x**i\n        denominador = math.factorial(i)\n        suma += numerador / denominador\n    return suma",
+      "casos_prueba": [
+        {
+          "entrada": "x=1, n=10",
+          "salida_esperada": "~2.71828",
+          "nota": "Con 10 términos ya es muy preciso para x=1."
+        },
+        {
+          "entrada": "x=10, n=10",
+          "salida_esperada": "Error alto",
+          "nota": "Para x=10, el término x^n crece mucho, necesitas más de 10 términos para alcanzar al factorial."
+        },
+        {
+          "entrada": "x=0, n=1",
+          "salida_esperada": "1.0",
+          "nota": "e^0 es 1. La serie funciona perfectamente."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "animacion",
+          "titulo": "Visualizando Series de Taylor (3Blue1Brown)",
+          "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4"
+        }
+      ]
+    }
+  }
+}
