@@ -1,0 +1,167 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "ecuacion_general_segundo_grado",
+      "titulo": "Ecuación General de Segundo Grado (Cónicas)",
+      "materia": "Geometría",
+      "semestre": 1,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "4-5 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "La Ecuación Madre de las Formas Curvas",
+        "definicion": "Expresión algebraica de la forma Ax² + Bxy + Cy² + Dx + Ey + F = 0, que representa cualquier sección cónica (círculo, elipse, parábola, hipérbola) en el plano, incluyendo aquellas que están rotadas.",
+        "puntos_clave": [
+          "El término 'Bxy' es el responsable de la rotación de la figura respecto a los ejes.",
+          "El Discriminante (Δ = B² - 4AC) determina qué tipo de curva es.",
+          "En IA, estas ecuaciones representan 'fronteras de decisión' curvas.",
+          "Las funciones de costo en redes neuronales suelen aproximarse localmente a una forma cuadrática (paraboloide hiperesférico) cerca del mínimo."
+        ],
+        "formulas": [
+          "Ecuación General: Ax² + Bxy + Cy² + Dx + Ey + F = 0",
+          "Discriminante: Δ = B² - 4AC",
+          "Δ < 0: Elipse (o Círculo)",
+          "Δ = 0: Parábola",
+          "Δ > 0: Hipérbola",
+          "Ángulo de rotación: cot(2θ) = (A - C) / B"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Cómo se aplica en IA?",
+        "descripcion": "Cuando una IA necesita separar datos que no se pueden dividir con una línea recta (linealmente inseparables), utiliza curvas de segundo grado.",
+        "aplicaciones_comunes": [
+          "Support Vector Machines (SVM): Uso de 'kernels polinómicos' de grado 2 para crear fronteras elípticas o hiperbólicas entre clases.",
+          "Optimización (Gradient Descent): La superficie de error a menudo se visualiza como un 'bowl' (paraboloide) donde buscamos el fondo (mínimo global).",
+          "Visión por Computadora: Detección de objetos circulares o elípticos (ojos, ruedas, células) usando la Transformada de Hough.",
+          "Regresión Polinomial: Ajustar una curva parabólica a datos de tendencias no lineales."
+        ],
+        "ejemplos_vida_real": [
+          "Un filtro de spam que detecta patrones complejos en emails.",
+          "El algoritmo de YouTube recomendando videos (ajuste de curvas).",
+          "Diagnóstico médico por imagen (detectar tumores midiendo su excentricidad)."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "sistemas_coordenadas",
+            "nombre": "Sistemas de Coordenadas",
+            "razon": "Para graficar las curvas."
+          },
+          {
+            "id": "algebra_superior",
+            "nombre": "Matrices y Determinantes",
+            "razon": "Para eliminar el término de rotación (Bxy) mediante diagonalización."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "calculo_multivariable",
+            "nombre": "Optimización y Gradientes",
+            "razon": "Entenderás que minimizar el error es buscar el fondo de una paraboloide n-dimensional."
+          },
+          {
+            "id": "aprendizaje_automatico",
+            "nombre": "SVM y Kernels",
+            "razon": "Aprenderás cómo proyectar datos a dimensiones superiores para separarlos con estas ecuaciones."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Diagonalización de matrices",
+          "Valores propios (Eigenvalues)",
+          "Traslación y Rotación de ejes"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Ciencia de Datos",
+              "descripcion": "Modelado predictivo no lineal.",
+              "ejemplos": ["Predicción de precios de acciones (volatilidad)", "Modelos de riesgo crediticio"]
+            },
+            {
+              "nombre": "Visión Artificial",
+              "descripcion": "Reconocimiento de formas biométricas.",
+              "ejemplos": ["Iris recognition (elipses)", "Seguimiento de pupilas"]
+            },
+            {
+              "nombre": "Robótica",
+              "descripcion": "Control predictivo.",
+              "ejemplos": ["Trayectorias balísticas (parábolas)", "Evitación de obstáculos elípticos"]
+            }
+          ],
+          "empresas_referencia": [
+            "NVIDIA (Visión por computador)",
+            "Mobileye (Detección de carriles curvos)",
+            "Cualquier empresa fintech (Modelos de riesgo no lineales)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$35,000 - $80,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Machine Learning",
+              "importancia": "Crítica",
+              "uso": "Selección de algoritmos y comprensión de fronteras de decisión."
+            },
+            {
+              "nombre": "Ingeniero de Visión Computacional",
+              "importancia": "Crítica",
+              "uso": "Detección de primitivas geométricas en imágenes."
+            },
+            {
+              "nombre": "Data Scientist",
+              "importancia": "Alta",
+              "uso": "Análisis de regresiones no lineales."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Clasificador de Fronteras de Decisión",
+      "descripcion": "Imagina que un algoritmo de Machine Learning ha encontrado una frontera de separación entre dos clases de datos (ej. tumores benignos vs malignos). La frontera está dada por los coeficientes A, B, C, D, E, F. Tu tarea es clasificar qué forma tiene esa frontera.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Crea una función que reciba los 6 coeficientes: A, B, C, D, E, F.",
+        "Calcula el discriminante: Δ = B² - 4AC.",
+        "Si Δ < 0: Retorna 'ELIPSE' (o 'CIRCULO' si A==C y B==0).",
+        "Si Δ = 0: Retorna 'PARABOLA'.",
+        "Si Δ > 0: Retorna 'HIPERBOLA'.",
+        "Este es el paso fundamental antes de graficar la separación de datos."
+      ],
+      "codigo_plantilla": "def clasificar_frontera(A, B, C, D, E, F):\n    \"\"\"\n    Determina el tipo de cónica basado en la ecuación general.\n    Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\nprint(clasificar_frontera(1, 0, 1, 0, 0, -9))  # x^2 + y^2 - 9 = 0\nprint(clasificar_frontera(1, 0, -1, 0, 0, -1)) # x^2 - y^2 - 1 = 0",
+      "solucion_referencia": "def clasificar_frontera(A, B, C, D, E, F):\n    discriminante = B**2 - 4*A*C\n    \n    if discriminante < 0:\n        if A == C and B == 0:\n            return \"CIRCULO\"\n        else:\n            return \"ELIPSE\"\n    elif discriminante == 0:\n        return \"PARABOLA\"\n    else:\n        return \"HIPERBOLA\"",
+      "casos_prueba": [
+        {
+          "entrada": "A=1, B=0, C=1, D=0, E=0, F=-25",
+          "salida_esperada": "CIRCULO",
+          "nota": "Discriminante = -4. A=C."
+        },
+        {
+          "entrada": "A=1, B=2, C=1, D=10, E=5, F=0",
+          "salida_esperada": "PARABOLA",
+          "nota": "Discriminante = 2^2 - 4(1)(1) = 0."
+        },
+        {
+          "entrada": "A=2, B=-1, C=-3, D=0, E=0, F=10",
+          "salida_esperada": "HIPERBOLA",
+          "nota": "Discriminante = (-1)^2 - 4(2)(-3) = 1 + 24 = 25 (>0)."
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "articulo",
+          "titulo": "Visualización de fronteras de decisión en SVM (Scikit-Learn)",
+          "url": "https://scikit-learn.org/stable/auto_examples/svm/plot_svm_kernels.html"
+        }
+      ]
+    }
+  }
+}
