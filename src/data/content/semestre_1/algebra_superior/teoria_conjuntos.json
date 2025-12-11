@@ -1,0 +1,153 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "teoria_conjuntos",
+      "titulo": "Teoría de Conjuntos y Operaciones Fundamentales",
+      "materia": "Matemáticas Discretas",
+      "semestre": 1,
+      "dificultad": "básico",
+      "tiempo_estudio": "3-4 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es un conjunto?",
+        "definicion": "Un conjunto es una colección bien definida de objetos distintos, llamados elementos, que pueden ser números, personas, letras, etc. En programación, es fundamental por su propiedad de no admitir duplicados.",
+        "puntos_clave": [
+          "No hay orden: {a, b} es lo mismo que {b, a}.",
+          "Unicidad: Un conjunto no contiene elementos repetidos.",
+          "Cardinalidad: Es el número de elementos únicos en el conjunto.",
+          "Subconjunto: Si todo elemento de A está en B, A es subconjunto de B."
+        ],
+        "formulas": [
+          "Unión: A ∪ B = {x | x ∈ A ∨ x ∈ B}",
+          "Intersección: A ∩ B = {x | x ∈ A ∧ x ∈ B}",
+          "Diferencia: A - B = {x | x ∈ A ∧ x ∉ B}",
+          "Producto Cartesiano: A × B = {(a,b) | a ∈ A, b ∈ B}"
+        ]
+      },
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve en tecnología?",
+        "descripcion": "La teoría de conjuntos es la base matemática de las bases de datos relacionales (SQL) y la lógica de filtrado de datos.",
+        "aplicaciones_comunes": [
+          "Consultas SQL (JOINs son operaciones de conjuntos).",
+          "Eliminación de duplicados en listas de datos.",
+          "Análisis de grupos de usuarios (segmentación de marketing).",
+          "Lógica booleana y diseño de circuitos.",
+          "Cálculo de probabilidad."
+        ],
+        "ejemplos_vida_real": [
+          "Spotify: Crear una playlist con canciones que están en tus 'Favoritos' pero NO en la playlist 'Tristes' (Diferencia).",
+          "E-commerce: Encontrar clientes que compraron 'Zapatos' Y 'Calcetines' (Intersección).",
+          "Instagram: Mostrar la lista total de seguidores únicos de dos influencers (Unión)."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Ruta de Aprendizaje",
+        "prerequisitos": [
+          {
+            "id": "logica_proposicional",
+            "nombre": "Lógica Básica",
+            "razon": "Entender operadores lógicos como AND, OR y NOT es esencial para comprender Intersección, Unión y Complemento."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "relaciones_y_funciones",
+            "nombre": "Relaciones y Funciones",
+            "razon": "Las funciones son un tipo especial de relación entre conjuntos."
+          },
+          {
+            "id": "bases_de_datos_sql",
+            "nombre": "Fundamentos de Bases de Datos",
+            "razon": "El lenguaje SQL se basa directamente en el álgebra de conjuntos."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Diagramas de Venn",
+          "Álgebra Booleana",
+          "Tipos de datos abstractos (Set)"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "Uso en el mercado laboral",
+          "sectores": [
+            {
+              "nombre": "Data Science & Analytics",
+              "descripcion": "Limpieza de datos y segmentación de audiencias.",
+              "ejemplos": ["Filtrado de datasets", "Análisis de cohortes"]
+            },
+            {
+              "nombre": "Desarrollo Backend",
+              "descripcion": "Gestión eficiente de colecciones de datos en memoria y bases de datos.",
+              "ejemplos": ["Consultas complejas en SQL", "Optimización de búsquedas"]
+            }
+          ],
+          "empresas_referencia": [
+            "Oracle (Bases de datos)",
+            "Salesforce (Segmentación de clientes/CRM)",
+            "Rappi (Análisis de cobertura y usuarios)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que usan esto a diario",
+          "salario_promedio_mx": "$25,000 - $55,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Desarrollador SQL / Database Admin",
+              "importancia": "Crítica",
+              "uso": "Diseño de consultas y optimización de relaciones entre tablas."
+            },
+            {
+              "nombre": "Data Analyst",
+              "importancia": "Alta",
+              "uso": "Agrupación y extracción de insights de grandes volúmenes de datos."
+            },
+            {
+              "nombre": "Ingeniero de Software",
+              "importancia": "Media",
+              "uso": "Uso de estructuras de datos tipo Set/HashSet para optimizar rendimiento."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Analítica de Clientes para E-commerce",
+      "descripcion": "Eres el desarrollador backend de una tienda en línea. Tienes dos listas de IDs de clientes: los que compraron en el 'Black Friday' y los que compraron en 'Cyber Monday'. Debes obtener métricas clave usando operaciones de conjuntos.",
+      "dificultad": "básico",
+      "instrucciones": [
+        "Calcula la 'Unión': Total de clientes únicos que compraron en cualquiera de los dos eventos.",
+        "Calcula la 'Intersección': Clientes fieles que compraron en AMBOS eventos.",
+        "Calcula la 'Diferencia': Clientes que compraron en Black Friday pero NO volvieron en Cyber Monday."
+      ],
+      "codigo_plantilla": "def analizar_ventas(black_friday_ids, cyber_monday_ids):\n    \"\"\"\n    Analiza el comportamiento de clientes entre dos eventos.\n    Args:\n        black_friday_ids (list): Lista de IDs de clientes del primer evento\n        cyber_monday_ids (list): Lista de IDs de clientes del segundo evento\n    Returns:\n        dict: Diccionario con total_unicos, clientes_leales, solo_black_friday\n    \"\"\"\n    # Convierte las listas a conjuntos para operar\n    conjunto_bf = set(black_friday_ids)\n    conjunto_cm = set(cyber_monday_ids)\n    \n    # Tu código aquí\n    pass\n\n# Datos de prueba\nbf = [101, 102, 103, 104, 105]\ncm = [103, 104, 106, 107]\nprint(analizar_ventas(bf, cm))",
+      "solucion_referencia": "def analizar_ventas(black_friday_ids, cyber_monday_ids):\n    conjunto_bf = set(black_friday_ids)\n    conjunto_cm = set(cyber_monday_ids)\n    \n    return {\n        \"total_unicos\": conjunto_bf | conjunto_cm,       # Unión\n        \"clientes_leales\": conjunto_bf & conjunto_cm,    # Intersección\n        \"solo_black_friday\": conjunto_bf - conjunto_cm   # Diferencia\n    }",
+      "casos_prueba": [
+        {
+          "entrada": "bf=[1,2], cm=[2,3]",
+          "salida_esperada": "{'total_unicos': {1, 2, 3}, 'clientes_leales': {2}, 'solo_black_friday': {1}}",
+          "nota": "Intersección simple"
+        },
+        {
+          "entrada": "bf=[1,2], cm=[]",
+          "salida_esperada": "{'total_unicos': {1, 2}, 'clientes_leales': set(), 'solo_black_friday': {1, 2}}",
+          "nota": "Conjunto vacío"
+        },
+        {
+          "entrada": "bf=[1,2], cm=[1,2]",
+          "salida_esperada": "{'total_unicos': {1, 2}, 'clientes_leales': {1, 2}, 'solo_black_friday': set()}",
+          "nota": "Conjuntos idénticos"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Operaciones con Conjuntos y Diagramas de Venn",
+          "url": "https://www.youtube.com/watch?v=Kk2O19T8p2E"
+        }
+      ]
+    }
+  }
+}
