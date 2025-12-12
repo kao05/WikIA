@@ -1,0 +1,129 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "penetracion_ia",
+      "titulo": "Evolución y Desarrollo de la IA",
+      "materia": "Inteligencia Artificial y Sociedad",
+      "semestre": 1,
+      "dificultad": "básico",
+      "tiempo_estudio": "3-4 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "Historia: De Dartmouth a la IA Generativa",
+        "definicion": "Un recorrido por el desarrollo histórico de la Inteligencia Artificial, analizando cómo pasó de ser una teoría matemática a la tecnología omnipresente de hoy en día.",
+        "puntos_clave": [
+          "El nacimiento (1956): La Conferencia de Dartmouth donde se acuñó el término 'Inteligencia Artificial'.",
+          "IA Simbólica vs. Conexionismo: La batalla temprana entre sistemas basados en reglas lógicas (GOFAI) y redes neuronales.",
+          "Los Inviernos de la IA: Periodos históricos de desencanto y reducción de financiación por falta de resultados prácticos.",
+          "El Boom del Deep Learning (2012): El momento clave (AlexNet/ImageNet) donde la capacidad de cómputo (GPUs) y el Big Data hicieron viables las redes neuronales profundas.",
+          "La Era Generativa (2017-Presente): La introducción de la arquitectura 'Transformer' y el surgimiento de los LLMs (ChatGPT, Claude)."
+        ],
+        "formulas": []
+      },
+      "utilidad_practica": {
+        "titulo": "¿Por qué estudiar su historia?",
+        "descripcion": "Entender la evolución de la IA permite distinguir entre ciclos de expectativa exagerada (hype) y progreso real, además de comprender por qué la tecnología explotó ahora y no antes.",
+        "factores_habilitadores": [
+          "Ley de Moore y GPUs: El hardware necesario para el cálculo matricial paralelo.",
+          "Big Data: La disponibilidad masiva de datos gracias a Internet para entrenar modelos.",
+          "Algoritmos mejorados: Backpropagation y nuevas arquitecturas (Transformers, GANs)."
+        ],
+        "hitos_historicos": [
+          "1950: Test de Turing (¿Pueden las máquinas pensar?).",
+          "1997: Deep Blue vence a Kasparov (Fuerza bruta y búsqueda).",
+          "2016: AlphaGo vence a Lee Sedol (Aprendizaje por refuerzo y redes neuronales).",
+          "2022: Lanzamiento de ChatGPT (IA Generativa accesible al público)."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Línea de Tiempo del Conocimiento",
+        "prerequisitos": [
+          {
+            "id": "historia_computacion",
+            "nombre": "Historia de la Computación",
+            "razon": "Entender el surgimiento de los ordenadores digitales."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "oportunidades_retos",
+            "nombre": "Oportunidades y Retos",
+            "razon": "Una vez entendido el pasado, analizamos el futuro inmediato."
+          },
+          {
+            "id": "redes_neuronales",
+            "nombre": "Redes Neuronales (Semestre 4)",
+            "razon": "Profundización técnica en la arquitectura que cambió la historia reciente."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Sistemas Expertos",
+          "Test de Turing",
+          "Perceptrón",
+          "Singularidad"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Quiénes han impulsado este desarrollo?",
+          "sectores": [
+            {
+              "nombre": "Pioneros Académicos",
+              "descripcion": "Universidades que mantuvieron viva la investigación durante los 'inviernos'.",
+              "ejemplos": ["MIT", "Stanford", "Universidad de Toronto (Hinton)"]
+            },
+            {
+              "nombre": "Gigantes Tecnológicos (Big Tech)",
+              "descripcion": "Empresas que industrializaron la IA gracias a sus datos.",
+              "ejemplos": ["Google (Brain/DeepMind)", "Meta (FAIR)", "NVIDIA (Hardware)"]
+            }
+          ],
+          "figuras_clave": [
+            "Alan Turing (Padre de la computación)",
+            "Geoffrey Hinton, Yann LeCun, Yoshua Bengio (Padres del Deep Learning)",
+            "Demis Hassabis (DeepMind)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles relacionados",
+          "salario_promedio_mx": "Variable según el rol técnico",
+          "roles": [
+            {
+              "nombre": "Investigador de IA",
+              "importancia": "Alta",
+              "uso": "Crear la siguiente generación de algoritmos."
+            },
+            {
+              "nombre": "Estratega Tecnológico",
+              "importancia": "Media",
+              "uso": "Entender la madurez de la tecnología para adoptarla en empresas."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "NO_APLICA",
+      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+      "descripcion": "El estudio de la evolución de la IA es histórico y contextual. No se valida mediante un script de prueba. Una actividad adecuada sería crear una línea de tiempo interactiva o comparar cómo un programa de ajedrez de 1990 (Minimax) difiere en lógica de AlphaZero (Reinforcement Learning).",
+      "dificultad": "N/A",
+      "instrucciones": [],
+      "codigo_plantilla": "N/A",
+      "solucion_referencia": "N/A",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "articulo",
+          "titulo": "Breve historia de la Inteligencia Artificial",
+          "url": "https://www.nationalgeographic.com.es/ciencia/breve-historia-inteligencia-artificial_14419"
+        },
+        {
+          "tipo": "video",
+          "titulo": "El Invierno de la IA explicado",
+          "url": "https://www.youtube.com/watch?v=..."
+        }
+      ]
+    }
+  }
+}
