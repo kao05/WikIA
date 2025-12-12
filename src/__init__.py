@@ -50,12 +50,12 @@ def load_stylesheet(app: QApplication):
         if style_path.exists():
             with open(style_path, 'r', encoding='utf-8') as f:
                 app.setStyleSheet(f.read())
-            print("✅ Estilos cargados")
+            print(" Estilos cargados")
         else:
-            print("⚠️  Archivo de estilos no encontrado, usando estilos por defecto")
+            print(" Archivo de estilos no encontrado, usando estilos por defecto")
     
     except Exception as e:
-        print(f"⚠️  Error cargando estilos: {e}")
+        print(f" Error cargando estilos: {e}")
 
 
 def show_error_dialog(title: str, message: str):
@@ -79,20 +79,20 @@ def main():
     Función principal que inicia la aplicación.
     """
     print("\n" + "="*70)
-    print("  🧠 WIKIA COGNITIVA - Plataforma Educativa de IA")
+    print("  WIKIA COGNITIVA - Plataforma Educativa de IA")
     print("="*70 + "\n")
     
     try:
         # Crear aplicación Qt
-        print("🔄 Inicializando aplicación...")
+        print(" Inicializando aplicación...")
         app = setup_application()
         
         # Cargar estilos
-        print("🎨 Cargando estilos...")
+        print(" Cargando estilos...")
         load_stylesheet(app)
         
         # Crear ventana principal
-        print("🏗️  Creando ventana principal...")
+        print("  Creando ventana principal...")
         window = MainWindow()
         
         # Verificar que la ventana se inicializó correctamente
@@ -107,17 +107,17 @@ def main():
             return 1
         
         # Mostrar ventana
-        print("✅ Mostrando ventana principal...")
+        print(" Mostrando ventana principal...")
         window.show()
         
-        print("\n🎉 ¡Aplicación iniciada correctamente!")
+        print("\n ¡Aplicación iniciada correctamente!")
         print("="*70 + "\n")
         
         # Ejecutar loop de eventos
         return app.exec()
     
     except Exception as e:
-        print(f"\n❌ Error fatal al iniciar la aplicación:")
+        print(f"\n Error fatal al iniciar la aplicación:")
         print(f"   {str(e)}")
         print("\n" + "="*70 + "\n")
         
