@@ -1,0 +1,207 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "resolucion_problemas_algoritmos",
+      "titulo": "Resolución de Problemas y Diseño de Algoritmos",
+      "materia": "Paradigmas de Programación",
+      "semestre": 2,
+      "dificultad": "intermedio-avanzado",
+      "tiempo_estudio": "6-10 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es la resolución de problemas mediante algoritmos?",
+        "definicion": "La resolución de problemas algorítmicos consiste en formular soluciones precisas, finitas y eficientes para problemas computacionales, utilizando estructuras de datos, patrones de diseño y técnicas formales de análisis.",
+        "puntos_clave": [
+          "Un algoritmo es una secuencia finita de pasos que resuelve un problema.",
+          "La calidad de un algoritmo se evalúa por su corrección, eficiencia y claridad.",
+          "La resolución algorítmica usa estrategias como descomposición, recursión y generalización.",
+          "El análisis de complejidad (Big O) es crucial para medir eficiencia.",
+          "Los algoritmos dependen del tipo de estructura del problema (lineal, jerárquico, combinatorio…)."
+        ],
+        "formulas": [
+          "T(n) = T(n/2) + O(1)  // ejemplo de recurrencia (búsqueda binaria)",
+          "O(n log n)  // complejidad típica en algoritmos divide y vencerás"
+        ]
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve saber resolver problemas con algoritmos?",
+        "descripcion": "El diseño algorítmico permite modelar soluciones eficientes y correctas para problemas de cualquier dominio computacional.",
+        "aplicaciones_comunes": [
+          "Optimizar procesos (ordenamiento, búsqueda, filtrado).",
+          "Construcción de rutas en aplicaciones GPS.",
+          "Compresión y cifrado de datos.",
+          "Clasificación y segmentación en aprendizaje automático.",
+          "Diseño de sistemas de recomendación."
+        ],
+        "ejemplos_vida_real": [
+          "Búsqueda de productos en un e-commerce (búsqueda binaria o árboles de búsqueda).",
+          "Ordenamiento de videos en TikTok según relevancia (algoritmos de ranking).",
+          "Compresión de imágenes JPEG (transformada DCT).",
+          "Planificación de viajes en Google Maps (Dijkstra, A*)."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "estructuras_datos_basicas",
+            "nombre": "Estructuras de Datos Básicas",
+            "razon": "Los algoritmos operan sobre estructuras como listas, pilas, colas y árboles."
+          },
+          {
+            "id": "complejidad_algoritmica",
+            "nombre": "Complejidad Algorítmica",
+            "razon": "Permite evaluar eficiencia temporal y espacial."
+          },
+          {
+            "id": "recursividad",
+            "nombre": "Recursividad",
+            "razon": "Base de algoritmos divide y vencerás."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "divide_y_venceras",
+            "nombre": "Divide y Vencerás",
+            "razon": "Estrategia algorítmica fundamental en ordenamiento y búsqueda."
+          },
+          {
+            "id": "programacion_dinamica",
+            "nombre": "Programación Dinámica",
+            "razon": "Resuelve problemas optimizando subsoluciones repetitivas."
+          },
+          {
+            "id": "algoritmos_grafos",
+            "nombre": "Algoritmos en Grafos",
+            "razon": "Crucial en optimización de rutas, redes y estructuras conectadas."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Divide y vencerás",
+          "Greedy algorithms",
+          "Backtracking",
+          "Memoización",
+          "Programación dinámica",
+          "Heurísticas",
+          "NP-completitud"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa el diseño algorítmico?",
+          "sectores": [
+            {
+              "nombre": "Machine Learning",
+              "descripcion": "Optimización matemática y búsqueda eficiente en espacios de parámetros.",
+              "ejemplos": ["Gradiente descendente", "K-Means", "Árboles de decisión"]
+            },
+            {
+              "nombre": "Cíberseguridad",
+              "descripcion": "Cifrado, hashing y análisis de vulnerabilidades.",
+              "ejemplos": ["RSA", "AES", "SHA-256"]
+            },
+            {
+              "nombre": "Desarrollo de Software",
+              "descripcion": "Optimización del rendimiento en aplicaciones.",
+              "ejemplos": ["Algoritmos de caché", "Búsquedas eficientes en bases de datos"]
+            },
+            {
+              "nombre": "Robótica",
+              "descripcion": "Exploración, navegación y planificación.",
+              "ejemplos": ["A*", "RRT*", "SLAM"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (optimización de búsquedas y rutas)",
+            "Nvidia (algoritmos para paralelismo y gráficos)",
+            "IBM (ciencia de datos y HPC)",
+            "Meta (recomendación y ranking)",
+            "Microsoft Research (algoritmos de optimización)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles donde los algoritmos son esenciales",
+          "salario_promedio_mx": "$35,000 - $120,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Software",
+              "importancia": "Crítica",
+              "uso": "Construcción de sistemas eficientes."
+            },
+            {
+              "nombre": "Científico de Datos",
+              "importancia": "Alta",
+              "uso": "Optimizar procesos de aprendizaje y preprocesamiento."
+            },
+            {
+              "nombre": "Ingeniero en Machine Learning",
+              "importancia": "Crítica",
+              "uso": "Diseño de modelos optimizados y algoritmos de entrenamiento."
+            },
+            {
+              "nombre": "Desarrollador Backend",
+              "importancia": "Media",
+              "uso": "Selección adecuada de estrategias de búsqueda y estructuras."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Implementar Búsqueda Binaria y Análisis de Complejidad",
+      "descripcion": "Implementa un algoritmo de búsqueda binaria, analiza su complejidad y compara su rendimiento contra la búsqueda lineal.",
+      "dificultad": "intermedio",
+
+      "instrucciones": [
+        "Escribe una función busqueda_lineal(lista, objetivo).",
+        "Escribe una función busqueda_binaria(lista, objetivo).",
+        "La lista debe estar ordenada para búsqueda binaria.",
+        "Añade contadores de operaciones en ambas funciones.",
+        "Compara rendimiento con listas de tamaños crecientes."
+      ],
+
+      "codigo_plantilla": "def busqueda_lineal(lista, objetivo):\n    operaciones = 0\n    for i, x in enumerate(lista):\n        operaciones += 1\n        if x == objetivo:\n            return i, operaciones\n    return -1, operaciones\n\n\ndef busqueda_binaria(lista, objetivo):\n    operaciones = 0\n    izquierda, derecha = 0, len(lista) - 1\n    while izquierda <= derecha:\n        operaciones += 1\n        medio = (izquierda + derecha) // 2\n        if lista[medio] == objetivo:\n            return medio, operaciones\n        elif lista[medio] < objetivo:\n            izquierda = medio + 1\n        else:\n            derecha = medio - 1\n    return -1, operaciones\n\n# Pruebas básicas\nlista = list(range(0, 100))\nprint(busqueda_lineal(lista, 73))\nprint(busqueda_binaria(lista, 73))",
+
+      "solucion_referencia": "def busqueda_lineal(lista, objetivo):\n    operaciones = 0\n    for i, x in enumerate(lista):\n        operaciones += 1\n        if x == objetivo:\n            return i, operaciones\n    return -1, operaciones\n\n\ndef busqueda_binaria(lista, objetivo):\n    operaciones = 0\n    izquierda, derecha = 0, len(lista) - 1\n    while izquierda <= derecha:\n        operaciones += 1\n        medio = (izquierda + derecha) // 2\n        if lista[medio] == objetivo:\n            return medio, operaciones\n        elif lista[medio] < objetivo:\n            izquierda = medio + 1\n        else:\n            derecha = medio - 1\n    return -1, operaciones\n\n# Análisis comparativo\n# T_lineal = O(n)\n# T_binaria = O(log n)",
+
+      "casos_prueba": [
+        {
+          "entrada": "Lista de 100 elementos, objetivo = 73",
+          "salida_esperada": "Búsqueda lineal ~ 74 operaciones, binaria ~ 7",
+          "nota": "Diferencia de complejidades"
+        },
+        {
+          "entrada": "Lista no ordenada en búsqueda binaria",
+          "salida_esperada": "Resultado incorrecto o inconsistente",
+          "nota": "Condición necesaria de ordenamiento"
+        },
+        {
+          "entrada": "Objetivo inexistente",
+          "salida_esperada": "-1 + operaciones correspondientes",
+          "nota": "Control de errores"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "libro",
+          "titulo": "Algorithms (Sedgewick & Wayne)",
+          "url": "https://algs4.cs.princeton.edu/home/"
+        },
+        {
+          "tipo": "curso",
+          "titulo": "MIT 6.006: Introduction to Algorithms",
+          "url": "https://ocw.mit.edu"
+        }
+      ]
+    }
+  }
+}
