@@ -1,4 +1,4 @@
-# 🧠 Wikia Cognitiva
+#  Wikia Cognitiva
 
 Plataforma educativa interactiva para estudiantes de Inteligencia Artificial que conecta los conceptos teóricos con sus aplicaciones prácticas en la industria.
 
