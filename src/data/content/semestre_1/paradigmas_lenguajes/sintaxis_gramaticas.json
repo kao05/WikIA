@@ -1,0 +1,207 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "sintaxis_gramaticas",
+      "titulo": "Sintaxis y Gramáticas en Lenguajes de Programación",
+      "materia": "Paradigmas de Programación",
+      "semestre": 2,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "5-8 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué son la sintaxis y las gramáticas?",
+        "definicion": "La sintaxis define la estructura permitida de un lenguaje de programación. Las gramáticas formales son sistemas de reglas que describen cómo se forman las sentencias válidas del lenguaje. Constituyen la base para analizadores sintácticos (parsers) y compiladores.",
+        "puntos_clave": [
+          "Una gramática formal especifica cómo construir cadenas válidas.",
+          "La sintaxis regula el orden correcto de símbolos y expresiones.",
+          "La mayoría de los lenguajes modernos usan gramáticas libres de contexto (CFG).",
+          "Los analizadores sintácticos convierten secuencias de tokens en árboles sintácticos.",
+          "El análisis sintáctico precede al análisis semántico en compilación."
+        ],
+        "formulas": [
+          "G = (V, Σ, R, S)  // Definición de gramática formal",
+          "Producción: A → α",
+          "Árbol sintáctico = estructura jerárquica derivada de la gramática"
+        ]
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve estudiar sintaxis y gramáticas?",
+        "descripcion": "Permite comprender cómo los lenguajes de programación están definidos formalmente y cómo funcionan los compiladores e intérpretes.",
+        "aplicaciones_comunes": [
+          "Construcción de compiladores y analizadores de código.",
+          "Validación de entradas en lenguajes DSL (Domain-Specific Languages).",
+          "Procesamiento de expresiones matemáticas.",
+          "Diseño de lenguajes nuevos (p. ej., Python, Rust, DSLs internos).",
+          "Creación de árboles sintácticos abstractos (AST) usados en IA y análisis estático."
+        ],
+        "ejemplos_vida_real": [
+          "El parser de Python genera un AST basado en una gramática formal.",
+          "Motores como ANTLR generan parsers para lenguajes personalizados.",
+          "Validación de código en IDEs como VSCode o PyCharm.",
+          "Librerías de computación simbólica que interpretan expresiones matemáticas."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "lenguajes_formales",
+            "nombre": "Lenguajes Formales y Autómatas",
+            "razon": "Las gramáticas se definen dentro de la teoría de lenguajes formales."
+          },
+          {
+            "id": "expresiones_regulares",
+            "nombre": "Expresiones Regulares",
+            "razon": "El análisis léxico utiliza expresiones regulares antes del análisis sintáctico."
+          },
+          {
+            "id": "estructuras_datos_basicas",
+            "nombre": "Estructuras de Datos",
+            "razon": "Los árboles sintácticos requieren estructuras jerárquicas."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "analisis_sintactico",
+            "nombre": "Análisis Sintáctico",
+            "razon": "Uso directo de gramáticas en la construcción de parsers."
+          },
+          {
+            "id": "analisis_semantico",
+            "nombre": "Análisis Semántico",
+            "razon": "El AST se usa para verificar tipos y reglas semánticas."
+          },
+          {
+            "id": "construccion_compiladores",
+            "nombre": "Compiladores e Intérpretes",
+            "razon": "Las gramáticas son el punto de partida del front-end de cualquier compilador."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Gramática libre de contexto (CFG)",
+          "Notación BNF y EBNF",
+          "Derivaciones izquierda/derecha",
+          "Árboles sintácticos",
+          "Ambigüedad",
+          "Parsing LL y LR",
+          "Tokens y análisis léxico"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se utilizan gramáticas en la industria?",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Compiladores",
+              "descripcion": "Los lenguajes requieren gramáticas precisas para ser interpretados.",
+              "ejemplos": ["Compilador de C", "Parser de Python", "JVM bytecode verifier"]
+            },
+            {
+              "nombre": "Inteligencia Artificial",
+              "descripcion": "Procesamiento de lenguaje natural con gramáticas formales.",
+              "ejemplos": ["Parsing sintáctico en NLP", "Árboles sintácticos para transformers"]
+            },
+            {
+              "nombre": "Desarrollo Web",
+              "descripcion": "Interpretación de HTML/CSS/JS mediante parsers integrados en navegadores.",
+              "ejemplos": ["Motor V8", "SpiderMonkey", "WebKit parser"]
+            },
+            {
+              "nombre": "Herramientas DevOps",
+              "descripcion": "Verificación de archivos de configuración estructurados.",
+              "ejemplos": ["YAML linters", "Terraform parsers"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (Go compiler, V8)",
+            "Mozilla (Rust, SpiderMonkey)",
+            "JetBrains (análisis estático en IDEs)",
+            "Meta (Herramientas internas de parsing y análisis estático)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles donde se requiere dominio de gramáticas",
+          "salario_promedio_mx": "$40,000 - $120,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Compiladores",
+              "importancia": "Crítica",
+              "uso": "Define gramáticas, ASTs y sistemas de análisis sintáctico."
+            },
+            {
+              "nombre": "Ingeniero de Software",
+              "importancia": "Media",
+              "uso": "Construcción de validadores y DSLs."
+            },
+            {
+              "nombre": "Ingeniero en NLP",
+              "importancia": "Alta",
+              "uso": "Parsing y análisis sintáctico lingüístico."
+            },
+            {
+              "nombre": "Desarrollador de IDEs / Linter",
+              "importancia": "Alta",
+              "uso": "Análisis estático basado en gramáticas."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Definir una mini-gramática y construir su árbol sintáctico",
+      "descripcion": "Define una gramática libre de contexto para expresiones aritméticas simples (+, *, números) y construye un árbol sintáctico abstracto (AST) en Python.",
+      "dificultad": "intermedio-alto",
+
+      "instrucciones": [
+        "Define una gramática en EBNF para expresiones como: 3 + 4 * 2.",
+        "Implementa un parser recursivo-descendente para esa gramática.",
+        "Construye nodos de AST para operaciones y valores.",
+        "Evalúa el AST para obtener el resultado final.",
+        "Prueba casos como: 1+2*3, (2+2)*5, 8*3+1."
+      ],
+
+      "codigo_plantilla": "# Gramática sugerida (EBNF)\n# Expr   := Term { '+' Term }\n# Term   := Factor { '*' Factor }\n# Factor := NUM | '(' Expr ')'\n\nclass Numero:\n    def __init__(self, valor):\n        self.valor = valor\n\nclass BinOp:\n    def __init__(self, op, izq, der):\n        self.op = op\n        self.izq = izq\n        self.der = der\n\nclass Parser:\n    def __init__(self, tokens):\n        self.tokens = tokens\n        self.pos = 0\n\n    def expr(self):\n        # TODO: implementar siguiendo la gramática\n        pass\n\n    def term(self):\n        pass\n\n    def factor(self):\n        pass\n\n# Función para evaluar el AST\ndef eval_ast(nodo):\n    # TODO: implementar evaluación\n    pass",
+
+      "solucion_referencia": "# Implementación simple\nclass Numero:\n    def __init__(self, valor): self.valor = valor\n\nclass BinOp:\n    def __init__(self, op, izq, der):\n        self.op = op; self.izq = izq; self.der = der\n\nclass Parser:\n    def __init__(self, tokens):\n        self.tokens = tokens\n        self.pos = 0\n\n    def consumir(self):\n        tok = self.tokens[self.pos]\n        self.pos += 1\n        return tok\n\n    def ver(self):\n        return self.tokens[self.pos]\n\n    def expr(self):\n        nodo = self.term()\n        while self.pos < len(self.tokens) and self.ver() == '+':\n            self.consumir()\n            nodo = BinOp('+', nodo, self.term())\n        return nodo\n\n    def term(self):\n        nodo = self.factor()\n        while self.pos < len(self.tokens) and self.ver() == '*':\n            self.consumir()\n            nodo = BinOp('*', nodo, self.factor())\n        return nodo\n\n    def factor(self):\n        tok = self.consumir()\n        if tok.isdigit():\n            return Numero(int(tok))\n        elif tok == '(':\n            nodo = self.expr()\n            self.consumir()  # ')'\n            return nodo\n\n\ndef eval_ast(nodo):\n    if isinstance(nodo, Numero): return nodo.valor\n    if nodo.op == '+': return eval_ast(nodo.izq) + eval_ast(nodo.der)\n    if nodo.op == '*': return eval_ast(nodo.izq) * eval_ast(nodo.der)\n\n# Ejemplo\np = Parser(list(\"3+4*2\"))\nast = p.expr()\nprint(eval_ast(ast))  # 11",
+
+      "casos_prueba": [
+        {
+          "entrada": "3+4*2",
+          "salida_esperada": "11",
+          "nota": "Precedencia correcta de operadores"
+        },
+        {
+          "entrada": "(2+2)*5",
+          "salida_esperada": "20",
+          "nota": "Uso de paréntesis"
+        },
+        {
+          "entrada": "8*3+1",
+          "salida_esperada": "25",
+          "nota": "Asociatividad izquierda"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "herramienta",
+          "titulo": "ANTLR — Generador de Gramáticas",
+          "url": "https://www.antlr.org/"
+        },
+        {
+          "tipo": "libro",
+          "titulo": "Compilers: Principles, Techniques, and Tools (Dragon Book)",
+          "url": "https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools"
+        }
+      ]
+    }
+  }
+}
