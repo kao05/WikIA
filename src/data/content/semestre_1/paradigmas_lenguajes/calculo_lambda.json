@@ -1,0 +1,201 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "calculo_lambda",
+      "titulo": "Cálculo Lambda",
+      "materia": "Paradigmas de Programación",
+      "semestre": 2,
+      "dificultad": "alto",
+      "tiempo_estudio": "4-6 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es el cálculo lambda?",
+        "definicion": "El cálculo lambda es un sistema formal creado por Alonzo Church para estudiar computación a través de funciones. Todo programa se puede expresar únicamente con funciones, aplicación y sustitución. Es la base matemática de la programación funcional y del diseño de lenguajes modernos.",
+        "puntos_clave": [
+          "Todo en cálculo lambda es una función.",
+          "La estructura central es λx. E, que representa una función anónima.",
+          "El proceso fundamental es la reducción: aplicar funciones a argumentos.",
+          "Es equivalente en poder computacional a las máquinas de Turing.",
+          "Es la base teórica de lenguajes como Lisp, Haskell y Scala."
+        ],
+        "formulas": [
+          "Función: λx. x",
+          "Aplicación: (λx. x + 1) 3",
+          "Beta–reducción: (λx. E) v → E[x := v]"
+        ]
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "El cálculo lambda proporciona el fundamento formal de la programación funcional, optimización de código, diseño de compiladores y teoría de lenguajes.",
+        "aplicaciones_comunes": [
+          "Definición de funciones puras y sin efectos secundarios.",
+          "Evaluación por sustitución (beta-reducción).",
+          "Diseño de intérpretes y compiladores.",
+          "Modelado de lenguajes funcionales como Haskell o Scheme.",
+          "Optimización y descomposición de programas en funciones pequeñas."
+        ],
+        "ejemplos_vida_real": [
+          "Funciones lambda en Python, JavaScript y C#.",
+          "Map, filter y reduce en programación funcional.",
+          "Transformaciones del compilador (rewriting) basadas en reglas lambda.",
+          "Modelos de cómputo para IA simbólica."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "logica_basica",
+            "nombre": "Lógica Básica",
+            "razon": "El cálculo lambda se basa en funciones matemáticas y sustitución formal."
+          },
+          {
+            "id": "funciones",
+            "nombre": "Funciones",
+            "razon": "El cálculo lambda define funciones anónimas y aplicación funcional."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "programacion_funcional",
+            "nombre": "Programación Funcional",
+            "razon": "El paradigma funcional deriva directamente del cálculo lambda."
+          },
+          {
+            "id": "tipado",
+            "nombre": "Sistemas de Tipos",
+            "razon": "El cálculo lambda tipado es la base de lenguajes modernos."
+          },
+          {
+            "id": "compiladores",
+            "nombre": "Construcción de Intérpretes",
+            "razon": "Los intérpretes representan expresiones como árboles lambda."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Funciones anónimas",
+          "Álgebra de funciones",
+          "Sustitución",
+          "Reducción alfa, beta, eta",
+          "Expresividad computacional"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Compiladores e Intérpretes",
+              "descripcion": "Optimización basada en árboles sintácticos y modelos funcionales.",
+              "ejemplos": ["Clousure conversion", "Optimización de expresiones"]
+            },
+            {
+              "nombre": "Programación Funcional",
+              "descripcion": "Lenguajes basados directamente en cálculo lambda.",
+              "ejemplos": ["Haskell", "Lisp", "Scala"]
+            },
+            {
+              "nombre": "Desarrollo de Software",
+              "descripcion": "Uso cotidiano de lambdas en lenguajes modernos.",
+              "ejemplos": ["Python lambda", "JavaScript arrow functions"]
+            },
+            {
+              "nombre": "IA Simbólica",
+              "descripcion": "Expresiones lambda como base para representaciones simbólicas.",
+              "ejemplos": ["Sistemas de razonamiento", "Álgebra simbólica"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (compiladores internos, optimización IR)",
+            "Microsoft (F#, Roslyn)",
+            "Meta (Hack/Flow)",
+            "NVIDIA (modelos funcionales en optimización de kernels)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$30,000 - $90,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Compiladores",
+              "importancia": "Crítica",
+              "uso": "Aplicación de transformaciones basadas en cálculo lambda."
+            },
+            {
+              "nombre": "Desarrollador Backend",
+              "importancia": "Alta",
+              "uso": "Uso avanzado de funciones como objetos de primera clase."
+            },
+            {
+              "nombre": "Científico de Datos",
+              "importancia": "Media",
+              "uso": "Uso intensivo de funciones en pandas, NumPy y PySpark."
+            },
+            {
+              "nombre": "Ingeniero en Lenguajes de Programación",
+              "importancia": "Crítica",
+              "uso": "Diseño de sintaxis y semántica funcional."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Simular cálculo lambda con funciones anónimas en Python",
+      "descripcion": "Implementa un pequeño evaluador que realice beta-reducción de expresiones funcionales usando funciones lambda de Python.",
+      "dificultad": "intermedio-alto",
+
+      "instrucciones": [
+        "Define funciones lambda en Python que representen expresiones del cálculo lambda.",
+        "Implementa la función identidad λx. x.",
+        "Implementa la función booleana TRUE = λx. λy. x.",
+        "Implementa la función booleana FALSE = λx. λy. y.",
+        "Simula beta–reducción aplicando funciones a otros lambdas.",
+        "No uses librerías externas; debe ser un mini–intérprete manual."
+      ],
+
+      "codigo_plantilla": "## Simulación simple del cálculo lambda\n\n# Identidad: λx. x\nidentidad = lambda x: x\n\n# TRUE: λx. λy. x\nTRUE = lambda x: (lambda y: x)\n\n# FALSE: λx. λy. y\nFALSE = lambda x: (lambda y: y)\n\n# TODO: Agregar funciones adicionales y casos de prueba\n\nprint(identidad(5))        # Esperado: 5\nprint(TRUE(10)(20))        # Esperado: 10\nprint(FALSE(10)(20))       # Esperado: 20",
+
+      "solucion_referencia": "identidad = lambda x: x\nTRUE = lambda x: (lambda y: x)\nFALSE = lambda x: (lambda y: y)\n\n# Lógica básica\nNOT = lambda b: b(FALSE)(TRUE)\nAND = lambda a: (lambda b: a(b)(FALSE))\nOR  = lambda a: (lambda b: a(TRUE)(b))\n\nprint(identidad(7))        # 7\nprint(TRUE(1)(2))          # 1\nprint(FALSE(1)(2))         # 2\nprint(NOT(TRUE)(1)(0))     # 0\nprint(AND(TRUE)(FALSE)(1)(0))  # 0\nprint(OR(FALSE)(TRUE)(1)(0))   # 1",
+
+      "casos_prueba": [
+        {
+          "entrada": "identidad(3)",
+          "salida_esperada": "3",
+          "nota": "Verifica sustitución simple"
+        },
+        {
+          "entrada": "TRUE(10)(20)",
+          "salida_esperada": "10",
+          "nota": "Función booleana correcta"
+        },
+        {
+          "entrada": "NOT(TRUE)",
+          "salida_esperada": "FALSE",
+          "nota": "Construcción de operadores booleanos"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "articulo",
+          "titulo": "Church, A. (1936) — An Unsolvable Problem of Elementary Number Theory",
+          "url": "https://academic.oup.com"
+        },
+        {
+          "tipo": "curso",
+          "titulo": "MIT — Structure and Interpretation of Computer Programs (SICP)",
+          "url": "https://mitpress.mit.edu/sites/default/files/sicp/index.html"
+        }
+      ]
+    }
+  }
+}
