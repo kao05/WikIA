@@ -1,0 +1,192 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "sistemas_operativos",
+      "titulo": "Fundamentos de Sistemas Operativos",
+      "materia": "Introducción a la Programación",
+      "semestre": 1,
+      "dificultad": "medio",
+      "tiempo_estudio": "3-5 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es un sistema operativo?",
+        "definicion": "Un sistema operativo (SO) es el software fundamental que gestiona los recursos del hardware y proporciona servicios a los programas. Actúa como intermediario entre el usuario y la computadora.",
+        "puntos_clave": [
+          "Administra CPU, memoria, almacenamiento y dispositivos.",
+          "Controla procesos y concurrencia.",
+          "Proporciona seguridad, aislamiento y permisos.",
+          "Define APIs y llamadas al sistema (syscalls).",
+          "Ejemplos: Linux, Windows, macOS, Android."
+        ],
+        "formulas": []
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "Comprender los sistemas operativos es esencial para escribir programas eficientes, gestionar memoria, trabajar con archivos y comunicarse con hardware.",
+        "aplicaciones_comunes": [
+          "Administración de procesos y multiprogramación.",
+          "Gestión de memoria: stack, heap, paginación.",
+          "Entrada y salida (E/S) con archivos y dispositivos.",
+          "Control de permisos, usuarios y seguridad.",
+          "Sincronización entre procesos e hilos."
+        ],
+        "ejemplos_vida_real": [
+          "Un navegador maneja decenas de procesos simultáneos.",
+          "Un videojuego requiere manejo eficiente de hilos y E/S.",
+          "Un modelo de IA carga gigabytes de datos usando paginación.",
+          "Un servidor web atiende miles de solicitudes en paralelo."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "computacion_basica",
+            "nombre": "Computación Básica",
+            "razon": "Para comprender hardware y su interacción con software."
+          },
+          {
+            "id": "archivos_io",
+            "nombre": "Archivos y Entrada/Salida",
+            "razon": "Son servicios fundamentales del sistema operativo."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "arquitectura_computadoras",
+            "nombre": "Arquitectura de Computadoras",
+            "razon": "Los SO dependen del hardware para planificación y memoria."
+          },
+          {
+            "id": "concurrencia",
+            "nombre": "Concurrencia y Paralelismo",
+            "razon": "Procesos, hilos y sincronización son temas clave de los SO."
+          },
+          {
+            "id": "redes_computadoras",
+            "nombre": "Redes y Comunicación",
+            "razon": "Los SO gestionan sockets, puertos y protocolos."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Procesos e hilos",
+          "Planificación de CPU",
+          "Administración de memoria",
+          "Sistemas de archivos",
+          "Interfaces de sistema (syscalls)"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Inteligencia Artificial",
+              "descripcion": "Manejo de memoria, carga de datos y uso eficiente de GPU.",
+              "ejemplos": ["TensorFlow y PyTorch usan APIs del SO para memoria"]
+            },
+            {
+              "nombre": "Ciberseguridad",
+              "descripcion": "Análisis de procesos, memoria, permisos y syscalls.",
+              "ejemplos": ["Análisis forense", "Hardening de sistemas"]
+            },
+            {
+              "nombre": "Sistemas Embebidos",
+              "descripcion": "Control de tareas en tiempo real.",
+              "ejemplos": ["RTOS para robots", "Automóviles inteligentes"]
+            },
+            {
+              "nombre": "Backend y Servidores",
+              "descripcion": "Multiprocesamiento y uso de sockets.",
+              "ejemplos": ["Servidores Linux", "Sistemas distribuidos"]
+            }
+          ],
+          "empresas_referencia": [
+            "Red Hat",
+            "NVIDIA (CUDA depende del SO)",
+            "Google (infraestructura Linux)",
+            "Microsoft (Windows Kernel)",
+            "Tesla (Autopilot OS)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$25,000 - $75,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Sistemas",
+              "importancia": "Alta",
+              "uso": "Administración y optimización del SO."
+            },
+            {
+              "nombre": "Desarrollador de Software",
+              "importancia": "Media",
+              "uso": "Uso de procesos, archivos y memoria."
+            },
+            {
+              "nombre": "Especialista en Ciberseguridad",
+              "importancia": "Alta",
+              "uso": "Análisis de memoria y registros del SO."
+            },
+            {
+              "nombre": "Ingeniero en Robótica",
+              "importancia": "Media",
+              "uso": "Uso de sistemas embebidos y RTOS."
+            },
+            {
+              "nombre": "Administrador de Servidores",
+              "importancia": "Alta",
+              "uso": "Gestión de recursos y procesos a gran escala."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto en C: Crear un proceso hijo usando fork()",
+      "descripcion": "Implementa un programa que cree un proceso hijo y muestre información del proceso padre y del hijo para ilustrar la gestión de procesos del sistema operativo.",
+      "dificultad": "intermedio",
+
+      "instrucciones": [
+        "Incluye <unistd.h> y <sys/types.h>.",
+        "Usa fork() para crear un proceso hijo.",
+        "Identifica si el código está corriendo en el padre o en el hijo.",
+        "Imprime el PID del padre y del hijo.",
+        "Asegúrate de que el padre espere al hijo usando wait()."
+      ],
+
+      "codigo_plantilla": "#include <stdio.h>\n#include <unistd.h>\n#include <sys/types.h>\n#include <sys/wait.h>\n\nint main() {\n    pid_t pid = fork();\n\n    if (pid < 0) {\n        printf(\"Error al crear proceso\\n\");\n        return 1;\n    }\n    else if (pid == 0) {\n        // TODO: código del proceso hijo\n    }\n    else {\n        // TODO: código del proceso padre\n    }\n\n    return 0;\n}",
+
+      "solucion_referencia": "#include <stdio.h>\n#include <unistd.h>\n#include <sys/types.h>\n#include <sys/wait.h>\n\nint main() {\n    pid_t pid = fork();\n\n    if (pid < 0) {\n        printf(\"Error al crear proceso\\n\");\n        return 1;\n    }\n    else if (pid == 0) {\n        printf(\"Soy el proceso hijo. PID: %d, PPID: %d\\n\", getpid(), getppid());\n    }\n    else {\n        printf(\"Soy el proceso padre. PID: %d, hijo: %d\\n\", getpid(), pid);\n        wait(NULL);\n        printf(\"Proceso hijo finalizado.\\n\");\n    }\n\n    return 0;\n}",
+
+      "casos_prueba": [
+        {
+          "entrada": "Ejecución simple",
+          "salida_esperada": "Padre imprime su PID y el del hijo; hijo imprime PID y PPID.",
+          "nota": "Comprobación de creación de procesos."
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "articulo",
+          "titulo": "Operating Systems: Three Easy Pieces (OSTEP)",
+          "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+        },
+        {
+          "tipo": "documentacion",
+          "titulo": "Linux fork() manual",
+          "url": "https://man7.org/linux/man-pages/man2/fork.2.html"
+        }
+      ]
+    }
+  }
+}
