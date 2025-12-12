@@ -1,0 +1,138 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "conexion_social",
+      "titulo": "Conexión Social, Aislamiento y Filtros Algorítmicos",
+      "materia": "Inteligencia Artificial y Sociedad",
+      "semestre": 1,
+      "dificultad": "básico",
+      "tiempo_estudio": "3-5 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Cómo afecta la IA a nuestras relaciones?",
+        "definicion": "Estudio de cómo los algoritmos de recomendación y los agentes conversacionales median, sustituyen o distorsionan la interacción humana, generando fenómenos como burbujas de filtro o relaciones parasociales.",
+        "puntos_clave": [
+          "Burbujas de Filtro (Filter Bubbles): Aislamiento intelectual causado por algoritmos que solo muestran información afín al usuario.",
+          "Cámaras de Eco: Entornos donde las opiniones se refuerzan por repetición, excluyendo la disidencia.",
+          "Relaciones Parasociales con IA: Vínculos emocionales unilaterales formados con chatbots o avatares (ej. Replika).",
+          "Economía de la Atención: Diseño de sistemas optimizados para maximizar el tiempo en pantalla a costa del bienestar social."
+        ],
+        "formulas": []
+      },
+      "utilidad_practica": {
+        "titulo": "¿Por qué es importante para un desarrollador?",
+        "descripcion": "Entender estos efectos es crucial para diseñar tecnologías responsables (Humane Tech) que no exploten vulnerabilidades psicológicas ni fragmenten el tejido social.",
+        "aplicaciones_comunes": [
+          "Diseño de algoritmos de recomendación diversos (serendipity engineering).",
+          "Implementación de características de Bienestar Digital (Digital Wellbeing).",
+          "Detección de patrones de adicción en el uso de aplicaciones.",
+          "Desarrollo de chatbots terapéuticos con límites éticos claros."
+        ],
+        "ejemplos_vida_real": [
+          "El algoritmo 'For You' de TikTok y su capacidad para aislar usuarios en nichos específicos.",
+          "La radicalización política en Facebook/Twitter debido a la priorización de contenido emotivo.",
+          "Usuarios que reportan enamoramiento o dependencia emocional de IAs como Character.AI."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones en el Plan de Estudios",
+        "prerequisitos": [
+          {
+            "id": "penetracion_ia",
+            "nombre": "Penetración de la IA en la sociedad",
+            "razon": "Entender la omnipresencia de estos sistemas antes de analizar sus efectos psicológicos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "transparencia_explicabilidad",
+            "nombre": "Transparencia y Explicabilidad",
+            "razon": "Para mitigar el aislamiento, el usuario debe entender por qué ve lo que ve."
+          },
+          {
+            "id": "redes_arboles_grafos",
+            "nombre": "Redes, árboles y grafos (Semestre 4)",
+            "razon": "Base matemática para modelar redes sociales y la propagación de información."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Refuerzo intermitente (Psicología)",
+          "Análisis de Sentimientos",
+          "Teoría de Grafos (Redes de mundo pequeño)",
+          "Sesgo de confirmación"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se aplica profesionalmente?",
+          "sectores": [
+            {
+              "nombre": "Redes Sociales y Entretenimiento",
+              "descripcion": "Optimización de engagement vs. responsabilidad social.",
+              "ejemplos": ["Meta (Facebook/Instagram)", "ByteDance (TikTok)", "YouTube"]
+            },
+            {
+              "nombre": "Salud Mental Digital",
+              "descripcion": "Creación de herramientas de apoyo que no generen dependencia.",
+              "ejemplos": ["Apps de terapia (Woebot)", "Plataformas de mindfulness"]
+            },
+            {
+              "nombre": "Regulación y Ética",
+              "descripcion": "Auditoría de algoritmos para prevenir daños sociales.",
+              "ejemplos": ["Center for Humane Technology", "Organismos reguladores de la UE"]
+            }
+          ],
+          "empresas_referencia": [
+            "OpenAI (Políticas de uso de ChatGPT)",
+            "Twitter/X (Algoritmos de visibilidad)",
+            "Hinge (Diseñado para ser borrado)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles relacionados",
+          "salario_promedio_mx": "$35,000 - $80,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Investigador de Ética en IA",
+              "importancia": "Crítica",
+              "uso": "Evaluar el impacto social de nuevos modelos antes del lanzamiento."
+            },
+            {
+              "nombre": "Product Manager (Trust & Safety)",
+              "importancia": "Alta",
+              "uso": "Balancear métricas de negocio con la seguridad del usuario."
+            },
+            {
+              "nombre": "Ingeniero de Recomendación",
+              "importancia": "Alta",
+              "uso": "Ajustar pesos en algoritmos para evitar bucles de retroalimentación negativa."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "NO_APLICA",
+      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+      "descripcion": "El impacto de la IA en la conexión social es un fenómeno psicosocial complejo. No se puede reducir a un script con entradas y salidas exactas. Se estudia mediante el análisis de métricas de retención, estudios de comportamiento de usuario (UX Research) y análisis de grafos sociales, no mediante la compilación de código simple.",
+      "dificultad": "N/A",
+      "instrucciones": [],
+      "codigo_plantilla": "N/A",
+      "solucion_referencia": "N/A",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "documental",
+          "titulo": "El Dilema de las Redes Sociales (The Social Dilemma)",
+          "url": "https://www.netflix.com/title/81254224"
+        },
+        {
+          "tipo": "articulo",
+          "titulo": "Cómo funcionan los algoritmos de recomendación",
+          "url": "https://developers.google.com/machine-learning/recommendation"
+        }
+      ]
+    }
+  }
+}
