@@ -1,201 +1,202 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "Recursividad",
-      "titulo": "Recursividad en Programación",
-      "materia": "Introducción a la Programación",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "3 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la recursividad?",
-        "definicion": "La recursividad es una técnica de programación mediante la cual una función se llama a sí misma para resolver un problema descomponiéndolo en versiones más pequeñas del mismo problema.",
-        "puntos_clave": [
-          "Toda función recursiva debe tener un caso base que detenga el proceso.",
-          "Cada llamada recursiva reduce el problema hacia el caso base.",
-          "La recursión utiliza la estructura de la pila de llamadas del programa (call stack).",
-          "Es una alternativa natural a la iteración para problemas jerárquicos.",
-          "Muchos algoritmos clásicos están expresados de forma recursiva."
-        ],
-        "formulas": [
-          "Función recursiva: f(n) = f(n-1) + f(n-2)",
-          "Caso base: f(0) y f(1)"
-        ]
+  "metadata": {
+    "id": "Recursividad",
+    "titulo": "Recursividad en Programación",
+    "materia": "Introducción a la Programación",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "3 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la recursividad?",
+    "contenido": "La recursividad es una técnica de programación mediante la cual una función se llama a sí misma para resolver un problema descomponiéndolo en versiones más pequeñas del mismo problema.",
+    "puntos_clave": [
+      "Toda función recursiva debe tener un caso base que detenga el proceso.",
+      "Cada llamada recursiva reduce el problema hacia el caso base.",
+      "La recursión utiliza la estructura de la pila de llamadas del programa (call stack).",
+      "Es una alternativa natural a la iteración para problemas jerárquicos.",
+      "Muchos algoritmos clásicos están expresados de forma recursiva."
+    ],
+    "formulas": [
+      {
+        "latex": "Función recursiva: f(n) = f(n-1) + f(n-2)",
+        "descripcion": ""
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "La recursividad es útil para resolver problemas con estructura repetitiva, jerárquica o fractal, especialmente cuando el tamaño del problema puede dividirse en subproblemas similares.",
-        "aplicaciones_comunes": [
-          "Procesamiento de estructuras de árbol y grafos.",
-          "Algoritmos clásicos: QuickSort, MergeSort, DFS, BFS.",
-          "Cálculo matemático: factorial, potencias, Fibonacci.",
-          "Procesamiento de archivos y directorios.",
-          "Algoritmos de IA para búsqueda de caminos y toma de decisiones."
-        ],
-        "ejemplos_vida_real": [
-          "Buscar un archivo dentro de carpetas anidadas.",
-          "Explorar conexiones de redes sociales (amigos de amigos).",
-          "Renderizar comentarios anidados (Facebook, Reddit).",
-          "Árboles de decisión en machine learning.",
-          "Búsqueda de rutas en mapas (A* usa funciones recursivas internas)."
-        ]
-      },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "funciones",
-            "nombre": "Funciones",
-            "razon": "La recursividad es un tipo particular de llamada a funciones."
-          },
-          {
-            "id": "control_flujo",
-            "nombre": "Control de Flujo",
-            "razon": "La recursión combina condicionales y llamadas repetidas."
-          },
-          {
-            "id": "pila_llamadas",
-            "nombre": "Call Stack",
-            "razon": "Comprender la pila evita errores como overflow."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "estructuras_datos_arboles",
-            "nombre": "Árboles y Grafos",
-            "razon": "Su naturaleza jerárquica se expresa naturalmente con recursión."
-          },
-          {
-            "id": "backtracking",
-            "nombre": "Backtracking",
-            "razon": "Técnica de búsqueda basada en llamadas recursivas controladas."
-          },
-          {
-            "id": "dividir_y_conquistar",
-            "nombre": "Divide and Conquer",
-            "razon": "Muchos algoritmos D&C se expresan con recursividad."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Pila de ejecución",
-          "Stack overflow",
-          "Complejidad temporal recursiva",
-          "Recursividad directa e indirecta",
-          "Relación entre recursión e iteración"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Árboles de decisión, búsqueda en grafos y algoritmos heurísticos.",
-              "ejemplos": ["Minimax en juegos", "Algoritmos de búsqueda A*, IDDFS"]
-            },
-            {
-              "nombre": "Desarrollo de Software",
-              "descripcion": "Procesamiento de estructuras jerárquicas.",
-              "ejemplos": ["Sistemas de archivos", "Compiladores (árbol AST)"]
-            },
-            {
-              "nombre": "Ciencia de Datos",
-              "descripcion": "Modelos basados en árboles y estructuras recursivas.",
-              "ejemplos": ["Random Forest", "Árboles de decisión"]
-            },
-            {
-              "nombre": "Industria Web",
-              "descripcion": "Renderizado de elementos anidados.",
-              "ejemplos": ["HTML DOM recursivo", "Frameworks como React"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (algoritmos de búsqueda)",
-            "Meta (procesamiento de grafos sociales)",
-            "NASA (simulación científica con algoritmos recursivos)",
-            "Microsoft (compiladores y análisis de código)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$25,000 - $70,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Algoritmos",
-              "importancia": "Crítica",
-              "uso": "Optimización y diseño de algoritmos recursivos."
-            },
-            {
-              "nombre": "Científico de Datos",
-              "importancia": "Alta",
-              "uso": "Árboles de decisión y modelos jerárquicos."
-            },
-            {
-              "nombre": "Ingeniero Backend",
-              "importancia": "Media",
-              "uso": "Procesamiento jerárquico de datos."
-            },
-            {
-              "nombre": "Desarrollador de Compiladores",
-              "importancia": "Alta",
-              "uso": "Análisis sintáctico recursivo."
-            }
-          ]
-        }
+      {
+        "latex": "Caso base: f(0) y f(1)",
+        "descripcion": ""
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto en C: Recorrer directorios recursivamente (versión sencilla)",
-      "descripcion": "Implementa una función recursiva en C que muestre todos los archivos dentro de un directorio y sus subdirectorios.",
-      "dificultad": "intermedio-alto",
-
-      "instrucciones": [
-        "Usa <dirent.h> para leer archivos y carpetas.",
-        "Crea una función que reciba la ruta actual.",
-        "Si el elemento es un archivo, imprímelo.",
-        "Si es una carpeta, llama nuevamente a la función recursiva.",
-        "Evita recorrer los directorios . y ..",
-        "Prueba el programa en un directorio con subcarpetas."
-      ],
-
-      "codigo_plantilla": "#include <stdio.h>\n#include <dirent.h>\n#include <string.h>\n\nvoid recorrer(const char *ruta) {\n    // TODO: Implementación recursiva\n}\n\nint main() {\n    recorrer(\".\"); // Inicia en el directorio actual\n    return 0;\n}",
-
-      "solucion_referencia": "#include <stdio.h>\n#include <dirent.h>\n#include <string.h>\n\nvoid recorrer(const char *ruta) {\n    DIR *d = opendir(ruta);\n    if (!d) return;\n\n    struct dirent *dir;\n    while ((dir = readdir(d)) != NULL) {\n        if (strcmp(dir->d_name, \".\") == 0 || strcmp(dir->d_name, \"..\") == 0)\n            continue;\n\n        char path[512];\n        sprintf(path, \"%s/%s\", ruta, dir->d_name);\n\n        printf(\"%s\\n\", path);\n\n        if (dir->d_type == DT_DIR) {\n            recorrer(path);\n        }\n    }\n    closedir(d);\n}",
-
-      "casos_prueba": [
-        {
-          "entrada": "Directorio con 3 subcarpetas y 5 archivos",
-          "salida_esperada": "Imprime todos los elementos en orden jerárquico",
-          "nota": "Valida llamadas recursivas múltiples"
-        },
-        {
-          "entrada": "Directorio vacío",
-          "salida_esperada": "No imprime nada",
-          "nota": "Valida caso base"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "documentacion",
-          "titulo": "MIT — Recursion and the Call Stack",
-          "url": "https://ocw.mit.edu"
-        },
-        {
-          "tipo": "documentacion",
-          "titulo": "GNU — Library for directory handling",
-          "url": "https://www.gnu.org/software/libc/manual/"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "La recursividad es útil para resolver problemas con estructura repetitiva, jerárquica o fractal, especialmente cuando el tamaño del problema puede dividirse en subproblemas similares.",
+    "aplicaciones": [
+      "Procesamiento de estructuras de árbol y grafos.",
+      "Algoritmos clásicos: QuickSort, MergeSort, DFS, BFS.",
+      "Cálculo matemático: factorial, potencias, Fibonacci.",
+      "Procesamiento de archivos y directorios.",
+      "Algoritmos de IA para búsqueda de caminos y toma de decisiones."
+    ],
+    "ejemplos_vida_real": [
+      "Buscar un archivo dentro de carpetas anidadas.",
+      "Explorar conexiones de redes sociales (amigos de amigos).",
+      "Renderizar comentarios anidados (Facebook, Reddit).",
+      "Árboles de decisión en machine learning.",
+      "Búsqueda de rutas en mapas (A* usa funciones recursivas internas)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "funciones",
+        "nombre": "Funciones",
+        "razon": "La recursividad es un tipo particular de llamada a funciones."
+      },
+      {
+        "id": "control_flujo",
+        "nombre": "Control de Flujo",
+        "razon": "La recursión combina condicionales y llamadas repetidas."
+      },
+      {
+        "id": "pila_llamadas",
+        "nombre": "Call Stack",
+        "razon": "Comprender la pila evita errores como overflow."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "estructuras_datos_arboles",
+        "nombre": "Árboles y Grafos",
+        "razon": "Su naturaleza jerárquica se expresa naturalmente con recursión."
+      },
+      {
+        "id": "backtracking",
+        "nombre": "Backtracking",
+        "razon": "Técnica de búsqueda basada en llamadas recursivas controladas."
+      },
+      {
+        "id": "dividir_y_conquistar",
+        "nombre": "Divide and Conquer",
+        "razon": "Muchos algoritmos D&C se expresan con recursividad."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Pila de ejecución",
+      "Stack overflow",
+      "Complejidad temporal recursiva",
+      "Recursividad directa e indirecta",
+      "Relación entre recursión e iteración"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Árboles de decisión, búsqueda en grafos y algoritmos heurísticos.",
+        "ejemplos": [
+          "Minimax en juegos",
+          "Algoritmos de búsqueda A*, IDDFS"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Software",
+        "descripcion": "Procesamiento de estructuras jerárquicas.",
+        "ejemplos": [
+          "Sistemas de archivos",
+          "Compiladores (árbol AST)"
+        ]
+      },
+      {
+        "nombre": "Ciencia de Datos",
+        "descripcion": "Modelos basados en árboles y estructuras recursivas.",
+        "ejemplos": [
+          "Random Forest",
+          "Árboles de decisión"
+        ]
+      },
+      {
+        "nombre": "Industria Web",
+        "descripcion": "Renderizado de elementos anidados.",
+        "ejemplos": [
+          "HTML DOM recursivo",
+          "Frameworks como React"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (algoritmos de búsqueda)",
+      "Meta (procesamiento de grafos sociales)",
+      "NASA (simulación científica con algoritmos recursivos)",
+      "Microsoft (compiladores y análisis de código)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Algoritmos",
+        "importancia": "Crítica",
+        "uso": "Optimización y diseño de algoritmos recursivos."
+      },
+      {
+        "nombre": "Científico de Datos",
+        "importancia": "Alta",
+        "uso": "Árboles de decisión y modelos jerárquicos."
+      },
+      {
+        "nombre": "Ingeniero Backend",
+        "importancia": "Media",
+        "uso": "Procesamiento jerárquico de datos."
+      },
+      {
+        "nombre": "Desarrollador de Compiladores",
+        "importancia": "Alta",
+        "uso": "Análisis sintáctico recursivo."
+      }
+    ],
+    "salario_promedio_mx": "$25,000 - $70,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto en C: Recorrer directorios recursivamente (versión sencilla)",
+    "descripcion": "Implementa una función recursiva en C que muestre todos los archivos dentro de un directorio y sus subdirectorios.",
+    "dificultad": "intermedio-alto",
+    "codigo_inicial": "#include <stdio.h>\n#include <dirent.h>\n#include <string.h>\n\nvoid recorrer(const char *ruta) {\n    // TODO: Implementación recursiva\n}\n\nint main() {\n    recorrer(\".\"); // Inicia en el directorio actual\n    return 0;\n}",
+    "solucion_referencia": "#include <stdio.h>\n#include <dirent.h>\n#include <string.h>\n\nvoid recorrer(const char *ruta) {\n    DIR *d = opendir(ruta);\n    if (!d) return;\n\n    struct dirent *dir;\n    while ((dir = readdir(d)) != NULL) {\n        if (strcmp(dir->d_name, \".\") == 0 || strcmp(dir->d_name, \"..\") == 0)\n            continue;\n\n        char path[512];\n        sprintf(path, \"%s/%s\", ruta, dir->d_name);\n\n        printf(\"%s\\n\", path);\n\n        if (dir->d_type == DT_DIR) {\n            recorrer(path);\n        }\n    }\n    closedir(d);\n}",
+    "pistas": [
+      "Usa <dirent.h> para leer archivos y carpetas.",
+      "Crea una función que reciba la ruta actual.",
+      "Si el elemento es un archivo, imprímelo.",
+      "Si es una carpeta, llama nuevamente a la función recursiva.",
+      "Evita recorrer los directorios . y ..",
+      "Prueba el programa en un directorio con subcarpetas."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Directorio con 3 subcarpetas y 5 archivos",
+        "salida_esperada": "Imprime todos los elementos en orden jerárquico",
+        "explicacion": "Valida llamadas recursivas múltiples"
+      },
+      {
+        "entrada": "Directorio vacío",
+        "salida_esperada": "No imprime nada",
+        "explicacion": "Valida caso base"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "documentacion",
+        "titulo": "MIT — Recursion and the Call Stack",
+        "url": "https://ocw.mit.edu"
+      },
+      {
+        "tipo": "documentacion",
+        "titulo": "GNU — Library for directory handling",
+        "url": "https://www.gnu.org/software/libc/manual/"
+      }
+    ]
   }
 }

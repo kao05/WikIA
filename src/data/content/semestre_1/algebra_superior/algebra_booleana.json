@@ -1,164 +1,178 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "algebra_booleana",
-      "titulo": "Álgebra Booleana y Lógica Digital",
-      "materia": "Matemáticas Discretas / Diseño Lógico",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "3-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es el Álgebra Booleana?",
-        "definicion": "Es una rama del álgebra donde las variables solo pueden tener dos valores: Verdadero (1) o Falso (0). Es la base matemática de todas las computadoras modernas.",
-        "puntos_clave": [
-          "Valores Binarios: Todo se reduce a 1 (High/True) y 0 (Low/False).",
-          "Operadores Fundamentales: AND (multiplicación lógica), OR (suma lógica), NOT (negación).",
-          "Tablas de Verdad: Herramienta para visualizar todas las posibles salidas de una función lógica.",
-          "Compuertas Lógicas: La representación física de estas operaciones (AND, OR, NOT, XOR, NAND)."
-        ],
-        "formulas": [
-          "Identidad: A + 0 = A, A • 1 = A",
-          "Dominación: A + 1 = 1, A • 0 = 0",
-          "Idempotencia: A + A = A, A • A = A",
-          "Leyes de De Morgan (¡Cruciales!): (A • B)' = A' + B' y (A + B)' = A' • B'"
-        ]
+  "metadata": {
+    "id": "algebra_booleana",
+    "titulo": "Álgebra Booleana y Lógica Digital",
+    "materia": "Matemáticas Discretas / Diseño Lógico",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "3-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es el Álgebra Booleana?",
+    "contenido": "Es una rama del álgebra donde las variables solo pueden tener dos valores: Verdadero (1) o Falso (0). Es la base matemática de todas las computadoras modernas.",
+    "puntos_clave": [
+      "Valores Binarios: Todo se reduce a 1 (High/True) y 0 (Low/False).",
+      "Operadores Fundamentales: AND (multiplicación lógica), OR (suma lógica), NOT (negación).",
+      "Tablas de Verdad: Herramienta para visualizar todas las posibles salidas de una función lógica.",
+      "Compuertas Lógicas: La representación física de estas operaciones (AND, OR, NOT, XOR, NAND)."
+    ],
+    "formulas": [
+      {
+        "latex": "Identidad: A + 0 = A, A • 1 = A",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Por qué es indispensable?",
-        "descripcion": "Sin álgebra booleana, no existirían los procesadores ni el software. Se usa para simplificar circuitos y optimizar condiciones en el código.",
-        "aplicaciones_comunes": [
-          "Diseño de circuitos electrónicos (CPUs, GPUs).",
-          "Simplificación de condiciones complejas en programación (if/else).",
-          "Máscaras de red (Subnetting) en redes de computadoras.",
-          "Búsquedas avanzadas en Google (usando AND, OR, -).",
-          "Permisos de usuarios (Bitwise operations)."
-        ],
-        "ejemplos_vida_real": [
-          "Interruptores de luz conmutados (Lógica XOR).",
-          "Sistemas de seguridad: La alarma suena si (Puerta Abierta OR Ventana Rota) AND (Alarma Activada).",
-          "Buscadores: Buscar 'Python AND (Django OR Flask) -Java'."
-        ]
+      {
+        "latex": "Dominación: A + 1 = 1, A • 0 = 0",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Conexiones Académicas",
-        "prerequisitos": [
-          {
-            "id": "sistemas_numericos",
-            "nombre": "Sistemas Numéricos (Binario)",
-            "razon": "Debes entender cómo funciona el sistema binario (0 y 1)."
-          },
-          {
-            "id": "teoria_conjuntos",
-            "nombre": "Teoría de Conjuntos",
-            "razon": "Existe una relación directa: Unión=OR, Intersección=AND, Complemento=NOT."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "arquitectura_computadoras",
-            "nombre": "Arquitectura de Computadoras",
-            "razon": "Usarás compuertas lógicas para diseñar sumadores, memorias y procesadores."
-          },
-          {
-            "id": "redes_computadoras",
-            "nombre": "Redes y Subnetting",
-            "razon": "Las direcciones IP se calculan usando lógica AND bit a bit."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Mapas de Karnaugh (Simplificación)",
-          "Operadores Bitwise (Programación)",
-          "Lógica Proposicional"
-        ]
+      {
+        "latex": "Idempotencia: A + A = A, A • A = A",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Aplicación Real en Ingeniería",
-          "sectores": [
-            {
-              "nombre": "Sistemas Embebidos / IoT",
-              "descripcion": "Control de hardware a bajo nivel mediante registros y bits.",
-              "ejemplos": ["Arduino", "Controladores de semáforos"]
-            },
-            {
-              "nombre": "Desarrollo de Software (Backend/Seguridad)",
-              "descripcion": "Gestión eficiente de permisos y estados mediante banderas (flags).",
-              "ejemplos": ["Sistemas de roles de usuario (Linux chmod)", "Flags de configuración"]
-            },
-            {
-              "nombre": "Diseño de Hardware (VLSI)",
-              "descripcion": "Creación de chips y microprocesadores.",
-              "ejemplos": ["Diseño de núcleos ARM o RISC-V"]
-            }
-          ],
-          "empresas_referencia": [
-            "Intel / AMD / NVIDIA (Diseño de chips)",
-            "Cisco (Redes y enrutamiento)",
-            "Empresas de Ciberseguridad (Criptografía y lógica)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Técnicos Relacionados",
-          "salario_promedio_mx": "$30,000 - $70,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Sistemas Embebidos",
-              "importancia": "Crítica",
-              "uso": "Manipulación directa de bits para controlar hardware."
-            },
-            {
-              "nombre": "Ingeniero de Validación de Hardware",
-              "importancia": "Crítica",
-              "uso": "Pruebas lógicas de circuitos integrados."
-            },
-            {
-              "nombre": "Desarrollador Backend Senior",
-              "importancia": "Alta",
-              "uso": "Optimización lógica y manejo de permisos bitwise."
-            }
-          ]
-        }
+      {
+        "latex": "Leyes de De Morgan (¡Cruciales!): (A • B)' = A' + B' y (A + B)' = A' • B'",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Sistema de Permisos con Máscaras de Bits (Bitwise)",
-      "descripcion": "En sistemas operativos como Linux, los permisos se manejan con bits para ahorrar memoria. Tu tarea es implementar un sistema simple de gestión de permisos usando Álgebra Booleana (operadores Bitwise).",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Define tres constantes de permisos como potencias de 2: LECTURA (4), ESCRITURA (2), EJECUCION (1).",
-        "Implementa una función para 'agregar' un permiso a un usuario (Operación OR |).",
-        "Implementa una función para 'verificar' si un usuario tiene un permiso específico (Operación AND &).",
-        "Implementa una función para 'quitar' un permiso (Operación AND & con NOT ~)."
-      ],
-      "codigo_plantilla": "# Constantes (Representación binaria: 100, 010, 001)\nLECTURA = 4\nESCRITURA = 2\nEJECUCION = 1\n\ndef gestionar_permisos():\n    permisos_usuario = 0  # Inicia sin permisos\n    \n    # 1. Agregar permisos de LECTURA y EJECUCION\n    # Tu código aquí para actualizar permisos_usuario\n    \n    # 2. Verificar si tiene permiso de ESCRITURA\n    tiene_escritura = False # Tu código aquí\n    \n    return permisos_usuario, tiene_escritura\n\nprint(gestionar_permisos())",
-      "solucion_referencia": "LECTURA = 4    # 100\nESCRITURA = 2  # 010\nEJECUCION = 1  # 001\n\ndef demo_bitwise():\n    permisos = 0\n    \n    # Agregar (OR): 000 | 100 | 001 = 101 (5)\n    permisos = permisos | LECTURA | EJECUCION\n    \n    # Verificar (AND): 101 & 010 = 000 (0 -> Falso)\n    tiene_escritura = (permisos & ESCRITURA) == ESCRITURA\n    \n    # Verificar Lectura: 101 & 100 = 100 (4 -> Verdadero)\n    tiene_lectura = (permisos & LECTURA) == LECTURA\n    \n    return permisos, tiene_escritura, tiene_lectura",
-      "casos_prueba": [
-        {
-          "entrada": "Permisos: LECTURA + EJECUCION",
-          "salida_esperada": "Valor entero: 5 (Binario 101)",
-          "nota": "Suma lógica correcta"
-        },
-        {
-          "entrada": "Verificar ESCRITURA en usuario con LECTURA+EJECUCION",
-          "salida_esperada": "False",
-          "nota": "El bit del medio está apagado"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Bitwise Operators in Python (Real Python)",
-          "url": "https://realpython.com/python-bitwise-operators/"
-        },
-        {
-            "tipo": "video",
-            "titulo": "Lógica Booleana y Compuertas Lógicas",
-            "url": "https://www.youtube.com/watch?v=..."
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué es indispensable?",
+    "contenido": "Sin álgebra booleana, no existirían los procesadores ni el software. Se usa para simplificar circuitos y optimizar condiciones en el código.",
+    "aplicaciones": [
+      "Diseño de circuitos electrónicos (CPUs, GPUs).",
+      "Simplificación de condiciones complejas en programación (if/else).",
+      "Máscaras de red (Subnetting) en redes de computadoras.",
+      "Búsquedas avanzadas en Google (usando AND, OR, -).",
+      "Permisos de usuarios (Bitwise operations)."
+    ],
+    "ejemplos_vida_real": [
+      "Interruptores de luz conmutados (Lógica XOR).",
+      "Sistemas de seguridad: La alarma suena si (Puerta Abierta OR Ventana Rota) AND (Alarma Activada).",
+      "Buscadores: Buscar 'Python AND (Django OR Flask) -Java'."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Conexiones Académicas",
+    "prerequisitos": [
+      {
+        "id": "sistemas_numericos",
+        "nombre": "Sistemas Numéricos (Binario)",
+        "razon": "Debes entender cómo funciona el sistema binario (0 y 1)."
+      },
+      {
+        "id": "teoria_conjuntos",
+        "nombre": "Teoría de Conjuntos",
+        "razon": "Existe una relación directa: Unión=OR, Intersección=AND, Complemento=NOT."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "arquitectura_computadoras",
+        "nombre": "Arquitectura de Computadoras",
+        "razon": "Usarás compuertas lógicas para diseñar sumadores, memorias y procesadores."
+      },
+      {
+        "id": "redes_computadoras",
+        "nombre": "Redes y Subnetting",
+        "razon": "Las direcciones IP se calculan usando lógica AND bit a bit."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Mapas de Karnaugh (Simplificación)",
+      "Operadores Bitwise (Programación)",
+      "Lógica Proposicional"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Aplicación Real en Ingeniería",
+    "sectores": [
+      {
+        "nombre": "Sistemas Embebidos / IoT",
+        "descripcion": "Control de hardware a bajo nivel mediante registros y bits.",
+        "ejemplos": [
+          "Arduino",
+          "Controladores de semáforos"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Software (Backend/Seguridad)",
+        "descripcion": "Gestión eficiente de permisos y estados mediante banderas (flags).",
+        "ejemplos": [
+          "Sistemas de roles de usuario (Linux chmod)",
+          "Flags de configuración"
+        ]
+      },
+      {
+        "nombre": "Diseño de Hardware (VLSI)",
+        "descripcion": "Creación de chips y microprocesadores.",
+        "ejemplos": [
+          "Diseño de núcleos ARM o RISC-V"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Intel / AMD / NVIDIA (Diseño de chips)",
+      "Cisco (Redes y enrutamiento)",
+      "Empresas de Ciberseguridad (Criptografía y lógica)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Técnicos Relacionados",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Sistemas Embebidos",
+        "importancia": "Crítica",
+        "uso": "Manipulación directa de bits para controlar hardware."
+      },
+      {
+        "nombre": "Ingeniero de Validación de Hardware",
+        "importancia": "Crítica",
+        "uso": "Pruebas lógicas de circuitos integrados."
+      },
+      {
+        "nombre": "Desarrollador Backend Senior",
+        "importancia": "Alta",
+        "uso": "Optimización lógica y manejo de permisos bitwise."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $70,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Sistema de Permisos con Máscaras de Bits (Bitwise)",
+    "descripcion": "En sistemas operativos como Linux, los permisos se manejan con bits para ahorrar memoria. Tu tarea es implementar un sistema simple de gestión de permisos usando Álgebra Booleana (operadores Bitwise).",
+    "dificultad": "intermedio",
+    "codigo_inicial": "# Constantes (Representación binaria: 100, 010, 001)\nLECTURA = 4\nESCRITURA = 2\nEJECUCION = 1\n\ndef gestionar_permisos():\n    permisos_usuario = 0  # Inicia sin permisos\n    \n    # 1. Agregar permisos de LECTURA y EJECUCION\n    # Tu código aquí para actualizar permisos_usuario\n    \n    # 2. Verificar si tiene permiso de ESCRITURA\n    tiene_escritura = False # Tu código aquí\n    \n    return permisos_usuario, tiene_escritura\n\nprint(gestionar_permisos())",
+    "solucion_referencia": "LECTURA = 4    # 100\nESCRITURA = 2  # 010\nEJECUCION = 1  # 001\n\ndef demo_bitwise():\n    permisos = 0\n    \n    # Agregar (OR): 000 | 100 | 001 = 101 (5)\n    permisos = permisos | LECTURA | EJECUCION\n    \n    # Verificar (AND): 101 & 010 = 000 (0 -> Falso)\n    tiene_escritura = (permisos & ESCRITURA) == ESCRITURA\n    \n    # Verificar Lectura: 101 & 100 = 100 (4 -> Verdadero)\n    tiene_lectura = (permisos & LECTURA) == LECTURA\n    \n    return permisos, tiene_escritura, tiene_lectura",
+    "pistas": [
+      "Define tres constantes de permisos como potencias de 2: LECTURA (4), ESCRITURA (2), EJECUCION (1).",
+      "Implementa una función para 'agregar' un permiso a un usuario (Operación OR |).",
+      "Implementa una función para 'verificar' si un usuario tiene un permiso específico (Operación AND &).",
+      "Implementa una función para 'quitar' un permiso (Operación AND & con NOT ~)."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Permisos: LECTURA + EJECUCION",
+        "salida_esperada": "Valor entero: 5 (Binario 101)",
+        "explicacion": "Suma lógica correcta"
+      },
+      {
+        "entrada": "Verificar ESCRITURA en usuario con LECTURA+EJECUCION",
+        "salida_esperada": "False",
+        "explicacion": "El bit del medio está apagado"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Bitwise Operators in Python (Real Python)",
+        "url": "https://realpython.com/python-bitwise-operators/"
+      },
+      {
+        "tipo": "video",
+        "titulo": "Lógica Booleana y Compuertas Lógicas",
+        "url": "https://www.youtube.com/watch?v=..."
+      }
+    ]
   }
 }

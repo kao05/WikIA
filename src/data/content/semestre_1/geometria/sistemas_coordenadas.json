@@ -1,158 +1,172 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "sistemas_coordenadas",
-      "titulo": "Sistemas de Coordenadas y Espacios Dimensionales",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "básico",
-      "tiempo_estudio": "2-3 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "El Mapa de los Datos",
-        "definicion": "Sistema de referencia que utiliza uno o más números (coordenadas) para determinar unívocamente la posición de un punto u objeto geométrico. En computación, es la base para digitalizar la realidad.",
-        "puntos_clave": [
-          "Plano Cartesiano (2D): Ejes X (abscisas) e Y (ordenadas). Se cruzan en el Origen (0,0).",
-          "Espacio Tridimensional (3D): Agregamos el eje Z (profundidad).",
-          "Espacios n-dimensionales (Rn): En IA, trabajamos con 'hiperespacios' donde cada 'eje' es una característica (feature) de los datos (ej. edad, precio, peso...).",
-          "Distancia: La métrica para saber qué tan 'cerca' o 'lejos' están dos puntos (datos) entre sí."
-        ],
-        "formulas": [
-          "Punto 2D: P(x, y)",
-          "Punto 3D: P(x, y, z)",
-          "Distancia Euclidiana (Línea recta): d = √((x2-x1)² + (y2-y1)²)",
-          "Distancia Manhattan (Taxista): d = |x2-x1| + |y2-y1| (Muy usada en grillas y algoritmos de IA)"
-        ]
+  "metadata": {
+    "id": "sistemas_coordenadas",
+    "titulo": "Sistemas de Coordenadas y Espacios Dimensionales",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "básico",
+    "tiempo_estudio": "2-3 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "El Mapa de los Datos",
+    "contenido": "Sistema de referencia que utiliza uno o más números (coordenadas) para determinar unívocamente la posición de un punto u objeto geométrico. En computación, es la base para digitalizar la realidad.",
+    "puntos_clave": [
+      "Plano Cartesiano (2D): Ejes X (abscisas) e Y (ordenadas). Se cruzan en el Origen (0,0).",
+      "Espacio Tridimensional (3D): Agregamos el eje Z (profundidad).",
+      "Espacios n-dimensionales (Rn): En IA, trabajamos con 'hiperespacios' donde cada 'eje' es una característica (feature) de los datos (ej. edad, precio, peso...).",
+      "Distancia: La métrica para saber qué tan 'cerca' o 'lejos' están dos puntos (datos) entre sí."
+    ],
+    "formulas": [
+      {
+        "latex": "Punto 2D: P(x, y)",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Cómo se aplica en IA y Software?",
-        "descripcion": "Cualquier dato que proceses en una computadora debe ser transformado a coordenadas numéricas para ser analizado.",
-        "aplicaciones_comunes": [
-          "Visión Artificial: Una imagen es una grilla de coordenadas (x, y) donde cada punto tiene valores de color (RGB).",
-          "K-Nearest Neighbors (KNN): Algoritmo que clasifica un dato nuevo basándose en los 'puntos' más cercanos en el sistema de coordenadas.",
-          "Desarrollo de Videojuegos: Transformación entre 'Coordenadas de Mundo' (Global) y 'Coordenadas de Pantalla' (Local).",
-          "Sistemas de Recomendación: Si te gustan las pelis A y B, eres un 'punto' cercano a otro usuario que también le gustan."
-        ],
-        "ejemplos_vida_real": [
-          "GPS (Latitud, Longitud).",
-          "La pantalla de tu monitor (Pixeles: 1920x1080).",
-          "Hojas de cálculo (Filas y Columnas son coordenadas)."
-        ]
+      {
+        "latex": "Punto 3D: P(x, y, z)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "teoria_numeros",
-            "nombre": "Números Reales",
-            "razon": "Las coordenadas son pares ordenados de números reales."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "linea_recta",
-            "nombre": "Lugar Geométrico",
-            "razon": "Una vez tienes puntos, puedes unirlos para formar rectas y curvas."
-          },
-          {
-            "id": "matrices_vectores",
-            "nombre": "Álgebra Lineal",
-            "razon": "Un punto (x, y) es lo mismo que un vector [x, y]. Las transformaciones (rotar, escalar) se hacen con matrices."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Valor Absoluto",
-          "Teorema de Pitágoras",
-          "Cuadrantes"
-        ]
+      {
+        "latex": "Distancia Euclidiana (Línea recta): d = √((x2-x1)² + (y2-y1)²)",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Data Science",
-              "descripcion": "Visualización de datos (Scatter plots).",
-              "ejemplos": ["Gráficos de dispersión para encontrar clusters", "Detección de anomalías"]
-            },
-            {
-              "nombre": "Robótica",
-              "descripcion": "Odometría y Localización.",
-              "ejemplos": ["Robot aspiradora sabiendo dónde está su base (0,0)"]
-            },
-            {
-              "nombre": "Desarrollo Frontend/UI",
-              "descripcion": "Posicionamiento de elementos.",
-              "ejemplos": ["CSS (top, left, z-index)", "Canvas API"]
-            }
-          ],
-          "empresas_referencia": [
-            "Tableau / PowerBI (Visualización de coordenadas)",
-            "Unity / Unreal Engine (Sistemas de coordenadas 3D)",
-            "Google Maps (Sistemas de proyección de coordenadas)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$20,000 - $50,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Desarrollador Frontend",
-              "importancia": "Alta",
-              "uso": "Maquetación y animaciones SVG/Canvas."
-            },
-            {
-              "nombre": "Ingeniero de Datos",
-              "importancia": "Alta",
-              "uso": "Vectorización de datos para modelos."
-            },
-            {
-              "nombre": "Ingeniero de Robótica",
-              "importancia": "Crítica",
-              "uso": "Transformación de marcos de referencia."
-            }
-          ]
-        }
+      {
+        "latex": "Distancia Manhattan (Taxista): d = |x2-x1| + |y2-y1| (Muy usada en grillas y algoritmos de IA)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Métricas de Distancia para IA (Euclidiana vs Manhattan)",
-      "descripcion": "En algoritmos de Machine Learning (como KNN), la forma en que mides la distancia cambia el resultado. Vas a implementar dos formas de medir la distancia entre dos puntos en un plano cartesiano.",
-      "dificultad": "básico",
-      "instrucciones": [
-        "Punto A: (x1, y1), Punto B: (x2, y2).",
-        "1. Distancia Euclidiana (Vuelo de pájaro): d = sqrt((x2-x1)^2 + (y2-y1)^2). Úsala cuando te puedes mover en diagonal.",
-        "2. Distancia Manhattan (Taxista): d = |x2-x1| + |y2-y1|. Úsala cuando solo te puedes mover en grilla (como en una ciudad o arrays de memoria).",
-        "Implementa una función que devuelva ambas distancias."
-      ],
-      "codigo_plantilla": "import math\n\ndef calcular_distancias(x1, y1, x2, y2):\n    \"\"\"\n    Calcula distancia Euclidiana y Manhattan entre dos puntos.\n    Retorna una tupla: (euclidiana, manhattan)\n    \"\"\"\n    # 1. Euclidiana\n    euclidiana = 0 # Tu código\n    \n    # 2. Manhattan\n    manhattan = 0 # Tu código\n    \n    return euclidiana, manhattan\n\n# Pruebas: \n# P1(1, 1) y P2(4, 5). \n# Triángulo rectángulo de base 3 y altura 4. \n# Hipotenusa (Euclidiana) debería ser 5.\n# Caminata (Manhattan) debería ser 3+4 = 7.\nprint(calcular_distancias(1, 1, 4, 5))",
-      "solucion_referencia": "import math\n\ndef calcular_distancias(x1, y1, x2, y2):\n    # Diferencias\n    dx = x2 - x1\n    dy = y2 - y1\n    \n    # Euclidiana (Pitágoras)\n    euclidiana = math.sqrt(dx**2 + dy**2)\n    \n    # Manhattan (Valor Absoluto)\n    manhattan = abs(dx) + abs(dy)\n    \n    return euclidiana, manhattan",
-      "casos_prueba": [
-        {
-          "entrada": "x1=0, y1=0, x2=3, y2=4",
-          "salida_esperada": "(5.0, 7)",
-          "nota": "El clásico triángulo 3-4-5."
-        },
-        {
-          "entrada": "x1=0, y1=0, x2=10, y2=0",
-          "salida_esperada": "(10.0, 10)",
-          "nota": "En línea recta sobre un eje, ambas distancias son iguales."
-        },
-        {
-          "entrada": "x1=-2, y1=-2, x2=2, y2=2",
-          "salida_esperada": "(5.65..., 8)",
-          "nota": "Cruce de cuadrantes (negativo a positivo)."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Importancia de las métricas de distancia en Machine Learning",
-          "url": "https://www.analyticsvidhya.com/blog/2020/02/4-types-of-distance-metrics-in-machine-learning/"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Cómo se aplica en IA y Software?",
+    "contenido": "Cualquier dato que proceses en una computadora debe ser transformado a coordenadas numéricas para ser analizado.",
+    "aplicaciones": [
+      "Visión Artificial: Una imagen es una grilla de coordenadas (x, y) donde cada punto tiene valores de color (RGB).",
+      "K-Nearest Neighbors (KNN): Algoritmo que clasifica un dato nuevo basándose en los 'puntos' más cercanos en el sistema de coordenadas.",
+      "Desarrollo de Videojuegos: Transformación entre 'Coordenadas de Mundo' (Global) y 'Coordenadas de Pantalla' (Local).",
+      "Sistemas de Recomendación: Si te gustan las pelis A y B, eres un 'punto' cercano a otro usuario que también le gustan."
+    ],
+    "ejemplos_vida_real": [
+      "GPS (Latitud, Longitud).",
+      "La pantalla de tu monitor (Pixeles: 1920x1080).",
+      "Hojas de cálculo (Filas y Columnas son coordenadas)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "teoria_numeros",
+        "nombre": "Números Reales",
+        "razon": "Las coordenadas son pares ordenados de números reales."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "linea_recta",
+        "nombre": "Lugar Geométrico",
+        "razon": "Una vez tienes puntos, puedes unirlos para formar rectas y curvas."
+      },
+      {
+        "id": "matrices_vectores",
+        "nombre": "Álgebra Lineal",
+        "razon": "Un punto (x, y) es lo mismo que un vector [x, y]. Las transformaciones (rotar, escalar) se hacen con matrices."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Valor Absoluto",
+      "Teorema de Pitágoras",
+      "Cuadrantes"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Data Science",
+        "descripcion": "Visualización de datos (Scatter plots).",
+        "ejemplos": [
+          "Gráficos de dispersión para encontrar clusters",
+          "Detección de anomalías"
+        ]
+      },
+      {
+        "nombre": "Robótica",
+        "descripcion": "Odometría y Localización.",
+        "ejemplos": [
+          "Robot aspiradora sabiendo dónde está su base (0,0)"
+        ]
+      },
+      {
+        "nombre": "Desarrollo Frontend/UI",
+        "descripcion": "Posicionamiento de elementos.",
+        "ejemplos": [
+          "CSS (top, left, z-index)",
+          "Canvas API"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Tableau / PowerBI (Visualización de coordenadas)",
+      "Unity / Unreal Engine (Sistemas de coordenadas 3D)",
+      "Google Maps (Sistemas de proyección de coordenadas)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Desarrollador Frontend",
+        "importancia": "Alta",
+        "uso": "Maquetación y animaciones SVG/Canvas."
+      },
+      {
+        "nombre": "Ingeniero de Datos",
+        "importancia": "Alta",
+        "uso": "Vectorización de datos para modelos."
+      },
+      {
+        "nombre": "Ingeniero de Robótica",
+        "importancia": "Crítica",
+        "uso": "Transformación de marcos de referencia."
+      }
+    ],
+    "salario_promedio_mx": "$20,000 - $50,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Métricas de Distancia para IA (Euclidiana vs Manhattan)",
+    "descripcion": "En algoritmos de Machine Learning (como KNN), la forma en que mides la distancia cambia el resultado. Vas a implementar dos formas de medir la distancia entre dos puntos en un plano cartesiano.",
+    "dificultad": "básico",
+    "codigo_inicial": "import math\n\ndef calcular_distancias(x1, y1, x2, y2):\n    \"\"\"\n    Calcula distancia Euclidiana y Manhattan entre dos puntos.\n    Retorna una tupla: (euclidiana, manhattan)\n    \"\"\"\n    # 1. Euclidiana\n    euclidiana = 0 # Tu código\n    \n    # 2. Manhattan\n    manhattan = 0 # Tu código\n    \n    return euclidiana, manhattan\n\n# Pruebas: \n# P1(1, 1) y P2(4, 5). \n# Triángulo rectángulo de base 3 y altura 4. \n# Hipotenusa (Euclidiana) debería ser 5.\n# Caminata (Manhattan) debería ser 3+4 = 7.\nprint(calcular_distancias(1, 1, 4, 5))",
+    "solucion_referencia": "import math\n\ndef calcular_distancias(x1, y1, x2, y2):\n    # Diferencias\n    dx = x2 - x1\n    dy = y2 - y1\n    \n    # Euclidiana (Pitágoras)\n    euclidiana = math.sqrt(dx**2 + dy**2)\n    \n    # Manhattan (Valor Absoluto)\n    manhattan = abs(dx) + abs(dy)\n    \n    return euclidiana, manhattan",
+    "pistas": [
+      "Punto A: (x1, y1), Punto B: (x2, y2).",
+      "1. Distancia Euclidiana (Vuelo de pájaro): d = sqrt((x2-x1)^2 + (y2-y1)^2). Úsala cuando te puedes mover en diagonal.",
+      "2. Distancia Manhattan (Taxista): d = |x2-x1| + |y2-y1|. Úsala cuando solo te puedes mover en grilla (como en una ciudad o arrays de memoria).",
+      "Implementa una función que devuelva ambas distancias."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "x1=0, y1=0, x2=3, y2=4",
+        "salida_esperada": "(5.0, 7)",
+        "explicacion": "El clásico triángulo 3-4-5."
+      },
+      {
+        "entrada": "x1=0, y1=0, x2=10, y2=0",
+        "salida_esperada": "(10.0, 10)",
+        "explicacion": "En línea recta sobre un eje, ambas distancias son iguales."
+      },
+      {
+        "entrada": "x1=-2, y1=-2, x2=2, y2=2",
+        "salida_esperada": "(5.65..., 8)",
+        "explicacion": "Cruce de cuadrantes (negativo a positivo)."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Importancia de las métricas de distancia en Machine Learning",
+        "url": "https://www.analyticsvidhya.com/blog/2020/02/4-types-of-distance-metrics-in-machine-learning/"
+      }
+    ]
   }
 }
