@@ -12,7 +12,7 @@ from PyQt6.QtGui import QFont
 from PyQt6.QtCore import Qt
 
 # Importar ventana principal
-from ui.main_window import MainWindow
+from src.ui.main_window import MainWindow
 
 
 def setup_application():
