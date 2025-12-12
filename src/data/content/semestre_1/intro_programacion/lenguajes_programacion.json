@@ -1,0 +1,184 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "lenguajes_programacion",
+      "titulo": "Lenguajes de Programación",
+      "materia": "Introducción a la Programación",
+      "semestre": 1,
+      "dificultad": "básico-intermedio",
+      "tiempo_estudio": "3-5 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué son los lenguajes de programación?",
+        "definicion": "Un lenguaje de programación es un sistema formal compuesto por reglas sintácticas y semánticas que permiten expresar instrucciones para que una computadora las ejecute. Son el medio para comunicarle a una máquina qué tareas realizar.",
+        "puntos_clave": [
+          "Permiten escribir algoritmos de manera estructurada.",
+          "Cada lenguaje tiene sintaxis (forma) y semántica (significado).",
+          "Se clasifican por paradigma, nivel de abstracción y forma de ejecución.",
+          "Un lenguaje no es su entorno: Python ≠ Jupyter, Java ≠ IntelliJ.",
+          "Los programas pueden ejecutarse interpretados, compilados o mixtos."
+        ],
+        "formulas": []
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirven?",
+        "descripcion": "Los lenguajes de programación permiten crear software, automatizar procesos, analizar datos, desarrollar aplicaciones y resolver problemas en prácticamente cualquier área tecnológica.",
+        "aplicaciones_comunes": [
+          "Desarrollo de aplicaciones web, móviles y de escritorio.",
+          "Automatización de tareas y procesos empresariales.",
+          "Análisis de datos y Machine Learning.",
+          "Programación de hardware, robots y microcontroladores.",
+          "Desarrollo de videojuegos y simulaciones."
+        ],
+        "ejemplos_vida_real": [
+          "Python para análisis de datos y automatización.",
+          "JavaScript para aplicaciones web interactivas.",
+          "C++ para videojuegos y sistemas de alto rendimiento.",
+          "Java/Kotlin para aplicaciones Android.",
+          "R para estadística y modelos científicos."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "computacion_basica",
+            "nombre": "Computación Básica",
+            "razon": "Es necesario entender cómo funcionan las computadoras a nivel básico."
+          },
+          {
+            "id": "logica_basica",
+            "nombre": "Lógica y Pensamiento Computacional",
+            "razon": "Los lenguajes representan instrucciones basadas en lógica matemática."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "paradigmas_programacion",
+            "nombre": "Paradigmas de Programación",
+            "razon": "Cada lenguaje se enmarca en uno o varios paradigmas (imperativo, funcional, OO...)."
+          },
+          {
+            "id": "poo_basica",
+            "nombre": "Programación Orientada a Objetos",
+            "razon": "Muchos lenguajes modernos se basan en clases y objetos."
+          },
+          {
+            "id": "estructuras_datos_basicas",
+            "nombre": "Estructuras de Datos",
+            "razon": "Los lenguajes incluyen estructuras para gestionar información."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Sintaxis vs Semántica",
+          "Compilación vs Interpretación",
+          "Paradigmas de programación",
+          "Tipado estático vs dinámico",
+          "Lenguajes de alto y bajo nivel"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usan en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Desarrollo Web",
+              "descripcion": "JavaScript/TypeScript, Python, PHP para servidores y frontends.",
+              "ejemplos": ["Sistemas de e-commerce", "Aplicaciones web interactivas"]
+            },
+            {
+              "nombre": "Inteligencia Artificial y Ciencia de Datos",
+              "descripcion": "Python y R dominan por sus bibliotecas científicas.",
+              "ejemplos": ["Entrenamiento de modelos", "Procesamiento de datos masivos"]
+            },
+            {
+              "nombre": "Sistemas Embebidos",
+              "descripcion": "C y C++ se usan para programar hardware, sensores y robots.",
+              "ejemplos": ["Automóviles inteligentes", "Sistemas IoT"]
+            },
+            {
+              "nombre": "Fintech y Bancario",
+              "descripcion": "Java, Kotlin y C# por su seguridad, estabilidad y escalabilidad.",
+              "ejemplos": ["Plataformas bancarias", "Sistemas de trading"]
+            },
+            {
+              "nombre": "Videojuegos",
+              "descripcion": "C++, C#, motores como Unity o Unreal.",
+              "ejemplos": ["Sistemas de renderización", "Simulaciones físicas"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (C++, Go, Python, Java)",
+            "Meta (React/JS, Python, Rust)",
+            "Microsoft (C#, TypeScript)",
+            "NASA (C, Python para simulación científica)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$20,000 - $60,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Desarrollador de Software",
+              "importancia": "Alta",
+              "uso": "Construcción de aplicaciones en uno o varios lenguajes."
+            },
+            {
+              "nombre": "Científico de Datos",
+              "importancia": "Alta",
+              "uso": "Uso intensivo de Python y R para análisis y modelos."
+            },
+            {
+              "nombre": "Ingeniero de Sistemas Embebidos",
+              "importancia": "Crítica",
+              "uso": "Programación en C/C++ para hardware."
+            },
+            {
+              "nombre": "Ingeniero Backend",
+              "importancia": "Alta",
+              "uso": "Lenguajes robustos para sistemas de alto rendimiento."
+            },
+            {
+              "nombre": "Desarrollador de Videojuegos",
+              "importancia": "Media",
+              "uso": "Uso de lenguajes como C#, C++ en motores gráficos."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "pregunta_reflexiva",
+      "titulo": "Sin Reto de Programación — Tema Teórico",
+      "descripcion": "Este tema es altamente conceptual y no requiere un reto de programación directo.",
+      "dificultad": "conceptual",
+      "instrucciones": [
+        "Investiga un lenguaje de programación que no hayas utilizado.",
+        "Describe su paradigma, tipado, uso industrial y casos reales.",
+        "Reflexiona por qué existen tantos lenguajes diferentes y qué problemas resuelven."
+      ],
+      "codigo_plantilla": "",
+      "solucion_referencia": "",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "documentacion",
+          "titulo": "IEEE Spectrum — Ranking de Lenguajes de Programación",
+          "url": "https://spectrum.ieee.org/top-programming-languages"
+        },
+        {
+          "tipo": "documentacion",
+          "titulo": "TIOBE Index — Popularidad de Lenguajes",
+          "url": "https://www.tiobe.com/tiobe-index/"
+        }
+      ]
+    }
+  }
+}
