@@ -1,0 +1,200 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "modularidad",
+      "titulo": "Modularidad en Programación",
+      "materia": "Introducción a la Programación",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "2-4 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es la modularidad?",
+        "definicion": "La modularidad es un principio de diseño donde un programa se divide en partes independientes denominadas módulos. Cada módulo tiene una responsabilidad específica y clara, facilitando el mantenimiento, escalabilidad, depuración y reutilización del código.",
+        "puntos_clave": [
+          "Divide un sistema grande en partes pequeñas y manejables.",
+          "Cada módulo debe tener una única responsabilidad (principio SRP).",
+          "Los módulos deben ser reutilizables y fáciles de probar.",
+          "Reduce el acoplamiento y mejora la cohesión.",
+          "Fundamental para sistemas grandes y colaborativos."
+        ],
+        "formulas": []
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "La modularidad permite organizar el código de manera clara, favorece el trabajo colaborativo, facilita el mantenimiento y evita errores al reducir la complejidad.",
+        "aplicaciones_comunes": [
+          "Diseño de librerías y APIs.",
+          "Organización de proyectos grandes en múltiples archivos.",
+          "Reutilización de funciones y componentes.",
+          "Separación de lógica, interfaz y datos.",
+          "Diseño basado en capas (MVC, arquitectura hexagonal)."
+        ],
+        "ejemplos_vida_real": [
+          "Un videojuego divide su código en módulos: física, gráficos, sonido, IA.",
+          "Una aplicación web divide backend, frontend y base de datos.",
+          "Un robot divide módulos para percepción, movimiento y planificación."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "funciones",
+            "nombre": "Funciones",
+            "razon": "La modularidad se construye a partir de funciones que encapsulan tareas específicas."
+          },
+          {
+            "id": "tipos_datos",
+            "nombre": "Tipos de Datos y Variables",
+            "razon": "Los módulos trabajan sobre estructuras bien definidas."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "estructuras_datos",
+            "nombre": "Estructuras de Datos",
+            "razon": "La modularidad es clave para manipular datos complejos."
+          },
+          {
+            "id": "poo_basica",
+            "nombre": "Programación Orientada a Objetos",
+            "razon": "La POO es un paradigma modular basado en clases y objetos."
+          },
+          {
+            "id": "arquitectura_software",
+            "nombre": "Arquitectura de Software",
+            "razon": "La modularidad escala hacia arquitecturas completas."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Acoplamiento",
+          "Cohesión",
+          "Encapsulamiento",
+          "Interfaces",
+          "Separación de responsabilidades"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Software",
+              "descripcion": "Permite que equipos grandes trabajen en diferentes partes del sistema de forma independiente.",
+              "ejemplos": ["Servicios REST", "Sistemas modulares en microservicios"]
+            },
+            {
+              "nombre": "Backend y APIs",
+              "descripcion": "Diseño de endpoints y controladores desacoplados.",
+              "ejemplos": ["Django apps", "Spring Boot modules"]
+            },
+            {
+              "nombre": "Industria de Videojuegos",
+              "descripcion": "Separación entre motor gráfico, IA, física y audio.",
+              "ejemplos": ["Unity components", "Unreal Engine blueprints"]
+            },
+            {
+              "nombre": "Robótica",
+              "descripcion": "ROS utiliza módulos llamados 'nodos' para dividir la funcionalidad.",
+              "ejemplos": ["Nodo de percepción", "Nodo de navegación"]
+            },
+            {
+              "nombre": "Desarrollo Mobile",
+              "descripcion": "Separación de lógica, vistas y manejo de estado.",
+              "ejemplos": ["Android Architecture Components", "SwiftUI modular patterns"]
+            }
+          ],
+          "empresas_referencia": [
+            "Google (arquitecturas escalables para Android)",
+            "Microsoft (sistemas modulares en Azure)",
+            "Meta (sistemas distribuidos a gran escala)",
+            "Tesla (software modular para autopiloto)",
+            "Unity Technologies"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$20,000 - $60,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Desarrollador Backend",
+              "importancia": "Alta",
+              "uso": "Organización de servicios y controladores en módulos independientes."
+            },
+            {
+              "nombre": "Ingeniero de Software Full Stack",
+              "importancia": "Alta",
+              "uso": "Diseño modular de frontend y backend."
+            },
+            {
+              "nombre": "Programador de Videojuegos",
+              "importancia": "Media",
+              "uso": "Separación de sistemas: física, IA, rendering."
+            },
+            {
+              "nombre": "Ingeniero en Robótica",
+              "importancia": "Media",
+              "uso": "Modularización mediante nodos ROS."
+            },
+            {
+              "nombre": "Arquitecto de Software",
+              "importancia": "Crítica",
+              "uso": "Diseño modular a gran escala."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Crear un programa modular usando múltiples archivos",
+      "descripcion": "Implementa un programa que calcule el área de diferentes figuras geométricas usando un diseño modular dividido en múltiples archivos.",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Crea un archivo header (figuras.h) donde declares funciones para área de círculo, triángulo y rectángulo.",
+        "Implementa dichas funciones en figuras.c.",
+        "Crea un archivo principal main.c que incluya el header y llame a las funciones.",
+        "Compila todos los archivos usando un solo comando con gcc.",
+        "Prueba resultados con diferentes valores."
+      ],
+
+      "codigo_plantilla": "// figuras.h\n#ifndef FIGURAS_H\n#define FIGURAS_H\n\ndouble area_circulo(double r);\ndouble area_triangulo(double base, double altura);\ndouble area_rectangulo(double base, double altura);\n\n#endif\n\n// figuras.c\n#include \"figuras.h\"\n#define PI 3.14159\n\ndouble area_circulo(double r) { return PI * r * r; }\ndouble area_triangulo(double base, double altura) { return (base * altura) / 2; }\ndouble area_rectangulo(double base, double altura) { return base * altura; }\n\n// main.c\n#include <stdio.h>\n#include \"figuras.h\"\n\nint main() {\n    printf(\"Área círculo (r=5): %.2f\\n\", area_circulo(5));\n    printf(\"Área triángulo (3,4): %.2f\\n\", area_triangulo(3,4));\n    printf(\"Área rectángulo (2,6): %.2f\\n\", area_rectangulo(2,6));\n}\n\n// Compilación sugerida:\n// gcc main.c figuras.c -o figuras",
+      
+      "solucion_referencia": "La solución incluye separación correcta en header, implementación y archivo principal; uso del preprocesador; modularidad real con múltiples archivos.",
+      
+      "casos_prueba": [
+        {
+          "entrada": "radio=5",
+          "salida_esperada": "78.54",
+          "nota": "Validar constante PI"
+        },
+        {
+          "entrada": "triángulo base=10 altura=2",
+          "salida_esperada": "10",
+          "nota": "Test de fórmula básica"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "documentacion",
+          "titulo": "ISO C Standard — Program structure",
+          "url": "https://en.cppreference.com/w/c/language"
+        },
+        {
+          "tipo": "curso",
+          "titulo": "Modular Programming in C (MIT)",
+          "url": "https://ocw.mit.edu"
+        }
+      ]
+    }
+  }
+}
