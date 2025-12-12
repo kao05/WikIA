@@ -1,0 +1,138 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "sesgo_discriminacion",
+      "titulo": "Sesgo Algorítmico y Discriminación",
+      "materia": "Inteligencia Artificial y Sociedad",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "4-6 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es el Sesgo en la IA?",
+        "definicion": "Se refiere a errores sistemáticos y repetibles en un sistema informático que crean resultados injustos, privilegiando a un grupo de usuarios sobre otros de manera arbitraria (por raza, género, edad, etc.).",
+        "puntos_clave": [
+          "Sesgo de Datos (Historical Bias): Si entrenas una IA con datos históricos racistas o sexistas, la IA aprenderá y amplificará esos prejuicios (Garbage In, Garbage Out).",
+          "Sesgo de Representación: Cuando el conjunto de datos no refleja adecuadamente a la población real (ej. reconocimiento facial entrenado mayoritariamente con hombres blancos).",
+          "Atributos Protegidos: Variables legales que no deben influir en decisiones críticas (raza, religión, orientación sexual).",
+          "Proxies: Variables que parecen neutras pero correlacionan con atributos protegidos (ej. código postal como proxy de raza o nivel socioeconómico)."
+        ],
+        "formulas": []
+      },
+      "utilidad_practica": {
+        "titulo": "¿Por qué debemos mitigar el sesgo?",
+        "descripcion": "Para evitar daños reales a las personas, demandas legales y crisis de reputación. La IA debe ser justa (Fairness) para ser aceptada socialmente.",
+        "aplicaciones_comunes": [
+          "Auditoría de Algoritmos (Fairness Auditing).",
+          "Pre-procesamiento de datos: Técnicas de re-muestreo para equilibrar clases subrepresentadas.",
+          "Evaluación de Métricas de Equidad: Paridad demográfica, igualdad de oportunidades.",
+          "Diseño Inclusivo: Equipos diversos creando tecnología para evitar puntos ciegos."
+        ],
+        "ejemplos_vida_real": [
+          "El algoritmo de reclutamiento de Amazon que discriminaba a mujeres porque aprendió de currículums históricos mayoritariamente masculinos.",
+          "Sistemas de reconocimiento facial que fallan más frecuentemente con mujeres de piel oscura (caso Joy Buolamwini).",
+          "Algoritmos de predicción de reincidencia criminal (COMPAS) sesgados contra afroamericanos."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones Éticas y Técnicas",
+        "prerequisitos": [
+          {
+            "id": "penetracion_ia",
+            "nombre": "Penetración de la IA",
+            "razon": "Entender dónde se toman decisiones automáticas hoy en día."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "fiabilidad_calidad",
+            "nombre": "Fiabilidad y Calidad",
+            "razon": "Un modelo sesgado no es un modelo de alta calidad."
+          },
+          {
+            "id": "probabilidad_estadistica",
+            "nombre": "Probabilidad y Estadística (Semestre 3)",
+            "razon": "Base matemática para calcular disparidades estadísticas."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Acción Afirmativa Algorítmica",
+          "Explicabilidad (XAI)",
+          "Human-in-the-loop (Supervisión humana)",
+          "Justicia Matemática vs. Justicia Social"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde es crítico evitar el sesgo?",
+          "sectores": [
+            {
+              "nombre": "Recursos Humanos (HR Tech)",
+              "descripcion": "Filtrado de CVs y evaluación de candidatos.",
+              "ejemplos": ["Plataformas de contratación", "Análisis de videoentrevistas"]
+            },
+            {
+              "nombre": "Banca y Finanzas (Fintech)",
+              "descripcion": "Otorgamiento de créditos y seguros.",
+              "ejemplos": ["Scoring crediticio", "Cálculo de primas de seguro"]
+            },
+            {
+              "nombre": "Justicia y Seguridad Pública",
+              "descripcion": "Predicción de crimen y vigilancia.",
+              "ejemplos": ["Policía predictiva", "Reconocimiento facial en aeropuertos"]
+            }
+          ],
+          "empresas_referencia": [
+            "IBM (AI Fairness 360)",
+            "Google (PAIR - People + AI Research)",
+            "Algorithmic Justice League (Organización sin fines de lucro)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles especializados",
+          "salario_promedio_mx": "$40,000 - $90,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "AI Ethicist (Eticista de IA)",
+              "importancia": "Alta (Emergente)",
+              "uso": "Analizar implicaciones morales de los despliegues tecnológicos."
+            },
+            {
+              "nombre": "Auditor de Algoritmos",
+              "importancia": "Creciente",
+              "uso": "Verificar cumplimiento de normas de no discriminación."
+            },
+            {
+              "nombre": "Científico de Datos (Enfoque en Equidad)",
+              "importancia": "Crítica",
+              "uso": "Limpiar datasets y ajustar modelos para minimizar sesgos."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "NO_APLICA",
+      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+      "descripcion": "Detectar y corregir sesgos es una tarea analítica compleja que requiere contexto social, no solo código. Un ejercicio válido sería tomar un dataset real (como el 'Titanic' o 'Adult Income') y analizar si el modelo resultante es injusto para ciertos grupos demográficos usando librerías de auditoría, pero no se puede evaluar con un simple pass/fail automático.",
+      "dificultad": "N/A",
+      "instrucciones": [],
+      "codigo_plantilla": "N/A",
+      "solucion_referencia": "N/A",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Coded Bias (Documental sobre Joy Buolamwini)",
+          "url": "https://www.netflix.com/title/81328723"
+        },
+        {
+          "tipo": "herramienta",
+          "titulo": "IBM AI Fairness 360 (Demo interactiva)",
+          "url": "https://aif360.mybluemix.net/"
+        }
+      ]
+    }
+  }
+}
