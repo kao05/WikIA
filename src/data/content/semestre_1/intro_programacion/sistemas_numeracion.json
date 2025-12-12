@@ -1,0 +1,203 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "sistemas_numeracion",
+      "titulo": "Sistemas de Numeración",
+      "materia": "Introducción a la Programación",
+      "semestre": 1,
+      "dificultad": "básico-intermedio",
+      "tiempo_estudio": "2-3 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué son los sistemas de numeración?",
+        "definicion": "Un sistema de numeración es un conjunto de símbolos y reglas que permiten representar cantidades. En computación, los más usados son el sistema decimal, binario, octal y hexadecimal, esenciales para comprender cómo se almacena y procesa la información en una computadora.",
+        "puntos_clave": [
+          "El sistema decimal usa base 10 (0–9).",
+          "El sistema binario usa base 2 (0 y 1).",
+          "El sistema octal usa base 8 (0–7).",
+          "El sistema hexadecimal usa base 16 (0–9 y A–F).",
+          "Las computadoras trabajan internamente en binario.",
+          "Hexadecimal es una representación compacta del binario."
+        ],
+        "formulas": [
+          "Decimal a binario: dividir entre 2 y registrar restos.",
+          "Binario a decimal: Σ (bit * 2^posición).",
+          "Hexadecimal a decimal: Σ (dígito * 16^posición)."
+        ]
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "Los sistemas de numeración son fundamentales para comprender cómo las computadoras representan datos, cómo funciona la memoria, el almacenamiento, los registros y cómo se transmiten datos a nivel digital.",
+        "aplicaciones_comunes": [
+          "Representación de datos en memoria.",
+          "Interpretación de direcciones de memoria y registros.",
+          "Lectura de errores, depuración (debugging).",
+          "Diseño de hardware y arquitectura de computadoras.",
+          "Codificación de colores en hex (#RRGGBB).",
+          "Representación de instrucciones en código máquina."
+        ],
+        "ejemplos_vida_real": [
+          "Un color web como #FF5733 está en hexadecimal.",
+          "Las direcciones de memoria se muestran como 0x7ffeefbff6c.",
+          "Los microcontroladores usan registros binarios.",
+          "Los archivos PNG/JPEG codifican información en bytes (binario)."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "aritmetica_basica",
+            "nombre": "Aritmética Básica",
+            "razon": "Los sistemas de numeración requieren operaciones matemáticas simples."
+          },
+          {
+            "id": "computacion_basica",
+            "nombre": "Computación Básica",
+            "razon": "Es necesario entender cómo funciona la memoria y los bits."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "representacion_datos",
+            "nombre": "Representación de Datos",
+            "razon": "Enteros, caracteres y floats dependen del sistema binario."
+          },
+          {
+            "id": "arquitectura_computadoras",
+            "nombre": "Arquitectura de Computadoras",
+            "razon": "Los registros y buses operan en binario."
+          },
+          {
+            "id": "punteros",
+            "nombre": "Punteros en C",
+            "razon": "Las direcciones de memoria se representan en hexadecimal."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Bit y Byte",
+          "Complemento a 2",
+          "Representación de enteros con signo",
+          "Overflow",
+          "Códigos Hexadecimales"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Ciberseguridad",
+              "descripcion": "Interpretación de direcciones, offsets y payloads.",
+              "ejemplos": ["Análisis de memoria", "Reversing de binarios"]
+            },
+            {
+              "nombre": "Desarrollo de Sistemas Embebidos",
+              "descripcion": "Configuración de registros y máscaras de bits.",
+              "ejemplos": ["Programación de sensores", "Manipulación de registros GPIO"]
+            },
+            {
+              "nombre": "IA y Ciencia de Datos (bajo nivel)",
+              "descripcion": "Optimización de tensores y memoria.",
+              "ejemplos": ["Cálculo eficiente en GPUs", "Representación de tensores en PyTorch"]
+            },
+            {
+              "nombre": "Desarrollo Web",
+              "descripcion": "Colores y codificación de bytes en protocolos.",
+              "ejemplos": ["#FFFFFF en CSS", "Codificación Base64"]
+            }
+          ],
+          "empresas_referencia": [
+            "Intel",
+            "NVIDIA",
+            "Google (infraestructura C/C++)",
+            "ARM",
+            "Cisco"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$20,000 - $60,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero en Sistemas Embebidos",
+              "importancia": "Crítica",
+              "uso": "Configuración de puertos y registros en binario."
+            },
+            {
+              "nombre": "Especialista en Ciberseguridad",
+              "importancia": "Alta",
+              "uso": "Análisis hexadecimal de memoria y binarios."
+            },
+            {
+              "nombre": "Ingeniero de Software de Bajo Nivel",
+              "importancia": "Alta",
+              "uso": "Interacción con hardware y memoria."
+            },
+            {
+              "nombre": "Desarrollador Backend",
+              "importancia": "Media",
+              "uso": "Interpretar bytes en protocolos de red."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto en C: Convertir un número decimal a binario y hexadecimal",
+      "descripcion": "Escribe un programa en C que reciba un número entero y muestre su equivalente binario y hexadecimal sin usar funciones de librerías como itoa.",
+      "dificultad": "intermedio",
+
+      "instrucciones": [
+        "Lee un número entero del usuario.",
+        "Convierte manualmente a binario almacenando los bits en un arreglo.",
+        "Convierte manualmente a hexadecimal usando dígitos 0–9 y A–F.",
+        "No uses funciones preconstruidas como sprintf con %x.",
+        "Imprime ambas representaciones."
+      ],
+
+      "codigo_plantilla": "#include <stdio.h>\n\nvoid decimal_a_binario(int n) {\n    // TODO: implementar\n}\n\nvoid decimal_a_hex(int n) {\n    // TODO: implementar\n}\n\nint main() {\n    int n;\n    printf(\"Ingrese un número: \");\n    scanf(\"%d\", &n);\n\n    decimal_a_binario(n);\n    decimal_a_hex(n);\n\n    return 0;\n}",
+
+      "solucion_referencia": "#include <stdio.h>\n\nvoid decimal_a_binario(int n) {\n    int bits[32];\n    int i = 0;\n    if (n == 0) { printf(\"Binario: 0\\n\"); return; }\n\n    while (n > 0) {\n        bits[i++] = n % 2;\n        n /= 2;\n    }\n\n    printf(\"Binario: \");\n    for (int j = i - 1; j >= 0; j--) printf(\"%d\", bits[j]);\n    printf(\"\\n\");\n}\n\nvoid decimal_a_hex(int n) {\n    char hex[32];\n    int i = 0;\n    char tabla[] = \"0123456789ABCDEF\";\n\n    if (n == 0) { printf(\"Hex: 0\\n\"); return; }\n\n    while (n > 0) {\n        hex[i++] = tabla[n % 16];\n        n /= 16;\n    }\n\n    printf(\"Hex: \");\n    for (int j = i - 1; j >= 0; j--) printf(\"%c\", hex[j]);\n    printf(\"\\n\");\n}",
+
+      "casos_prueba": [
+        {
+          "entrada": 15,
+          "salida_esperada": "Binario: 1111, Hex: F",
+          "nota": "Caso simple"
+        },
+        {
+          "entrada": 255,
+          "salida_esperada": "Binario: 11111111, Hex: FF",
+          "nota": "Un byte completo"
+        },
+        {
+          "entrada": 4095,
+          "salida_esperada": "Binario: 111111111111, Hex: FFF",
+          "nota": "Límite de 12 bits"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "documentacion",
+          "titulo": "Sistema Binario — IEEE",
+          "url": "https://ieeexplore.ieee.org"
+        },
+        {
+          "tipo": "articulo",
+          "titulo": "Hexadecimal Representation in Computing",
+          "url": "https://developer.arm.com"
+        }
+      ]
+    }
+  }
+}
