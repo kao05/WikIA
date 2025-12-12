@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Script para corregir la estructura de los archivos JSON
+Script para corregir la estructura de los archivos JSON.
 
-Este script transforma archivos JSON con estructura anidada
-en "modulo_educativo" a la estructura plana esperada por los modelos.
+Ahora sobrescribe los archivos originales (sin crear copias _fixed) para
+garantizar que todo el contenido quede listo para la aplicación sin
+tareas manuales de limpieza.
 """
 
 import json
@@ -202,8 +203,8 @@ def transformar_formulas(formulas: list) -> list:
     return formulas_transformadas
 
 
-def procesar_archivo(ruta: Path, sobrescribir: bool = False):
-    """Procesa un archivo JSON individual"""
+def procesar_archivo(ruta: Path):
+    """Procesa un archivo JSON individual y lo sobrescribe"""
     print(f"\n📄 Procesando: {ruta.name}")
     
     try:
@@ -214,17 +215,11 @@ def procesar_archivo(ruta: Path, sobrescribir: bool = False):
         # Corregir estructura
         data_corregida = corregir_estructura(data)
         
-        # Determinar ruta de salida
-        if sobrescribir:
-            ruta_salida = ruta
-        else:
-            ruta_salida = ruta.parent / f"{ruta.stem}_fixed.json"
-        
-        # Guardar
-        with open(ruta_salida, 'w', encoding='utf-8') as f:
+        # Guardar siempre en el mismo archivo para no dejar copias
+        with open(ruta, 'w', encoding='utf-8') as f:
             json.dump(data_corregida, f, ensure_ascii=False, indent=2)
         
-        print(f"  ✅ Guardado en: {ruta_salida.name}")
+        print(f"  ✅ Guardado en: {ruta.name}")
         return True
         
     except Exception as e:
@@ -232,7 +227,7 @@ def procesar_archivo(ruta: Path, sobrescribir: bool = False):
         return False
 
 
-def procesar_directorio(directorio: Path, sobrescribir: bool = False):
+def procesar_directorio(directorio: Path):
     """Procesa todos los archivos JSON en un directorio recursivamente"""
     archivos_procesados = 0
     archivos_exitosos = 0
@@ -248,7 +243,7 @@ def procesar_directorio(directorio: Path, sobrescribir: bool = False):
             continue
         
         archivos_procesados += 1
-        if procesar_archivo(archivo, sobrescribir):
+        if procesar_archivo(archivo):
             archivos_exitosos += 1
     
     return archivos_procesados, archivos_exitosos
@@ -264,14 +259,11 @@ def main():
         epilog="""
 Ejemplos:
 
-  Procesar un archivo (crea copia _fixed):
-    python fix_json_structure.py archivo.json
+  Procesar un archivo (sobrescribe el original):
+    python fix_json_data.py archivo.json
   
-  Procesar directorio completo:
-    python fix_json_structure.py src/data/content/
-  
-  Sobrescribir archivos originales (CUIDADO):
-    python fix_json_structure.py src/data/content/ --sobrescribir
+  Procesar directorio completo (sobrescribe todos los .json excepto curriculum):
+    python fix_json_data.py src/data/content/
         """
     )
     
@@ -279,12 +271,6 @@ Ejemplos:
         'ruta',
         type=str,
         help='Ruta al archivo o directorio a procesar'
-    )
-    
-    parser.add_argument(
-        '--sobrescribir',
-        action='store_true',
-        help='Sobrescribir archivos originales (por defecto crea copias _fixed)'
     )
     
     args = parser.parse_args()
@@ -301,7 +287,7 @@ Ejemplos:
     
     if ruta.is_file():
         # Procesar archivo individual
-        if procesar_archivo(ruta, args.sobrescribir):
+        if procesar_archivo(ruta):
             print("\n✅ Archivo procesado exitosamente")
         else:
             print("\n❌ Error procesando archivo")
@@ -310,12 +296,9 @@ Ejemplos:
     elif ruta.is_dir():
         # Procesar directorio
         print(f"\n📁 Procesando directorio: {ruta}")
-        if args.sobrescribir:
-            print("⚠️  MODO: Sobrescribir archivos originales")
-        else:
-            print("ℹ️  MODO: Crear copias con sufijo _fixed")
+        print("⚠️  MODO: Sobrescribir archivos originales")
         
-        total, exitosos = procesar_directorio(ruta, args.sobrescribir)
+        total, exitosos = procesar_directorio(ruta)
         
         print("\n" + "="*70)
         print(f"📊 RESUMEN")
