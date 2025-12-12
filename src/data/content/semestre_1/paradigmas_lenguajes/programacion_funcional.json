@@ -1,0 +1,202 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "programacion_funcional",
+      "titulo": "Programación Funcional",
+      "materia": "Paradigmas de Programación",
+      "semestre": 2,
+      "dificultad": "avanzado",
+      "tiempo_estudio": "6-10 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es la Programación Funcional?",
+        "definicion": "La Programación Funcional (PF) es un paradigma donde los programas se construyen aplicando funciones puras y evitando estados mutables. Se basa en principios matemáticos derivados del cálculo lambda.",
+        "puntos_clave": [
+          "Las funciones son ciudadanos de primera clase (first-class functions).",
+          "Se evita o minimiza la mutabilidad de variables.",
+          "Una función pura siempre devuelve el mismo resultado dado el mismo input.",
+          "La ausencia de efectos secundarios facilita el razonamiento, pruebas y concurrencia.",
+          "Estructuras funcionales clave: funciones de orden superior, composición, inmutabilidad, recursión."
+        ],
+        "formulas": [
+          "f(x) = y  // Función pura",
+          "g = f ∘ h  // Composición de funciones"
+        ]
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve la Programación Funcional?",
+        "descripcion": "La PF es útil para construir sistemas confiables, fáciles de paralelizar y con menor probabilidad de errores relacionados con estados compartidos.",
+        "aplicaciones_comunes": [
+          "Procesamiento masivo de datos en paralelo (Spark, Flink).",
+          "Desarrollo backend tolerante a fallos (Erlang, Elixir).",
+          "Deep Learning y frameworks basados en grafos funcionales (TensorFlow 1.x, JAX).",
+          "Transformaciones inmutables de colecciones.",
+          "Construcción de compiladores y analizadores sintácticos."
+        ],
+        "ejemplos_vida_real": [
+          "MapReduce: paradigma funcional aplicado a Big Data.",
+          "Sistemas distribuidos de telecomunicaciones (Erlang en WhatsApp).",
+          "Infraestructura de microservicios tolerante a fallos (Elixir/Phoenix).",
+          "Motores de recomendación que usan funciones puras sobre vectores."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "calculo_lambda",
+            "nombre": "Cálculo Lambda",
+            "razon": "La PF se fundamenta en funciones anónimas y sustitución lambda."
+          },
+          {
+            "id": "recursividad",
+            "nombre": "Recursividad",
+            "razon": "La recursión reemplaza bucles mutables en PF."
+          },
+          {
+            "id": "tipos_de_datos",
+            "nombre": "Tipos de Datos",
+            "razon": "Los lenguajes funcionales utilizan fuertemente tipos algebraicos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "monadas",
+            "nombre": "Mónadas",
+            "razon": "Permiten modelar efectos en entornos funcionales puros."
+          },
+          {
+            "id": "programacion_reactiva",
+            "nombre": "Programación Reactiva",
+            "razon": "Basada en flujos funcionales y composición."
+          },
+          {
+            "id": "funciones_orden_superior",
+            "nombre": "Funciones de Orden Superior",
+            "razon": "Pilar técnico para abstracciones avanzadas."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Inmutabilidad",
+          "Funciones puras",
+          "Evaluación perezosa",
+          "Transparencia referencial",
+          "Composición de funciones",
+          "Currificación (currying)",
+          "Closures"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa la Programación Funcional en la industria?",
+          "sectores": [
+            {
+              "nombre": "Big Data",
+              "descripcion": "Procesamientos masivos en paralelo usando transformaciones funcionales.",
+              "ejemplos": ["Apache Spark (RDD Functional API)", "Hadoop MapReduce"]
+            },
+            {
+              "nombre": "Sistemas Distribuidos",
+              "descripcion": "Erlang y Elixir permiten tolerancia a fallos mediante funciones puras.",
+              "ejemplos": ["WhatsApp backend", "Discord infraestructura de mensajes"]
+            },
+            {
+              "nombre": "Finanzas",
+              "descripcion": "Modelos matemáticos expresados como funciones inmutables.",
+              "ejemplos": ["Goldman Sachs (Scala)", "Morgan Stanley (F#)"]
+            },
+            {
+              "nombre": "Machine Learning",
+              "descripcion": "Modelos como funciones puras sobre tensores.",
+              "ejemplos": ["JAX", "PyTorch (autograd con funciones puras)"]
+            }
+          ],
+          "empresas_referencia": [
+            "Netflix (Scala)",
+            "Twitter (Scala para backend)",
+            "Meta (Haskell en investigación)",
+            "WhatsApp (Erlang)",
+            "Google (JAX y TensorFlow funcional)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles donde la PF es relevante",
+          "salario_promedio_mx": "$40,000 - $120,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Datos",
+              "importancia": "Alta",
+              "uso": "Procesamiento funcional paralelo."
+            },
+            {
+              "nombre": "Backend Engineer",
+              "importancia": "Alta",
+              "uso": "Sistemas concurrentes seguros."
+            },
+            {
+              "nombre": "Ingeniero de Infraestructura",
+              "importancia": "Media",
+              "uso": "Automatización inmutable y pipelines funcionales."
+            },
+            {
+              "nombre": "Investigador en ML",
+              "importancia": "Alta",
+              "uso": "Modelos matemáticos declarativos con funciones puras."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Implementar un mini-MapReduce funcional en Python",
+      "descripcion": "Construye una función map_reduce que acepte una lista, una función map y una función reduce. El reto consiste en aplicar principios funcionales: inmutabilidad, funciones puras y composición.",
+      "dificultad": "alto",
+
+      "instrucciones": [
+        "Define una función map_reduce(datos, fun_map, fun_reduce).",
+        "fun_map debe aplicarse a cada elemento de forma pura.",
+        "El resultado del map debe reducirse usando fun_reduce.",
+        "No uses variables globales ni mutación de estado.",
+        "No utilices ciclos for tradicionales; usa map(), reduce() o comprensión funcional."
+      ],
+
+      "codigo_plantilla": "from functools import reduce\n\ndef map_reduce(datos, fun_map, fun_reduce):\n    # TODO: aplicar map y luego reduce\n    pass\n\n# Ejemplo esperado\ndatos = [1, 2, 3, 4, 5]\nresultado = map_reduce(datos, lambda x: x * 2, lambda a, b: a + b)\nprint(resultado)  # 30",
+
+      "solucion_referencia": "from functools import reduce\n\ndef map_reduce(datos, fun_map, fun_reduce):\n    mapeados = list(map(fun_map, datos))\n    return reduce(fun_reduce, mapeados)\n\n# Prueba\ndatos = [1, 2, 3, 4, 5]\nprint(map_reduce(datos, lambda x: x * 2, lambda a, b: a + b))  # 30",
+
+      "casos_prueba": [
+        {
+          "entrada": "[1,2,3], map=lambda x: x+1, reduce=sum",
+          "salida_esperada": "9",
+          "nota": "Transformación + reducción"
+        },
+        {
+          "entrada": "[], map=lambda x: x, reduce=lambda a,b:a+b",
+          "salida_esperada": "Error controlado o caso vacío",
+          "nota": "Casos base"
+        }
+      ],
+
+      "recursos_adicionales": [
+        {
+          "tipo": "libro",
+          "titulo": "Structure and Interpretation of Computer Programs (SICP)",
+          "url": "https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html"
+        },
+        {
+          "tipo": "documentacion",
+          "titulo": "Haskell 2010 Language Report",
+          "url": "https://www.haskell.org"
+        }
+      ]
+    }
+  }
+}
