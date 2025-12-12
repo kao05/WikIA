@@ -169,7 +169,7 @@
         "Ejecuta consultas como: ?- abuelo(X, maria)."
       ],
 
-      "codigo_plantilla": "% Hechos\% padre(juan, maria).\n% padre(juan, jose).\n% madre(ana, maria).\n% TODO: Añadir más hechos\n\n% Reglas\n% hermano(X, Y) :- ...\n% abuelo(X, Y) :- ...\n% ancestro(X, Y) :- ...  % Recursión lógica\n\n% Consultas esperadas:\n% ?- abuelo(X, maria).\n% ?- ancestro(X, jose).",
+      "codigo_plantilla": "% Hechos\n% padre(juan, maria).\n% padre(juan, jose).\n% madre(ana, maria).\n% TODO: Añadir más hechos\n\n% Reglas\n% hermano(X, Y) :- ...\n% abuelo(X, Y) :- ...\n% ancestro(X, Y) :- ...  % Recursión lógica\n\n% Consultas esperadas:\n% ?- abuelo(X, maria).\n% ?- ancestro(X, jose).",
 
       "solucion_referencia": "% Hechos\npadre(juan, maria).\npadre(juan, jose).\npadre(carlos, juan).\nmadre(ana, maria).\nmadre(ana, jose).\nmadre(luisa, juan).\n\n% Reglas\nhermano(X, Y) :- padre(P, X), padre(P, Y), madre(M, X), madre(M, Y), X \\= Y.\nabuelo(X, Y) :- padre(X, P), padre(P, Y).\nabuelo(X, Y) :- padre(X, P), madre(P, Y).\nancestro(X, Y) :- padre(X, Y).\nancestro(X, Y) :- madre(X, Y).\nancestro(X, Y) :- padre(X, Z), ancestro(Z, Y).\nancestro(X, Y) :- madre(X, Z), ancestro(Z, Y).",
 

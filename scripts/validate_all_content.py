@@ -194,7 +194,7 @@ class ValidadorJSON:
             semestre: Si se especifica, solo valida ese semestre (1-4)
         """
         print(f"\n{Colors.BOLD}{Colors.BLUE}{'='*70}{Colors.END}")
-        print(f"{Colors.BOLD}{Colors.BLUE}🔍 VALIDADOR DE CONTENIDO - WIKIA COGNITIVA{Colors.END}")
+        print(f"{Colors.BOLD}{Colors.BLUE} VALIDADOR DE CONTENIDO - WIKIA COGNITIVA{Colors.END}")
         print(f"{Colors.BOLD}{Colors.BLUE}{'='*70}{Colors.END}\n")
         
         # Determinar qué semestres validar
@@ -220,7 +220,7 @@ class ValidadorJSON:
                     continue
                 
                 materia_nombre = materia_dir.name.replace('_', ' ').title()
-                print(f"\n  📖 {Colors.BOLD}{materia_nombre}{Colors.END}")
+                print(f"\n   {Colors.BOLD}{materia_nombre}{Colors.END}")
                 
                 # Buscar todos los archivos JSON en la materia
                 archivos_json = list(materia_dir.glob("*.json"))
