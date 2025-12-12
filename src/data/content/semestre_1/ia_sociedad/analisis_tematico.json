@@ -1,0 +1,133 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "analisis_tematico",
+      "titulo": "Análisis Temático Cualitativo",
+      "materia": "Metodología de la Investigación / UX Research",
+      "semestre": 3,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "4-6 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué es el Análisis Temático?",
+        "definicion": "Es un método para identificar, analizar y reportar patrones (temas) dentro de datos cualitativos (entrevistas, textos, observaciones), interpretando diversos aspectos del tema de investigación.",
+        "puntos_clave": [
+          "Busca patrones de significado (temas) a través de un conjunto de datos.",
+          "Es flexible: no está atado a un marco teórico específico.",
+          "Sigue generalmente las 6 fases de Braun & Clarke (Familiarización, Codificación, Búsqueda, Revisión, Definición, Reporte).",
+          "Se diferencia del análisis de contenido en que es más descriptivo y cualitativo, menos enfocado en contar frecuencias de palabras."
+        ],
+        "formulas": []
+      },
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "Permite organizar y describir grandes conjuntos de datos cualitativos en detalle e interpretar aspectos del fenómeno estudiado.",
+        "aplicaciones_comunes": [
+          "Investigación de experiencia de usuario (UX Research) para encontrar puntos de dolor.",
+          "Análisis de feedback de clientes en encuestas abiertas.",
+          "Estudios sociológicos y psicológicos sobre comportamientos.",
+          "Evaluación de programas educativos o de salud."
+        ],
+        "ejemplos_vida_real": [
+          "Analizar transcripciones de 20 entrevistas para entender por qué los usuarios abandonan un carrito de compras.",
+          "Identificar temas recurrentes en los comentarios de una red social sobre un evento político.",
+          "Categorizar las quejas de soporte técnico para mejorar un producto."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "recoleccion_datos_cualitativos",
+            "nombre": "Recolección de Datos Cualitativos",
+            "razon": "Debes tener datos (entrevistas, focus groups) antes de poder analizarlos."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "teoria_fundamentada",
+            "nombre": "Teoría Fundamentada (Grounded Theory)",
+            "razon": "Un enfoque más riguroso para construir teoría a partir de datos."
+          },
+          {
+            "id": "software_atlas_ti",
+            "nombre": "Uso de Software (ATLAS.ti / NVivo)",
+            "razon": "Herramientas digitales para gestionar el análisis temático a gran escala."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Codificación (Coding)",
+          "Saturación de datos",
+          "Deductivo vs Inductivo",
+          "Mapa temático"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usa en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Diseño de Producto y Tecnología (UX)",
+              "descripcion": "Comprensión profunda de las necesidades del usuario.",
+              "ejemplos": ["Spotify (Investigación de hábitos de escucha)", "Airbnb (Experiencia del huésped)"]
+            },
+            {
+              "nombre": "Marketing e Investigación de Mercados",
+              "descripcion": "Análisis de percepción de marca y sentimiento.",
+              "ejemplos": ["Focus groups de nuevos productos", "Análisis de reputación de marca"]
+            },
+            {
+              "nombre": "Salud y Ciencias Sociales",
+              "descripcion": "Entendimiento de experiencias de pacientes y comunidades.",
+              "ejemplos": ["Estudios de impacto social", "Experiencia del paciente en hospitales"]
+            }
+          ],
+          "empresas_referencia": [
+            "IDEO (Design Thinking)",
+            "Nielsen (Investigación de mercados)",
+            "Google (User Experience Research)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$20,000 - $55,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "UX Researcher",
+              "importancia": "Crítica",
+              "uso": "Sintetizar hallazgos de entrevistas para guiar el diseño."
+            },
+            {
+              "nombre": "Analista de Investigación de Mercado",
+              "importancia": "Alta",
+              "uso": "Identificar tendencias cualitativas en consumidores."
+            },
+            {
+              "nombre": "Product Manager",
+              "importancia": "Media",
+              "uso": "Entender el 'por qué' detrás de las métricas de uso."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "NO_APLICA",
+      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+      "descripcion": "El Análisis Temático es una metodología interpretativa que depende del juicio humano, el contexto y la reflexividad. A diferencia de los algoritmos, no existe una única 'salida correcta' determinista que pueda validarse con un script de prueba automatizado. Se aprende mejor realizando un análisis manual de textos.",
+      "dificultad": "N/A",
+      "instrucciones": [],
+      "codigo_plantilla": "N/A",
+      "solucion_referencia": "N/A",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "video",
+          "titulo": "Tutorial de Análisis de Datos Cualitativos 101",
+          "url": "https://www.youtube.com/watch?v=di0-wVrU3lU"
+        }
+      ]
+    }
+  }
+}
