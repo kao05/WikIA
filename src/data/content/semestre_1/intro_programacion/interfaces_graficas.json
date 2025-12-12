@@ -1,0 +1,193 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "interfaces_graficas",
+      "titulo": "Interfaces Gráficas de Usuario (GUI)",
+      "materia": "Introducción a la Programación",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "3-6 horas"
+    },
+
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "¿Qué son las Interfaces Gráficas de Usuario (GUI)?",
+        "definicion": "Una interfaz gráfica de usuario (GUI) es un sistema que permite interactuar con un programa mediante elementos visuales como botones, ventanas, menús, iconos y formularios, en lugar de usar únicamente texto o consola.",
+        "puntos_clave": [
+          "Las GUI funcionan con un sistema basado en eventos (event-driven programming).",
+          "El usuario interactúa mediante clics, teclado u otros dispositivos de entrada.",
+          "Toolkit: marco de herramientas para construir ventanas (Qt, Tkinter, GTK, JavaFX).",
+          "Render loop: el sistema actualiza la pantalla cuando el usuario interactúa.",
+          "La lógica del programa debe separarse de la interfaz (patrones como MVC o MVVM)."
+        ],
+        "formulas": []
+      },
+
+      "utilidad_practica": {
+        "titulo": "¿Para qué sirve?",
+        "descripcion": "Las GUI permiten crear aplicaciones visuales intuitivas para usuarios finales, facilitando tareas complejas mediante elementos interactivos.",
+        "aplicaciones_comunes": [
+          "Aplicaciones de escritorio (calculadoras, paneles administrativos).",
+          "Herramientas de productividad (editores de texto, IDEs).",
+          "Aplicaciones de educación y simulaciones.",
+          "Sistemas POS (puntos de venta) y kioscos.",
+          "Herramientas utilizadas por empresas para control, monitoreo o dashboards."
+        ],
+        "ejemplos_vida_real": [
+          "El panel de control de Windows o macOS.",
+          "Interfaz de un editor de código como VSCode o PyCharm.",
+          "Ventanas de configuración de un videojuego.",
+          "Programas como Excel, Paint o Audacity."
+        ]
+      },
+
+      "mapa_conocimiento": {
+        "titulo": "Relaciones y Prerrequisitos",
+        "prerequisitos": [
+          {
+            "id": "control_flujo",
+            "nombre": "Estructuras de Control",
+            "razon": "La interacción se maneja mediante lógica condicional y eventos."
+          },
+          {
+            "id": "funciones",
+            "nombre": "Funciones",
+            "razon": "Los eventos de GUI se procesan mediante callbacks o funciones manejadoras."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "programacion_orientada_objetos",
+            "nombre": "Programación Orientada a Objetos",
+            "razon": "Muchas GUI se construyen con clases y objetos para cada componente visual."
+          },
+          {
+            "id": "arquitecturas_software",
+            "nombre": "Patrones y Arquitecturas",
+            "razon": "GUI escalables requieren separar vista, lógica y datos (MVC, MVP, MVVM)."
+          },
+          {
+            "id": "desarrollo_videojuegos",
+            "nombre": "Desarrollo de Videojuegos",
+            "razon": "Los menús y HUD de juegos se basan en conceptos avanzados de GUI."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Eventos y listeners",
+          "Layouts y contenedores",
+          "Sistema de coordenadas",
+          "Ciclo de actualización (event loop)",
+          "Widgets y componentes visuales"
+        ]
+      },
+
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Dónde se usan en el mundo real?",
+          "sectores": [
+            {
+              "nombre": "Desarrollo de Software de Escritorio",
+              "descripcion": "Aplicaciones para empresas, herramientas internas y paneles administrativos.",
+              "ejemplos": ["Aplicaciones Qt para bancos", "Herramientas internas de inventario"]
+            },
+            {
+              "nombre": "Operadores de Sistemas y Monitoreo",
+              "descripcion": "Dashboards para visualizar métricas o eventos del sistema.",
+              "ejemplos": ["Paneles para servidores", "Sistemas SCADA en industria"]
+            },
+            {
+              "nombre": "Salud y Medicina",
+              "descripcion": "Software para clínicas y hospitales con interfaces visuales complejas.",
+              "ejemplos": ["Sistemas de radiología", "Gestión de historial clínico"]
+            },
+            {
+              "nombre": "Fintech",
+              "descripcion": "Paneles de control, aplicaciones de escritorio, visualización de datos.",
+              "ejemplos": ["Sistemas de trading", "Clientes de banca digital"]
+            },
+            {
+              "nombre": "Videojuegos",
+              "descripcion": "HUDs, menús, inventarios y configuraciones.",
+              "ejemplos": ["Menús de Unity/Unreal", "Interfaces de usuario para juegos indie"]
+            }
+          ],
+          "empresas_referencia": [
+            "Microsoft (Windows UI/WinUI)",
+            "JetBrains (PyCharm, IntelliJ)",
+            "Qt Company",
+            "Adobe",
+            "Valve Corporation (Steam UI)"
+          ]
+        },
+
+        "roles_laborales": {
+          "titulo": "Perfiles que dominan este concepto",
+          "salario_promedio_mx": "$22,000 - $55,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Desarrollador de Software de Escritorio",
+              "importancia": "Alta",
+              "uso": "Construcción de aplicaciones GUI para empresas."
+            },
+            {
+              "nombre": "Ingeniero de Herramientas Internas",
+              "importancia": "Alta",
+              "uso": "Creación de software para mejorar procesos internos."
+            },
+            {
+              "nombre": "Desarrollador de Videojuegos",
+              "importancia": "Media",
+              "uso": "Creación de menús, HUDs y pantallas interactivas."
+            },
+            {
+              "nombre": "Ingeniero Frontend (Desktop o Web)",
+              "importancia": "Alta",
+              "uso": "Interacción usuario–sistema, diseño de flujos y widgets."
+            }
+          ]
+        }
+      }
+    },
+
+    "actividad_practica": {
+      "tipo": "reto_programacion",
+      "titulo": "Reto: Crea una Mini Calculadora Gráfica",
+      "descripcion": "Construye una pequeña calculadora GUI con botones para sumar, restar, multiplicar y dividir usando el toolkit de tu lenguaje (Tkinter, PyQt, JavaFX, etc.).",
+      "dificultad": "intermedio",
+      "instrucciones": [
+        "Crea una ventana principal.",
+        "Agrega un campo de texto para mostrar resultados.",
+        "Crea botones numéricos (0–9).",
+        "Agrega botones de +, -, *, / y '='.",
+        "Asocia eventos (callbacks) a cada botón.",
+        "Controla errores como división entre cero."
+      ],
+      "codigo_plantilla": "# Ejemplo de plantilla en Python (Tkinter)\nimport tkinter as tk\n\ndef on_click(valor):\n    # Aquí va la lógica que tú implementas\n    pass\n\nroot = tk.Tk()\nroot.title('Mini Calculadora')\n\nentrada = tk.Entry(root, width=20)\nentrada.grid(row=0, column=0, columnspan=4)\n\nbotones = [\n    '7','8','9','+',\n    '4','5','6','-',\n    '1','2','3','*',\n    '0','C','=','/'\n]\n\n# Generar botones dinámicamente\nr = 1; c = 0\nfor b in botones:\n    tk.Button(root, text=b, width=5, command=lambda x=b: on_click(x)).grid(row=r,column=c)\n    c += 1\n    if c == 4:\n        c = 0; r += 1\n\nroot.mainloop()",
+      "solucion_referencia": "El estudiante debe producir su propia implementación.\nLa solución incluye:\n- Manejo correcto del event loop\n- Concatenación de números en pantalla\n- Evaluación de expresiones\n- Manejo de errores y excepciones",
+      "casos_prueba": [
+        {
+          "entrada": "2 + 3 =",
+          "salida_esperada": 5,
+          "nota": "Suma básica"
+        },
+        {
+          "entrada": "8 / 0 =",
+          "salida_esperada": "Error",
+          "nota": "Manejo de división entre cero"
+        }
+      ],
+      "recursos_adicionales": [
+        {
+          "tipo": "documentacion",
+          "titulo": "Tkinter — Documentación Oficial de Python",
+          "url": "https://docs.python.org/3/library/tkinter.html"
+        },
+        {
+          "tipo": "documentacion",
+          "titulo": "PyQt Documentation",
+          "url": "https://doc.qt.io/qtforpython/"
+        }
+      ]
+    }
+  }
+}
