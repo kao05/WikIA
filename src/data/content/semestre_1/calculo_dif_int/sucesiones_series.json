@@ -1,160 +1,173 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "sucesiones_series",
-      "titulo": "Sucesiones y Series Infinitas",
-      "materia": "Cálculo diferencial e integral",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "5-6 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "El Orden y la Acumulación",
-        "definicion": "Una sucesión es una lista ordenada de números generada por una regla (a_n). Una serie es la suma de los términos de una sucesión infinita (Σ a_n).",
-        "puntos_clave": [
-          "Convergencia de Sucesiones: ¿Los números se acercan a un valor fijo o oscilan/crecen para siempre?",
-          "Convergencia de Series: Aunque sumes infinitos números, el resultado puede ser finito (ej. 1/2 + 1/4 + 1/8... = 1).",
-          "Serie Geométrica: Fundamental en computación. Converge si la razón |r| < 1. Fórmula: a / (1-r).",
-          "Serie Armónica: 1 + 1/2 + 1/3... Diverge (suma infinito) aunque los términos sean cada vez más pequeños."
-        ],
-        "formulas": [
-          "Sucesión: {a_n} = a_1, a_2, a_3...",
-          "Notación Sigma: S = Σ (n=1 a ∞) a_n",
-          "Suma Geométrica: S = a / (1 - r)  (si |r| < 1)",
-          "Prueba del Término n-ésimo: Si lim(n→∞) a_n ≠ 0, la serie diverge."
-        ]
+  "metadata": {
+    "id": "sucesiones_series",
+    "titulo": "Sucesiones y Series Infinitas",
+    "materia": "Cálculo diferencial e integral",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "5-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "El Orden y la Acumulación",
+    "contenido": "Una sucesión es una lista ordenada de números generada por una regla (a_n). Una serie es la suma de los términos de una sucesión infinita (Σ a_n).",
+    "puntos_clave": [
+      "Convergencia de Sucesiones: ¿Los números se acercan a un valor fijo o oscilan/crecen para siempre?",
+      "Convergencia de Series: Aunque sumes infinitos números, el resultado puede ser finito (ej. 1/2 + 1/4 + 1/8... = 1).",
+      "Serie Geométrica: Fundamental en computación. Converge si la razón |r| < 1. Fórmula: a / (1-r).",
+      "Serie Armónica: 1 + 1/2 + 1/3... Diverge (suma infinito) aunque los términos sean cada vez más pequeños."
+    ],
+    "formulas": [
+      {
+        "latex": "Sucesión: {a_n} = a_1, a_2, a_3...",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "Modelando el Futuro",
-        "descripcion": "Las sucesiones modelan datos discretos en el tiempo (Time Series), mientras que las series permiten sumar infinitos impactos futuros para tomar una decisión presente.",
-        "aplicaciones_comunes": [
-          "Reinforcement Learning (RL): El 'Retorno' (Return) es la suma de recompensas futuras descontadas. Es una serie geométrica donde el factor de descuento (gamma) asegura la convergencia.",
-          "Análisis Financiero: Cálculo del Valor Presente Neto (VPN) de flujos de caja perpetuos.",
-          "Procesamiento de Señales: La Transformada Z (versión discreta de Laplace) trabaja con series de potencias.",
-          "Fractales y Caos: Estructuras generadas por sucesiones recursivas."
-        ],
-        "ejemplos_vida_real": [
-          "Interés compuesto: Tu dinero crece siguiendo una sucesión geométrica.",
-          "Paradoja de Zenón: Aquiles y la tortuga (explicación de cómo infinitos pasos suman una distancia finita).",
-          "Predicción del clima o bolsa: Análisis de sucesiones temporales para predecir el valor n+1."
-        ]
+      {
+        "latex": "Notación Sigma: S = Σ (n=1 a ∞) a_n",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "limites_continuidad",
-            "nombre": "Límites",
-            "razon": "Definir convergencia requiere calcular el límite cuando n tiende a infinito."
-          },
-          {
-            "id": "algebra_superior",
-            "nombre": "Inducción Matemática",
-            "razon": "Para probar propiedades de sucesiones."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "series_taylor",
-            "nombre": "Series de Potencias",
-            "razon": "Convertir funciones en series infinitas de polinomios."
-          },
-          {
-            "id": "ecuaciones_diferenciales",
-            "nombre": "Ecuaciones en Diferencias",
-            "razon": "El equivalente discreto de las ecuaciones diferenciales."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Factorial",
-          "Recursividad",
-          "Criterio de la Razón/Raíz",
-          "Suma Parcial"
-        ]
+      {
+        "latex": "Suma Geométrica: S = a / (1 - r)  (si |r| < 1)",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Series en Algoritmos",
-          "sectores": [
-            {
-              "nombre": "Inteligencia Artificial (RL)",
-              "descripcion": "Agentes que aprenden a jugar o navegar.",
-              "ejemplos": ["Q-Learning (Bellman Equation)", "AlphaGo"]
-            },
-            {
-              "nombre": "Finanzas Quant",
-              "descripcion": "Valuación de perpetuidades y bonos.",
-              "ejemplos": ["Modelos de descuento de dividendos"]
-            },
-            {
-              "nombre": "Bioinformática",
-              "descripcion": "Análisis de secuencias de ADN.",
-              "ejemplos": ["Alineamiento de secuencias (Sucesiones de caracteres)"]
-            }
-          ],
-          "empresas_referencia": [
-            "OpenAI (Entrenamiento de agentes de RL)",
-            "Renaissance Technologies (Análisis de series de tiempo financieras)",
-            "Illumina (Secuenciación genética)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Técnicos",
-          "salario_promedio_mx": "$35,000 - $85,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Reinforcement Learning",
-              "importancia": "Crítica",
-              "uso": "Diseño de funciones de recompensa convergentes."
-            },
-            {
-              "nombre": "Analista de Series de Tiempo",
-              "importancia": "Alta",
-              "uso": "Forecasting de demanda o precios."
-            }
-          ]
-        }
+      {
+        "latex": "Prueba del Término n-ésimo: Si lim(n→∞) a_n ≠ 0, la serie diverge.",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: La Recompensa del Agente (RL Discount Factor)",
-      "descripcion": "En Aprendizaje por Refuerzo, un agente suma todas las recompensas futuras multiplicadas por un factor de descuento 'gamma' (entre 0 y 1). Esto es una Serie Geométrica. Vamos a simularlo.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Fórmula de recompensa total: G = R + (gamma * R) + (gamma^2 * R) + ...",
-        "Donde R es la recompensa por paso (ej. 10 puntos) y gamma es el factor de descuento (ej. 0.9).",
-        "1. Implementa una función `calcular_retorno(recompensa, gamma, pasos)` que sume los términos iterativamente.",
-        "2. Implementa `calcular_retorno_formula(recompensa, gamma)` usando la fórmula de la serie geométrica infinita: a / (1-r).",
-        "3. Compara: Con suficientes pasos (ej. 100), la suma iterativa debe ser casi idéntica a la fórmula."
-      ],
-      "codigo_plantilla": "def calcular_retorno_iterativo(R, gamma, pasos):\n    \"\"\"\n    Suma las recompensas descontadas hasta cierto número de pasos.\n    \"\"\"\n    total = 0\n    for t in range(pasos):\n        # Tu código aquí\n        # Termino actual: R * (gamma elevado a t)\n        pass\n    return total\n\ndef calcular_retorno_formula(R, gamma):\n    \"\"\"\n    Calcula el valor al infinito usando la fórmula geométrica.\n    \"\"\"\n    # Formula: a / (1 - r), donde a=R (primer termino) y r=gamma\n    return R / (1 - gamma)\n\n# Prueba\nR = 10\ngamma = 0.9\nprint(f\"Suma iterativa (50 pasos): {calcular_retorno_iterativo(R, gamma, 50)}\")\nprint(f\"Formula matemática (Infinito): {calcular_retorno_formula(R, gamma)}\")",
-      "solucion_referencia": "def calcular_retorno_iterativo(R, gamma, pasos):\n    total = 0\n    for t in range(pasos):\n        total += R * (gamma ** t)\n    return total",
-      "casos_prueba": [
-        {
-          "entrada": "R=10, gamma=0.5",
-          "salida_esperada": "20.0",
-          "nota": "10 / (1 - 0.5) = 20."
-        },
-        {
-          "entrada": "R=10, gamma=0.9",
-          "salida_esperada": "100.0",
-          "nota": "10 / 0.1 = 100. Notar cómo gamma cercano a 1 aumenta mucho el valor."
-        },
-        {
-          "entrada": "gamma=1.0",
-          "salida_esperada": "Error / Infinito",
-          "nota": "La serie geométrica diverge si r >= 1."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Geometric Series and the connection to RL",
-          "url": "https://www.youtube.com/watch?v=..."
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "Modelando el Futuro",
+    "contenido": "Las sucesiones modelan datos discretos en el tiempo (Time Series), mientras que las series permiten sumar infinitos impactos futuros para tomar una decisión presente.",
+    "aplicaciones": [
+      "Reinforcement Learning (RL): El 'Retorno' (Return) es la suma de recompensas futuras descontadas. Es una serie geométrica donde el factor de descuento (gamma) asegura la convergencia.",
+      "Análisis Financiero: Cálculo del Valor Presente Neto (VPN) de flujos de caja perpetuos.",
+      "Procesamiento de Señales: La Transformada Z (versión discreta de Laplace) trabaja con series de potencias.",
+      "Fractales y Caos: Estructuras generadas por sucesiones recursivas."
+    ],
+    "ejemplos_vida_real": [
+      "Interés compuesto: Tu dinero crece siguiendo una sucesión geométrica.",
+      "Paradoja de Zenón: Aquiles y la tortuga (explicación de cómo infinitos pasos suman una distancia finita).",
+      "Predicción del clima o bolsa: Análisis de sucesiones temporales para predecir el valor n+1."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "limites_continuidad",
+        "nombre": "Límites",
+        "razon": "Definir convergencia requiere calcular el límite cuando n tiende a infinito."
+      },
+      {
+        "id": "algebra_superior",
+        "nombre": "Inducción Matemática",
+        "razon": "Para probar propiedades de sucesiones."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "series_taylor",
+        "nombre": "Series de Potencias",
+        "razon": "Convertir funciones en series infinitas de polinomios."
+      },
+      {
+        "id": "ecuaciones_diferenciales",
+        "nombre": "Ecuaciones en Diferencias",
+        "razon": "El equivalente discreto de las ecuaciones diferenciales."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Factorial",
+      "Recursividad",
+      "Criterio de la Razón/Raíz",
+      "Suma Parcial"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Series en Algoritmos",
+    "sectores": [
+      {
+        "nombre": "Inteligencia Artificial (RL)",
+        "descripcion": "Agentes que aprenden a jugar o navegar.",
+        "ejemplos": [
+          "Q-Learning (Bellman Equation)",
+          "AlphaGo"
+        ]
+      },
+      {
+        "nombre": "Finanzas Quant",
+        "descripcion": "Valuación de perpetuidades y bonos.",
+        "ejemplos": [
+          "Modelos de descuento de dividendos"
+        ]
+      },
+      {
+        "nombre": "Bioinformática",
+        "descripcion": "Análisis de secuencias de ADN.",
+        "ejemplos": [
+          "Alineamiento de secuencias (Sucesiones de caracteres)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "OpenAI (Entrenamiento de agentes de RL)",
+      "Renaissance Technologies (Análisis de series de tiempo financieras)",
+      "Illumina (Secuenciación genética)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Técnicos",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Reinforcement Learning",
+        "importancia": "Crítica",
+        "uso": "Diseño de funciones de recompensa convergentes."
+      },
+      {
+        "nombre": "Analista de Series de Tiempo",
+        "importancia": "Alta",
+        "uso": "Forecasting de demanda o precios."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $85,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: La Recompensa del Agente (RL Discount Factor)",
+    "descripcion": "En Aprendizaje por Refuerzo, un agente suma todas las recompensas futuras multiplicadas por un factor de descuento 'gamma' (entre 0 y 1). Esto es una Serie Geométrica. Vamos a simularlo.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "def calcular_retorno_iterativo(R, gamma, pasos):\n    \"\"\"\n    Suma las recompensas descontadas hasta cierto número de pasos.\n    \"\"\"\n    total = 0\n    for t in range(pasos):\n        # Tu código aquí\n        # Termino actual: R * (gamma elevado a t)\n        pass\n    return total\n\ndef calcular_retorno_formula(R, gamma):\n    \"\"\"\n    Calcula el valor al infinito usando la fórmula geométrica.\n    \"\"\"\n    # Formula: a / (1 - r), donde a=R (primer termino) y r=gamma\n    return R / (1 - gamma)\n\n# Prueba\nR = 10\ngamma = 0.9\nprint(f\"Suma iterativa (50 pasos): {calcular_retorno_iterativo(R, gamma, 50)}\")\nprint(f\"Formula matemática (Infinito): {calcular_retorno_formula(R, gamma)}\")",
+    "solucion_referencia": "def calcular_retorno_iterativo(R, gamma, pasos):\n    total = 0\n    for t in range(pasos):\n        total += R * (gamma ** t)\n    return total",
+    "pistas": [
+      "Fórmula de recompensa total: G = R + (gamma * R) + (gamma^2 * R) + ...",
+      "Donde R es la recompensa por paso (ej. 10 puntos) y gamma es el factor de descuento (ej. 0.9).",
+      "1. Implementa una función `calcular_retorno(recompensa, gamma, pasos)` que sume los términos iterativamente.",
+      "2. Implementa `calcular_retorno_formula(recompensa, gamma)` usando la fórmula de la serie geométrica infinita: a / (1-r).",
+      "3. Compara: Con suficientes pasos (ej. 100), la suma iterativa debe ser casi idéntica a la fórmula."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "R=10, gamma=0.5",
+        "salida_esperada": "20.0",
+        "explicacion": "10 / (1 - 0.5) = 20."
+      },
+      {
+        "entrada": "R=10, gamma=0.9",
+        "salida_esperada": "100.0",
+        "explicacion": "10 / 0.1 = 100. Notar cómo gamma cercano a 1 aumenta mucho el valor."
+      },
+      {
+        "entrada": "gamma=1.0",
+        "salida_esperada": "Error / Infinito",
+        "explicacion": "La serie geométrica diverge si r >= 1."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Geometric Series and the connection to RL",
+        "url": "https://www.youtube.com/watch?v=..."
+      }
+    ]
   }
 }

@@ -1,174 +1,183 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "archivos_io",
-      "titulo": "Lectura y Escritura de Archivos",
-      "materia": "Introducción a la Programación",
-      "semestre": 1,
-      "dificultad": "básico-intermedio",
-      "tiempo_estudio": "2-4 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la lectura y escritura de archivos?",
-        "definicion": "El manejo de archivos (I/O, Input/Output) consiste en técnicas de programación que permiten que un programa lea datos almacenados en archivos del sistema o escriba información nueva en ellos.",
-        "puntos_clave": [
-          "Un archivo es una secuencia de bytes almacenada en disco.",
-          "Se requiere abrir el archivo antes de leerlo o escribirlo.",
-          "La lectura puede ser línea por línea, por bloques o completa.",
-          "La escritura puede sobrescribir o agregar contenido (modes: write, append).",
-          "Los errores de apertura deben manejarse (permisos, rutas, inexistencia)."
-        ],
-        "formulas": []
+  "metadata": {
+    "id": "archivos_io",
+    "titulo": "Lectura y Escritura de Archivos",
+    "materia": "Introducción a la Programación",
+    "semestre": 1,
+    "dificultad": "básico-intermedio",
+    "tiempo_estudio": "2-4 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la lectura y escritura de archivos?",
+    "contenido": "El manejo de archivos (I/O, Input/Output) consiste en técnicas de programación que permiten que un programa lea datos almacenados en archivos del sistema o escriba información nueva en ellos.",
+    "puntos_clave": [
+      "Un archivo es una secuencia de bytes almacenada en disco.",
+      "Se requiere abrir el archivo antes de leerlo o escribirlo.",
+      "La lectura puede ser línea por línea, por bloques o completa.",
+      "La escritura puede sobrescribir o agregar contenido (modes: write, append).",
+      "Los errores de apertura deben manejarse (permisos, rutas, inexistencia)."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "El manejo de archivos permite persistir información, cargar datos de entrada, exportar resultados y comunicarse con otros sistemas.",
+    "aplicaciones": [
+      "Guardar configuraciones de usuario o parámetros de un programa.",
+      "Registrar logs o bitácoras de eventos.",
+      "Cargar grandes conjuntos de datos en programas de análisis.",
+      "Procesar CSV, JSON, XML o archivos de texto.",
+      "Guardar reportes, estadísticas o documentos generados por un sistema."
+    ],
+    "ejemplos_vida_real": [
+      "Leer un archivo CSV con registros de ventas.",
+      "Guardar el progreso de un videojuego.",
+      "Procesar logs del servidor para detectar errores.",
+      "Leer datos de sensores exportados en archivos TXT o JSON."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "sistemas_operativos",
+        "nombre": "Sistemas Operativos",
+        "razon": "Comprender el sistema de archivos, directorios, permisos y rutas."
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "El manejo de archivos permite persistir información, cargar datos de entrada, exportar resultados y comunicarse con otros sistemas.",
-        "aplicaciones_comunes": [
-          "Guardar configuraciones de usuario o parámetros de un programa.",
-          "Registrar logs o bitácoras de eventos.",
-          "Cargar grandes conjuntos de datos en programas de análisis.",
-          "Procesar CSV, JSON, XML o archivos de texto.",
-          "Guardar reportes, estadísticas o documentos generados por un sistema."
-        ],
-        "ejemplos_vida_real": [
-          "Leer un archivo CSV con registros de ventas.",
-          "Guardar el progreso de un videojuego.",
-          "Procesar logs del servidor para detectar errores.",
-          "Leer datos de sensores exportados en archivos TXT o JSON."
-        ]
-      },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "sistemas_operativos",
-            "nombre": "Sistemas Operativos",
-            "razon": "Comprender el sistema de archivos, directorios, permisos y rutas."
-          },
-          {
-            "id": "modularidad",
-            "nombre": "Modularidad",
-            "razon": "Permite organizar las funciones de lectura/escritura en módulos reutilizables."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "estructuras_datos_basicas",
-            "nombre": "Estructuras de Datos",
-            "razon": "Los archivos suelen contener colecciones de datos que deben almacenarse en estructuras en memoria."
-          },
-          {
-            "id": "bases_datos",
-            "nombre": "Bases de Datos",
-            "razon": "El manejo de archivos es el precursor natural de los sistemas de almacenamiento persistente como SQL."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Rutas absolutas y relativas",
-          "Permisos de archivos (lectura, escritura, ejecución)",
-          "Codificación de caracteres (UTF-8)",
-          "Serialización (JSON, CSV)"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Backend y Desarrollo Web",
-              "descripcion": "Procesamiento de archivos subidos por usuarios y generación de reportes.",
-              "ejemplos": ["Exportación de facturas PDF", "Registro de logs del servidor", "Procesamiento de archivos CSV para análisis"]
-            },
-            {
-              "nombre": "Data Engineering",
-              "descripcion": "Ingesta de datos desde archivos CSV, JSON o Parquet.",
-              "ejemplos": ["Extracción de datos desde sistemas legacy", "Procesamiento de grandes volúmenes de logs"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Carga de datasets para entrenamiento de modelos.",
-              "ejemplos": ["Lectura de imágenes desde carpetas", "Carga de datasets como MNIST o CSVs personalizados"]
-            },
-            {
-              "nombre": "Ciberseguridad",
-              "descripcion": "Análisis de archivos sospechosos, bitácoras o dumps de memoria.",
-              "ejemplos": ["Revisión de logs de acceso", "Análisis forense digital"]
-            }
-          ],
-          "empresas_referencia": [
-            "Amazon Web Services (AWS)",
-            "Google Cloud",
-            "Meta",
-            "Microsoft (Azure, Windows File System)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$20,000 - $55,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Lectura y escritura de archivos de configuración, logs y datos."
-            },
-            {
-              "nombre": "Ingeniero de Datos",
-              "importancia": "Crítica",
-              "uso": "Procesamiento de archivos masivos y pipelines de datos."
-            },
-            {
-              "nombre": "Científico de Datos",
-              "importancia": "Media",
-              "uso": "Carga de datasets desde archivos CSV/JSON."
-            },
-            {
-              "nombre": "QA Tester",
-              "importancia": "Media",
-              "eso": "Validación de archivos generados por el sistema."
-            }
-          ]
-        }
+      {
+        "id": "modularidad",
+        "nombre": "Modularidad",
+        "razon": "Permite organizar las funciones de lectura/escritura en módulos reutilizables."
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Procesador de Archivo de Texto",
-      "descripcion": "Escribe un programa que lea un archivo de texto, cuente cuántas líneas tiene, cuántas palabras contiene y genere un nuevo archivo con un reporte.",
-      "dificultad": "básico-intermedio",
-      "instrucciones": [
-        "Solicita el nombre del archivo de entrada.",
-        "Lee todo el contenido de forma segura (manejo de excepciones).",
-        "Cuenta líneas, palabras y caracteres.",
-        "Escribe un archivo 'reporte.txt' con los resultados."
-      ],
-      "codigo_plantilla": "def procesar_archivo(ruta):\n    try:\n        with open(ruta, 'r', encoding='utf-8') as f:\n            contenido = f.read()\n    except FileNotFoundError:\n        print(\"Error: archivo no encontrado.\")\n        return\n\n    lineas = contenido.splitlines()\n    palabras = contenido.split()\n\n    with open('reporte.txt', 'w', encoding='utf-8') as out:\n        out.write(f'Lineas: {len(lineas)}\\n')\n        out.write(f'Palabras: {len(palabras)}\\n')\n        out.write(f'Caracteres: {len(contenido)}\\n')\n\n    print('Reporte generado exitosamente.')",
-      "solucion_referencia": "def procesar_archivo(ruta):\n    try:\n        with open(ruta, 'r', encoding='utf-8') as f:\n            contenido = f.read()\n    except FileNotFoundError:\n        return {\n            'error': 'Archivo no encontrado'\n        }\n\n    lineas = contenido.splitlines()\n    palabras = contenido.split()\n\n    reporte = {\n        'lineas': len(lineas),\n        'palabras': len(palabras),\n        'caracteres': len(contenido)\n    }\n\n    with open('reporte.txt', 'w', encoding='utf-8') as out:\n        for k, v in reporte.items():\n            out.write(f'{k}: {v}\\n')\n\n    return reporte",
-      "casos_prueba": [
-        {
-          "entrada": "archivo_vacio.txt",
-          "salida_esperada": { "lineas": 0, "palabras": 0, "caracteres": 0 },
-          "nota": "Archivo sin contenido"
+    ],
+    "temas_siguientes": [
+      {
+        "id": "estructuras_datos_basicas",
+        "nombre": "Estructuras de Datos",
+        "razon": "Los archivos suelen contener colecciones de datos que deben almacenarse en estructuras en memoria."
+      },
+      {
+        "id": "bases_datos",
+        "nombre": "Bases de Datos",
+        "razon": "El manejo de archivos es el precursor natural de los sistemas de almacenamiento persistente como SQL."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Rutas absolutas y relativas",
+      "Permisos de archivos (lectura, escritura, ejecución)",
+      "Codificación de caracteres (UTF-8)",
+      "Serialización (JSON, CSV)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Backend y Desarrollo Web",
+        "descripcion": "Procesamiento de archivos subidos por usuarios y generación de reportes.",
+        "ejemplos": [
+          "Exportación de facturas PDF",
+          "Registro de logs del servidor",
+          "Procesamiento de archivos CSV para análisis"
+        ]
+      },
+      {
+        "nombre": "Data Engineering",
+        "descripcion": "Ingesta de datos desde archivos CSV, JSON o Parquet.",
+        "ejemplos": [
+          "Extracción de datos desde sistemas legacy",
+          "Procesamiento de grandes volúmenes de logs"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Carga de datasets para entrenamiento de modelos.",
+        "ejemplos": [
+          "Lectura de imágenes desde carpetas",
+          "Carga de datasets como MNIST o CSVs personalizados"
+        ]
+      },
+      {
+        "nombre": "Ciberseguridad",
+        "descripcion": "Análisis de archivos sospechosos, bitácoras o dumps de memoria.",
+        "ejemplos": [
+          "Revisión de logs de acceso",
+          "Análisis forense digital"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Amazon Web Services (AWS)",
+      "Google Cloud",
+      "Meta",
+      "Microsoft (Azure, Windows File System)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Lectura y escritura de archivos de configuración, logs y datos."
+      },
+      {
+        "nombre": "Ingeniero de Datos",
+        "importancia": "Crítica",
+        "uso": "Procesamiento de archivos masivos y pipelines de datos."
+      },
+      {
+        "nombre": "Científico de Datos",
+        "importancia": "Media",
+        "uso": "Carga de datasets desde archivos CSV/JSON."
+      },
+      {
+        "nombre": "QA Tester",
+        "importancia": "Media",
+        "eso": "Validación de archivos generados por el sistema."
+      }
+    ],
+    "salario_promedio_mx": "$20,000 - $55,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Procesador de Archivo de Texto",
+    "descripcion": "Escribe un programa que lea un archivo de texto, cuente cuántas líneas tiene, cuántas palabras contiene y genere un nuevo archivo con un reporte.",
+    "dificultad": "básico-intermedio",
+    "codigo_inicial": "def procesar_archivo(ruta):\n    try:\n        with open(ruta, 'r', encoding='utf-8') as f:\n            contenido = f.read()\n    except FileNotFoundError:\n        print(\"Error: archivo no encontrado.\")\n        return\n\n    lineas = contenido.splitlines()\n    palabras = contenido.split()\n\n    with open('reporte.txt', 'w', encoding='utf-8') as out:\n        out.write(f'Lineas: {len(lineas)}\\n')\n        out.write(f'Palabras: {len(palabras)}\\n')\n        out.write(f'Caracteres: {len(contenido)}\\n')\n\n    print('Reporte generado exitosamente.')",
+    "solucion_referencia": "def procesar_archivo(ruta):\n    try:\n        with open(ruta, 'r', encoding='utf-8') as f:\n            contenido = f.read()\n    except FileNotFoundError:\n        return {\n            'error': 'Archivo no encontrado'\n        }\n\n    lineas = contenido.splitlines()\n    palabras = contenido.split()\n\n    reporte = {\n        'lineas': len(lineas),\n        'palabras': len(palabras),\n        'caracteres': len(contenido)\n    }\n\n    with open('reporte.txt', 'w', encoding='utf-8') as out:\n        for k, v in reporte.items():\n            out.write(f'{k}: {v}\\n')\n\n    return reporte",
+    "pistas": [
+      "Solicita el nombre del archivo de entrada.",
+      "Lee todo el contenido de forma segura (manejo de excepciones).",
+      "Cuenta líneas, palabras y caracteres.",
+      "Escribe un archivo 'reporte.txt' con los resultados."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "archivo_vacio.txt",
+        "salida_esperada": {
+          "lineas": 0,
+          "palabras": 0,
+          "caracteres": 0
         },
-        {
-          "entrada": "archivo_simple.txt",
-          "salida_esperada": { "lineas": 3, "palabras": 12, "caracteres": 65 },
-          "nota": "Texto corto común"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "documentacion",
-          "titulo": "Documentación oficial de Python — Lectura de archivos",
-          "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"
-        }
-      ]
-    }
+        "explicacion": "Archivo sin contenido"
+      },
+      {
+        "entrada": "archivo_simple.txt",
+        "salida_esperada": {
+          "lineas": 3,
+          "palabras": 12,
+          "caracteres": 65
+        },
+        "explicacion": "Texto corto común"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "documentacion",
+        "titulo": "Documentación oficial de Python — Lectura de archivos",
+        "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"
+      }
+    ]
   }
 }

@@ -1,143 +1,144 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "transparencia_explicabilidad",
-      "titulo": "Transparencia y Explicabilidad (XAI)",
-      "materia": "Inteligencia Artificial y Sociedad",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "3-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Por qué la IA debe ser explicable?",
-        "definicion": "La Explicabilidad (XAI - Explainable AI) es la capacidad de describir el funcionamiento interno de un sistema de IA de manera comprensible para los humanos, contrastando con el problema de la 'Caja Negra'.",
-        "puntos_clave": [
-          "El problema de la Caja Negra: Los modelos modernos (Deep Learning) son tan complejos que ni sus creadores pueden explicar fácilmente por qué tomaron una decisión específica.",
-          "Transparencia vs. Explicabilidad: La transparencia implica revelar que se está usando IA y qué datos se usaron; la explicabilidad implica detallar el razonamiento lógico de una decisión concreta.",
-          "Trade-off (Compromiso): Generalmente, cuanto más preciso es un modelo (redes neuronales profundas), menos explicable es. Los modelos simples (árboles de decisión) son explicables pero menos potentes.",
-          "Derecho a la Explicación: Principio legal (ej. en GDPR) que otorga a los usuarios el derecho a saber por qué un algoritmo tomó una decisión que les afecta legalmente."
-        ],
-        "formulas": []
+  "metadata": {
+    "id": "transparencia_explicabilidad",
+    "titulo": "Transparencia y Explicabilidad (XAI)",
+    "materia": "Inteligencia Artificial y Sociedad",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "3-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Por qué la IA debe ser explicable?",
+    "contenido": "La Explicabilidad (XAI - Explainable AI) es la capacidad de describir el funcionamiento interno de un sistema de IA de manera comprensible para los humanos, contrastando con el problema de la 'Caja Negra'.",
+    "puntos_clave": [
+      "El problema de la Caja Negra: Los modelos modernos (Deep Learning) son tan complejos que ni sus creadores pueden explicar fácilmente por qué tomaron una decisión específica.",
+      "Transparencia vs. Explicabilidad: La transparencia implica revelar que se está usando IA y qué datos se usaron; la explicabilidad implica detallar el razonamiento lógico de una decisión concreta.",
+      "Trade-off (Compromiso): Generalmente, cuanto más preciso es un modelo (redes neuronales profundas), menos explicable es. Los modelos simples (árboles de decisión) son explicables pero menos potentes.",
+      "Derecho a la Explicación: Principio legal (ej. en GDPR) que otorga a los usuarios el derecho a saber por qué un algoritmo tomó una decisión que les afecta legalmente."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve entender esto?",
+    "contenido": "Sin explicabilidad no hay confianza. Si una IA diagnostica cáncer o niega un crédito, el usuario (médico o cliente) necesita saber las razones para confiar en el resultado.",
+    "aplicaciones": [
+      "Diagnóstico Médico: El médico necesita saber qué parte de la radiografía detectó la IA como anómala.",
+      "Aprobación de Créditos: Los bancos deben explicar por ley por qué rechazaron una solicitud.",
+      "Depuración de Modelos (Debugging): Ayudar a los ingenieros a entender cuándo y por qué falla su modelo.",
+      "Detección de Sesgos: Si la explicación muestra que la IA se basó en el género para decidir, se revela un sesgo."
+    ],
+    "ejemplos_vida_real": [
+      "Un sistema de conducción autónoma que explica: 'Frené porque detecté un objeto con 90% de probabilidad de ser un peatón'.",
+      "Una IA de seguros que indica: 'La prima subió porque el historial de siniestros en tu código postal aumentó un 20%'.",
+      "Rechazo de una tarjeta de crédito explicando: 'Tus ingresos son altos, pero tu historial de pagos reciente es irregular'."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Conexiones del Sistema",
+    "prerequisitos": [
+      {
+        "id": "fiabilidad_calidad",
+        "nombre": "Fiabilidad y Calidad",
+        "razon": "Para confiar en un sistema fiable, necesitamos entenderlo."
       },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve entender esto?",
-        "descripcion": "Sin explicabilidad no hay confianza. Si una IA diagnostica cáncer o niega un crédito, el usuario (médico o cliente) necesita saber las razones para confiar en el resultado.",
-        "aplicaciones_comunes": [
-          "Diagnóstico Médico: El médico necesita saber qué parte de la radiografía detectó la IA como anómala.",
-          "Aprobación de Créditos: Los bancos deben explicar por ley por qué rechazaron una solicitud.",
-          "Depuración de Modelos (Debugging): Ayudar a los ingenieros a entender cuándo y por qué falla su modelo.",
-          "Detección de Sesgos: Si la explicación muestra que la IA se basó en el género para decidir, se revela un sesgo."
-        ],
-        "ejemplos_vida_real": [
-          "Un sistema de conducción autónoma que explica: 'Frené porque detecté un objeto con 90% de probabilidad de ser un peatón'.",
-          "Una IA de seguros que indica: 'La prima subió porque el historial de siniestros en tu código postal aumentó un 20%'.",
-          "Rechazo de una tarjeta de crédito explicando: 'Tus ingresos son altos, pero tu historial de pagos reciente es irregular'."
-        ]
-      },
-      "mapa_conocimiento": {
-        "titulo": "Conexiones del Sistema",
-        "prerequisitos": [
-          {
-            "id": "fiabilidad_calidad",
-            "nombre": "Fiabilidad y Calidad",
-            "razon": "Para confiar en un sistema fiable, necesitamos entenderlo."
-          },
-          {
-            "id": "sesgo_discriminacion",
-            "nombre": "Sesgo y Discriminación",
-            "razon": "La explicabilidad es la herramienta principal para auditar y descubrir sesgos."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "aprendizaje_automatico",
-            "nombre": "Aprendizaje Automático (Semestre 4)",
-            "razon": "Aprenderás técnicamente los modelos de Caja Negra (Redes Neuronales) vs. Caja Blanca (Regresión)."
-          },
-          {
-            "id": "busqueda_inferencia",
-            "nombre": "Búsqueda e Inferencia (Semestre 4)",
-            "razon": "Los sistemas basados en lógica son inherentemente explicables."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Interpretabilidad",
-          "Valores SHAP (Concepto técnico)",
-          "LIME (Local Interpretable Model-agnostic Explanations)",
-          "Modelos sustitutos (Surrogate models)"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Quién exige explicabilidad?",
-          "sectores": [
-            {
-              "nombre": "Banca y Seguros (Fintech)",
-              "descripcion": "Sectores altamente regulados donde las decisiones deben ser justificables.",
-              "ejemplos": ["Análisis de riesgo", "Detección de fraude"]
-            },
-            {
-              "nombre": "Salud (Healthcare)",
-              "descripcion": "Sistemas de soporte a la decisión clínica (CDSS).",
-              "ejemplos": ["Radiología asistida", "Genómica"]
-            },
-            {
-              "nombre": "Legal y Gobierno",
-              "descripcion": "Uso de algoritmos en el sector público.",
-              "ejemplos": ["Asignación de ayudas sociales", "Sentencias judiciales automatizadas"]
-            }
-          ],
-          "empresas_referencia": [
-            "Fiddler AI (Plataforma de monitoreo y explicabilidad)",
-            "TruEra (Calidad y explicabilidad de modelos)",
-            "Bancos Globales (JP Morgan, BBVA - Equipos de IA responsable)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Roles Clave",
-          "salario_promedio_mx": "$35,000 - $85,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de ML (Enfoque XAI)",
-              "importancia": "Alta",
-              "uso": "Implementar librerías que expliquen las predicciones del modelo."
-            },
-            {
-              "nombre": "Oficial de Cumplimiento Normativo",
-              "importancia": "Alta",
-              "uso": "Asegurar que los modelos cumplen con las leyes de transparencia."
-            },
-            {
-              "nombre": "Diseñador UX de IA",
-              "importancia": "Media",
-              "uso": "Diseñar interfaces que comuniquen la incertidumbre y las razones de la IA al usuario final."
-            }
-          ]
-        }
+      {
+        "id": "sesgo_discriminacion",
+        "nombre": "Sesgo y Discriminación",
+        "razon": "La explicabilidad es la herramienta principal para auditar y descubrir sesgos."
       }
-    },
-    "actividad_practica": {
-      "tipo": "NO_APLICA",
-      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
-      "descripcion": "En este nivel introductorio, la explicabilidad se aborda como un requisito de diseño y un derecho del usuario, no como una implementación matemática. La actividad sugerida es un análisis de caso: 'Caja Negra vs. Caja Blanca', donde el estudiante debe decidir qué modelo usar para un escenario crítico (ej. diagnóstico médico) sopesando precisión vs. explicabilidad.",
-      "dificultad": "N/A",
-      "instrucciones": [],
-      "codigo_plantilla": "N/A",
-      "solucion_referencia": "N/A",
-      "casos_prueba": [],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Explicabilidad de la IA: ¿Qué es y por qué importa?",
-          "url": "https://www.ibm.com/mx-es/watson/explainable-ai"
-        },
-        {
-          "tipo": "video",
-          "titulo": "Abrir la caja negra de la IA (TED Talk)",
-          "url": "https://www.youtube.com/watch?v=..."
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "aprendizaje_automatico",
+        "nombre": "Aprendizaje Automático (Semestre 4)",
+        "razon": "Aprenderás técnicamente los modelos de Caja Negra (Redes Neuronales) vs. Caja Blanca (Regresión)."
+      },
+      {
+        "id": "busqueda_inferencia",
+        "nombre": "Búsqueda e Inferencia (Semestre 4)",
+        "razon": "Los sistemas basados en lógica son inherentemente explicables."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Interpretabilidad",
+      "Valores SHAP (Concepto técnico)",
+      "LIME (Local Interpretable Model-agnostic Explanations)",
+      "Modelos sustitutos (Surrogate models)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Quién exige explicabilidad?",
+    "sectores": [
+      {
+        "nombre": "Banca y Seguros (Fintech)",
+        "descripcion": "Sectores altamente regulados donde las decisiones deben ser justificables.",
+        "ejemplos": [
+          "Análisis de riesgo",
+          "Detección de fraude"
+        ]
+      },
+      {
+        "nombre": "Salud (Healthcare)",
+        "descripcion": "Sistemas de soporte a la decisión clínica (CDSS).",
+        "ejemplos": [
+          "Radiología asistida",
+          "Genómica"
+        ]
+      },
+      {
+        "nombre": "Legal y Gobierno",
+        "descripcion": "Uso de algoritmos en el sector público.",
+        "ejemplos": [
+          "Asignación de ayudas sociales",
+          "Sentencias judiciales automatizadas"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Fiddler AI (Plataforma de monitoreo y explicabilidad)",
+      "TruEra (Calidad y explicabilidad de modelos)",
+      "Bancos Globales (JP Morgan, BBVA - Equipos de IA responsable)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Roles Clave",
+    "roles": [
+      {
+        "nombre": "Ingeniero de ML (Enfoque XAI)",
+        "importancia": "Alta",
+        "uso": "Implementar librerías que expliquen las predicciones del modelo."
+      },
+      {
+        "nombre": "Oficial de Cumplimiento Normativo",
+        "importancia": "Alta",
+        "uso": "Asegurar que los modelos cumplen con las leyes de transparencia."
+      },
+      {
+        "nombre": "Diseñador UX de IA",
+        "importancia": "Media",
+        "uso": "Diseñar interfaces que comuniquen la incertidumbre y las razones de la IA al usuario final."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $85,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "conceptual",
+    "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+    "descripcion": "En este nivel introductorio, la explicabilidad se aborda como un requisito de diseño y un derecho del usuario, no como una implementación matemática. La actividad sugerida es un análisis de caso: 'Caja Negra vs. Caja Blanca', donde el estudiante debe decidir qué modelo usar para un escenario crítico (ej. diagnóstico médico) sopesando precisión vs. explicabilidad.",
+    "dificultad": "N/A",
+    "objetivos": [],
+    "pasos_sugeridos": [],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Explicabilidad de la IA: ¿Qué es y por qué importa?",
+        "url": "https://www.ibm.com/mx-es/watson/explainable-ai"
+      },
+      {
+        "tipo": "video",
+        "titulo": "Abrir la caja negra de la IA (TED Talk)",
+        "url": "https://www.youtube.com/watch?v=..."
+      }
+    ]
   }
 }

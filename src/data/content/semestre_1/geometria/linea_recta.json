@@ -1,164 +1,178 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "linea_recta",
-      "titulo": "La Línea Recta y Regresión Lineal",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "básico",
-      "tiempo_estudio": "3-4 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "El Bloque Constructor de la IA",
-        "definicion": "Lugar geométrico de los puntos tales que, tomados dos puntos cualesquiera, la pendiente (m) es constante. En Machine Learning, esta ecuación (y = mx + b) modela la relación lineal entre una variable de entrada (feature) y una de salida (target).",
-        "puntos_clave": [
-          "Ecuación Pendiente-Ordenada: y = mx + b.",
-          "En ML, se escribe como: y = wx + b (donde 'w' es el peso/weight y 'b' es el sesgo/bias).",
-          "La pendiente (m o w) indica cuánto afecta la entrada al resultado.",
-          "La ordenada al origen (b) es el valor base cuando la entrada es 0.",
-          "Una neurona artificial básica calcula una suma lineal: z = w1*x1 + ... + b."
-        ],
-        "formulas": [
-          "Ecuación Ordinaria: y = mx + b",
-          "Ecuación General: Ax + By + C = 0",
-          "Pendiente dados dos puntos: m = (y2 - y1) / (x2 - x1)",
-          "Modelo de Predicción Lineal: ŷ = wx + b"
-        ]
+  "metadata": {
+    "id": "linea_recta",
+    "titulo": "La Línea Recta y Regresión Lineal",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "básico",
+    "tiempo_estudio": "3-4 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "El Bloque Constructor de la IA",
+    "contenido": "Lugar geométrico de los puntos tales que, tomados dos puntos cualesquiera, la pendiente (m) es constante. En Machine Learning, esta ecuación (y = mx + b) modela la relación lineal entre una variable de entrada (feature) y una de salida (target).",
+    "puntos_clave": [
+      "Ecuación Pendiente-Ordenada: y = mx + b.",
+      "En ML, se escribe como: y = wx + b (donde 'w' es el peso/weight y 'b' es el sesgo/bias).",
+      "La pendiente (m o w) indica cuánto afecta la entrada al resultado.",
+      "La ordenada al origen (b) es el valor base cuando la entrada es 0.",
+      "Una neurona artificial básica calcula una suma lineal: z = w1*x1 + ... + b."
+    ],
+    "formulas": [
+      {
+        "latex": "Ecuación Ordinaria: y = mx + b",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Por qué es vital para ML?",
-        "descripcion": "La mayoría de las IAs complejas están construidas sobre millones de pequeñas líneas rectas. Entender esto es entender cómo una máquina 'aprende' ajustando la inclinación (pendiente) de una línea para reducir el error.",
-        "aplicaciones_comunes": [
-          "Regresión Lineal: Predecir precios de casas basados en metros cuadrados.",
-          "Clasificadores Lineales: Separar emails (spam vs no spam) con una línea recta (frontera de decisión).",
-          "Redes Neuronales: Cada neurona realiza primero una operación lineal (wx + b) antes de activar.",
-          "Econometría: Análisis de tendencias de mercado."
-        ],
-        "ejemplos_vida_real": [
-          "Si por cada hora de estudio (x) tu calificación (y) sube 1 punto, esa es una relación lineal.",
-          "Conversión de grados Celsius a Fahrenheit (relación lineal exacta).",
-          "Tarifas de taxi: Costo base (b) + Costo por km (m)."
-        ]
+      {
+        "latex": "Ecuación General: Ax + By + C = 0",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "sistemas_coordenadas",
-            "nombre": "Plano Cartesiano",
-            "razon": "Necesitas saber graficar puntos (datos) para ver si forman una línea."
-          },
-          {
-            "id": "algebra_basica",
-            "nombre": "Despeje de Ecuaciones",
-            "razon": "Para encontrar x o y."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "angulos_distancias",
-            "nombre": "Distancia Punto-Recta",
-            "razon": "En ML, minimizar la distancia entre los datos y la línea es el objetivo del entrenamiento (Loss Function)."
-          },
-          {
-            "id": "calculo_dif_int",
-            "nombre": "Derivadas",
-            "razon": "Para encontrar la pendiente óptima automáticamente (Descenso del Gradiente)."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Correlación (positiva/negativa)",
-          "Error Cuadrático Medio (MSE)",
-          "Intersección con ejes"
-        ]
+      {
+        "latex": "Pendiente dados dos puntos: m = (y2 - y1) / (x2 - x1)",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Finanzas y Trading",
-              "descripcion": "Modelos de regresión para predecir precios de acciones a corto plazo.",
-              "ejemplos": ["Líneas de tendencia en gráficos de bolsa", "Análisis de riesgo"]
-            },
-            {
-              "nombre": "Marketing Digital",
-              "descripcion": "Predecir ventas futuras basándose en inversión publicitaria.",
-              "ejemplos": ["ROI de campañas", "Proyección de crecimiento"]
-            },
-            {
-              "nombre": "Ciencia de Datos",
-              "descripcion": "El algoritmo 'go-to' para establecer una línea base de rendimiento.",
-              "ejemplos": ["Regresión lineal simple y múltiple"]
-            }
-          ],
-          "empresas_referencia": [
-            "Zillow (Predicción de precios de inmuebles)",
-            "Amazon (Predicción de demanda de inventario)",
-            "Cualquier aseguradora (Cálculo de primas base)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$20,000 - $60,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Analista de Datos",
-              "importancia": "Crítica",
-              "uso": "Identificar tendencias simples en reportes de negocio."
-            },
-            {
-              "nombre": "Ingeniero de Machine Learning Jr",
-              "importancia": "Crítica",
-              "uso": "Entrenamiento de regresores lineales y logísticos."
-            },
-            {
-              "nombre": "Actuario",
-              "importancia": "Alta",
-              "uso": "Modelado de riesgos lineales."
-            }
-          ]
-        }
+      {
+        "latex": "Modelo de Predicción Lineal: ŷ = wx + b",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Tu Primera 'IA' (Predicción de Precios)",
-      "descripcion": "Vas a simular un modelo de IA ya entrenado que predice el precio de una casa (y) basándose en su tamaño en metros cuadrados (x). El modelo aprendió que la relación es: Precio = 15000 * Tamaño + 200000.",
-      "dificultad": "básico",
-      "instrucciones": [
-        "Implementa la función 'predecir_precio(metros)'.",
-        "Usa la fórmula de la recta: y = mx + b.",
-        "Aquí: m (peso) = 15000, b (sesgo) = 200000.",
-        "Calcula el error: Si el precio real de una casa de 100m² es $1,800,000, ¿cuál es la diferencia (error) con tu predicción?"
-      ],
-      "codigo_plantilla": "def predecir_precio(metros_cuadrados):\n    \"\"\"\n    Calcula el precio estimado usando regresión lineal simple.\n    y = mx + b\n    \"\"\"\n    peso_m = 15000  # Costo por metro cuadrado\n    sesgo_b = 200000 # Precio base del terreno\n    \n    # Tu código para calcular 'precio_estimado'\n    precio_estimado = 0 \n    return precio_estimado\n\n# Pruebas\ncasa_pequena = 50\ncasa_grande = 200\n\nprint(f\"Precio 50m2: ${predecir_precio(casa_pequena)}\")\nprint(f\"Precio 200m2: ${predecir_precio(casa_grande)}\")",
-      "solucion_referencia": "def predecir_precio(metros_cuadrados):\n    peso_m = 15000\n    sesgo_b = 200000\n    \n    # Aplicación directa de la ecuación de la recta\n    y = peso_m * metros_cuadrados + sesgo_b\n    return y",
-      "casos_prueba": [
-        {
-          "entrada": "metros=0",
-          "salida_esperada": 200000,
-          "nota": "Intersección con el eje Y (b). Precio del terreno sin construcción."
-        },
-        {
-          "entrada": "metros=100",
-          "salida_esperada": 1700000,
-          "nota": "15000*100 + 200000 = 1,500,000 + 200,000"
-        },
-        {
-          "entrada": "metros=10",
-          "salida_esperada": 350000,
-          "nota": "Cálculo simple."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Regresión Lineal explicada para principiantes",
-          "url": "https://www.youtube.com/results?search_query=linear+regression+explained"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué es vital para ML?",
+    "contenido": "La mayoría de las IAs complejas están construidas sobre millones de pequeñas líneas rectas. Entender esto es entender cómo una máquina 'aprende' ajustando la inclinación (pendiente) de una línea para reducir el error.",
+    "aplicaciones": [
+      "Regresión Lineal: Predecir precios de casas basados en metros cuadrados.",
+      "Clasificadores Lineales: Separar emails (spam vs no spam) con una línea recta (frontera de decisión).",
+      "Redes Neuronales: Cada neurona realiza primero una operación lineal (wx + b) antes de activar.",
+      "Econometría: Análisis de tendencias de mercado."
+    ],
+    "ejemplos_vida_real": [
+      "Si por cada hora de estudio (x) tu calificación (y) sube 1 punto, esa es una relación lineal.",
+      "Conversión de grados Celsius a Fahrenheit (relación lineal exacta).",
+      "Tarifas de taxi: Costo base (b) + Costo por km (m)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "sistemas_coordenadas",
+        "nombre": "Plano Cartesiano",
+        "razon": "Necesitas saber graficar puntos (datos) para ver si forman una línea."
+      },
+      {
+        "id": "algebra_basica",
+        "nombre": "Despeje de Ecuaciones",
+        "razon": "Para encontrar x o y."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "angulos_distancias",
+        "nombre": "Distancia Punto-Recta",
+        "razon": "En ML, minimizar la distancia entre los datos y la línea es el objetivo del entrenamiento (Loss Function)."
+      },
+      {
+        "id": "calculo_dif_int",
+        "nombre": "Derivadas",
+        "razon": "Para encontrar la pendiente óptima automáticamente (Descenso del Gradiente)."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Correlación (positiva/negativa)",
+      "Error Cuadrático Medio (MSE)",
+      "Intersección con ejes"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Finanzas y Trading",
+        "descripcion": "Modelos de regresión para predecir precios de acciones a corto plazo.",
+        "ejemplos": [
+          "Líneas de tendencia en gráficos de bolsa",
+          "Análisis de riesgo"
+        ]
+      },
+      {
+        "nombre": "Marketing Digital",
+        "descripcion": "Predecir ventas futuras basándose en inversión publicitaria.",
+        "ejemplos": [
+          "ROI de campañas",
+          "Proyección de crecimiento"
+        ]
+      },
+      {
+        "nombre": "Ciencia de Datos",
+        "descripcion": "El algoritmo 'go-to' para establecer una línea base de rendimiento.",
+        "ejemplos": [
+          "Regresión lineal simple y múltiple"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Zillow (Predicción de precios de inmuebles)",
+      "Amazon (Predicción de demanda de inventario)",
+      "Cualquier aseguradora (Cálculo de primas base)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Analista de Datos",
+        "importancia": "Crítica",
+        "uso": "Identificar tendencias simples en reportes de negocio."
+      },
+      {
+        "nombre": "Ingeniero de Machine Learning Jr",
+        "importancia": "Crítica",
+        "uso": "Entrenamiento de regresores lineales y logísticos."
+      },
+      {
+        "nombre": "Actuario",
+        "importancia": "Alta",
+        "uso": "Modelado de riesgos lineales."
+      }
+    ],
+    "salario_promedio_mx": "$20,000 - $60,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Tu Primera 'IA' (Predicción de Precios)",
+    "descripcion": "Vas a simular un modelo de IA ya entrenado que predice el precio de una casa (y) basándose en su tamaño en metros cuadrados (x). El modelo aprendió que la relación es: Precio = 15000 * Tamaño + 200000.",
+    "dificultad": "básico",
+    "codigo_inicial": "def predecir_precio(metros_cuadrados):\n    \"\"\"\n    Calcula el precio estimado usando regresión lineal simple.\n    y = mx + b\n    \"\"\"\n    peso_m = 15000  # Costo por metro cuadrado\n    sesgo_b = 200000 # Precio base del terreno\n    \n    # Tu código para calcular 'precio_estimado'\n    precio_estimado = 0 \n    return precio_estimado\n\n# Pruebas\ncasa_pequena = 50\ncasa_grande = 200\n\nprint(f\"Precio 50m2: ${predecir_precio(casa_pequena)}\")\nprint(f\"Precio 200m2: ${predecir_precio(casa_grande)}\")",
+    "solucion_referencia": "def predecir_precio(metros_cuadrados):\n    peso_m = 15000\n    sesgo_b = 200000\n    \n    # Aplicación directa de la ecuación de la recta\n    y = peso_m * metros_cuadrados + sesgo_b\n    return y",
+    "pistas": [
+      "Implementa la función 'predecir_precio(metros)'.",
+      "Usa la fórmula de la recta: y = mx + b.",
+      "Aquí: m (peso) = 15000, b (sesgo) = 200000.",
+      "Calcula el error: Si el precio real de una casa de 100m² es $1,800,000, ¿cuál es la diferencia (error) con tu predicción?"
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "metros=0",
+        "salida_esperada": 200000,
+        "explicacion": "Intersección con el eje Y (b). Precio del terreno sin construcción."
+      },
+      {
+        "entrada": "metros=100",
+        "salida_esperada": 1700000,
+        "explicacion": "15000*100 + 200000 = 1,500,000 + 200,000"
+      },
+      {
+        "entrada": "metros=10",
+        "salida_esperada": 350000,
+        "explicacion": "Cálculo simple."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Regresión Lineal explicada para principiantes",
+        "url": "https://www.youtube.com/results?search_query=linear+regression+explained"
+      }
+    ]
   }
 }

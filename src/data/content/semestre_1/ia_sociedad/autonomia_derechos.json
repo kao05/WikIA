@@ -1,133 +1,134 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "autonomia_derechos",
-      "titulo": "Autonomía y Derechos Digitales",
-      "materia": "ia_sociedad",
-      "semestre": 5,
-      "dificultad": "básico",
-      "tiempo_estudio": "3-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué son la Autonomía y los Derechos Digitales?",
-        "definicion": "La autonomía en el contexto digital es la capacidad de las personas para tomar decisiones libres e informadas sobre sus datos y su vida en línea, protegida por un marco de derechos humanos adaptados al ciberespacio.",
-        "puntos_clave": [
-          "Autodeterminación Informativa: El derecho a decidir quién, cómo y para qué se usan tus datos.",
-          "Derechos ARCO: Acceso, Rectificación, Cancelación y Oposición (fundamentales en protección de datos).",
-          "Consentimiento informado: Debe ser explícito, libre e inequívoco antes de recabar datos.",
-          "Privacidad como habilitador: Sin privacidad no existe verdadera autonomía ni libertad de expresión."
-        ],
-        "formulas": []
-      },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "Garantiza que el desarrollo tecnológico respete la dignidad humana y cumpla con las leyes internacionales y locales de protección de datos.",
-        "aplicaciones_comunes": [
-          "Diseño de avisos de privacidad y gestión de cookies.",
-          "Implementación de funcionalidades de 'Derecho al olvido' en bases de datos.",
-          "Auditorías de cumplimiento legal (GDPR, LFPDPPP en México).",
-          "Evaluación de impacto ético en algoritmos de IA (evitar manipulación o sesgos)."
-        ],
-        "ejemplos_vida_real": [
-          "Un usuario solicitando a una red social que borre todo su historial (Derecho de Cancelación).",
-          "Pacientes controlando qué médicos acceden a su expediente clínico electrónico.",
-          "Rechazar el rastreo de ubicación en una app móvil sin perder acceso a funciones básicas."
-        ]
-      },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "ciudadania_digital",
-            "nombre": "Ciudadanía Digital",
-            "razon": "Entender las normas básicas de convivencia en internet."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "seguridad_informatica",
-            "nombre": "Ciberseguridad",
-            "razon": "La seguridad técnica es necesaria para garantizar la privacidad y los derechos."
-          },
-          {
-            "id": "etica_ia",
-            "nombre": "Ética en Inteligencia Artificial",
-            "razon": "Dilemas avanzados sobre la autonomía frente a sistemas autónomos."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Habeas Data",
-          "Patrones oscuros (Dark Patterns)",
-          "Gobernanza de datos",
-          "Identidad digital"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se aplica profesionalmente?",
-          "sectores": [
-            {
-              "nombre": "LegalTech y Compliance",
-              "descripcion": "Aseguramiento del cumplimiento normativo en empresas tecnológicas.",
-              "ejemplos": ["Gestión de riesgos legales", "Oficinas de privacidad"]
-            },
-            {
-              "nombre": "Desarrollo de Software",
-              "descripcion": "Privacy by Design (Privacidad desde el diseño).",
-              "ejemplos": ["Arquitectura de software segura", "Gestión de identidad (IAM)"]
-            },
-            {
-              "nombre": "Gobierno Digital",
-              "descripcion": "Protección de datos ciudadanos y transparencia.",
-              "ejemplos": ["Portales de trámites digitales", "Identificación biométrica"]
-            }
-          ],
-          "empresas_referencia": [
-            "Electronic Frontier Foundation (Defensa de derechos)",
-            "Agencias de Protección de Datos (INAI en México)",
-            "Mozilla (Navegadores enfocados en privacidad)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles relacionados",
-          "salario_promedio_mx": "$30,000 - $70,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Oficial de Protección de Datos (DPO)",
-              "importancia": "Crítica",
-              "uso": "Responsable de la estrategia de privacidad de una organización."
-            },
-            {
-              "nombre": "Consultor de Ciberseguridad y Privacidad",
-              "importancia": "Alta",
-              "uso": "Auditoría de sistemas para evitar fugas y garantizar derechos."
-            },
-            {
-              "nombre": "Abogado Digital / Informático",
-              "importancia": "Alta",
-              "uso": "Defensa legal en casos de delitos informáticos o uso indebido de datos."
-            }
-          ]
-        }
+  "metadata": {
+    "id": "autonomia_derechos",
+    "titulo": "Autonomía y Derechos Digitales",
+    "materia": "ia_sociedad",
+    "semestre": 5,
+    "dificultad": "básico",
+    "tiempo_estudio": "3-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué son la Autonomía y los Derechos Digitales?",
+    "contenido": "La autonomía en el contexto digital es la capacidad de las personas para tomar decisiones libres e informadas sobre sus datos y su vida en línea, protegida por un marco de derechos humanos adaptados al ciberespacio.",
+    "puntos_clave": [
+      "Autodeterminación Informativa: El derecho a decidir quién, cómo y para qué se usan tus datos.",
+      "Derechos ARCO: Acceso, Rectificación, Cancelación y Oposición (fundamentales en protección de datos).",
+      "Consentimiento informado: Debe ser explícito, libre e inequívoco antes de recabar datos.",
+      "Privacidad como habilitador: Sin privacidad no existe verdadera autonomía ni libertad de expresión."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "Garantiza que el desarrollo tecnológico respete la dignidad humana y cumpla con las leyes internacionales y locales de protección de datos.",
+    "aplicaciones": [
+      "Diseño de avisos de privacidad y gestión de cookies.",
+      "Implementación de funcionalidades de 'Derecho al olvido' en bases de datos.",
+      "Auditorías de cumplimiento legal (GDPR, LFPDPPP en México).",
+      "Evaluación de impacto ético en algoritmos de IA (evitar manipulación o sesgos)."
+    ],
+    "ejemplos_vida_real": [
+      "Un usuario solicitando a una red social que borre todo su historial (Derecho de Cancelación).",
+      "Pacientes controlando qué médicos acceden a su expediente clínico electrónico.",
+      "Rechazar el rastreo de ubicación en una app móvil sin perder acceso a funciones básicas."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "ciudadania_digital",
+        "nombre": "Ciudadanía Digital",
+        "razon": "Entender las normas básicas de convivencia en internet."
       }
-    },
-    "actividad_practica": {
-      "tipo": "NO_APLICA",
-      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
-      "descripcion": "La autonomía y los derechos digitales son constructos normativos y éticos. No se pueden 'resolver' mediante una función de código. Su evaluación se realiza a través del análisis de casos, redacción de avisos de privacidad, auditorías de interfaces (para detectar patrones oscuros) o debates éticos.",
-      "dificultad": "N/A",
-      "instrucciones": [],
-      "codigo_plantilla": "N/A",
-      "solucion_referencia": "N/A",
-      "casos_prueba": [],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Guía de Derechos ARCO (INAI)",
-          "url": "https://home.inai.org.mx/derechos-arco/"
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "seguridad_informatica",
+        "nombre": "Ciberseguridad",
+        "razon": "La seguridad técnica es necesaria para garantizar la privacidad y los derechos."
+      },
+      {
+        "id": "etica_ia",
+        "nombre": "Ética en Inteligencia Artificial",
+        "razon": "Dilemas avanzados sobre la autonomía frente a sistemas autónomos."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Habeas Data",
+      "Patrones oscuros (Dark Patterns)",
+      "Gobernanza de datos",
+      "Identidad digital"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se aplica profesionalmente?",
+    "sectores": [
+      {
+        "nombre": "LegalTech y Compliance",
+        "descripcion": "Aseguramiento del cumplimiento normativo en empresas tecnológicas.",
+        "ejemplos": [
+          "Gestión de riesgos legales",
+          "Oficinas de privacidad"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Software",
+        "descripcion": "Privacy by Design (Privacidad desde el diseño).",
+        "ejemplos": [
+          "Arquitectura de software segura",
+          "Gestión de identidad (IAM)"
+        ]
+      },
+      {
+        "nombre": "Gobierno Digital",
+        "descripcion": "Protección de datos ciudadanos y transparencia.",
+        "ejemplos": [
+          "Portales de trámites digitales",
+          "Identificación biométrica"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Electronic Frontier Foundation (Defensa de derechos)",
+      "Agencias de Protección de Datos (INAI en México)",
+      "Mozilla (Navegadores enfocados en privacidad)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles relacionados",
+    "roles": [
+      {
+        "nombre": "Oficial de Protección de Datos (DPO)",
+        "importancia": "Crítica",
+        "uso": "Responsable de la estrategia de privacidad de una organización."
+      },
+      {
+        "nombre": "Consultor de Ciberseguridad y Privacidad",
+        "importancia": "Alta",
+        "uso": "Auditoría de sistemas para evitar fugas y garantizar derechos."
+      },
+      {
+        "nombre": "Abogado Digital / Informático",
+        "importancia": "Alta",
+        "uso": "Defensa legal en casos de delitos informáticos o uso indebido de datos."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $70,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "conceptual",
+    "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+    "descripcion": "La autonomía y los derechos digitales son constructos normativos y éticos. No se pueden 'resolver' mediante una función de código. Su evaluación se realiza a través del análisis de casos, redacción de avisos de privacidad, auditorías de interfaces (para detectar patrones oscuros) o debates éticos.",
+    "dificultad": "N/A",
+    "objetivos": [],
+    "pasos_sugeridos": [],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Guía de Derechos ARCO (INAI)",
+        "url": "https://home.inai.org.mx/derechos-arco/"
+      }
+    ]
   }
 }

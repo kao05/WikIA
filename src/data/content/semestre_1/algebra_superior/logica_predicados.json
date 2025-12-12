@@ -1,168 +1,181 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "logica_predicados",
-      "titulo": "Lógica de Predicados (Lógica de Primer Orden)",
-      "materia": "Matemáticas Discretas / Lógica Computacional",
-      "semestre": 1,
-      "dificultad": "intermedio-avanzado",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es un Predicado?",
-        "definicion": "La lógica proposicional se queda corta porque no puede generalizar. La lógica de predicados introduce variables y cuantificadores para expresar afirmaciones sobre grupos de objetos. Un 'Predicado' es una función que recibe un argumento y devuelve Verdadero o Falso.",
-        "puntos_clave": [
-          "El Predicado P(x): Es una oración que depende de una variable 'x'. Ejemplo: P(x) = 'x es mayor que 5'.",
-          "Cuantificador Universal (∀): 'Para todo'. Se usa cuando una propiedad aplica a TODOS los elementos del dominio.",
-          "Cuantificador Existencial (∃): 'Existe al menos un'. Se usa cuando la propiedad aplica a UNO o MÁS elementos.",
-          "Dominio de Discurso: El conjunto de valores donde tienen sentido nuestras variables (ej. Números Enteros, Usuarios de Netflix)."
-        ],
-        "formulas": [
-          "Universal: ∀x P(x) (Verdadero solo si P(x) es real para cada x)",
-          "Existencial: ∃x P(x) (Verdadero si P(x) es real para al menos un x)",
-          "Negación Universal (De Morgan): ¬(∀x P(x)) ≡ ∃x ¬P(x) (Para negar que 'todos son altos', basta probar que 'existe uno que no es alto').",
-          "Negación Existencial: ¬(∃x P(x)) ≡ ∀x ¬P(x)"
-        ]
+  "metadata": {
+    "id": "logica_predicados",
+    "titulo": "Lógica de Predicados (Lógica de Primer Orden)",
+    "materia": "Matemáticas Discretas / Lógica Computacional",
+    "semestre": 1,
+    "dificultad": "intermedio-avanzado",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es un Predicado?",
+    "contenido": "La lógica proposicional se queda corta porque no puede generalizar. La lógica de predicados introduce variables y cuantificadores para expresar afirmaciones sobre grupos de objetos. Un 'Predicado' es una función que recibe un argumento y devuelve Verdadero o Falso.",
+    "puntos_clave": [
+      "El Predicado P(x): Es una oración que depende de una variable 'x'. Ejemplo: P(x) = 'x es mayor que 5'.",
+      "Cuantificador Universal (∀): 'Para todo'. Se usa cuando una propiedad aplica a TODOS los elementos del dominio.",
+      "Cuantificador Existencial (∃): 'Existe al menos un'. Se usa cuando la propiedad aplica a UNO o MÁS elementos.",
+      "Dominio de Discurso: El conjunto de valores donde tienen sentido nuestras variables (ej. Números Enteros, Usuarios de Netflix)."
+    ],
+    "formulas": [
+      {
+        "latex": "Universal: ∀x P(x) (Verdadero solo si P(x) es real para cada x)",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "El cerebro de las consultas de datos",
-        "descripcion": "Cada vez que filtras información en una app o buscas en una base de datos, estás evaluando predicados.",
-        "aplicaciones_comunes": [
-          "Bases de Datos (SQL): La cláusula 'WHERE' es literalmente un predicado. (SELECT * FROM Users WHERE age > 18).",
-          "Programación Funcional: Las funciones 'filter()' reciben un predicado como argumento.",
-          "Expresiones Regulares (Regex): Patrones que definen predicados para cadenas de texto.",
-          "Inteligencia Artificial: Sistemas basados en reglas y representación del conocimiento (Prolog)."
-        ],
-        "ejemplos_vida_real": [
-          "Filtros de Excel: Mostrar filas donde 'Ventas > 1000' (Predicado).",
-          "Validación de Formularios: El botón 'Enviar' se activa solo si ∀campo (campo está lleno y es válido).",
-          "Buscadores de Vuelos: Buscar vuelos donde (Precio < 5000) ∧ (Escalas == 0)."
-        ]
+      {
+        "latex": "Existencial: ∃x P(x) (Verdadero si P(x) es real para al menos un x)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Estructura del Conocimiento",
-        "prerequisitos": [
-          {
-            "id": "logica_proposicional",
-            "nombre": "Lógica Proposicional",
-            "razon": "Debes dominar los conectores AND, OR, NOT antes de agregar cuantificadores."
-          },
-          {
-            "id": "teoria_conjuntos",
-            "nombre": "Teoría de Conjuntos",
-            "razon": "El 'Dominio' de una variable es un conjunto. ∀ se relaciona con subconjuntos."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "bases_datos_relacionales",
-            "nombre": "Bases de Datos (SQL)",
-            "razon": "SQL es la implementación industrial de la lógica de predicados."
-          },
-          {
-            "id": "programacion_funcional",
-            "nombre": "Programación Funcional",
-            "razon": "Uso intensivo de funciones puras y predicados (map, filter, reduce)."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Inferencia Lógica",
-          "Refutación",
-          "Variables libres y ligadas"
-        ]
+      {
+        "latex": "Negación Universal (De Morgan): ¬(∀x P(x)) ≡ ∃x ¬P(x) (Para negar que 'todos son altos', basta probar que 'existe uno que no es alto').",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Dónde se usa en el trabajo",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Backend / Data Engineering",
-              "descripcion": "Creación de consultas complejas para extraer información precisa.",
-              "ejemplos": ["Reportes financieros automatizados", "Motores de búsqueda internos"]
-            },
-            {
-              "nombre": "Testing y QA Automation",
-              "descripcion": "Aserciones lógicas sobre el comportamiento del software.",
-              "ejemplos": ["Tests unitarios: Assert.IsTrue(Predicado)"]
-            },
-            {
-              "nombre": "Inteligencia Artificial (Sistemas Expertos)",
-              "descripcion": "Motores de reglas de negocio.",
-              "ejemplos": ["Sistemas de detección de fraude bancario"]
-            }
-          ],
-          "empresas_referencia": [
-            "Palantir (Análisis de datos masivos)",
-            "IBM (Sistemas de IA simbólica)",
-            "Cualquier Fintech (Reglas de validación de transacciones)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Técnicos",
-          "salario_promedio_mx": "$30,000 - $65,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Data Engineer",
-              "importancia": "Crítica",
-              "uso": "Transformación de datos basada en lógica condicional compleja."
-            },
-            {
-              "nombre": "Backend Developer",
-              "importancia": "Alta",
-              "uso": "Lógica de negocio y consultas a BD."
-            },
-            {
-              "nombre": "QA Engineer",
-              "importancia": "Alta",
-              "uso": "Definición de criterios de aceptación (Predicados de éxito)."
-            }
-          ]
-        }
+      {
+        "latex": "Negación Existencial: ¬(∃x P(x)) ≡ ∀x ¬P(x)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: El Motor de Filtrado (Implementando 'Filter')",
-      "descripcion": "En programación funcional, filtrar una lista es aplicar un predicado a cada elemento. Tu reto es construir tu propio motor de filtrado para un inventario de tienda, usando funciones como predicados lógicos.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Tienes una lista de diccionarios (productos).",
-        "Crea una función de orden superior 'mi_filtro(lista, predicado)' que reciba la lista y una FUNCIÓN que devuelva True/False.",
-        "Define predicados específicos: 'es_barato(item)', 'es_electronica(item)'.",
-        "Combina predicados para consultas complejas (Lógica: es_barato AND es_electronica)."
-      ],
-      "codigo_plantilla": "productos = [\n    {\"nombre\": \"Laptop\", \"precio\": 15000, \"cat\": \"tech\"},\n    {\"nombre\": \"Teclado\", \"precio\": 500, \"cat\": \"tech\"},\n    {\"nombre\": \"Café\", \"precio\": 100, \"cat\": \"food\"}\n]\n\n# 1. Función de Orden Superior\ndef mi_filtro(lista, funcion_predicado):\n    resultado = []\n    # Tu código aquí: Recorre la lista y aplica la función\n    return resultado\n\n# 2. Definir predicados (Funciones que retornan Bool)\ndef es_tech(p): \n    return p[\"cat\"] == \"tech\"\n\ndef es_accesible(p):\n    return p[\"precio\"] < 1000\n\n# 3. Uso\nprint(\"Tech:\", mi_filtro(productos, es_tech))\nprint(\"Accesibles:\", mi_filtro(productos, es_accesible))",
-      "solucion_referencia": "def mi_filtro(lista, funcion_predicado):\n    resultado = []\n    for item in lista:\n        # Evaluamos el predicado P(x)\n        if funcion_predicado(item):\n            resultado.append(item)\n    return resultado\n\n# Predicado Compuesto (Lambda): Tech AND Accesible\n# Esto equivale a ∃x (Tech(x) ∧ Accesible(x))\ngang_tech = mi_filtro(productos, lambda p: es_tech(p) and es_accesible(p))\nprint(gang_tech) # Output: [{'nombre': 'Teclado' ...}]",
-      "casos_prueba": [
-        {
-          "entrada": "Predicado: es_tech",
-          "salida_esperada": "[Laptop, Teclado]",
-          "nota": "Filtro simple correcto"
-        },
-        {
-          "entrada": "Predicado: es_tech AND es_accesible",
-          "salida_esperada": "[Teclado]",
-          "nota": "Lógica compuesta (Intersección)"
-        },
-        {
-          "entrada": "Predicado: Que siempre retorne False",
-          "salida_esperada": "[] (Lista vacía)",
-          "nota": "Caso borde"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "imagen",
-          "titulo": "Diagrama de Cuantificadores Lógicos",
-          "url": ""
-        },
-        {
-          "tipo": "video",
-          "titulo": "Predicates and Quantifiers (Khan Academy)",
-          "url": "https://www.youtube.com/watch?v=..."
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "El cerebro de las consultas de datos",
+    "contenido": "Cada vez que filtras información en una app o buscas en una base de datos, estás evaluando predicados.",
+    "aplicaciones": [
+      "Bases de Datos (SQL): La cláusula 'WHERE' es literalmente un predicado. (SELECT * FROM Users WHERE age > 18).",
+      "Programación Funcional: Las funciones 'filter()' reciben un predicado como argumento.",
+      "Expresiones Regulares (Regex): Patrones que definen predicados para cadenas de texto.",
+      "Inteligencia Artificial: Sistemas basados en reglas y representación del conocimiento (Prolog)."
+    ],
+    "ejemplos_vida_real": [
+      "Filtros de Excel: Mostrar filas donde 'Ventas > 1000' (Predicado).",
+      "Validación de Formularios: El botón 'Enviar' se activa solo si ∀campo (campo está lleno y es válido).",
+      "Buscadores de Vuelos: Buscar vuelos donde (Precio < 5000) ∧ (Escalas == 0)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Estructura del Conocimiento",
+    "prerequisitos": [
+      {
+        "id": "logica_proposicional",
+        "nombre": "Lógica Proposicional",
+        "razon": "Debes dominar los conectores AND, OR, NOT antes de agregar cuantificadores."
+      },
+      {
+        "id": "teoria_conjuntos",
+        "nombre": "Teoría de Conjuntos",
+        "razon": "El 'Dominio' de una variable es un conjunto. ∀ se relaciona con subconjuntos."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "bases_datos_relacionales",
+        "nombre": "Bases de Datos (SQL)",
+        "razon": "SQL es la implementación industrial de la lógica de predicados."
+      },
+      {
+        "id": "programacion_funcional",
+        "nombre": "Programación Funcional",
+        "razon": "Uso intensivo de funciones puras y predicados (map, filter, reduce)."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Inferencia Lógica",
+      "Refutación",
+      "Variables libres y ligadas"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Dónde se usa en el trabajo",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Backend / Data Engineering",
+        "descripcion": "Creación de consultas complejas para extraer información precisa.",
+        "ejemplos": [
+          "Reportes financieros automatizados",
+          "Motores de búsqueda internos"
+        ]
+      },
+      {
+        "nombre": "Testing y QA Automation",
+        "descripcion": "Aserciones lógicas sobre el comportamiento del software.",
+        "ejemplos": [
+          "Tests unitarios: Assert.IsTrue(Predicado)"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial (Sistemas Expertos)",
+        "descripcion": "Motores de reglas de negocio.",
+        "ejemplos": [
+          "Sistemas de detección de fraude bancario"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Palantir (Análisis de datos masivos)",
+      "IBM (Sistemas de IA simbólica)",
+      "Cualquier Fintech (Reglas de validación de transacciones)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Técnicos",
+    "roles": [
+      {
+        "nombre": "Data Engineer",
+        "importancia": "Crítica",
+        "uso": "Transformación de datos basada en lógica condicional compleja."
+      },
+      {
+        "nombre": "Backend Developer",
+        "importancia": "Alta",
+        "uso": "Lógica de negocio y consultas a BD."
+      },
+      {
+        "nombre": "QA Engineer",
+        "importancia": "Alta",
+        "uso": "Definición de criterios de aceptación (Predicados de éxito)."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $65,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: El Motor de Filtrado (Implementando 'Filter')",
+    "descripcion": "En programación funcional, filtrar una lista es aplicar un predicado a cada elemento. Tu reto es construir tu propio motor de filtrado para un inventario de tienda, usando funciones como predicados lógicos.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "productos = [\n    {\"nombre\": \"Laptop\", \"precio\": 15000, \"cat\": \"tech\"},\n    {\"nombre\": \"Teclado\", \"precio\": 500, \"cat\": \"tech\"},\n    {\"nombre\": \"Café\", \"precio\": 100, \"cat\": \"food\"}\n]\n\n# 1. Función de Orden Superior\ndef mi_filtro(lista, funcion_predicado):\n    resultado = []\n    # Tu código aquí: Recorre la lista y aplica la función\n    return resultado\n\n# 2. Definir predicados (Funciones que retornan Bool)\ndef es_tech(p): \n    return p[\"cat\"] == \"tech\"\n\ndef es_accesible(p):\n    return p[\"precio\"] < 1000\n\n# 3. Uso\nprint(\"Tech:\", mi_filtro(productos, es_tech))\nprint(\"Accesibles:\", mi_filtro(productos, es_accesible))",
+    "solucion_referencia": "def mi_filtro(lista, funcion_predicado):\n    resultado = []\n    for item in lista:\n        # Evaluamos el predicado P(x)\n        if funcion_predicado(item):\n            resultado.append(item)\n    return resultado\n\n# Predicado Compuesto (Lambda): Tech AND Accesible\n# Esto equivale a ∃x (Tech(x) ∧ Accesible(x))\ngang_tech = mi_filtro(productos, lambda p: es_tech(p) and es_accesible(p))\nprint(gang_tech) # Output: [{'nombre': 'Teclado' ...}]",
+    "pistas": [
+      "Tienes una lista de diccionarios (productos).",
+      "Crea una función de orden superior 'mi_filtro(lista, predicado)' que reciba la lista y una FUNCIÓN que devuelva True/False.",
+      "Define predicados específicos: 'es_barato(item)', 'es_electronica(item)'.",
+      "Combina predicados para consultas complejas (Lógica: es_barato AND es_electronica)."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Predicado: es_tech",
+        "salida_esperada": "[Laptop, Teclado]",
+        "explicacion": "Filtro simple correcto"
+      },
+      {
+        "entrada": "Predicado: es_tech AND es_accesible",
+        "salida_esperada": "[Teclado]",
+        "explicacion": "Lógica compuesta (Intersección)"
+      },
+      {
+        "entrada": "Predicado: Que siempre retorne False",
+        "salida_esperada": "[] (Lista vacía)",
+        "explicacion": "Caso borde"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "imagen",
+        "titulo": "Diagrama de Cuantificadores Lógicos",
+        "url": ""
+      },
+      {
+        "tipo": "video",
+        "titulo": "Predicates and Quantifiers (Khan Academy)",
+        "url": "https://www.youtube.com/watch?v=..."
+      }
+    ]
   }
 }

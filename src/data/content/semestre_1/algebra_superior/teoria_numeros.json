@@ -1,172 +1,184 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "teoria_numeros",
-      "titulo": "Teoría de Números y Criptografía",
-      "materia": "Matemáticas Discretas / Seguridad Informática",
-      "semestre": 1,
-      "dificultad": "difícil",
-      "tiempo_estudio": "5-7 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "El Lenguaje de la Seguridad",
-        "definicion": "Rama de las matemáticas que estudia las propiedades de los números enteros, especialmente los números primos. Es el cimiento matemático de la criptografía moderna.",
-        "puntos_clave": [
-          "Divisibilidad y Primos: Los números primos son los 'átomos' de la aritmética. Todo número se compone de primos únicos (Teorema Fundamental de la Aritmética).",
-          "Aritmética Modular (Aritmética del Reloj): Operar con números que dan la vuelta al llegar a un límite (módulo). Ejemplo: 13 horas + 2 horas = 3 horas (en mod 12).",
-          "Algoritmo de Euclides: Un método eficiente de más de 2000 años para encontrar el Máximo Común Divisor (MCD).",
-          "Congruencias: a ≡ b (mod n) significa que 'a' y 'b' dejan el mismo residuo al dividirse por 'n'."
-        ],
-        "formulas": [
-          "Algoritmo de la División: a = bq + r (0 ≤ r < b)",
-          "Congruencia: a ≡ b (mod n) ↔ n divide a (a - b)",
-          "Pequeño Teorema de Fermat: a^(p-1) ≡ 1 (mod p) (Clave para RSA)"
-        ]
+  "metadata": {
+    "id": "teoria_numeros",
+    "titulo": "Teoría de Números y Criptografía",
+    "materia": "Matemáticas Discretas / Seguridad Informática",
+    "semestre": 1,
+    "dificultad": "difícil",
+    "tiempo_estudio": "5-7 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "El Lenguaje de la Seguridad",
+    "contenido": "Rama de las matemáticas que estudia las propiedades de los números enteros, especialmente los números primos. Es el cimiento matemático de la criptografía moderna.",
+    "puntos_clave": [
+      "Divisibilidad y Primos: Los números primos son los 'átomos' de la aritmética. Todo número se compone de primos únicos (Teorema Fundamental de la Aritmética).",
+      "Aritmética Modular (Aritmética del Reloj): Operar con números que dan la vuelta al llegar a un límite (módulo). Ejemplo: 13 horas + 2 horas = 3 horas (en mod 12).",
+      "Algoritmo de Euclides: Un método eficiente de más de 2000 años para encontrar el Máximo Común Divisor (MCD).",
+      "Congruencias: a ≡ b (mod n) significa que 'a' y 'b' dejan el mismo residuo al dividirse por 'n'."
+    ],
+    "formulas": [
+      {
+        "latex": "Algoritmo de la División: a = bq + r (0 ≤ r < b)",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Por qué es vital hoy?",
-        "descripcion": "Sin teoría de números, no podrías comprar en Amazon, revisar tu banco ni enviar mensajes privados en WhatsApp. Garantiza la confidencialidad.",
-        "aplicaciones_comunes": [
-          "Criptografía RSA: Usa la dificultad de factorizar números gigantes (producto de dos primos) para proteger datos.",
-          "Funciones Hash (Hashing): Distribución de datos en tablas Hash usando aritmética modular (key % size).",
-          "Generación de Números Aleatorios: Vital para simulaciones y seguridad.",
-          "Dígitos de Control: Validación de tarjetas de crédito (Algoritmo de Luhn) e ISBN de libros."
-        ],
-        "ejemplos_vida_real": [
-          "Candado HTTPS: Cuando ves el candadito en el navegador, tu computadora está haciendo aritmética modular compleja.",
-          "Relojes: Calcular la hora es aritmética módulo 12 o 24.",
-          "Criptomonedas (Bitcoin): Curvas elípticas sobre campos finitos (teoría de números avanzada)."
-        ]
+      {
+        "latex": "Congruencia: a ≡ b (mod n) ↔ n divide a (a - b)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Conexiones Críticas",
-        "prerequisitos": [
-          {
-            "id": "algebra_basica",
-            "nombre": "Álgebra Elemental",
-            "razon": "Manejo de ecuaciones y propiedades de las operaciones."
-          },
-          {
-            "id": "metodos_demostracion",
-            "nombre": "Métodos de Demostración",
-            "razon": "Muchas propiedades de números primos se demuestran por contradicción."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "criptografia_aplicada",
-            "nombre": "Criptografía y Seguridad",
-            "razon": "Aplicación directa de RSA, Diffie-Hellman y Curvas Elípticas."
-          },
-          {
-            "id": "algoritmos_avanzados",
-            "nombre": "Algoritmos Numéricos",
-            "razon": "Pruebas de primalidad y factorización eficiente."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Complejidad Computacional (P vs NP)",
-          "Operaciones Bitwise",
-          "Números Coprimos"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Industria de la Seguridad",
-          "sectores": [
-            {
-              "nombre": "Ciberseguridad y Privacidad",
-              "descripcion": "Desarrollo de protocolos seguros de comunicación.",
-              "ejemplos": ["VPNs", "Mensajería encriptada (Signal/WhatsApp)"]
-            },
-            {
-              "nombre": "Blockchain y Web3",
-              "descripcion": "Firmas digitales y consenso distribuido.",
-              "ejemplos": ["Ethereum Smart Contracts", "Billeteras Bitcoin"]
-            },
-            {
-              "nombre": "Banca y Finanzas",
-              "descripcion": "Seguridad en transacciones y cajeros automáticos.",
-              "ejemplos": ["PCI-DSS Compliance", "Tokens de seguridad"]
-            }
-          ],
-          "empresas_referencia": [
-            "Cloudflare (Seguridad de internet)",
-            "Coinbase (Criptomonedas)",
-            "Entidades Bancarias (BBVA, Santander)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Roles Especializados",
-          "salario_promedio_mx": "$50,000 - $100,000+ MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Criptografía",
-              "importancia": "Crítica",
-              "uso": "Diseño e implementación de algoritmos matemáticos seguros."
-            },
-            {
-              "nombre": "Blockchain Developer",
-              "importancia": "Alta",
-              "uso": "Uso de hashing y firmas digitales."
-            },
-            {
-              "nombre": "Ingeniero de Seguridad de Software",
-              "importancia": "Alta",
-              "uso": "Implementación correcta de librerías criptográficas (no crear las propias)."
-            }
-          ]
-        }
+      {
+        "latex": "Pequeño Teorema de Fermat: a^(p-1) ≡ 1 (mod p) (Clave para RSA)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: El Cifrado del César (Aritmética Modular)",
-      "descripcion": "El Cifrado César es la forma más básica de criptografía, usada por Julio César. Consiste en desplazar cada letra del alfabeto un número fijo de posiciones. Si llegas a la 'Z', vuelves a empezar en la 'A'. Esto es pura Aritmética Modular (mod 26).",
-      "dificultad": "básico",
-      "instrucciones": [
-        "El alfabeto tiene 26 letras. Asigna A=0, B=1, ... Z=25.",
-        "La fórmula de encriptación es: C = (P + K) % 26, donde P es la letra original y K es la clave (desplazamiento).",
-        "Implementa una función 'encriptar(texto, clave)'.",
-        "Tip: Usa la función `ord()` de Python para obtener el valor ASCII y ajusta para que A empiece en 0."
-      ],
-      "codigo_plantilla": "def encriptar_cesar(texto, clave):\n    resultado = \"\"\n    \n    for letra in texto:\n        if letra.isalpha():\n            # Determinar si es mayúscula para mantener el caso\n            ascii_base = ord('A') if letra.isupper() else ord('a')\n            \n            # 1. Convertir letra a número (0-25)\n            original = ord(letra) - ascii_base\n            \n            # 2. Aplicar desplazamiento y MÓDULO 26 (La magia)\n            nuevo_numero = (original + clave) % 26\n            \n            # 3. Convertir número de vuelta a letra\n            nueva_letra = chr(nuevo_numero + ascii_base)\n            resultado += nueva_letra\n        else:\n            # Dejar espacios y símbolos igual\n            resultado += letra\n            \n    return resultado\n\n# Prueba\ntexto_secreto = \"HOLA MUNDO Z\"\nclave = 3 # Desplazamiento de 3 (A->D, B->E... Z->C)\nprint(f\"Original: {texto_secreto}\")\nprint(f\"Encriptado: {encriptar_cesar(texto_secreto, clave)}\")",
-      "solucion_referencia": "Original: HOLA MUNDO Z\nEncriptado: KROD PXQGR C\n\nExplicación:\n- H (7) + 3 = 10 (K)\n- Z (25) + 3 = 28. 28 % 26 = 2 (C). ¡Aquí se ve el efecto modular!",
-      "casos_prueba": [
-        {
-          "entrada": "Texto: 'ABC', Clave: 1",
-          "salida_esperada": "'BCD'",
-          "nota": "Desplazamiento simple"
-        },
-        {
-          "entrada": "Texto: 'ZZZ', Clave: 1",
-          "salida_esperada": "'AAA'",
-          "nota": "Prueba de vuelta de ciclo (Módulo)"
-        },
-        {
-          "entrada": "Texto: 'Python', Clave: 26",
-          "salida_esperada": "'Python'",
-          "nota": "Clave múltiplo del módulo (Vuelta completa)"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Modular Arithmetic and Cryptography (Khan Academy)",
-          "url": "https://www.youtube.com/watch?v=..."
-        },
-        {
-          "tipo": "imagen",
-          "titulo": "Reloj de Aritmética Modular",
-          "url": ""
-        }, 
-        {
-             "tipo": "imagen",
-             "titulo": "Diagrama de funcionamiento RSA",
-             "url": ""
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué es vital hoy?",
+    "contenido": "Sin teoría de números, no podrías comprar en Amazon, revisar tu banco ni enviar mensajes privados en WhatsApp. Garantiza la confidencialidad.",
+    "aplicaciones": [
+      "Criptografía RSA: Usa la dificultad de factorizar números gigantes (producto de dos primos) para proteger datos.",
+      "Funciones Hash (Hashing): Distribución de datos en tablas Hash usando aritmética modular (key % size).",
+      "Generación de Números Aleatorios: Vital para simulaciones y seguridad.",
+      "Dígitos de Control: Validación de tarjetas de crédito (Algoritmo de Luhn) e ISBN de libros."
+    ],
+    "ejemplos_vida_real": [
+      "Candado HTTPS: Cuando ves el candadito en el navegador, tu computadora está haciendo aritmética modular compleja.",
+      "Relojes: Calcular la hora es aritmética módulo 12 o 24.",
+      "Criptomonedas (Bitcoin): Curvas elípticas sobre campos finitos (teoría de números avanzada)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Conexiones Críticas",
+    "prerequisitos": [
+      {
+        "id": "algebra_basica",
+        "nombre": "Álgebra Elemental",
+        "razon": "Manejo de ecuaciones y propiedades de las operaciones."
+      },
+      {
+        "id": "metodos_demostracion",
+        "nombre": "Métodos de Demostración",
+        "razon": "Muchas propiedades de números primos se demuestran por contradicción."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "criptografia_aplicada",
+        "nombre": "Criptografía y Seguridad",
+        "razon": "Aplicación directa de RSA, Diffie-Hellman y Curvas Elípticas."
+      },
+      {
+        "id": "algoritmos_avanzados",
+        "nombre": "Algoritmos Numéricos",
+        "razon": "Pruebas de primalidad y factorización eficiente."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Complejidad Computacional (P vs NP)",
+      "Operaciones Bitwise",
+      "Números Coprimos"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Industria de la Seguridad",
+    "sectores": [
+      {
+        "nombre": "Ciberseguridad y Privacidad",
+        "descripcion": "Desarrollo de protocolos seguros de comunicación.",
+        "ejemplos": [
+          "VPNs",
+          "Mensajería encriptada (Signal/WhatsApp)"
+        ]
+      },
+      {
+        "nombre": "Blockchain y Web3",
+        "descripcion": "Firmas digitales y consenso distribuido.",
+        "ejemplos": [
+          "Ethereum Smart Contracts",
+          "Billeteras Bitcoin"
+        ]
+      },
+      {
+        "nombre": "Banca y Finanzas",
+        "descripcion": "Seguridad en transacciones y cajeros automáticos.",
+        "ejemplos": [
+          "PCI-DSS Compliance",
+          "Tokens de seguridad"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Cloudflare (Seguridad de internet)",
+      "Coinbase (Criptomonedas)",
+      "Entidades Bancarias (BBVA, Santander)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Roles Especializados",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Criptografía",
+        "importancia": "Crítica",
+        "uso": "Diseño e implementación de algoritmos matemáticos seguros."
+      },
+      {
+        "nombre": "Blockchain Developer",
+        "importancia": "Alta",
+        "uso": "Uso de hashing y firmas digitales."
+      },
+      {
+        "nombre": "Ingeniero de Seguridad de Software",
+        "importancia": "Alta",
+        "uso": "Implementación correcta de librerías criptográficas (no crear las propias)."
+      }
+    ],
+    "salario_promedio_mx": "$50,000 - $100,000+ MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: El Cifrado del César (Aritmética Modular)",
+    "descripcion": "El Cifrado César es la forma más básica de criptografía, usada por Julio César. Consiste en desplazar cada letra del alfabeto un número fijo de posiciones. Si llegas a la 'Z', vuelves a empezar en la 'A'. Esto es pura Aritmética Modular (mod 26).",
+    "dificultad": "básico",
+    "codigo_inicial": "def encriptar_cesar(texto, clave):\n    resultado = \"\"\n    \n    for letra in texto:\n        if letra.isalpha():\n            # Determinar si es mayúscula para mantener el caso\n            ascii_base = ord('A') if letra.isupper() else ord('a')\n            \n            # 1. Convertir letra a número (0-25)\n            original = ord(letra) - ascii_base\n            \n            # 2. Aplicar desplazamiento y MÓDULO 26 (La magia)\n            nuevo_numero = (original + clave) % 26\n            \n            # 3. Convertir número de vuelta a letra\n            nueva_letra = chr(nuevo_numero + ascii_base)\n            resultado += nueva_letra\n        else:\n            # Dejar espacios y símbolos igual\n            resultado += letra\n            \n    return resultado\n\n# Prueba\ntexto_secreto = \"HOLA MUNDO Z\"\nclave = 3 # Desplazamiento de 3 (A->D, B->E... Z->C)\nprint(f\"Original: {texto_secreto}\")\nprint(f\"Encriptado: {encriptar_cesar(texto_secreto, clave)}\")",
+    "solucion_referencia": "Original: HOLA MUNDO Z\nEncriptado: KROD PXQGR C\n\nExplicación:\n- H (7) + 3 = 10 (K)\n- Z (25) + 3 = 28. 28 % 26 = 2 (C). ¡Aquí se ve el efecto modular!",
+    "pistas": [
+      "El alfabeto tiene 26 letras. Asigna A=0, B=1, ... Z=25.",
+      "La fórmula de encriptación es: C = (P + K) % 26, donde P es la letra original y K es la clave (desplazamiento).",
+      "Implementa una función 'encriptar(texto, clave)'.",
+      "Tip: Usa la función `ord()` de Python para obtener el valor ASCII y ajusta para que A empiece en 0."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Texto: 'ABC', Clave: 1",
+        "salida_esperada": "'BCD'",
+        "explicacion": "Desplazamiento simple"
+      },
+      {
+        "entrada": "Texto: 'ZZZ', Clave: 1",
+        "salida_esperada": "'AAA'",
+        "explicacion": "Prueba de vuelta de ciclo (Módulo)"
+      },
+      {
+        "entrada": "Texto: 'Python', Clave: 26",
+        "salida_esperada": "'Python'",
+        "explicacion": "Clave múltiplo del módulo (Vuelta completa)"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Modular Arithmetic and Cryptography (Khan Academy)",
+        "url": "https://www.youtube.com/watch?v=..."
+      },
+      {
+        "tipo": "imagen",
+        "titulo": "Reloj de Aritmética Modular",
+        "url": ""
+      },
+      {
+        "tipo": "imagen",
+        "titulo": "Diagrama de funcionamiento RSA",
+        "url": ""
+      }
+    ]
   }
 }

@@ -1,200 +1,204 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "tipos_datos_abstractos",
-      "titulo": "Tipos de Datos Abstractos (TDA)",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "intermedio-avanzado",
-      "tiempo_estudio": "4-6 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es un Tipo de Dato Abstracto?",
-        "definicion": "Un Tipo de Dato Abstracto (TDA) es un modelo matemático que define un conjunto de valores y un conjunto de operaciones permitidas sobre esos valores, sin especificar cómo se implementan internamente. Se centra en el *qué* hace la estructura, no en *cómo* lo hace.",
-        "puntos_clave": [
-          "Define comportamiento, no implementación.",
-          "Sirve de especificación para estructuras de datos concretas.",
-          "Permite ocultar detalles internos (abstracción).",
-          "Garantiza modularidad y mantenibilidad.",
-          "Se describe mediante invariantes y pre/post condiciones."
-        ],
-        "formulas": [
-          "TDA = (Estados, Operaciones, Axiomas)",
-          "Ejemplo: Pila = ({S}, push, pop, top, empty)",
-          "Estructura ≠ TDA (el TDA es conceptual; la estructura es concreta)"
-        ]
+  "metadata": {
+    "id": "tipos_datos_abstractos",
+    "titulo": "Tipos de Datos Abstractos (TDA)",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "intermedio-avanzado",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es un Tipo de Dato Abstracto?",
+    "contenido": "Un Tipo de Dato Abstracto (TDA) es un modelo matemático que define un conjunto de valores y un conjunto de operaciones permitidas sobre esos valores, sin especificar cómo se implementan internamente. Se centra en el *qué* hace la estructura, no en *cómo* lo hace.",
+    "puntos_clave": [
+      "Define comportamiento, no implementación.",
+      "Sirve de especificación para estructuras de datos concretas.",
+      "Permite ocultar detalles internos (abstracción).",
+      "Garantiza modularidad y mantenibilidad.",
+      "Se describe mediante invariantes y pre/post condiciones."
+    ],
+    "formulas": [
+      {
+        "latex": "TDA = (Estados, Operaciones, Axiomas)",
+        "descripcion": ""
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve un TDA?",
-        "descripcion": "Los TDA permiten diseñar software robusto, organizando datos y operaciones de forma clara y formal. Son la base para crear estructuras de datos eficientes.",
-        "aplicaciones_comunes": [
-          "Diseño de APIs y librerías.",
-          "Modelado de soluciones algorítmicas.",
-          "Creación de estructuras de datos eficientes.",
-          "Programación orientada a objetos (clases como TDA).",
-          "Diseño de compiladores (pilas, colas, árboles)."
-        ],
-        "ejemplos_vida_real": [
-          "Una navegación web usa una pila para el historial.",
-          "Un sistema de atención telefónica usa una cola FIFO.",
-          "Buscadores como Google utilizan árboles balanceados y tries.",
-          "Bases de datos implementan listas, tablas hash y árboles B+."
-        ]
+      {
+        "latex": "Ejemplo: Pila = ({S}, push, pop, top, empty)",
+        "descripcion": ""
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "estructuras_datos_basicas",
-            "nombre": "Estructuras de Datos Básicas",
-            "razon": "Los TDA se implementan usando estructuras como arreglos, listas o árboles."
-          },
-          {
-            "id": "modularidad",
-            "nombre": "Modularidad",
-            "razon": "Los TDA requieren encapsulación y ocultamiento."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "analisis_algoritmos",
-            "nombre": "Análisis de Algoritmos",
-            "razon": "Cada TDA influye en la complejidad temporal de las operaciones."
-          },
-          {
-            "id": "poo",
-            "nombre": "Programación Orientada a Objetos",
-            "razon": "Las clases son representaciones directas de TDA."
-          },
-          {
-            "id": "estructuras_avanzadas",
-            "nombre": "Estructuras de Datos Avanzadas",
-            "razon": "Los TDA forman la base de árboles, heaps, tablas hash, etc."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Encapsulación",
-          "Contratos (pre/post condiciones)",
-          "Invariantes de representación",
-          "Modelos algebraicos",
-          "Interfaces vs implementaciones"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usan los TDA en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Backend",
-              "descripcion": "Gestión eficiente de datos y estados.",
-              "ejemplos": ["Colas de mensajes", "Heaps para scheduling"]
-            },
-            {
-              "nombre": "Bases de Datos",
-              "descripcion": "Árboles B/B+, hashing, listas enlazadas internas.",
-              "ejemplos": ["Índices de MySQL", "Sistemas NoSQL"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Estructuras de búsqueda y árboles de decisión.",
-              "ejemplos": ["Priority Queue para A*", "Árboles para MCTS"]
-            },
-            {
-              "nombre": "Sistemas Operativos",
-              "descripcion": "Tablas de procesos, colas de ejecución, heaps.",
-              "ejemplos": ["Planificadores (scheduler)", "Tablas de páginas"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (Infraestructura de datos y búsqueda)",
-            "Meta (Optimización de grafos y feeds)",
-            "Microsoft (Compiladores y sistemas de archivos)",
-            "NVIDIA (arquitecturas para IA y grafos)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que requieren dominio del concepto",
-          "salario_promedio_mx": "$30,000 - $100,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Software",
-              "importancia": "Alta",
-              "uso": "Diseño de APIs, contenedores, optimización."
-            },
-            {
-              "nombre": "Científico de Datos",
-              "importancia": "Media",
-              "uso": "Estructuras eficientes para ML y ETL."
-            },
-            {
-              "nombre": "Ingeniero de Algoritmos",
-              "importancia": "Crítica",
-              "uso": "Modelado abstracto de estructuras y operaciones."
-            },
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Colas, pilas, árboles, tablas hash."
-            }
-          ]
-        }
+      {
+        "latex": "Estructura ≠ TDA (el TDA es conceptual; la estructura es concreta)",
+        "descripcion": ""
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Implementa 3 TDA clásicos desde cero",
-      "descripcion": "Implementa una Pila (Stack), una Cola (Queue) y una Lista Enlazada (LinkedList) usando solo arreglos o nodos. Luego realiza pruebas unitarias para validar cada operación.",
-      "dificultad": "intermedio",
-
-      "instrucciones": [
-        "Define en pseudocódigo los TDA: operaciones y axiomas.",
-        "Implementa cada TDA en Python sin usar listas pre-hechas como estructuras completas.",
-        "Incluye métodos: push/pop para pila, enqueue/dequeue para cola y add/remove para lista enlazada.",
-        "Valida las operaciones con casos de prueba.",
-        "Reflexiona sobre su eficiencia Big O."
-      ],
-
-      "codigo_plantilla": "class Stack:\n    def __init__(self):\n        self.data = []\n\n    def push(self, x):\n        # TODO\n        pass\n\n    def pop(self):\n        # TODO\n        pass\n\nclass Queue:\n    def __init__(self):\n        self.data = []\n\n    def enqueue(self, x):\n        # TODO\n        pass\n\n    def dequeue(self):\n        # TODO\n        pass\n\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add(self, val):\n        # TODO\n        pass\n\n    def remove(self, val):\n        # TODO\n        pass",
-
-      "solucion_referencia": "class Stack:\n    def __init__(self): self.data = []\n    def push(self, x): self.data.append(x)\n    def pop(self): return self.data.pop()\n\nclass Queue:\n    def __init__(self): self.data = []\n    def enqueue(self, x): self.data.append(x)\n    def dequeue(self): return self.data.pop(0)\n\nclass Node:\n    def __init__(self, v): self.val = v; self.next = None\n\nclass LinkedList:\n    def __init__(self): self.head = None\n    def add(self, val):\n        n = Node(val)\n        n.next = self.head\n        self.head = n\n    def remove(self, val):\n        cur = self.head; prev = None\n        while cur:\n            if cur.val == val:\n                if prev: prev.next = cur.next\n                else: self.head = cur.next\n                return\n            prev, cur = cur, cur.next",
-
-      "casos_prueba": [
-        {
-          "entrada": "Stack → push(1), push(2), pop()",
-          "salida_esperada": "2",
-          "nota": "LIFO correcto"
-        },
-        {
-          "entrada": "Queue → enqueue(1), enqueue(2), dequeue()",
-          "salida_esperada": "1",
-          "nota": "FIFO correcto"
-        },
-        {
-          "entrada": "LinkedList → add(3), add(4), remove(4)",
-          "salida_esperada": "head = 3",
-          "nota": "Eliminación correcta"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "libro",
-          "titulo": "Algorithms — Sedgewick & Wayne",
-          "url": "https://algs4.cs.princeton.edu/home/"
-        },
-        {
-          "tipo": "video",
-          "titulo": "MIT 6.006 — Estructuras de Datos",
-          "url": "https://ocw.mit.edu/"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve un TDA?",
+    "contenido": "Los TDA permiten diseñar software robusto, organizando datos y operaciones de forma clara y formal. Son la base para crear estructuras de datos eficientes.",
+    "aplicaciones": [
+      "Diseño de APIs y librerías.",
+      "Modelado de soluciones algorítmicas.",
+      "Creación de estructuras de datos eficientes.",
+      "Programación orientada a objetos (clases como TDA).",
+      "Diseño de compiladores (pilas, colas, árboles)."
+    ],
+    "ejemplos_vida_real": [
+      "Una navegación web usa una pila para el historial.",
+      "Un sistema de atención telefónica usa una cola FIFO.",
+      "Buscadores como Google utilizan árboles balanceados y tries.",
+      "Bases de datos implementan listas, tablas hash y árboles B+."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "estructuras_datos_basicas",
+        "nombre": "Estructuras de Datos Básicas",
+        "razon": "Los TDA se implementan usando estructuras como arreglos, listas o árboles."
+      },
+      {
+        "id": "modularidad",
+        "nombre": "Modularidad",
+        "razon": "Los TDA requieren encapsulación y ocultamiento."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "analisis_algoritmos",
+        "nombre": "Análisis de Algoritmos",
+        "razon": "Cada TDA influye en la complejidad temporal de las operaciones."
+      },
+      {
+        "id": "poo",
+        "nombre": "Programación Orientada a Objetos",
+        "razon": "Las clases son representaciones directas de TDA."
+      },
+      {
+        "id": "estructuras_avanzadas",
+        "nombre": "Estructuras de Datos Avanzadas",
+        "razon": "Los TDA forman la base de árboles, heaps, tablas hash, etc."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Encapsulación",
+      "Contratos (pre/post condiciones)",
+      "Invariantes de representación",
+      "Modelos algebraicos",
+      "Interfaces vs implementaciones"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usan los TDA en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Backend",
+        "descripcion": "Gestión eficiente de datos y estados.",
+        "ejemplos": [
+          "Colas de mensajes",
+          "Heaps para scheduling"
+        ]
+      },
+      {
+        "nombre": "Bases de Datos",
+        "descripcion": "Árboles B/B+, hashing, listas enlazadas internas.",
+        "ejemplos": [
+          "Índices de MySQL",
+          "Sistemas NoSQL"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Estructuras de búsqueda y árboles de decisión.",
+        "ejemplos": [
+          "Priority Queue para A*",
+          "Árboles para MCTS"
+        ]
+      },
+      {
+        "nombre": "Sistemas Operativos",
+        "descripcion": "Tablas de procesos, colas de ejecución, heaps.",
+        "ejemplos": [
+          "Planificadores (scheduler)",
+          "Tablas de páginas"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (Infraestructura de datos y búsqueda)",
+      "Meta (Optimización de grafos y feeds)",
+      "Microsoft (Compiladores y sistemas de archivos)",
+      "NVIDIA (arquitecturas para IA y grafos)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que requieren dominio del concepto",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Software",
+        "importancia": "Alta",
+        "uso": "Diseño de APIs, contenedores, optimización."
+      },
+      {
+        "nombre": "Científico de Datos",
+        "importancia": "Media",
+        "uso": "Estructuras eficientes para ML y ETL."
+      },
+      {
+        "nombre": "Ingeniero de Algoritmos",
+        "importancia": "Crítica",
+        "uso": "Modelado abstracto de estructuras y operaciones."
+      },
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Colas, pilas, árboles, tablas hash."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $100,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Implementa 3 TDA clásicos desde cero",
+    "descripcion": "Implementa una Pila (Stack), una Cola (Queue) y una Lista Enlazada (LinkedList) usando solo arreglos o nodos. Luego realiza pruebas unitarias para validar cada operación.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "class Stack:\n    def __init__(self):\n        self.data = []\n\n    def push(self, x):\n        # TODO\n        pass\n\n    def pop(self):\n        # TODO\n        pass\n\nclass Queue:\n    def __init__(self):\n        self.data = []\n\n    def enqueue(self, x):\n        # TODO\n        pass\n\n    def dequeue(self):\n        # TODO\n        pass\n\nclass Node:\n    def __init__(self, val):\n        self.val = val\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add(self, val):\n        # TODO\n        pass\n\n    def remove(self, val):\n        # TODO\n        pass",
+    "solucion_referencia": "class Stack:\n    def __init__(self): self.data = []\n    def push(self, x): self.data.append(x)\n    def pop(self): return self.data.pop()\n\nclass Queue:\n    def __init__(self): self.data = []\n    def enqueue(self, x): self.data.append(x)\n    def dequeue(self): return self.data.pop(0)\n\nclass Node:\n    def __init__(self, v): self.val = v; self.next = None\n\nclass LinkedList:\n    def __init__(self): self.head = None\n    def add(self, val):\n        n = Node(val)\n        n.next = self.head\n        self.head = n\n    def remove(self, val):\n        cur = self.head; prev = None\n        while cur:\n            if cur.val == val:\n                if prev: prev.next = cur.next\n                else: self.head = cur.next\n                return\n            prev, cur = cur, cur.next",
+    "pistas": [
+      "Define en pseudocódigo los TDA: operaciones y axiomas.",
+      "Implementa cada TDA en Python sin usar listas pre-hechas como estructuras completas.",
+      "Incluye métodos: push/pop para pila, enqueue/dequeue para cola y add/remove para lista enlazada.",
+      "Valida las operaciones con casos de prueba.",
+      "Reflexiona sobre su eficiencia Big O."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Stack → push(1), push(2), pop()",
+        "salida_esperada": "2",
+        "explicacion": "LIFO correcto"
+      },
+      {
+        "entrada": "Queue → enqueue(1), enqueue(2), dequeue()",
+        "salida_esperada": "1",
+        "explicacion": "FIFO correcto"
+      },
+      {
+        "entrada": "LinkedList → add(3), add(4), remove(4)",
+        "salida_esperada": "head = 3",
+        "explicacion": "Eliminación correcta"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "libro",
+        "titulo": "Algorithms — Sedgewick & Wayne",
+        "url": "https://algs4.cs.princeton.edu/home/"
+      },
+      {
+        "tipo": "video",
+        "titulo": "MIT 6.006 — Estructuras de Datos",
+        "url": "https://ocw.mit.edu/"
+      }
+    ]
   }
 }

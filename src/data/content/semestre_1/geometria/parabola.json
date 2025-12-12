@@ -1,164 +1,177 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "parabola",
-      "titulo": "La Parábola y Funciones de Costo",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "La Geometría del Error",
-        "definicion": "Lugar geométrico de los puntos que equidistan de un punto fijo (foco) y una recta fija (directriz). En IA, las parábolas convexas (que abren hacia arriba) representan la superficie ideal de una función de error.",
-        "puntos_clave": [
-          "Ecuación Canónica: (x-h)² = 4p(y-k) o y = ax² + bx + c.",
-          "El Vértice (h, k) es el punto más importante en ML: representa el Mínimo Global (error cero o mínimo posible).",
-          "Si 'a' es positivo, la parábola abre hacia arriba (U), permitiendo encontrar un mínimo.",
-          "En Deep Learning, buscamos descender por las paredes de esta parábola hasta llegar al fondo (Gradient Descent)."
-        ],
-        "formulas": [
-          "Ecuación General: Ax² + Dx + Ey + F = 0 (Eje vertical)",
-          "Vértice (x): h = -b / 2a",
-          "Vértice (y): k = c - b² / 4a",
-          "Derivada (Pendiente): y' = 2ax + b (La dirección hacia donde bajar)"
-        ]
+  "metadata": {
+    "id": "parabola",
+    "titulo": "La Parábola y Funciones de Costo",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "La Geometría del Error",
+    "contenido": "Lugar geométrico de los puntos que equidistan de un punto fijo (foco) y una recta fija (directriz). En IA, las parábolas convexas (que abren hacia arriba) representan la superficie ideal de una función de error.",
+    "puntos_clave": [
+      "Ecuación Canónica: (x-h)² = 4p(y-k) o y = ax² + bx + c.",
+      "El Vértice (h, k) es el punto más importante en ML: representa el Mínimo Global (error cero o mínimo posible).",
+      "Si 'a' es positivo, la parábola abre hacia arriba (U), permitiendo encontrar un mínimo.",
+      "En Deep Learning, buscamos descender por las paredes de esta parábola hasta llegar al fondo (Gradient Descent)."
+    ],
+    "formulas": [
+      {
+        "latex": "Ecuación General: Ax² + Dx + Ey + F = 0 (Eje vertical)",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Por qué es el corazón del entrenamiento de IA?",
-        "descripcion": "Casi todos los algoritmos de optimización asumen que, cerca del punto óptimo, la función de error se parece a una parábola (o paraboloide en 3D).",
-        "aplicaciones_comunes": [
-          "Funciones de Pérdida (Loss Functions): El Error Cuadrático Medio (MSE) crea una gráfica parabólica perfecta.",
-          "Descenso del Gradiente: Algoritmo que 'rueda' cuesta abajo por la parábola para encontrar los mejores pesos de la red neuronal.",
-          "Trayectorias Físicas: Predicción de movimiento de proyectiles en robótica.",
-          "Antenas Parabólicas: Recepción de señales satelitales (concentran la señal en el foco)."
-        ],
-        "ejemplos_vida_real": [
-          "Lanzar una pelota (trayectoria parabólica por gravedad).",
-          "Faros de coches (el foco de luz está en el foco geométrico para lanzar rayos paralelos).",
-          "El puente Golden Gate (los cables principales forman parábolas bajo carga uniforme)."
-        ]
+      {
+        "latex": "Vértice (x): h = -b / 2a",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "algebra_superior",
-            "nombre": "Ecuaciones Cuadráticas",
-            "razon": "Entender ax² + bx + c = 0."
-          },
-          {
-            "id": "linea_recta",
-            "nombre": "Pendiente",
-            "razon": "La pendiente cambia en cada punto de la parábola (es la derivada)."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "calculo_dif_int",
-            "nombre": "Derivadas y Optimización",
-            "razon": "Calcular la derivada de la parábola nos dice 'cuánto' bajar para reducir el error."
-          },
-          {
-            "id": "aprendizaje_automatico",
-            "nombre": "Backpropagation",
-            "razon": "Es básicamente aplicar la regla de la cadena para bajar por una parábola multidimensional."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Mínimos y Máximos locales/globales",
-          "Concavidad y Convexidad",
-          "Tangentes"
-        ]
+      {
+        "latex": "Vértice (y): k = c - b² / 4a",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Deep Learning / IA",
-              "descripcion": "Entrenamiento de redes neuronales.",
-              "ejemplos": ["Optimizadores Adam, SGD (Stochastic Gradient Descent)"]
-            },
-            {
-              "nombre": "Telecomunicaciones",
-              "descripcion": "Diseño de antenas de alta ganancia.",
-              "ejemplos": ["Starlink (Receptores parabólicos)", "Radioastronomía"]
-            },
-            {
-              "nombre": "Robótica Militar/Defensa",
-              "descripcion": "Cálculo balístico.",
-              "ejemplos": ["Sistemas de intercepción de proyectiles"]
-            }
-          ],
-          "empresas_referencia": [
-            "Tesla (Optimización de redes para Autopilot)",
-            "NASA (Cálculo de trayectorias y antenas Deep Space Network)",
-            "Google DeepMind (Investigación en optimizadores)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$35,000 - $90,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Investigador de IA (Research Scientist)",
-              "importancia": "Crítica",
-              "uso": "Diseño de nuevas funciones de pérdida y optimizadores."
-            },
-            {
-              "nombre": "Ingeniero de Control",
-              "importancia": "Alta",
-              "uso": "Sistemas de control predictivo."
-            },
-            {
-              "nombre": "Ingeniero Mecánico",
-              "importancia": "Alta",
-              "uso": "Diseño de reflectores y estructuras de carga."
-            }
-          ]
-        }
+      {
+        "latex": "Derivada (Pendiente): y' = 2ax + b (La dirección hacia donde bajar)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Simulación de Descenso del Gradiente",
-      "descripcion": "Vas a simular cómo una IA 'aprende'. Tienes una función de costo parabólica simple: J(w) = w². Tu objetivo es encontrar el valor de 'w' que minimiza J(w) (el vértice), empezando desde un punto aleatorio y dando pequeños pasos hacia abajo.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Función de costo: error = w².",
-        "Gradiente (Derivada): gradiente = 2*w.",
-        "Regla de aprendizaje: w_nuevo = w_actual - (tasa_aprendizaje * gradiente).",
-        "Implementa un bucle que actualice 'w' 20 veces.",
-        "Observa cómo 'w' se acerca a 0 (el mínimo) automáticamente."
-      ],
-      "codigo_plantilla": "def descenso_gradiente(w_inicial, tasa_aprendizaje, iteraciones):\n    \"\"\"\n    Simula la optimización de un parámetro w en una función de error parabólica.\n    \"\"\"\n    w = w_inicial\n    historial = []\n    \n    for i in range(iteraciones):\n        # 1. Calcular el gradiente (derivada de w^2 es 2w)\n        gradiente = 2 * w\n        \n        # 2. Actualizar el peso (descender)\n        w = w - (tasa_aprendizaje * gradiente)\n        \n        historial.append(w)\n        \n    return w, historial\n\n# Prueba: Empezamos en w=10 (error alto), queremos llegar a w=0\nprint(descenso_gradiente(10, 0.1, 5))",
-      "solucion_referencia": "def descenso_gradiente(w_inicial, tasa_aprendizaje, iteraciones):\n    w = w_inicial\n    historial = []\n    for i in range(iteraciones):\n        error = w ** 2  # Solo informativo\n        gradiente = 2 * w\n        w = w - (tasa_aprendizaje * gradiente)\n        historial.append(f\"Iter {i+1}: w={w:.4f}, Error={error:.4f}\")\n    return w, historial",
-      "casos_prueba": [
-        {
-          "entrada": "w=10, tasa=0.1, iters=3",
-          "salida_esperada": "w se reduce progresivamente (8.0 -> 6.4 -> 5.12)",
-          "nota": "Descenso suave hacia el 0."
-        },
-        {
-          "entrada": "w=-5, tasa=0.1, iters=3",
-          "salida_esperada": "w aumenta hacia 0 (-4.0 -> -3.2 -> -2.56)",
-          "nota": "La parábola funciona igual viniendo del lado negativo."
-        },
-        {
-          "entrada": "w=10, tasa=0.9, iters=3",
-          "salida_esperada": "Oscilaciones o convergencia muy rápida",
-          "nota": "Si la tasa es muy alta, podrías saltarte el mínimo."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "interactivo",
-          "titulo": "Visualizando el Descenso del Gradiente (Loss Landscape)",
-          "url": "https://losslandscape.com/explorer"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué es el corazón del entrenamiento de IA?",
+    "contenido": "Casi todos los algoritmos de optimización asumen que, cerca del punto óptimo, la función de error se parece a una parábola (o paraboloide en 3D).",
+    "aplicaciones": [
+      "Funciones de Pérdida (Loss Functions): El Error Cuadrático Medio (MSE) crea una gráfica parabólica perfecta.",
+      "Descenso del Gradiente: Algoritmo que 'rueda' cuesta abajo por la parábola para encontrar los mejores pesos de la red neuronal.",
+      "Trayectorias Físicas: Predicción de movimiento de proyectiles en robótica.",
+      "Antenas Parabólicas: Recepción de señales satelitales (concentran la señal en el foco)."
+    ],
+    "ejemplos_vida_real": [
+      "Lanzar una pelota (trayectoria parabólica por gravedad).",
+      "Faros de coches (el foco de luz está en el foco geométrico para lanzar rayos paralelos).",
+      "El puente Golden Gate (los cables principales forman parábolas bajo carga uniforme)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "algebra_superior",
+        "nombre": "Ecuaciones Cuadráticas",
+        "razon": "Entender ax² + bx + c = 0."
+      },
+      {
+        "id": "linea_recta",
+        "nombre": "Pendiente",
+        "razon": "La pendiente cambia en cada punto de la parábola (es la derivada)."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "calculo_dif_int",
+        "nombre": "Derivadas y Optimización",
+        "razon": "Calcular la derivada de la parábola nos dice 'cuánto' bajar para reducir el error."
+      },
+      {
+        "id": "aprendizaje_automatico",
+        "nombre": "Backpropagation",
+        "razon": "Es básicamente aplicar la regla de la cadena para bajar por una parábola multidimensional."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Mínimos y Máximos locales/globales",
+      "Concavidad y Convexidad",
+      "Tangentes"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Deep Learning / IA",
+        "descripcion": "Entrenamiento de redes neuronales.",
+        "ejemplos": [
+          "Optimizadores Adam, SGD (Stochastic Gradient Descent)"
+        ]
+      },
+      {
+        "nombre": "Telecomunicaciones",
+        "descripcion": "Diseño de antenas de alta ganancia.",
+        "ejemplos": [
+          "Starlink (Receptores parabólicos)",
+          "Radioastronomía"
+        ]
+      },
+      {
+        "nombre": "Robótica Militar/Defensa",
+        "descripcion": "Cálculo balístico.",
+        "ejemplos": [
+          "Sistemas de intercepción de proyectiles"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Tesla (Optimización de redes para Autopilot)",
+      "NASA (Cálculo de trayectorias y antenas Deep Space Network)",
+      "Google DeepMind (Investigación en optimizadores)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Investigador de IA (Research Scientist)",
+        "importancia": "Crítica",
+        "uso": "Diseño de nuevas funciones de pérdida y optimizadores."
+      },
+      {
+        "nombre": "Ingeniero de Control",
+        "importancia": "Alta",
+        "uso": "Sistemas de control predictivo."
+      },
+      {
+        "nombre": "Ingeniero Mecánico",
+        "importancia": "Alta",
+        "uso": "Diseño de reflectores y estructuras de carga."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $90,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Simulación de Descenso del Gradiente",
+    "descripcion": "Vas a simular cómo una IA 'aprende'. Tienes una función de costo parabólica simple: J(w) = w². Tu objetivo es encontrar el valor de 'w' que minimiza J(w) (el vértice), empezando desde un punto aleatorio y dando pequeños pasos hacia abajo.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "def descenso_gradiente(w_inicial, tasa_aprendizaje, iteraciones):\n    \"\"\"\n    Simula la optimización de un parámetro w en una función de error parabólica.\n    \"\"\"\n    w = w_inicial\n    historial = []\n    \n    for i in range(iteraciones):\n        # 1. Calcular el gradiente (derivada de w^2 es 2w)\n        gradiente = 2 * w\n        \n        # 2. Actualizar el peso (descender)\n        w = w - (tasa_aprendizaje * gradiente)\n        \n        historial.append(w)\n        \n    return w, historial\n\n# Prueba: Empezamos en w=10 (error alto), queremos llegar a w=0\nprint(descenso_gradiente(10, 0.1, 5))",
+    "solucion_referencia": "def descenso_gradiente(w_inicial, tasa_aprendizaje, iteraciones):\n    w = w_inicial\n    historial = []\n    for i in range(iteraciones):\n        error = w ** 2  # Solo informativo\n        gradiente = 2 * w\n        w = w - (tasa_aprendizaje * gradiente)\n        historial.append(f\"Iter {i+1}: w={w:.4f}, Error={error:.4f}\")\n    return w, historial",
+    "pistas": [
+      "Función de costo: error = w².",
+      "Gradiente (Derivada): gradiente = 2*w.",
+      "Regla de aprendizaje: w_nuevo = w_actual - (tasa_aprendizaje * gradiente).",
+      "Implementa un bucle que actualice 'w' 20 veces.",
+      "Observa cómo 'w' se acerca a 0 (el mínimo) automáticamente."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "w=10, tasa=0.1, iters=3",
+        "salida_esperada": "w se reduce progresivamente (8.0 -> 6.4 -> 5.12)",
+        "explicacion": "Descenso suave hacia el 0."
+      },
+      {
+        "entrada": "w=-5, tasa=0.1, iters=3",
+        "salida_esperada": "w aumenta hacia 0 (-4.0 -> -3.2 -> -2.56)",
+        "explicacion": "La parábola funciona igual viniendo del lado negativo."
+      },
+      {
+        "entrada": "w=10, tasa=0.9, iters=3",
+        "salida_esperada": "Oscilaciones o convergencia muy rápida",
+        "explicacion": "Si la tasa es muy alta, podrías saltarte el mínimo."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "interactivo",
+        "titulo": "Visualizando el Descenso del Gradiente (Loss Landscape)",
+        "url": "https://losslandscape.com/explorer"
+      }
+    ]
   }
 }

@@ -1,166 +1,183 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "derivadas_trig_log",
-      "titulo": "Derivadas Trigonométricas y Logarítmicas",
-      "materia": "Cálculo diferencial e integral",
-      "semestre": 1,
-      "dificultad": "intermedio-avanzado",
-      "tiempo_estudio": "5-6 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "Funciones Trascendentes",
-        "definicion": "Son las derivadas de funciones que no son polinómicas, incluyendo las trigonométricas (seno, coseno, tangente) y las exponenciales/logarítmicas. Describen comportamientos cíclicos o de crecimiento proporcional.",
-        "puntos_clave": [
-          "La función exponencial e^x es única: su derivada es ella misma.",
-          "Las derivadas trigonométricas son cíclicas (seno deriva en coseno, coseno en -seno).",
-          "La derivada del logaritmo natural ln(x) convierte el crecimiento logarítmico en una proporción inversa (1/x).",
-          "Requieren casi siempre el uso de la Regla de la Cadena."
-        ],
-        "formulas": [
-          "d/dx(sen x) = cos x",
-          "d/dx(cos x) = -sen x",
-          "d/dx(tan x) = sec^2 x",
-          "d/dx(e^x) = e^x",
-          "d/dx(ln x) = 1/x"
-        ]
+  "metadata": {
+    "id": "derivadas_trig_log",
+    "titulo": "Derivadas Trigonométricas y Logarítmicas",
+    "materia": "Cálculo diferencial e integral",
+    "semestre": 1,
+    "dificultad": "intermedio-avanzado",
+    "tiempo_estudio": "5-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "Funciones Trascendentes",
+    "contenido": "Son las derivadas de funciones que no son polinómicas, incluyendo las trigonométricas (seno, coseno, tangente) y las exponenciales/logarítmicas. Describen comportamientos cíclicos o de crecimiento proporcional.",
+    "puntos_clave": [
+      "La función exponencial e^x es única: su derivada es ella misma.",
+      "Las derivadas trigonométricas son cíclicas (seno deriva en coseno, coseno en -seno).",
+      "La derivada del logaritmo natural ln(x) convierte el crecimiento logarítmico en una proporción inversa (1/x).",
+      "Requieren casi siempre el uso de la Regla de la Cadena."
+    ],
+    "formulas": [
+      {
+        "latex": "d/dx(sen x) = cos x",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Por qué son importantes en tecnología?",
-        "descripcion": "Modelan fenómenos naturales complejos como ondas, electricidad y probabilidades. En computación, son la base del procesamiento de señales y el aprendizaje automático.",
-        "aplicaciones_comunes": [
-          "Procesamiento de Señales (Audio/Imagen): Transformadas de Fourier y análisis de ondas.",
-          "Redes Neuronales: Funciones de activación (Sigmoide, Tangente Hiperbólica).",
-          "Ciencia de Datos: Transformaciones logarítmicas para normalizar datos con sesgo (skewed data).",
-          "Criptografía: Aritmética modular y logaritmos discretos."
-        ],
-        "ejemplos_vida_real": [
-          "La cancelación de ruido en audífonos (ondas inversas).",
-          "El crecimiento viral de un post en redes sociales (curva logística/sigmoide).",
-          "Calcular la pérdida (Loss) en un modelo de IA usando Log-Likelihood."
-        ]
+      {
+        "latex": "d/dx(cos x) = -sen x",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "derivadas_basicas",
-            "nombre": "Derivadas Básicas",
-            "razon": "Necesitas dominar las reglas de potencia y sumas."
-          },
-          {
-            "id": "regla_cadena",
-            "nombre": "Regla de la Cadena",
-            "razon": "Indispensable. Rara vez derivarás sen(x) solo; derivarás sen(x^2 + 1)."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "integrales",
-            "nombre": "Integración",
-            "razon": "Revertir estas operaciones es fundamental para resolver ecuaciones diferenciales."
-          },
-          {
-            "id": "series_taylor",
-            "nombre": "Series de Taylor",
-            "razon": "Aproximar funciones complejas como sen(x) o e^x usando polinomios."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Número de Euler (e)",
-          "Radianes vs Grados",
-          "Identidades Trigonométricas"
-        ]
+      {
+        "latex": "d/dx(tan x) = sec^2 x",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Aplicación en IA y Software",
-          "sectores": [
-            {
-              "nombre": "Deep Learning",
-              "descripcion": "El algoritmo de Backpropagation depende totalmente de la derivada de la función de activación (generalmente derivada de e^x o tanh).",
-              "ejemplos": ["Gradiente de Sigmoide", "Gradiente de Softmax"]
-            },
-            {
-              "nombre": "Ingeniería de Audio",
-              "descripcion": "Sintetizadores y compresión de audio.",
-              "ejemplos": ["Osciladores", "Filtros de frecuencia"]
-            },
-            {
-              "nombre": "Análisis Financiero",
-              "descripcion": "Interés compuesto continuo y modelado de volatilidad.",
-              "ejemplos": ["Retornos logarítmicos de acciones"]
-            }
-          ],
-          "empresas_referencia": [
-            "Spotify (Algoritmos de recomendación y audio)",
-            "DeepMind (Investigación fundamental en IA)",
-            "Cualquier Fintech (Modelos de riesgo)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Técnicos",
-          "salario_promedio_mx": "$35,000 - $90,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de NLP (Procesamiento de Lenguaje)",
-              "importancia": "Alta",
-              "uso": "Cálculo de probabilidades logarítmicas en modelos de lenguaje."
-            },
-            {
-              "nombre": "Investigador de IA",
-              "importancia": "Crítica",
-              "uso": "Diseño de nuevas funciones de pérdida y activación."
-            },
-            {
-              "nombre": "Desarrollador de DSP (Procesamiento de Señales)",
-              "importancia": "Alta",
-              "uso": "Manipulación de señales en el dominio de la frecuencia."
-            }
-          ]
-        }
+      {
+        "latex": "d/dx(e^x) = e^x",
+        "descripcion": ""
+      },
+      {
+        "latex": "d/dx(ln x) = 1/x",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: La Derivada de la Sigmoide (Base de Redes Neuronales)",
-      "descripcion": "La función Sigmoide se usa para convertir números en probabilidades (0 a 1). Su derivada tiene una propiedad hermosa que hace eficiente el entrenamiento de redes neuronales.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "La función Sigmoide es: S(x) = 1 / (1 + e^-x).",
-        "Matemáticamente, su derivada es: S'(x) = S(x) * (1 - S(x)).",
-        "1. Implementa la función `sigmoid(x)` usando `math.exp`.",
-        "2. Implementa `sigmoid_derivative_math(x)` usando cálculo numérico (fórmula del límite/cociente) como en el ejercicio anterior.",
-        "3. Implementa `sigmoid_derivative_opt(x)` usando la propiedad algebraica S(x)*(1-S(x)).",
-        "4. Compara los resultados. ¡La versión optimizada es mucho más rápida para la computadora!"
-      ],
-      "codigo_plantilla": "import math\n\ndef sigmoid(x):\n    # S(x) = 1 / (1 + e^-x)\n    return 1 / (1 + math.exp(-x))\n\ndef sigmoid_derivative_math(x, h=0.00001):\n    # Derivada numérica (f(x+h) - f(x)) / h\n    return (sigmoid(x + h) - sigmoid(x)) / h\n\ndef sigmoid_derivative_opt(x):\n    # Derivada usando la propiedad de la sigmoide\n    s = sigmoid(x)\n    return s * (1 - s)\n\nval = 0\nprint(f\"Numérica en 0: {sigmoid_derivative_math(val)}\")\nprint(f\"Optimizada en 0: {sigmoid_derivative_opt(val)}\")",
-      "solucion_referencia": "import math\n\ndef sigmoid(x):\n    return 1 / (1 + math.exp(-x))\n\ndef sigmoid_derivative_opt(x):\n    s = sigmoid(x)\n    return s * (1 - s) \n    # Esta optimización evita calcular exponenciales extra, \n    # ahorrando cómputo en Backpropagation.",
-      "casos_prueba": [
-        {
-          "entrada": "x = 0",
-          "salida_esperada": "0.25",
-          "nota": "La pendiente máxima de la sigmoide está en 0."
-        },
-        {
-          "entrada": "x = 10",
-          "salida_esperada": "~0.000045",
-          "nota": "En extremos, la pendiente es casi 0 (problema de 'Desvanecimiento del Gradiente')."
-        },
-        {
-          "entrada": "x = -10",
-          "salida_esperada": "~0.000045",
-          "nota": "Simetría en la derivada."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Derivadas de Funciones de Activación",
-          "url": "https://en.wikipedia.org/wiki/Activation_function"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué son importantes en tecnología?",
+    "contenido": "Modelan fenómenos naturales complejos como ondas, electricidad y probabilidades. En computación, son la base del procesamiento de señales y el aprendizaje automático.",
+    "aplicaciones": [
+      "Procesamiento de Señales (Audio/Imagen): Transformadas de Fourier y análisis de ondas.",
+      "Redes Neuronales: Funciones de activación (Sigmoide, Tangente Hiperbólica).",
+      "Ciencia de Datos: Transformaciones logarítmicas para normalizar datos con sesgo (skewed data).",
+      "Criptografía: Aritmética modular y logaritmos discretos."
+    ],
+    "ejemplos_vida_real": [
+      "La cancelación de ruido en audífonos (ondas inversas).",
+      "El crecimiento viral de un post en redes sociales (curva logística/sigmoide).",
+      "Calcular la pérdida (Loss) en un modelo de IA usando Log-Likelihood."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "derivadas_basicas",
+        "nombre": "Derivadas Básicas",
+        "razon": "Necesitas dominar las reglas de potencia y sumas."
+      },
+      {
+        "id": "regla_cadena",
+        "nombre": "Regla de la Cadena",
+        "razon": "Indispensable. Rara vez derivarás sen(x) solo; derivarás sen(x^2 + 1)."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "integrales",
+        "nombre": "Integración",
+        "razon": "Revertir estas operaciones es fundamental para resolver ecuaciones diferenciales."
+      },
+      {
+        "id": "series_taylor",
+        "nombre": "Series de Taylor",
+        "razon": "Aproximar funciones complejas como sen(x) o e^x usando polinomios."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Número de Euler (e)",
+      "Radianes vs Grados",
+      "Identidades Trigonométricas"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Aplicación en IA y Software",
+    "sectores": [
+      {
+        "nombre": "Deep Learning",
+        "descripcion": "El algoritmo de Backpropagation depende totalmente de la derivada de la función de activación (generalmente derivada de e^x o tanh).",
+        "ejemplos": [
+          "Gradiente de Sigmoide",
+          "Gradiente de Softmax"
+        ]
+      },
+      {
+        "nombre": "Ingeniería de Audio",
+        "descripcion": "Sintetizadores y compresión de audio.",
+        "ejemplos": [
+          "Osciladores",
+          "Filtros de frecuencia"
+        ]
+      },
+      {
+        "nombre": "Análisis Financiero",
+        "descripcion": "Interés compuesto continuo y modelado de volatilidad.",
+        "ejemplos": [
+          "Retornos logarítmicos de acciones"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Spotify (Algoritmos de recomendación y audio)",
+      "DeepMind (Investigación fundamental en IA)",
+      "Cualquier Fintech (Modelos de riesgo)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Técnicos",
+    "roles": [
+      {
+        "nombre": "Ingeniero de NLP (Procesamiento de Lenguaje)",
+        "importancia": "Alta",
+        "uso": "Cálculo de probabilidades logarítmicas en modelos de lenguaje."
+      },
+      {
+        "nombre": "Investigador de IA",
+        "importancia": "Crítica",
+        "uso": "Diseño de nuevas funciones de pérdida y activación."
+      },
+      {
+        "nombre": "Desarrollador de DSP (Procesamiento de Señales)",
+        "importancia": "Alta",
+        "uso": "Manipulación de señales en el dominio de la frecuencia."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $90,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: La Derivada de la Sigmoide (Base de Redes Neuronales)",
+    "descripcion": "La función Sigmoide se usa para convertir números en probabilidades (0 a 1). Su derivada tiene una propiedad hermosa que hace eficiente el entrenamiento de redes neuronales.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "import math\n\ndef sigmoid(x):\n    # S(x) = 1 / (1 + e^-x)\n    return 1 / (1 + math.exp(-x))\n\ndef sigmoid_derivative_math(x, h=0.00001):\n    # Derivada numérica (f(x+h) - f(x)) / h\n    return (sigmoid(x + h) - sigmoid(x)) / h\n\ndef sigmoid_derivative_opt(x):\n    # Derivada usando la propiedad de la sigmoide\n    s = sigmoid(x)\n    return s * (1 - s)\n\nval = 0\nprint(f\"Numérica en 0: {sigmoid_derivative_math(val)}\")\nprint(f\"Optimizada en 0: {sigmoid_derivative_opt(val)}\")",
+    "solucion_referencia": "import math\n\ndef sigmoid(x):\n    return 1 / (1 + math.exp(-x))\n\ndef sigmoid_derivative_opt(x):\n    s = sigmoid(x)\n    return s * (1 - s) \n    # Esta optimización evita calcular exponenciales extra, \n    # ahorrando cómputo en Backpropagation.",
+    "pistas": [
+      "La función Sigmoide es: S(x) = 1 / (1 + e^-x).",
+      "Matemáticamente, su derivada es: S'(x) = S(x) * (1 - S(x)).",
+      "1. Implementa la función `sigmoid(x)` usando `math.exp`.",
+      "2. Implementa `sigmoid_derivative_math(x)` usando cálculo numérico (fórmula del límite/cociente) como en el ejercicio anterior.",
+      "3. Implementa `sigmoid_derivative_opt(x)` usando la propiedad algebraica S(x)*(1-S(x)).",
+      "4. Compara los resultados. ¡La versión optimizada es mucho más rápida para la computadora!"
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "x = 0",
+        "salida_esperada": "0.25",
+        "explicacion": "La pendiente máxima de la sigmoide está en 0."
+      },
+      {
+        "entrada": "x = 10",
+        "salida_esperada": "~0.000045",
+        "explicacion": "En extremos, la pendiente es casi 0 (problema de 'Desvanecimiento del Gradiente')."
+      },
+      {
+        "entrada": "x = -10",
+        "salida_esperada": "~0.000045",
+        "explicacion": "Simetría en la derivada."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Derivadas de Funciones de Activación",
+        "url": "https://en.wikipedia.org/wiki/Activation_function"
+      }
+    ]
   }
 }

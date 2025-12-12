@@ -1,163 +1,174 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "metodos_demostracion",
-      "titulo": "Métodos de Demostración y Razonamiento",
-      "materia": "Matemáticas Discretas",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Cómo sabemos que algo es verdad?",
-        "definicion": "Una demostración es un argumento lógico válido que establece la verdad de un teorema matemático. No basta con 'probar con algunos números'; se debe garantizar que la afirmación se cumple siempre.",
-        "puntos_clave": [
-          "Demostración Directa: Asumimos que la hipótesis P es verdadera y usamos pasos lógicos para llegar a la conclusión Q (P → Q).",
-          "Demostración por Contrapositiva: Demostramos que si la conclusión es falsa, la hipótesis también debe serlo (¬Q → ¬P). Es lógicamente equivalente a la directa.",
-          "Reducción al Absurdo (Contradicción): Asumimos que la afirmación es FALSA y demostramos que esto lleva a una contradicción imposible (como 1=0). Por tanto, la afirmación original debe ser verdadera.",
-          "Contraejemplo: El método para DESTRUIR una afirmación. Basta un solo caso donde falle para invalidar un 'Para todo...'.",
-          "Demostración por Casos: Dividir el problema en subconjuntos que cubran todas las posibilidades (ej. x > 0, x = 0, x < 0)."
-        ],
-        "formulas": [
-          "Modus Ponens: ((P → Q) ∧ P) → Q",
-          "Contraposición: (P → Q) ≡ (¬Q → ¬P)",
-          "Contradicción: (¬P → (R ∧ ¬R)) → P"
-        ]
+  "metadata": {
+    "id": "metodos_demostracion",
+    "titulo": "Métodos de Demostración y Razonamiento",
+    "materia": "Matemáticas Discretas",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Cómo sabemos que algo es verdad?",
+    "contenido": "Una demostración es un argumento lógico válido que establece la verdad de un teorema matemático. No basta con 'probar con algunos números'; se debe garantizar que la afirmación se cumple siempre.",
+    "puntos_clave": [
+      "Demostración Directa: Asumimos que la hipótesis P es verdadera y usamos pasos lógicos para llegar a la conclusión Q (P → Q).",
+      "Demostración por Contrapositiva: Demostramos que si la conclusión es falsa, la hipótesis también debe serlo (¬Q → ¬P). Es lógicamente equivalente a la directa.",
+      "Reducción al Absurdo (Contradicción): Asumimos que la afirmación es FALSA y demostramos que esto lleva a una contradicción imposible (como 1=0). Por tanto, la afirmación original debe ser verdadera.",
+      "Contraejemplo: El método para DESTRUIR una afirmación. Basta un solo caso donde falle para invalidar un 'Para todo...'.",
+      "Demostración por Casos: Dividir el problema en subconjuntos que cubran todas las posibilidades (ej. x > 0, x = 0, x < 0)."
+    ],
+    "formulas": [
+      {
+        "latex": "Modus Ponens: ((P → Q) ∧ P) → Q",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "De la Teoría a la Práctica (Debugging y Seguridad)",
-        "descripcion": "Los métodos de demostración son la base teórica del 'Debugging' y la Ciberseguridad.",
-        "aplicaciones_comunes": [
-          "Debugging (Contraejemplo): Cuando encuentras un bug, has encontrado un 'contraejemplo' a la afirmación 'mi código funciona bien'.",
-          "Criptografía (Reducción al Absurdo): La seguridad de RSA se basa en asumir que 'si alguien pudiera romperlo rápido, entonces podría factorizar números gigantes rápido', lo cual se sabe que es falso (hoy en día).",
-          "Optimización (Demostración Directa): Probar que un algoritmo 'Greedy' siempre da la solución óptima.",
-          "Inteligencia Artificial: Demostración automática de teoremas."
-        ],
-        "ejemplos_vida_real": [
-          "Juicios Legales: La 'coartada' es una prueba por contradicción (No pude ser yo porque estaba en otro lugar; es imposible estar en dos sitios a la vez).",
-          "QA Testing: El 'Fuzzing' (meter datos aleatorios) busca generar contraejemplos automáticos para romper el software.",
-          "Sudoku: Se resuelve casi enteramente por eliminación (casos) y contradicción."
-        ]
+      {
+        "latex": "Contraposición: (P → Q) ≡ (¬Q → ¬P)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Arquitectura Lógica",
-        "prerequisitos": [
-          {
-            "id": "logica_proposicional",
-            "nombre": "Lógica Proposicional",
-            "razon": "Necesitas manipular implicaciones y negaciones con fluidez."
-          },
-          {
-            "id": "logica_predicados",
-            "nombre": "Lógica de Predicados",
-            "razon": "Para demostrar afirmaciones sobre 'Todos' (∀) o 'Algunos' (∃)."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "teoria_computacion",
-            "nombre": "Teoría de la Computación",
-            "razon": "El famoso 'Problema de la Parada' se demuestra por contradicción."
-          },
-          {
-            "id": "complejidad_algoritmica",
-            "nombre": "Complejidad P vs NP",
-            "razon": "Demostrar si un problema es difícil o fácil de resolver."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Inferencia Lógica",
-          "Falacias Lógicas",
-          "Axiomas y Teoremas"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Aplicación Industrial",
-          "sectores": [
-            {
-              "nombre": "Ciberseguridad Avanzada",
-              "descripcion": "Verificación formal de protocolos criptográficos.",
-              "ejemplos": ["Auditoría de Smart Contracts", "Protocolos SSL/TLS"]
-            },
-            {
-              "nombre": "Cloud Computing (AWS/Azure)",
-              "descripcion": "Uso de métodos formales (TLA+) para probar que los servicios distribuidos no perderán datos.",
-              "ejemplos": ["Amazon S3 consistencia", "Bases de datos distribuidas"]
-            },
-            {
-              "nombre": "Testing Automatizado",
-              "descripcion": "Generación de casos de prueba para refutar la estabilidad del código.",
-              "ejemplos": ["Property-based testing (Hypothesis en Python)"]
-            }
-          ],
-          "empresas_referencia": [
-            "Amazon Web Services (Usa TLA+)",
-            "Microsoft Research",
-            "Empresas de Auditoría Blockchain (CertiK)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Analíticos",
-          "salario_promedio_mx": "$35,000 - $80,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Seguridad / Pentester",
-              "importancia": "Crítica",
-              "uso": "Encontrar fallos lógicos (contraejemplos) en sistemas de autenticación."
-            },
-            {
-              "nombre": "Ingeniero de Automatización de Pruebas (SDET)",
-              "importancia": "Alta",
-              "uso": "Diseñar pruebas que cubran todos los 'casos de borde'."
-            },
-            {
-              "nombre": "Investigador Académico",
-              "importancia": "Crítica",
-              "uso": "Publicación de nuevos hallazgos matemáticos o algorítmicos."
-            }
-          ]
-        }
+      {
+        "latex": "Contradicción: (¬P → (R ∧ ¬R)) → P",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: El Cazador de Contraejemplos (Euler)",
-      "descripcion": "A veces, una fórmula parece funcionar siempre... hasta que falla. Euler propuso el polinomio n^2 + n + 41, el cual parece generar solo números primos. Tu misión es usar fuerza bruta (programación) para encontrar el primer 'Contraejemplo' que demuestre que esta afirmación es FALSA para todo n.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Crea una función 'es_primo(num)' que verifique si un número es primo.",
-        "Crea un bucle que evalúe la fórmula 'resultado = n*n + n + 41' para n = 0, 1, 2...",
-        "En cada iteración, verifica si 'resultado' es primo.",
-        "Detén el bucle e imprime el valor de 'n' cuando encuentres un resultado que NO sea primo (el contraejemplo)."
-      ],
-      "codigo_plantilla": "def es_primo(num):\n    if num < 2: return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef buscar_contraejemplo():\n    n = 0\n    while True:\n        # Fórmula de Euler\n        resultado = (n * n) + n + 41\n        \n        print(f\"n={n}, resultado={resultado}, ¿Es primo? ...\")\n        \n        # Tu lógica aquí: Si NO es primo, ¡Eureka! Rompe el ciclo.\n        \n        n += 1\n        # Seguridad para evitar bucles infinitos si no encuentras nada pronto\n        if n > 100: break\n\nbuscar_contraejemplo()",
-      "solucion_referencia": "def buscar_contraejemplo():\n    n = 0\n    while True:\n        resultado = n*n + n + 41\n        if not es_primo(resultado):\n            print(f\"¡Contraejemplo encontrado en n={n}! El resultado {resultado} NO es primo.\")\n            print(f\"Explicación: {n}*{n} + {n} + 41 es divisible por 41.\")\n            break\n        n += 1",
-      "casos_prueba": [
-        {
-          "entrada": "n = 1",
-          "salida_esperada": "43 (Es primo) -> Continúa buscando",
-          "nota": "Parece verdadero al principio"
-        },
-        {
-          "entrada": "n = 40",
-          "salida_esperada": "1681 (41 * 41) -> NO es primo -> Contraejemplo",
-          "nota": "El punto de quiebre. 40^2 + 40 + 41 = 1681"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Proof by Contradiction (Numberphile)",
-          "url": "https://www.youtube.com/watch?v=p4vWyg91xM8"
-        },
-        {
-            "tipo": "imagen",
-            "titulo": "Diagrama de tipos de demostración matemática",
-            "url": ""
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "De la Teoría a la Práctica (Debugging y Seguridad)",
+    "contenido": "Los métodos de demostración son la base teórica del 'Debugging' y la Ciberseguridad.",
+    "aplicaciones": [
+      "Debugging (Contraejemplo): Cuando encuentras un bug, has encontrado un 'contraejemplo' a la afirmación 'mi código funciona bien'.",
+      "Criptografía (Reducción al Absurdo): La seguridad de RSA se basa en asumir que 'si alguien pudiera romperlo rápido, entonces podría factorizar números gigantes rápido', lo cual se sabe que es falso (hoy en día).",
+      "Optimización (Demostración Directa): Probar que un algoritmo 'Greedy' siempre da la solución óptima.",
+      "Inteligencia Artificial: Demostración automática de teoremas."
+    ],
+    "ejemplos_vida_real": [
+      "Juicios Legales: La 'coartada' es una prueba por contradicción (No pude ser yo porque estaba en otro lugar; es imposible estar en dos sitios a la vez).",
+      "QA Testing: El 'Fuzzing' (meter datos aleatorios) busca generar contraejemplos automáticos para romper el software.",
+      "Sudoku: Se resuelve casi enteramente por eliminación (casos) y contradicción."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Arquitectura Lógica",
+    "prerequisitos": [
+      {
+        "id": "logica_proposicional",
+        "nombre": "Lógica Proposicional",
+        "razon": "Necesitas manipular implicaciones y negaciones con fluidez."
+      },
+      {
+        "id": "logica_predicados",
+        "nombre": "Lógica de Predicados",
+        "razon": "Para demostrar afirmaciones sobre 'Todos' (∀) o 'Algunos' (∃)."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "teoria_computacion",
+        "nombre": "Teoría de la Computación",
+        "razon": "El famoso 'Problema de la Parada' se demuestra por contradicción."
+      },
+      {
+        "id": "complejidad_algoritmica",
+        "nombre": "Complejidad P vs NP",
+        "razon": "Demostrar si un problema es difícil o fácil de resolver."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Inferencia Lógica",
+      "Falacias Lógicas",
+      "Axiomas y Teoremas"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Aplicación Industrial",
+    "sectores": [
+      {
+        "nombre": "Ciberseguridad Avanzada",
+        "descripcion": "Verificación formal de protocolos criptográficos.",
+        "ejemplos": [
+          "Auditoría de Smart Contracts",
+          "Protocolos SSL/TLS"
+        ]
+      },
+      {
+        "nombre": "Cloud Computing (AWS/Azure)",
+        "descripcion": "Uso de métodos formales (TLA+) para probar que los servicios distribuidos no perderán datos.",
+        "ejemplos": [
+          "Amazon S3 consistencia",
+          "Bases de datos distribuidas"
+        ]
+      },
+      {
+        "nombre": "Testing Automatizado",
+        "descripcion": "Generación de casos de prueba para refutar la estabilidad del código.",
+        "ejemplos": [
+          "Property-based testing (Hypothesis en Python)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Amazon Web Services (Usa TLA+)",
+      "Microsoft Research",
+      "Empresas de Auditoría Blockchain (CertiK)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Analíticos",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Seguridad / Pentester",
+        "importancia": "Crítica",
+        "uso": "Encontrar fallos lógicos (contraejemplos) en sistemas de autenticación."
+      },
+      {
+        "nombre": "Ingeniero de Automatización de Pruebas (SDET)",
+        "importancia": "Alta",
+        "uso": "Diseñar pruebas que cubran todos los 'casos de borde'."
+      },
+      {
+        "nombre": "Investigador Académico",
+        "importancia": "Crítica",
+        "uso": "Publicación de nuevos hallazgos matemáticos o algorítmicos."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $80,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: El Cazador de Contraejemplos (Euler)",
+    "descripcion": "A veces, una fórmula parece funcionar siempre... hasta que falla. Euler propuso el polinomio n^2 + n + 41, el cual parece generar solo números primos. Tu misión es usar fuerza bruta (programación) para encontrar el primer 'Contraejemplo' que demuestre que esta afirmación es FALSA para todo n.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "def es_primo(num):\n    if num < 2: return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef buscar_contraejemplo():\n    n = 0\n    while True:\n        # Fórmula de Euler\n        resultado = (n * n) + n + 41\n        \n        print(f\"n={n}, resultado={resultado}, ¿Es primo? ...\")\n        \n        # Tu lógica aquí: Si NO es primo, ¡Eureka! Rompe el ciclo.\n        \n        n += 1\n        # Seguridad para evitar bucles infinitos si no encuentras nada pronto\n        if n > 100: break\n\nbuscar_contraejemplo()",
+    "solucion_referencia": "def buscar_contraejemplo():\n    n = 0\n    while True:\n        resultado = n*n + n + 41\n        if not es_primo(resultado):\n            print(f\"¡Contraejemplo encontrado en n={n}! El resultado {resultado} NO es primo.\")\n            print(f\"Explicación: {n}*{n} + {n} + 41 es divisible por 41.\")\n            break\n        n += 1",
+    "pistas": [
+      "Crea una función 'es_primo(num)' que verifique si un número es primo.",
+      "Crea un bucle que evalúe la fórmula 'resultado = n*n + n + 41' para n = 0, 1, 2...",
+      "En cada iteración, verifica si 'resultado' es primo.",
+      "Detén el bucle e imprime el valor de 'n' cuando encuentres un resultado que NO sea primo (el contraejemplo)."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "n = 1",
+        "salida_esperada": "43 (Es primo) -> Continúa buscando",
+        "explicacion": "Parece verdadero al principio"
+      },
+      {
+        "entrada": "n = 40",
+        "salida_esperada": "1681 (41 * 41) -> NO es primo -> Contraejemplo",
+        "explicacion": "El punto de quiebre. 40^2 + 40 + 41 = 1681"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Proof by Contradiction (Numberphile)",
+        "url": "https://www.youtube.com/watch?v=p4vWyg91xM8"
+      },
+      {
+        "tipo": "imagen",
+        "titulo": "Diagrama de tipos de demostración matemática",
+        "url": ""
+      }
+    ]
   }
 }

@@ -1,166 +1,179 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "hiperbola",
-      "titulo": "La Hipérbola",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "avanzado",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "La Curva de la Diferencia Constante",
-        "definicion": "Lugar geométrico de los puntos del plano cuya diferencia de distancias (en valor absoluto) a dos puntos fijos (focos) es constante e igual a 2a.",
-        "puntos_clave": [
-          "A diferencia de la elipse (suma de distancias), aquí se restan.",
-          "Tiene dos asíntotas: líneas rectas hacia las que la curva se acerca infinitamente pero nunca toca.",
-          "Ecuación Canónica Horizontal: x²/a² - y²/b² = 1.",
-          "Ecuación Canónica Vertical: y²/a² - x²/b² = 1.",
-          "Relación pitagórica modificada: c² = a² + b² (aquí c es la distancia más larga, del centro al foco)."
-        ],
-        "formulas": [
-          "Ecuación General: Ax² - Cy² + Dx + Ey + F = 0 (Signos opuestos en cuadrados)",
-          "Asíntotas (Horizontal): y = ±(b/a)x",
-          "Asíntotas (Vertical): y = ±(a/b)x",
-          "Excentricidad: e = c/a (siempre e > 1)"
-        ]
+  "metadata": {
+    "id": "hiperbola",
+    "titulo": "La Hipérbola",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "avanzado",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "La Curva de la Diferencia Constante",
+    "contenido": "Lugar geométrico de los puntos del plano cuya diferencia de distancias (en valor absoluto) a dos puntos fijos (focos) es constante e igual a 2a.",
+    "puntos_clave": [
+      "A diferencia de la elipse (suma de distancias), aquí se restan.",
+      "Tiene dos asíntotas: líneas rectas hacia las que la curva se acerca infinitamente pero nunca toca.",
+      "Ecuación Canónica Horizontal: x²/a² - y²/b² = 1.",
+      "Ecuación Canónica Vertical: y²/a² - x²/b² = 1.",
+      "Relación pitagórica modificada: c² = a² + b² (aquí c es la distancia más larga, del centro al foco)."
+    ],
+    "formulas": [
+      {
+        "latex": "Ecuación General: Ax² - Cy² + Dx + Ey + F = 0 (Signos opuestos en cuadrados)",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve en Tecnología?",
-        "descripcion": "La hipérbola es fundamental en sistemas de navegación por diferencia de tiempo y en funciones de activación para Inteligencia Artificial.",
-        "aplicaciones_comunes": [
-          "Sistemas de Navegación (LORAN/GPS): La intersección de dos hipérbolas determina tu posición basándose en la diferencia de tiempo de llegada de señales.",
-          "Inteligencia Artificial: La función 'tangente hiperbólica' (tanh) es una función de activación clásica en redes neuronales.",
-          "Astronomía: Trayectorias de objetos que escapan de la gravedad de un planeta (trayectorias abiertas).",
-          "Óptica: Espejos hiperbólicos en telescopios (telescopio Cassegrain)."
-        ],
-        "ejemplos_vida_real": [
-          "El cono sónico de un avión rompiendo la barrera del sonido intersectando el suelo.",
-          "La forma que hace la luz de una lámpara con pantalla cilíndrica sobre la pared.",
-          "Torres de refrigeración de plantas nucleares (hiperboloides)."
-        ]
+      {
+        "latex": "Asíntotas (Horizontal): y = ±(b/a)x",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "elipse",
-            "nombre": "La Elipse",
-            "razon": "Comparten elementos (focos, vértices) pero con lógica inversa (resta vs suma)."
-          },
-          {
-            "id": "linea_recta",
-            "nombre": "Línea Recta",
-            "razon": "Necesario para calcular las ecuaciones de las asíntotas."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "funciones_transcendentes",
-            "nombre": "Funciones Hiperbólicas (sinh, cosh, tanh)",
-            "razon": "Son análogas a las trigonométricas pero basadas en la hipérbola unitaria. Clave para Cálculo y ML."
-          },
-          {
-            "id": "calculo_integral",
-            "nombre": "Integración",
-            "razon": "Las funciones hiperbólicas aparecen frecuentemente al integrar raíces cuadradas."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Valor Absoluto",
-          "Límites al infinito (para entender asíntotas)",
-          "Teorema de Pitágoras"
-        ]
+      {
+        "latex": "Asíntotas (Vertical): y = ±(a/b)x",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Telecomunicaciones y Navegación",
-              "descripcion": "Geolocalización por TDOA (Time Difference of Arrival).",
-              "ejemplos": ["Sistemas de posicionamiento marítimo", "Multilateración de señales celulares"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Diseño de arquitecturas neuronales.",
-              "ejemplos": ["Uso de tanh en redes recurrentes (RNN) y LSTMs"]
-            },
-            {
-              "nombre": "Ingeniería Civil",
-              "descripcion": "Estructuras resistentes y ligeras.",
-              "ejemplos": ["Estructuras hiperboloides (torres de agua/enfriamiento)"]
-            }
-          ],
-          "empresas_referencia": [
-            "Garmin (Tecnología GPS)",
-            "OpenAI / DeepMind (Uso intensivo de funciones matemáticas en ML)",
-            "Empresas de Energía Nuclear (Diseño estructural)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$30,000 - $70,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de RF (Radiofrecuencia)",
-              "importancia": "Alta",
-              "uso": "Propagación de ondas y localización."
-            },
-            {
-              "nombre": "Científico de Datos (Deep Learning)",
-              "importancia": "Alta",
-              "uso": "Comprensión profunda de funciones de activación no lineales."
-            },
-            {
-              "nombre": "Físico / Astrónomo",
-              "importancia": "Crítica",
-              "uso": "Mecánica celeste (trayectorias de escape)."
-            }
-          ]
-        }
+      {
+        "latex": "Excentricidad: e = c/a (siempre e > 1)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Sistema de Posicionamiento Hiperbólico (TDOA)",
-      "descripcion": "Estás creando un sistema de localización simple. Tienes dos antenas fijas. Un dispositivo envía una señal y sabemos la diferencia de distancia a la que se encuentra de ambas antenas. Debes verificar si una coordenada candidata (x, y) es válida para esa diferencia.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Definición de Hipérbola: |d1 - d2| = 2a.",
-        "Recibirás las coordenadas de dos antenas: (x1, y1) y (x2, y2).",
-        "Recibirás la 'diferencia de distancia reportada' (diff_dist).",
-        "Recibirás una ubicación candidata del usuario (user_x, user_y).",
-        "Calcula la distancia del usuario a la antena 1 y a la antena 2.",
-        "Verifica si el valor absoluto de la resta de esas distancias es aproximadamente igual a 'diff_dist' (usa un margen de error/tolerancia de 0.1)."
-      ],
-      "codigo_plantilla": "import math\n\ndef verificar_posicion_hiperbolica(ax, ay, bx, by, diff_dist, ux, uy):\n    \"\"\"\n    Verifica si el usuario (ux, uy) está en la hipérbola definida por las antenas A y B\n    y la diferencia de distancia constante.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Antena A: (-5, 0), Antena B: (5, 0)\n# Diferencia constante (2a): 6. \n# Esto corresponde a la hipérbola x^2/9 - y^2/16 = 1. Vértice en (3,0).\nprint(verificar_posicion_hiperbolica(-5, 0, 5, 0, 6, 3, 0)) # Esperado: True",
-      "solucion_referencia": "import math\n\ndef verificar_posicion_hiperbolica(ax, ay, bx, by, diff_dist, ux, uy):\n    # 1. Calcular distancias euclidianas a cada antena\n    dist_a = math.sqrt((ux - ax)**2 + (uy - ay)**2)\n    dist_b = math.sqrt((ux - bx)**2 + (uy - by)**2)\n    \n    # 2. Calcular la diferencia real\n    diferencia_real = abs(dist_a - dist_b)\n    \n    # 3. Comparar con la diferencia reportada (con tolerancia)\n    tolerancia = 0.1\n    return abs(diferencia_real - diff_dist) <= tolerancia",
-      "casos_prueba": [
-        {
-          "entrada": "A=(-5,0), B=(5,0), diff=6, user=(3,0)",
-          "salida_esperada": "True",
-          "nota": "Distancia a A=8, Distancia a B=2. |8-2|=6. Correcto."
-        },
-        {
-          "entrada": "A=(-5,0), B=(5,0), diff=6, user=(0,0)",
-          "salida_esperada": "False",
-          "nota": "En el origen las distancias son iguales (5 y 5), la diferencia es 0, no 6."
-        },
-        {
-          "entrada": "A=(0,4), B=(0,-4), diff=4, user=(0,2)",
-          "salida_esperada": "True",
-          "nota": "Hipérbola vertical. Distancia a A=2, Distancia a B=6. |2-6|=4."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "simulador",
-          "titulo": "Visualizador de Hipérbolas y Asíntotas (GeoGebra)",
-          "url": "https://www.geogebra.org/m/hyperbola"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve en Tecnología?",
+    "contenido": "La hipérbola es fundamental en sistemas de navegación por diferencia de tiempo y en funciones de activación para Inteligencia Artificial.",
+    "aplicaciones": [
+      "Sistemas de Navegación (LORAN/GPS): La intersección de dos hipérbolas determina tu posición basándose en la diferencia de tiempo de llegada de señales.",
+      "Inteligencia Artificial: La función 'tangente hiperbólica' (tanh) es una función de activación clásica en redes neuronales.",
+      "Astronomía: Trayectorias de objetos que escapan de la gravedad de un planeta (trayectorias abiertas).",
+      "Óptica: Espejos hiperbólicos en telescopios (telescopio Cassegrain)."
+    ],
+    "ejemplos_vida_real": [
+      "El cono sónico de un avión rompiendo la barrera del sonido intersectando el suelo.",
+      "La forma que hace la luz de una lámpara con pantalla cilíndrica sobre la pared.",
+      "Torres de refrigeración de plantas nucleares (hiperboloides)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "elipse",
+        "nombre": "La Elipse",
+        "razon": "Comparten elementos (focos, vértices) pero con lógica inversa (resta vs suma)."
+      },
+      {
+        "id": "linea_recta",
+        "nombre": "Línea Recta",
+        "razon": "Necesario para calcular las ecuaciones de las asíntotas."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "funciones_transcendentes",
+        "nombre": "Funciones Hiperbólicas (sinh, cosh, tanh)",
+        "razon": "Son análogas a las trigonométricas pero basadas en la hipérbola unitaria. Clave para Cálculo y ML."
+      },
+      {
+        "id": "calculo_integral",
+        "nombre": "Integración",
+        "razon": "Las funciones hiperbólicas aparecen frecuentemente al integrar raíces cuadradas."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Valor Absoluto",
+      "Límites al infinito (para entender asíntotas)",
+      "Teorema de Pitágoras"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Telecomunicaciones y Navegación",
+        "descripcion": "Geolocalización por TDOA (Time Difference of Arrival).",
+        "ejemplos": [
+          "Sistemas de posicionamiento marítimo",
+          "Multilateración de señales celulares"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Diseño de arquitecturas neuronales.",
+        "ejemplos": [
+          "Uso de tanh en redes recurrentes (RNN) y LSTMs"
+        ]
+      },
+      {
+        "nombre": "Ingeniería Civil",
+        "descripcion": "Estructuras resistentes y ligeras.",
+        "ejemplos": [
+          "Estructuras hiperboloides (torres de agua/enfriamiento)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Garmin (Tecnología GPS)",
+      "OpenAI / DeepMind (Uso intensivo de funciones matemáticas en ML)",
+      "Empresas de Energía Nuclear (Diseño estructural)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Ingeniero de RF (Radiofrecuencia)",
+        "importancia": "Alta",
+        "uso": "Propagación de ondas y localización."
+      },
+      {
+        "nombre": "Científico de Datos (Deep Learning)",
+        "importancia": "Alta",
+        "uso": "Comprensión profunda de funciones de activación no lineales."
+      },
+      {
+        "nombre": "Físico / Astrónomo",
+        "importancia": "Crítica",
+        "uso": "Mecánica celeste (trayectorias de escape)."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $70,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Sistema de Posicionamiento Hiperbólico (TDOA)",
+    "descripcion": "Estás creando un sistema de localización simple. Tienes dos antenas fijas. Un dispositivo envía una señal y sabemos la diferencia de distancia a la que se encuentra de ambas antenas. Debes verificar si una coordenada candidata (x, y) es válida para esa diferencia.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "import math\n\ndef verificar_posicion_hiperbolica(ax, ay, bx, by, diff_dist, ux, uy):\n    \"\"\"\n    Verifica si el usuario (ux, uy) está en la hipérbola definida por las antenas A y B\n    y la diferencia de distancia constante.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Antena A: (-5, 0), Antena B: (5, 0)\n# Diferencia constante (2a): 6. \n# Esto corresponde a la hipérbola x^2/9 - y^2/16 = 1. Vértice en (3,0).\nprint(verificar_posicion_hiperbolica(-5, 0, 5, 0, 6, 3, 0)) # Esperado: True",
+    "solucion_referencia": "import math\n\ndef verificar_posicion_hiperbolica(ax, ay, bx, by, diff_dist, ux, uy):\n    # 1. Calcular distancias euclidianas a cada antena\n    dist_a = math.sqrt((ux - ax)**2 + (uy - ay)**2)\n    dist_b = math.sqrt((ux - bx)**2 + (uy - by)**2)\n    \n    # 2. Calcular la diferencia real\n    diferencia_real = abs(dist_a - dist_b)\n    \n    # 3. Comparar con la diferencia reportada (con tolerancia)\n    tolerancia = 0.1\n    return abs(diferencia_real - diff_dist) <= tolerancia",
+    "pistas": [
+      "Definición de Hipérbola: |d1 - d2| = 2a.",
+      "Recibirás las coordenadas de dos antenas: (x1, y1) y (x2, y2).",
+      "Recibirás la 'diferencia de distancia reportada' (diff_dist).",
+      "Recibirás una ubicación candidata del usuario (user_x, user_y).",
+      "Calcula la distancia del usuario a la antena 1 y a la antena 2.",
+      "Verifica si el valor absoluto de la resta de esas distancias es aproximadamente igual a 'diff_dist' (usa un margen de error/tolerancia de 0.1)."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "A=(-5,0), B=(5,0), diff=6, user=(3,0)",
+        "salida_esperada": "True",
+        "explicacion": "Distancia a A=8, Distancia a B=2. |8-2|=6. Correcto."
+      },
+      {
+        "entrada": "A=(-5,0), B=(5,0), diff=6, user=(0,0)",
+        "salida_esperada": "False",
+        "explicacion": "En el origen las distancias son iguales (5 y 5), la diferencia es 0, no 6."
+      },
+      {
+        "entrada": "A=(0,4), B=(0,-4), diff=4, user=(0,2)",
+        "salida_esperada": "True",
+        "explicacion": "Hipérbola vertical. Distancia a A=2, Distancia a B=6. |2-6|=4."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "simulador",
+        "titulo": "Visualizador de Hipérbolas y Asíntotas (GeoGebra)",
+        "url": "https://www.geogebra.org/m/hyperbola"
+      }
+    ]
   }
 }

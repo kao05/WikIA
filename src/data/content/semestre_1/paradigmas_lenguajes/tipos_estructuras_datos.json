@@ -1,228 +1,205 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "tipos_estructuras_datos",
-      "titulo": "Tipos de Estructuras de Datos",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "5-8 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué son las Estructuras de Datos?",
-        "definicion": "Una estructura de datos es una representación concreta utilizada para organizar, almacenar y manipular información de manera eficiente. Se derivan de los Tipos de Datos Abstractos (TDA) y buscan optimizar el acceso, búsqueda, inserción, eliminación y recorrido.",
-        "puntos_clave": [
-          "Organizan datos para operaciones eficientes.",
-          "Implementan un TDA con una estructura interna concreta.",
-          "Permiten garantizar eficiencia temporal y espacial.",
-          "Son fundamentales para algoritmos avanzados y software crítico.",
-          "Su uso adecuado depende del patrón de acceso a los datos."
-        ],
-        "formulas": [
-          "Estructura de Datos = Implementación concreta de un TDA",
-          "Complejidad: O(f(n)) para operaciones insert/buscar/eliminar"
+  "metadata": {
+    "id": "tipos_estructuras_datos",
+    "titulo": "Tipos de Estructuras de Datos",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "5-8 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué son las Estructuras de Datos?",
+    "contenido": "Una estructura de datos es una representación concreta utilizada para organizar, almacenar y manipular información de manera eficiente. Se derivan de los Tipos de Datos Abstractos (TDA) y buscan optimizar el acceso, búsqueda, inserción, eliminación y recorrido.",
+    "puntos_clave": [
+      "Organizan datos para operaciones eficientes.",
+      "Implementan un TDA con una estructura interna concreta.",
+      "Permiten garantizar eficiencia temporal y espacial.",
+      "Son fundamentales para algoritmos avanzados y software crítico.",
+      "Su uso adecuado depende del patrón de acceso a los datos."
+    ],
+    "formulas": [
+      {
+        "latex": "Estructura de Datos = Implementación concreta de un TDA",
+        "descripcion": ""
+      },
+      {
+        "latex": "Complejidad: O(f(n)) para operaciones insert/buscar/eliminar",
+        "descripcion": ""
+      }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirven las estructuras de datos?",
+    "contenido": "Se utilizan para gestionar grandes cantidades de información, optimizar tiempos de ejecución y garantizar que un algoritmo sea escalable y correcto.",
+    "aplicaciones": [
+      "Búsqueda eficiente (tablas hash, árboles).",
+      "Manejo de secuencias ordenadas (listas, vectores, heaps).",
+      "Optimización de recursos en sistemas operativos.",
+      "Grafos para rutas, recomendaciones o análisis de redes.",
+      "Ejecución de algoritmos en Machine Learning y IA."
+    ],
+    "ejemplos_vida_real": [
+      "El GPS encuentra rutas usando grafos.",
+      "Netflix crea listas personalizadas usando árboles y colas de prioridad.",
+      "Los sistemas de archivos usan árboles B/B+ para indexar carpetas.",
+      "Los compiladores representan programas como árboles sintácticos (AST)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "tipos_datos_abstractos",
+        "nombre": "Tipos de Datos Abstractos",
+        "razon": "Las estructuras de datos implementan los TDA definidos de forma abstracta."
+      },
+      {
+        "id": "modularidad",
+        "nombre": "Modularidad",
+        "razon": "Permite encapsular la lógica interna de las estructuras."
+      },
+      {
+        "id": "analisis_algoritmos",
+        "nombre": "Análisis de Algoritmos",
+        "razon": "Cada estructura tiene complejidades asociadas a sus operaciones."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "estructuras_datos_avanzadas",
+        "nombre": "Estructuras de Datos Avanzadas",
+        "razon": "Extensiones como árboles balanceados, tries y grafos."
+      },
+      {
+        "id": "machine_learning_basico",
+        "nombre": "Machine Learning Básico",
+        "razon": "Los modelos utilizan vectores, matrices, árboles y grafos."
+      },
+      {
+        "id": "poo",
+        "nombre": "Programación Orientada a Objetos",
+        "razon": "Las clases modelan implementaciones concretas de estructuras."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Inmutabilidad vs mutabilidad",
+      "Memoria contigua y no contigua",
+      "Representación en nodos",
+      "Estructuras lineales y no lineales",
+      "Complejidad Big O"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usan las estructuras de datos en la industria?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Web y Backend",
+        "descripcion": "Colas, pilas, árboles y hash para caches, sesiones y enrutamiento.",
+        "ejemplos": [
+          "Mapas hash en Redis",
+          "Árboles de rutas en frameworks web"
         ]
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirven las estructuras de datos?",
-        "descripcion": "Se utilizan para gestionar grandes cantidades de información, optimizar tiempos de ejecución y garantizar que un algoritmo sea escalable y correcto.",
-        "aplicaciones_comunes": [
-          "Búsqueda eficiente (tablas hash, árboles).",
-          "Manejo de secuencias ordenadas (listas, vectores, heaps).",
-          "Optimización de recursos en sistemas operativos.",
-          "Grafos para rutas, recomendaciones o análisis de redes.",
-          "Ejecución de algoritmos en Machine Learning y IA."
-        ],
-        "ejemplos_vida_real": [
-          "El GPS encuentra rutas usando grafos.",
-          "Netflix crea listas personalizadas usando árboles y colas de prioridad.",
-          "Los sistemas de archivos usan árboles B/B+ para indexar carpetas.",
-          "Los compiladores representan programas como árboles sintácticos (AST)."
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Grafos, matrices y heaps para búsqueda y optimización.",
+        "ejemplos": [
+          "A* pathfinding",
+          "Redes neuronales (matrices y tensores)"
         ]
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "tipos_datos_abstractos",
-            "nombre": "Tipos de Datos Abstractos",
-            "razon": "Las estructuras de datos implementan los TDA definidos de forma abstracta."
-          },
-          {
-            "id": "modularidad",
-            "nombre": "Modularidad",
-            "razon": "Permite encapsular la lógica interna de las estructuras."
-          },
-          {
-            "id": "analisis_algoritmos",
-            "nombre": "Análisis de Algoritmos",
-            "razon": "Cada estructura tiene complejidades asociadas a sus operaciones."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "estructuras_datos_avanzadas",
-            "nombre": "Estructuras de Datos Avanzadas",
-            "razon": "Extensiones como árboles balanceados, tries y grafos."
-          },
-          {
-            "id": "machine_learning_basico",
-            "nombre": "Machine Learning Básico",
-            "razon": "Los modelos utilizan vectores, matrices, árboles y grafos."
-          },
-          {
-            "id": "poo",
-            "nombre": "Programación Orientada a Objetos",
-            "razon": "Las clases modelan implementaciones concretas de estructuras."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Inmutabilidad vs mutabilidad",
-          "Memoria contigua y no contigua",
-          "Representación en nodos",
-          "Estructuras lineales y no lineales",
-          "Complejidad Big O"
+      {
+        "nombre": "Bases de Datos",
+        "descripcion": "Árboles B/B+, hashing y listas enlazadas internas.",
+        "ejemplos": [
+          "Índices de PostgreSQL",
+          "Motores InnoDB"
         ]
       },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usan las estructuras de datos en la industria?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Web y Backend",
-              "descripcion": "Colas, pilas, árboles y hash para caches, sesiones y enrutamiento.",
-              "ejemplos": ["Mapas hash en Redis", "Árboles de rutas en frameworks web"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Grafos, matrices y heaps para búsqueda y optimización.",
-              "ejemplos": ["A* pathfinding", "Redes neuronales (matrices y tensores)"]
-            },
-            {
-              "nombre": "Bases de Datos",
-              "descripcion": "Árboles B/B+, hashing y listas enlazadas internas.",
-              "ejemplos": ["Índices de PostgreSQL", "Motores InnoDB"]
-            },
-            {
-              "nombre": "Sistemas Operativos",
-              "descripcion": "Colas de procesos, heaps para scheduling, árboles para FS.",
-              "ejemplos": ["Scheduler de Linux", "EXT4 File System"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (infraestructura y grafos de búsqueda)",
-            "Amazon (almacenamiento distribuido y hashing)",
-            "Meta (optimizaciones de grafos sociales)",
-            "Microsoft (compiladores y sistemas de archivos)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que usan estructuras de datos día a día",
-          "salario_promedio_mx": "$35,000 - $110,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Algoritmos",
-              "importancia": "Crítica",
-              "uso": "Optimización algorítmica y selección de estructuras óptimas."
-            },
-            {
-              "nombre": "Backend Engineer",
-              "importancia": "Alta",
-              "uso": "Implementación de colas, árboles, cachés e índices."
-            },
-            {
-              "nombre": "Machine Learning Engineer",
-              "importancia": "Alta",
-              "uso": "Manipulación de tensores, grafos y estructuras numéricas."
-            },
-            {
-              "nombre": "Ingeniero de Datos",
-              "importancia": "Alta",
-              "uso": "Tablas hash, colas y árboles para pipelines y ETL."
-            }
-          ]
-        }
-      },
-
-      "tipos_estructuras": {
-        "lineales": [
-          "Arreglos (Arrays)",
-          "Listas enlazadas",
-          "Pilas (Stacks)",
-          "Colas (Queues)",
-          "Listas dobles"
-        ],
-        "no_lineales": [
-          "Árboles (binary, AVL, red-black)",
-          "Grafos",
-          "Tries",
-          "Heaps (max/min-heap)",
-          "Conjuntos (set) basados en hashing"
-        ],
-        "estructuras_especiales": [
-          "Tablas hash",
-          "Árboles B y B+ (bases de datos)",
-          "Bloom Filters",
-          "Segment Trees",
-          "Matrices y Tensores"
+      {
+        "nombre": "Sistemas Operativos",
+        "descripcion": "Colas de procesos, heaps para scheduling, árboles para FS.",
+        "ejemplos": [
+          "Scheduler de Linux",
+          "EXT4 File System"
         ]
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Implementa una Tabla Hash con Manejo de Colisiones",
-      "descripcion": "Crea desde cero una hash table simple con encadenamiento (listas enlazadas) o sondeo lineal. Deberás implementar inserción, búsqueda y eliminación.",
-      "dificultad": "intermedio-alto",
-
-      "instrucciones": [
-        "Define un tamaño fijo para la tabla.",
-        "Implementa una función hash simple.",
-        "Usa encadenamiento (listas enlazadas) o sondeo lineal.",
-        "Agrega métodos: insert(key, value), get(key), delete(key).",
-        "Prueba colisiones intencionalmente."
-      ],
-
-      "codigo_plantilla": "class HashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = [[] for _ in range(size)]  # Encadenamiento\n\n    def _hash(self, key):\n        # TODO\n        pass\n\n    def insert(self, key, value):\n        # TODO\n        pass\n\n    def get(self, key):\n        # TODO\n        pass\n\n    def delete(self, key):\n        # TODO\n        pass",
-
-      "solucion_referencia": "class HashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = [[] for _ in range(size)]\n\n    def _hash(self, key):\n        return hash(key) % self.size\n\n    def insert(self, key, value):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                pair[1] = value\n                return\n        self.table[idx].append([key, value])\n\n    def get(self, key):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                return pair[1]\n        return None\n\n    def delete(self, key):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                self.table[idx].remove(pair)\n                return",
-
-      "casos_prueba": [
-        {
-          "entrada": "insert('a',1); get('a')",
-          "salida_esperada": "1",
-          "nota": "Inserción y búsqueda básica"
-        },
-        {
-          "entrada": "insert('a',2); get('a')",
-          "salida_esperada": "2",
-          "nota": "Actualización de valores"
-        },
-        {
-          "entrada": "delete('a'); get('a')",
-          "salida_esperada": "None",
-          "nota": "Eliminación correcta"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "curso",
-          "titulo": "MIT 6.006 — Algorithms",
-          "url": "https://ocw.mit.edu/"
-        },
-        {
-          "tipo": "libro",
-          "titulo": "Introduction to Algorithms (CLRS)",
-          "url": "https://mitpress.mit.edu"
-        }
-      ]
-    }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (infraestructura y grafos de búsqueda)",
+      "Amazon (almacenamiento distribuido y hashing)",
+      "Meta (optimizaciones de grafos sociales)",
+      "Microsoft (compiladores y sistemas de archivos)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que usan estructuras de datos día a día",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Algoritmos",
+        "importancia": "Crítica",
+        "uso": "Optimización algorítmica y selección de estructuras óptimas."
+      },
+      {
+        "nombre": "Backend Engineer",
+        "importancia": "Alta",
+        "uso": "Implementación de colas, árboles, cachés e índices."
+      },
+      {
+        "nombre": "Machine Learning Engineer",
+        "importancia": "Alta",
+        "uso": "Manipulación de tensores, grafos y estructuras numéricas."
+      },
+      {
+        "nombre": "Ingeniero de Datos",
+        "importancia": "Alta",
+        "uso": "Tablas hash, colas y árboles para pipelines y ETL."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $110,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Implementa una Tabla Hash con Manejo de Colisiones",
+    "descripcion": "Crea desde cero una hash table simple con encadenamiento (listas enlazadas) o sondeo lineal. Deberás implementar inserción, búsqueda y eliminación.",
+    "dificultad": "intermedio-alto",
+    "codigo_inicial": "class HashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = [[] for _ in range(size)]  # Encadenamiento\n\n    def _hash(self, key):\n        # TODO\n        pass\n\n    def insert(self, key, value):\n        # TODO\n        pass\n\n    def get(self, key):\n        # TODO\n        pass\n\n    def delete(self, key):\n        # TODO\n        pass",
+    "solucion_referencia": "class HashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = [[] for _ in range(size)]\n\n    def _hash(self, key):\n        return hash(key) % self.size\n\n    def insert(self, key, value):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                pair[1] = value\n                return\n        self.table[idx].append([key, value])\n\n    def get(self, key):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                return pair[1]\n        return None\n\n    def delete(self, key):\n        idx = self._hash(key)\n        for pair in self.table[idx]:\n            if pair[0] == key:\n                self.table[idx].remove(pair)\n                return",
+    "pistas": [
+      "Define un tamaño fijo para la tabla.",
+      "Implementa una función hash simple.",
+      "Usa encadenamiento (listas enlazadas) o sondeo lineal.",
+      "Agrega métodos: insert(key, value), get(key), delete(key).",
+      "Prueba colisiones intencionalmente."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "insert('a',1); get('a')",
+        "salida_esperada": "1",
+        "explicacion": "Inserción y búsqueda básica"
+      },
+      {
+        "entrada": "insert('a',2); get('a')",
+        "salida_esperada": "2",
+        "explicacion": "Actualización de valores"
+      },
+      {
+        "entrada": "delete('a'); get('a')",
+        "salida_esperada": "None",
+        "explicacion": "Eliminación correcta"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "curso",
+        "titulo": "MIT 6.006 — Algorithms",
+        "url": "https://ocw.mit.edu/"
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Introduction to Algorithms (CLRS)",
+        "url": "https://mitpress.mit.edu"
+      }
+    ]
   }
 }

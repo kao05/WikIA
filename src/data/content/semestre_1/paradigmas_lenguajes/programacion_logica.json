@@ -1,208 +1,212 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "programacion_logica",
-      "titulo": "Programación Lógica",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "avanzado",
-      "tiempo_estudio": "6-10 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la Programación Lógica?",
-        "definicion": "La Programación Lógica es un paradigma declarativo donde los programas se describen mediante hechos y reglas lógicas. La ejecución consiste en que un motor de inferencia intenta satisfacer consultas basándose en estas reglas.",
-        "puntos_clave": [
-          "El énfasis está en especificar *qué* debe cumplirse, no *cómo* se calcula.",
-          "Los programas consisten en hechos, reglas e inferencias.",
-          "El lenguaje más conocido es Prolog (Programming in Logic).",
-          "Utiliza un mecanismo llamado unificación para hacer coincidir patrones.",
-          "El motor lógico usa backtracking para explorar posibles soluciones."
-        ],
-        "formulas": [
-          "Regla general: A :- B, C.  (A es verdadero si B y C son verdaderos)",
-          "Hecho: padre(juan, maria).",
-          "Consulta: ?- padre(juan, maria)."
-        ]
+  "metadata": {
+    "id": "programacion_logica",
+    "titulo": "Programación Lógica",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "avanzado",
+    "tiempo_estudio": "6-10 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la Programación Lógica?",
+    "contenido": "La Programación Lógica es un paradigma declarativo donde los programas se describen mediante hechos y reglas lógicas. La ejecución consiste en que un motor de inferencia intenta satisfacer consultas basándose en estas reglas.",
+    "puntos_clave": [
+      "El énfasis está en especificar *qué* debe cumplirse, no *cómo* se calcula.",
+      "Los programas consisten en hechos, reglas e inferencias.",
+      "El lenguaje más conocido es Prolog (Programming in Logic).",
+      "Utiliza un mecanismo llamado unificación para hacer coincidir patrones.",
+      "El motor lógico usa backtracking para explorar posibles soluciones."
+    ],
+    "formulas": [
+      {
+        "latex": "Regla general: A :- B, C.  (A es verdadero si B y C son verdaderos)",
+        "descripcion": ""
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve la Programación Lógica?",
-        "descripcion": "La programación lógica es especialmente útil para problemas donde la solución es un conjunto de condiciones lógicas o restricciones que deben satisfacerse.",
-        "aplicaciones_comunes": [
-          "Sistemas expertos basados en reglas.",
-          "Motores de inferencia y razonamiento automático.",
-          "Procesamiento de lenguaje natural.",
-          "Sistemas de planificación (AI Planning).",
-          "Resolución de puzles con restricciones (Sudoku, N-Queens)."
-        ],
-        "ejemplos_vida_real": [
-          "Motores de recomendación basados en reglas.",
-          "Sistemas de diagnóstico médico con inferencia lógica.",
-          "Chatbots simbólicos que entienden relaciones semánticas.",
-          "Inferencia de parentescos y relaciones familiares en genealogías.",
-          "Sistemas legales que verifican normativas mediante reglas."
-        ]
+      {
+        "latex": "Hecho: padre(juan, maria).",
+        "descripcion": ""
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "logica_proposicional",
-            "nombre": "Lógica Proposicional",
-            "razon": "Las reglas lógicas derivan de operadores lógicos clásicos."
-          },
-          {
-            "id": "logica_predicados",
-            "nombre": "Lógica de Predicados",
-            "razon": "Prolog opera esencialmente en lógica de primer orden."
-          },
-          {
-            "id": "estructuras_datos_basicas",
-            "nombre": "Estructuras de Datos",
-            "razon": "Las listas se usan ampliamente en programación lógica."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "raciocinio_automatico",
-            "nombre": "Razonamiento Automático",
-            "razon": "La programación lógica es base de los métodos de inferencia."
-          },
-          {
-            "id": "constraint_programming",
-            "nombre": "Programación con Restricciones (CLP)",
-            "razon": "Extiende la lógica con restricciones algebraicas."
-          },
-          {
-            "id": "sistemas_expertos",
-            "nombre": "Sistemas Expertos",
-            "razon": "Se basan directamente en reglas y motores lógicos."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Hechos",
-          "Reglas",
-          "Unificación",
-          "Backtracking",
-          "Meta-programación en Prolog",
-          "Búsqueda lógica",
-          "Resolución SLD"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa la Programación Lógica?",
-          "sectores": [
-            {
-              "nombre": "Inteligencia Artificial Simbólica",
-              "descripcion": "Razonamiento automatizado con reglas y hechos.",
-              "ejemplos": ["Sistemas expertos médicos", "Motores de inferencia legal"]
-            },
-            {
-              "nombre": "Procesamiento de Lenguaje Natural",
-              "descripcion": "Gramáticas lógicas para análisis sintáctico.",
-              "ejemplos": ["GRAM (Prolog-based parsers)", "DCG en Prolog"]
-            },
-            {
-              "nombre": "Ciberseguridad",
-              "descripcion": "Verificación de reglas y permisos.",
-              "ejemplos": ["Análisis de políticas de acceso", "Modelos RBAC con reglas"]
-            },
-            {
-              "nombre": "Robótica y Planeación",
-              "descripcion": "Planeadores simbólicos para toma de decisiones.",
-              "ejemplos": ["STRIPS", "PDDL planners"]
-            }
-          ],
-          "empresas_referencia": [
-            "IBM (Sistemas expertos y verificación formal)",
-            "NIST (modelos lógicos de seguridad)",
-            "DeepMind (Lógica en razonamiento simbólico)",
-            "OpenCyc y Cycorp (bases de conocimiento lógicas)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles donde se usa programación lógica",
-          "salario_promedio_mx": "$35,000 - $100,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero en IA Simbólica",
-              "importancia": "Alta",
-              "uso": "Diseño de sistemas expertos e inferencia lógica."
-            },
-            {
-              "nombre": "Especialista en NLP",
-              "importancia": "Media",
-              "uso": "Gramáticas lógicas y razonamiento lingüístico."
-            },
-            {
-              "nombre": "Especialista en Verificación Formal",
-              "importancia": "Alta",
-              "uso": "Validar sistemas críticos mediante lógica de primer orden."
-            },
-            {
-              "nombre": "Desarrollador en Ciberseguridad",
-              "importancia": "Media",
-              "uso": "Evaluación de políticas lógicas de acceso."
-            }
-          ]
-        }
+      {
+        "latex": "Consulta: ?- padre(juan, maria).",
+        "descripcion": ""
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Árbol genealógico y consultas lógicas en Prolog",
-      "descripcion": "Define hechos y reglas para modelar relaciones familiares. Luego responde consultas mediante inferencia lógica.",
-      "dificultad": "intermedio-avanzado",
-
-      "instrucciones": [
-        "Define hechos básicos como padre/2 o madre/2.",
-        "Define reglas como hermano/2, abuelo/2, primo/2 usando unificación.",
-        "Define una regla ancestro/2 que sea recursiva en Prolog.",
-        "Crea al menos 6 personas y varias relaciones familiares.",
-        "Ejecuta consultas como: ?- abuelo(X, maria)."
-      ],
-
-      "codigo_plantilla": "% Hechos\n% padre(juan, maria).\n% padre(juan, jose).\n% madre(ana, maria).\n% TODO: Añadir más hechos\n\n% Reglas\n% hermano(X, Y) :- ...\n% abuelo(X, Y) :- ...\n% ancestro(X, Y) :- ...  % Recursión lógica\n\n% Consultas esperadas:\n% ?- abuelo(X, maria).\n% ?- ancestro(X, jose).",
-
-      "solucion_referencia": "% Hechos\npadre(juan, maria).\npadre(juan, jose).\npadre(carlos, juan).\nmadre(ana, maria).\nmadre(ana, jose).\nmadre(luisa, juan).\n\n% Reglas\nhermano(X, Y) :- padre(P, X), padre(P, Y), madre(M, X), madre(M, Y), X \\= Y.\nabuelo(X, Y) :- padre(X, P), padre(P, Y).\nabuelo(X, Y) :- padre(X, P), madre(P, Y).\nancestro(X, Y) :- padre(X, Y).\nancestro(X, Y) :- madre(X, Y).\nancestro(X, Y) :- padre(X, Z), ancestro(Z, Y).\nancestro(X, Y) :- madre(X, Z), ancestro(Z, Y).",
-
-      "casos_prueba": [
-        {
-          "entrada": "?- abuelo(X, maria).",
-          "salida_esperada": "X = carlos",
-          "nota": "Inferencia mediante dos niveles de reglas"
-        },
-        {
-          "entrada": "?- hermano(maria, jose).",
-          "salida_esperada": "true",
-          "nota": "Unificación y verificación de igualdad"
-        },
-        {
-          "entrada": "?- ancestro(carlos, maria).",
-          "salida_esperada": "true",
-          "nota": "Recursión lógica"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "documentacion",
-          "titulo": "SWI-Prolog Reference Manual",
-          "url": "https://www.swi-prolog.org"
-        },
-        {
-          "tipo": "libro",
-          "titulo": "Artificial Intelligence: A Modern Approach (AIMA)",
-          "url": "https://aima.cs.berkeley.edu"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve la Programación Lógica?",
+    "contenido": "La programación lógica es especialmente útil para problemas donde la solución es un conjunto de condiciones lógicas o restricciones que deben satisfacerse.",
+    "aplicaciones": [
+      "Sistemas expertos basados en reglas.",
+      "Motores de inferencia y razonamiento automático.",
+      "Procesamiento de lenguaje natural.",
+      "Sistemas de planificación (AI Planning).",
+      "Resolución de puzles con restricciones (Sudoku, N-Queens)."
+    ],
+    "ejemplos_vida_real": [
+      "Motores de recomendación basados en reglas.",
+      "Sistemas de diagnóstico médico con inferencia lógica.",
+      "Chatbots simbólicos que entienden relaciones semánticas.",
+      "Inferencia de parentescos y relaciones familiares en genealogías.",
+      "Sistemas legales que verifican normativas mediante reglas."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "logica_proposicional",
+        "nombre": "Lógica Proposicional",
+        "razon": "Las reglas lógicas derivan de operadores lógicos clásicos."
+      },
+      {
+        "id": "logica_predicados",
+        "nombre": "Lógica de Predicados",
+        "razon": "Prolog opera esencialmente en lógica de primer orden."
+      },
+      {
+        "id": "estructuras_datos_basicas",
+        "nombre": "Estructuras de Datos",
+        "razon": "Las listas se usan ampliamente en programación lógica."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "raciocinio_automatico",
+        "nombre": "Razonamiento Automático",
+        "razon": "La programación lógica es base de los métodos de inferencia."
+      },
+      {
+        "id": "constraint_programming",
+        "nombre": "Programación con Restricciones (CLP)",
+        "razon": "Extiende la lógica con restricciones algebraicas."
+      },
+      {
+        "id": "sistemas_expertos",
+        "nombre": "Sistemas Expertos",
+        "razon": "Se basan directamente en reglas y motores lógicos."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Hechos",
+      "Reglas",
+      "Unificación",
+      "Backtracking",
+      "Meta-programación en Prolog",
+      "Búsqueda lógica",
+      "Resolución SLD"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa la Programación Lógica?",
+    "sectores": [
+      {
+        "nombre": "Inteligencia Artificial Simbólica",
+        "descripcion": "Razonamiento automatizado con reglas y hechos.",
+        "ejemplos": [
+          "Sistemas expertos médicos",
+          "Motores de inferencia legal"
+        ]
+      },
+      {
+        "nombre": "Procesamiento de Lenguaje Natural",
+        "descripcion": "Gramáticas lógicas para análisis sintáctico.",
+        "ejemplos": [
+          "GRAM (Prolog-based parsers)",
+          "DCG en Prolog"
+        ]
+      },
+      {
+        "nombre": "Ciberseguridad",
+        "descripcion": "Verificación de reglas y permisos.",
+        "ejemplos": [
+          "Análisis de políticas de acceso",
+          "Modelos RBAC con reglas"
+        ]
+      },
+      {
+        "nombre": "Robótica y Planeación",
+        "descripcion": "Planeadores simbólicos para toma de decisiones.",
+        "ejemplos": [
+          "STRIPS",
+          "PDDL planners"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "IBM (Sistemas expertos y verificación formal)",
+      "NIST (modelos lógicos de seguridad)",
+      "DeepMind (Lógica en razonamiento simbólico)",
+      "OpenCyc y Cycorp (bases de conocimiento lógicas)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles donde se usa programación lógica",
+    "roles": [
+      {
+        "nombre": "Ingeniero en IA Simbólica",
+        "importancia": "Alta",
+        "uso": "Diseño de sistemas expertos e inferencia lógica."
+      },
+      {
+        "nombre": "Especialista en NLP",
+        "importancia": "Media",
+        "uso": "Gramáticas lógicas y razonamiento lingüístico."
+      },
+      {
+        "nombre": "Especialista en Verificación Formal",
+        "importancia": "Alta",
+        "uso": "Validar sistemas críticos mediante lógica de primer orden."
+      },
+      {
+        "nombre": "Desarrollador en Ciberseguridad",
+        "importancia": "Media",
+        "uso": "Evaluación de políticas lógicas de acceso."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $100,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Árbol genealógico y consultas lógicas en Prolog",
+    "descripcion": "Define hechos y reglas para modelar relaciones familiares. Luego responde consultas mediante inferencia lógica.",
+    "dificultad": "intermedio-avanzado",
+    "codigo_inicial": "% Hechos\n% padre(juan, maria).\n% padre(juan, jose).\n% madre(ana, maria).\n% TODO: Añadir más hechos\n\n% Reglas\n% hermano(X, Y) :- ...\n% abuelo(X, Y) :- ...\n% ancestro(X, Y) :- ...  % Recursión lógica\n\n% Consultas esperadas:\n% ?- abuelo(X, maria).\n% ?- ancestro(X, jose).",
+    "solucion_referencia": "% Hechos\npadre(juan, maria).\npadre(juan, jose).\npadre(carlos, juan).\nmadre(ana, maria).\nmadre(ana, jose).\nmadre(luisa, juan).\n\n% Reglas\nhermano(X, Y) :- padre(P, X), padre(P, Y), madre(M, X), madre(M, Y), X \\= Y.\nabuelo(X, Y) :- padre(X, P), padre(P, Y).\nabuelo(X, Y) :- padre(X, P), madre(P, Y).\nancestro(X, Y) :- padre(X, Y).\nancestro(X, Y) :- madre(X, Y).\nancestro(X, Y) :- padre(X, Z), ancestro(Z, Y).\nancestro(X, Y) :- madre(X, Z), ancestro(Z, Y).",
+    "pistas": [
+      "Define hechos básicos como padre/2 o madre/2.",
+      "Define reglas como hermano/2, abuelo/2, primo/2 usando unificación.",
+      "Define una regla ancestro/2 que sea recursiva en Prolog.",
+      "Crea al menos 6 personas y varias relaciones familiares.",
+      "Ejecuta consultas como: ?- abuelo(X, maria)."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "?- abuelo(X, maria).",
+        "salida_esperada": "X = carlos",
+        "explicacion": "Inferencia mediante dos niveles de reglas"
+      },
+      {
+        "entrada": "?- hermano(maria, jose).",
+        "salida_esperada": "true",
+        "explicacion": "Unificación y verificación de igualdad"
+      },
+      {
+        "entrada": "?- ancestro(carlos, maria).",
+        "salida_esperada": "true",
+        "explicacion": "Recursión lógica"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "documentacion",
+        "titulo": "SWI-Prolog Reference Manual",
+        "url": "https://www.swi-prolog.org"
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Artificial Intelligence: A Modern Approach (AIMA)",
+        "url": "https://aima.cs.berkeley.edu"
+      }
+    ]
   }
 }

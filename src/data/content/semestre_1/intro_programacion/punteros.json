@@ -1,214 +1,221 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "punteros",
-      "titulo": "Punteros en C",
-      "materia": "Introducción a la Programación",
-      "semestre": 1,
-      "dificultad": "alto",
-      "tiempo_estudio": "4-6 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué son los punteros?",
-        "definicion": "Un puntero es una variable que almacena la dirección de memoria de otra variable. Permiten manipular memoria directamente y son fundamentales en lenguajes de bajo nivel como C.",
-        "puntos_clave": [
-          "Un puntero almacena una dirección, no un valor.",
-          "El operador & obtiene la dirección de una variable.",
-          "El operador * permite acceder al valor almacenado en esa dirección.",
-          "Los punteros permiten manipulación eficiente de arreglos, estructuras y memoria dinámica.",
-          "Son base para estructuras como listas enlazadas, árboles y grafos."
-        ],
-        "formulas": [
-          "int *p;   // p es un puntero a entero",
-          "p = &x;   // p almacena la dirección de x",
-          "*p        // valor contenido en la dirección apuntada"
-        ]
+  "metadata": {
+    "id": "punteros",
+    "titulo": "Punteros en C",
+    "materia": "Introducción a la Programación",
+    "semestre": 1,
+    "dificultad": "alto",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué son los punteros?",
+    "contenido": "Un puntero es una variable que almacena la dirección de memoria de otra variable. Permiten manipular memoria directamente y son fundamentales en lenguajes de bajo nivel como C.",
+    "puntos_clave": [
+      "Un puntero almacena una dirección, no un valor.",
+      "El operador & obtiene la dirección de una variable.",
+      "El operador * permite acceder al valor almacenado en esa dirección.",
+      "Los punteros permiten manipulación eficiente de arreglos, estructuras y memoria dinámica.",
+      "Son base para estructuras como listas enlazadas, árboles y grafos."
+    ],
+    "formulas": [
+      {
+        "latex": "int *p;   // p es un puntero a entero",
+        "descripcion": ""
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "Los punteros permiten acceso directo a memoria, manipulación de estructuras complejas y comunicación eficiente entre funciones.",
-        "aplicaciones_comunes": [
-          "Paso por referencia en funciones.",
-          "Manipulación de arreglos sin copia.",
-          "Estructuras dinámicas como listas, colas y árboles.",
-          "Asignación dinámica de memoria con malloc/free.",
-          "Implementación de buffers, strings y memoria compartida."
-        ],
-        "ejemplos_vida_real": [
-          "Administración de memoria en sistemas operativos.",
-          "Manejo eficiente de imágenes en visión computacional.",
-          "Estructuras dinámicas en algoritmos de grafos.",
-          "Desarrollo de drivers y software embebido.",
-          "Procesamiento de grandes volúmenes de datos en C/C++."
-        ]
+      {
+        "latex": "p = &x;   // p almacena la dirección de x",
+        "descripcion": ""
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "variables_y_tipos",
-            "nombre": "Variables y Tipos de Datos",
-            "razon": "Los punteros apuntan a direcciones de variables con tipos definidos."
-          },
-          {
-            "id": "memoria_basica",
-            "nombre": "Modelo de Memoria",
-            "razon": "Es necesario entender stack, heap y direcciones."
-          },
-          {
-            "id": "funciones",
-            "nombre": "Funciones",
-            "razon": "Los punteros permiten paso por referencia."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "memoria_dinamica",
-            "nombre": "Memoria Dinámica",
-            "razon": "malloc/free dependen completamente de punteros."
-          },
-          {
-            "id": "estructuras_datos",
-            "nombre": "Estructuras de Datos",
-            "razon": "Listas, árboles y grafos requieren punteros."
-          },
-          {
-            "id": "punteros_funciones",
-            "nombre": "Punteros a Funciones",
-            "razon": "Parte fundamental de callbacks y librerías en C."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Direcciones de memoria",
-          "Stack y Heap",
-          "Paso por referencia",
-          "Arreglos y punteros",
-          "Aritmética de punteros",
-          "malloc, calloc, free"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usan en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Sistemas Operativos",
-              "descripcion": "Administración directa de memoria y manejo de procesos.",
-              "ejemplos": ["Kernel de Linux", "Windows NT Memory Manager"]
-            },
-            {
-              "nombre": "Robótica y Sistemas Embebidos",
-              "descripcion": "Control de hardware, sensores y buses de comunicación.",
-              "ejemplos": ["Firmware para microcontroladores", "Controladores de movimiento"]
-            },
-            {
-              "nombre": "Inteligencia Artificial (implementación baja)",
-              "descripcion": "Librerías de alto rendimiento para ML/IA utilizan C/C++.",
-              "ejemplos": ["PyTorch backend (C++)", "TensorFlow kernels en C++"]
-            },
-            {
-              "nombre": "Videojuegos",
-              "descripcion": "Optimización gráfica y de físicas.",
-              "ejemplos": ["Unreal Engine", "Motores de física personalizados"]
-            },
-            {
-              "nombre": "Telecomunicaciones",
-              "descripcion": "Manipulación de buffers y paquetes de red.",
-              "ejemplos": ["Routers Cisco", "Stacks TCP/IP"]
-            }
-          ],
-          "empresas_referencia": [
-            "NVIDIA",
-            "Intel",
-            "NASA",
-            "Google (infraestructura C/C++)",
-            "Bosch (embebidos y robótica)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$30,000 - $80,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero en Sistemas Embebidos",
-              "importancia": "Crítica",
-              "uso": "Programación en C para hardware y sensores."
-            },
-            {
-              "nombre": "Ingeniero de Software de Bajo Nivel",
-              "importancia": "Crítica",
-              "uso": "Manipulación de memoria, optimización y drivers."
-            },
-            {
-              "nombre": "Programador de Videojuegos",
-              "importancia": "Alta",
-              "uso": "Optimización de motores en C/C++."
-            },
-            {
-              "nombre": "Ingeniero de I.A. de Alto Rendimiento",
-              "importancia": "Media",
-              "uso": "Optimización de kernels numéricos."
-            },
-            {
-              "nombre": "Administrador de Sistemas",
-              "importancia": "Media",
-              "uso": "Comprensión de memoria y debugging de bajo nivel."
-            }
-          ]
-        }
+      {
+        "latex": "*p        // valor contenido en la dirección apuntada",
+        "descripcion": ""
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto en C: Manejo de punteros y memoria dinámica",
-      "descripcion": "Implementa un programa que use punteros para crear dinámicamente un arreglo, llenarlo, modificarlo y liberarlo correctamente.",
-      "dificultad": "intermedio-alto",
-
-      "instrucciones": [
-        "Solicita al usuario el tamaño del arreglo.",
-        "Usa malloc para asignar memoria dinámica.",
-        "Llena el arreglo con números dados por el usuario.",
-        "Implementa una función que reciba un puntero al arreglo y lo modifique.",
-        "Imprime el arreglo modificado.",
-        "Libera la memoria con free."
-      ],
-
-      "codigo_plantilla": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid modificar_arreglo(int *arr, int n) {\n    // TODO: multiplica cada elemento por 2 usando aritmética de punteros\n}\n\nint main() {\n    int n;\n    printf(\"Ingrese el tamaño del arreglo: \");\n    scanf(\"%d\", &n);\n\n    // TODO: asigna memoria dinámica\n    int *arr = NULL;\n\n    // TODO: llenar el arreglo\n\n    modificar_arreglo(arr, n);\n\n    // TODO: imprimir resultados\n\n    // TODO: liberar memoria\n\n    return 0;\n}",
-
-      "solucion_referencia": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid modificar_arreglo(int *arr, int n) {\n    for (int i = 0; i < n; i++) {\n        *(arr + i) *= 2;\n    }\n}\n\nint main() {\n    int n;\n    printf(\"Ingrese el tamaño del arreglo: \");\n    scanf(\"%d\", &n);\n\n    int *arr = malloc(n * sizeof(int));\n    if (arr == NULL) {\n        printf(\"Error de memoria\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"Valor[%d]: \", i);\n        scanf(\"%d\", &arr[i]);\n    }\n\n    modificar_arreglo(arr, n);\n\n    printf(\"Arreglo modificado:\\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n\n    free(arr);\n    return 0;\n}",
-
-      "casos_prueba": [
-        {
-          "entrada": "[3 elementos: 1, 2, 3]",
-          "salida_esperada": "2 4 6",
-          "nota": "Verifica aritmética de punteros"
-        },
-        {
-          "entrada": "[5 elementos: 0, -1, 4, 10, 3]",
-          "salida_esperada": "0 -2 8 20 6",
-          "nota": "Incluye negativos"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "documentacion",
-          "titulo": "The C Programming Language (Kernighan & Ritchie)",
-          "url": "https://en.cppreference.com/w/c/language/pointer"
-        },
-        {
-          "tipo": "video",
-          "titulo": "MIT — Memory and Pointers in C",
-          "url": "https://ocw.mit.edu"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "Los punteros permiten acceso directo a memoria, manipulación de estructuras complejas y comunicación eficiente entre funciones.",
+    "aplicaciones": [
+      "Paso por referencia en funciones.",
+      "Manipulación de arreglos sin copia.",
+      "Estructuras dinámicas como listas, colas y árboles.",
+      "Asignación dinámica de memoria con malloc/free.",
+      "Implementación de buffers, strings y memoria compartida."
+    ],
+    "ejemplos_vida_real": [
+      "Administración de memoria en sistemas operativos.",
+      "Manejo eficiente de imágenes en visión computacional.",
+      "Estructuras dinámicas en algoritmos de grafos.",
+      "Desarrollo de drivers y software embebido.",
+      "Procesamiento de grandes volúmenes de datos en C/C++."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "variables_y_tipos",
+        "nombre": "Variables y Tipos de Datos",
+        "razon": "Los punteros apuntan a direcciones de variables con tipos definidos."
+      },
+      {
+        "id": "memoria_basica",
+        "nombre": "Modelo de Memoria",
+        "razon": "Es necesario entender stack, heap y direcciones."
+      },
+      {
+        "id": "funciones",
+        "nombre": "Funciones",
+        "razon": "Los punteros permiten paso por referencia."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "memoria_dinamica",
+        "nombre": "Memoria Dinámica",
+        "razon": "malloc/free dependen completamente de punteros."
+      },
+      {
+        "id": "estructuras_datos",
+        "nombre": "Estructuras de Datos",
+        "razon": "Listas, árboles y grafos requieren punteros."
+      },
+      {
+        "id": "punteros_funciones",
+        "nombre": "Punteros a Funciones",
+        "razon": "Parte fundamental de callbacks y librerías en C."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Direcciones de memoria",
+      "Stack y Heap",
+      "Paso por referencia",
+      "Arreglos y punteros",
+      "Aritmética de punteros",
+      "malloc, calloc, free"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usan en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Sistemas Operativos",
+        "descripcion": "Administración directa de memoria y manejo de procesos.",
+        "ejemplos": [
+          "Kernel de Linux",
+          "Windows NT Memory Manager"
+        ]
+      },
+      {
+        "nombre": "Robótica y Sistemas Embebidos",
+        "descripcion": "Control de hardware, sensores y buses de comunicación.",
+        "ejemplos": [
+          "Firmware para microcontroladores",
+          "Controladores de movimiento"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial (implementación baja)",
+        "descripcion": "Librerías de alto rendimiento para ML/IA utilizan C/C++.",
+        "ejemplos": [
+          "PyTorch backend (C++)",
+          "TensorFlow kernels en C++"
+        ]
+      },
+      {
+        "nombre": "Videojuegos",
+        "descripcion": "Optimización gráfica y de físicas.",
+        "ejemplos": [
+          "Unreal Engine",
+          "Motores de física personalizados"
+        ]
+      },
+      {
+        "nombre": "Telecomunicaciones",
+        "descripcion": "Manipulación de buffers y paquetes de red.",
+        "ejemplos": [
+          "Routers Cisco",
+          "Stacks TCP/IP"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "NVIDIA",
+      "Intel",
+      "NASA",
+      "Google (infraestructura C/C++)",
+      "Bosch (embebidos y robótica)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Ingeniero en Sistemas Embebidos",
+        "importancia": "Crítica",
+        "uso": "Programación en C para hardware y sensores."
+      },
+      {
+        "nombre": "Ingeniero de Software de Bajo Nivel",
+        "importancia": "Crítica",
+        "uso": "Manipulación de memoria, optimización y drivers."
+      },
+      {
+        "nombre": "Programador de Videojuegos",
+        "importancia": "Alta",
+        "uso": "Optimización de motores en C/C++."
+      },
+      {
+        "nombre": "Ingeniero de I.A. de Alto Rendimiento",
+        "importancia": "Media",
+        "uso": "Optimización de kernels numéricos."
+      },
+      {
+        "nombre": "Administrador de Sistemas",
+        "importancia": "Media",
+        "uso": "Comprensión de memoria y debugging de bajo nivel."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $80,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto en C: Manejo de punteros y memoria dinámica",
+    "descripcion": "Implementa un programa que use punteros para crear dinámicamente un arreglo, llenarlo, modificarlo y liberarlo correctamente.",
+    "dificultad": "intermedio-alto",
+    "codigo_inicial": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid modificar_arreglo(int *arr, int n) {\n    // TODO: multiplica cada elemento por 2 usando aritmética de punteros\n}\n\nint main() {\n    int n;\n    printf(\"Ingrese el tamaño del arreglo: \");\n    scanf(\"%d\", &n);\n\n    // TODO: asigna memoria dinámica\n    int *arr = NULL;\n\n    // TODO: llenar el arreglo\n\n    modificar_arreglo(arr, n);\n\n    // TODO: imprimir resultados\n\n    // TODO: liberar memoria\n\n    return 0;\n}",
+    "solucion_referencia": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid modificar_arreglo(int *arr, int n) {\n    for (int i = 0; i < n; i++) {\n        *(arr + i) *= 2;\n    }\n}\n\nint main() {\n    int n;\n    printf(\"Ingrese el tamaño del arreglo: \");\n    scanf(\"%d\", &n);\n\n    int *arr = malloc(n * sizeof(int));\n    if (arr == NULL) {\n        printf(\"Error de memoria\\n\");\n        return 1;\n    }\n\n    for (int i = 0; i < n; i++) {\n        printf(\"Valor[%d]: \", i);\n        scanf(\"%d\", &arr[i]);\n    }\n\n    modificar_arreglo(arr, n);\n\n    printf(\"Arreglo modificado:\\n\");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n\n    free(arr);\n    return 0;\n}",
+    "pistas": [
+      "Solicita al usuario el tamaño del arreglo.",
+      "Usa malloc para asignar memoria dinámica.",
+      "Llena el arreglo con números dados por el usuario.",
+      "Implementa una función que reciba un puntero al arreglo y lo modifique.",
+      "Imprime el arreglo modificado.",
+      "Libera la memoria con free."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "[3 elementos: 1, 2, 3]",
+        "salida_esperada": "2 4 6",
+        "explicacion": "Verifica aritmética de punteros"
+      },
+      {
+        "entrada": "[5 elementos: 0, -1, 4, 10, 3]",
+        "salida_esperada": "0 -2 8 20 6",
+        "explicacion": "Incluye negativos"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "documentacion",
+        "titulo": "The C Programming Language (Kernighan & Ritchie)",
+        "url": "https://en.cppreference.com/w/c/language/pointer"
+      },
+      {
+        "tipo": "video",
+        "titulo": "MIT — Memory and Pointers in C",
+        "url": "https://ocw.mit.edu"
+      }
+    ]
   }
 }

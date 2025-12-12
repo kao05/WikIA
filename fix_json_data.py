@@ -259,23 +259,29 @@ def main():
         epilog="""
 Ejemplos:
 
-  Procesar un archivo (sobrescribe el original):
-    python fix_json_data.py archivo.json
+    Sin argumentos (por defecto procesa src/data/content/):
+        python fix_json_data.py
+
+    Procesar un archivo (sobrescribe el original):
+        python fix_json_data.py src/data/content/semestre_1/algebra_superior/algebra_booleana.json
   
-  Procesar directorio completo (sobrescribe todos los .json excepto curriculum):
-    python fix_json_data.py src/data/content/
+    Procesar un directorio específico:
+        python fix_json_data.py alguna/otra/ruta
         """
     )
-    
+
     parser.add_argument(
         'ruta',
-        type=str,
-        help='Ruta al archivo o directorio a procesar'
+        nargs='?',
+        default=None,
+        help='Ruta al archivo o directorio; si se omite, usa src/data/content/'
     )
     
     args = parser.parse_args()
     
-    ruta = Path(args.ruta)
+    # Ruta por defecto: carpeta de contenidos
+    default_dir = Path(__file__).parent / "src" / "data" / "content"
+    ruta = Path(args.ruta) if args.ruta else default_dir
     
     if not ruta.exists():
         print(f"❌ Error: La ruta '{ruta}' no existe")

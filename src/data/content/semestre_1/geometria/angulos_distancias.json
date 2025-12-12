@@ -1,163 +1,175 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "angulos_distancias",
-      "titulo": "Ángulos y Distancias entre Rectas",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "3-4 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "Intersecciones y Distancias en el Plano",
-        "definicion": "Estudio de las relaciones métricas entre rectas en el plano cartesiano, permitiendo calcular la separación exacta entre objetos geométricos y la inclinación relativa entre ellos.",
-        "puntos_clave": [
-          "El ángulo entre dos rectas se calcula a partir de sus pendientes.",
-          "La distancia de un punto a una recta es la longitud del segmento perpendicular que los une (la distancia más corta).",
-          "Dos rectas son paralelas si su ángulo es 0° (pendientes iguales).",
-          "Dos rectas son perpendiculares si su ángulo es 90° (producto de pendientes = -1)."
-        ],
-        "formulas": [
-          "Ángulo entre rectas: tan(θ) = |(m2 - m1) / (1 + m1*m2)|",
-          "Distancia punto-recta: d = |Ax1 + By1 + C| / √(A² + B²)",
-          "Distancia entre paralelas: d = |C1 - C2| / √(A² + B²)"
-        ]
+  "metadata": {
+    "id": "angulos_distancias",
+    "titulo": "Ángulos y Distancias entre Rectas",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "3-4 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "Intersecciones y Distancias en el Plano",
+    "contenido": "Estudio de las relaciones métricas entre rectas en el plano cartesiano, permitiendo calcular la separación exacta entre objetos geométricos y la inclinación relativa entre ellos.",
+    "puntos_clave": [
+      "El ángulo entre dos rectas se calcula a partir de sus pendientes.",
+      "La distancia de un punto a una recta es la longitud del segmento perpendicular que los une (la distancia más corta).",
+      "Dos rectas son paralelas si su ángulo es 0° (pendientes iguales).",
+      "Dos rectas son perpendiculares si su ángulo es 90° (producto de pendientes = -1)."
+    ],
+    "formulas": [
+      {
+        "latex": "Ángulo entre rectas: tan(θ) = |(m2 - m1) / (1 + m1*m2)|",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "Estos cálculos son el núcleo de la detección de colisiones en videojuegos, sistemas de posicionamiento global (GPS) y diseño asistido por computadora (CAD).",
-        "aplicaciones_comunes": [
-          "Detección de colisiones (ej. si la distancia jugador-pared < radio).",
-          "Cálculo de rutas óptimas y desviaciones en GPS.",
-          "Diseño de estructuras arquitectónicas.",
-          "Visión artificial (detectar bordes y orientaciones).",
-          "Robótica (evasión de obstáculos)."
-        ],
-        "ejemplos_vida_real": [
-          "Determinar si un coche se ha salido de su carril (distancia a la línea).",
-          "Calcular el ángulo de corte necesario para una pieza de madera.",
-          "Saber si un clic del mouse 'toca' una línea en un programa de dibujo."
-        ]
+      {
+        "latex": "Distancia punto-recta: d = |Ax1 + By1 + C| / √(A² + B²)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "linea_recta",
-            "nombre": "Línea Recta",
-            "razon": "Debes dominar la ecuación general (Ax + By + C = 0) y el concepto de pendiente (m)."
-          },
-          {
-            "id": "sistemas_coordenadas",
-            "nombre": "Sistemas de Coordenadas",
-            "razon": "Necesario para ubicar puntos (x,y) en el plano."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "circunferencia",
-            "nombre": "La Circunferencia",
-            "razon": "La distancia punto-recta es clave para definir rectas tangentes."
-          },
-          {
-            "id": "vectores",
-            "nombre": "Álgebra Lineal (Vectores)",
-            "razon": "Estos conceptos se generalizan a R3 usando productos punto y cruz."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Teorema de Pitágoras",
-          "Trigonometría básica (tangente)",
-          "Valor absoluto"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo de Videojuegos",
-              "descripcion": "Física del juego y detección de impactos.",
-              "ejemplos": ["Raycasting (motores FPS)", "Colisiones 2D"]
-            },
-            {
-              "nombre": "Sistemas de Información Geográfica (GIS)",
-              "descripcion": "Análisis espacial y cartografía.",
-              "ejemplos": ["Proximidad de parcelas a carreteras", "Cálculo de áreas de influencia"]
-            },
-            {
-              "nombre": "Robótica y Automatización",
-              "descripcion": "Navegación autónoma.",
-              "ejemplos": ["Robot aspiradora siguiendo una pared", "Brazos robóticos industriales"]
-            }
-          ],
-          "empresas_referencia": [
-            "Unity Technologies (Motor de videojuegos)",
-            "Uber (Geolocalización y rutas)",
-            "Autodesk (Software CAD como AutoCAD)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$20,000 - $55,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Programador de Gráficos / Gameplay",
-              "importancia": "Crítica",
-              "uso": "Matemáticas para renderizado y lógica de juego."
-            },
-            {
-              "nombre": "Ingeniero Civil / Topógrafo",
-              "importancia": "Alta",
-              "uso": "Diseño de planos y carreteras."
-            },
-            {
-              "nombre": "Analista GIS",
-              "importancia": "Alta",
-              "uso": "Análisis de datos espaciales y mapas."
-            }
-          ]
-        }
+      {
+        "latex": "Distancia entre paralelas: d = |C1 - C2| / √(A² + B²)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Detector de Proximidad (Distancia Punto-Recta)",
-      "descripcion": "Escribe una función que calcule la distancia mínima entre un punto (el jugador) y una recta (una pared), dada la ecuación general de la recta Ax + By + C = 0.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "La fórmula de la distancia es: d = |Ax + By + C| / sqrt(A^2 + B^2).",
-        "Debes importar la librería 'math' para usar la raíz cuadrada (math.sqrt).",
-        "La función recibirá los coeficientes de la recta (A, B, C) y las coordenadas del punto (x, y).",
-        "Devuelve el resultado como un número flotante."
-      ],
-      "codigo_plantilla": "import math\n\ndef distancia_punto_recta(A, B, C, x, y):\n    \"\"\"\n    Calcula la distancia de un punto (x,y) a una recta Ax + By + C = 0\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Recta: 3x + 4y - 12 = 0 (Una pared)\n# Punto: (2, 4) (El jugador)\nprint(f\"Distancia: {distancia_punto_recta(3, 4, -12, 2, 4)}\")",
-      "solucion_referencia": "import math\n\ndef distancia_punto_recta(A, B, C, x, y):\n    # Numerador: Valor absoluto de Ax + By + C\n    numerador = abs(A * x + B * y + C)\n    \n    # Denominador: Raíz cuadrada de A^2 + B^2\n    denominador = math.sqrt(A**2 + B**2)\n    \n    # Manejo de error por división entre cero (si A y B son 0 no es una recta)\n    if denominador == 0:\n        return 0.0\n        \n    return numerador / denominador",
-      "casos_prueba": [
-        {
-          "entrada": "A=3, B=4, C=-12, x=0, y=3",
-          "salida_esperada": 0.0,
-          "nota": "El punto está sobre la recta (distancia 0)"
-        },
-        {
-          "entrada": "A=1, B=0, C=-5, x=10, y=5",
-          "salida_esperada": 5.0,
-          "nota": "Recta vertical x=5. Punto en x=10. Distancia simple."
-        },
-        {
-          "entrada": "A=0, B=1, C=0, x=3, y=4",
-          "salida_esperada": 4.0,
-          "nota": "Recta horizontal y=0 (Eje X). Distancia es la coordenada Y."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Detección de colisiones en 2D",
-          "url": "https://developer.mozilla.org/es/docs/Games/Techniques/2D_collision_detection"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "Estos cálculos son el núcleo de la detección de colisiones en videojuegos, sistemas de posicionamiento global (GPS) y diseño asistido por computadora (CAD).",
+    "aplicaciones": [
+      "Detección de colisiones (ej. si la distancia jugador-pared < radio).",
+      "Cálculo de rutas óptimas y desviaciones en GPS.",
+      "Diseño de estructuras arquitectónicas.",
+      "Visión artificial (detectar bordes y orientaciones).",
+      "Robótica (evasión de obstáculos)."
+    ],
+    "ejemplos_vida_real": [
+      "Determinar si un coche se ha salido de su carril (distancia a la línea).",
+      "Calcular el ángulo de corte necesario para una pieza de madera.",
+      "Saber si un clic del mouse 'toca' una línea en un programa de dibujo."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "linea_recta",
+        "nombre": "Línea Recta",
+        "razon": "Debes dominar la ecuación general (Ax + By + C = 0) y el concepto de pendiente (m)."
+      },
+      {
+        "id": "sistemas_coordenadas",
+        "nombre": "Sistemas de Coordenadas",
+        "razon": "Necesario para ubicar puntos (x,y) en el plano."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "circunferencia",
+        "nombre": "La Circunferencia",
+        "razon": "La distancia punto-recta es clave para definir rectas tangentes."
+      },
+      {
+        "id": "vectores",
+        "nombre": "Álgebra Lineal (Vectores)",
+        "razon": "Estos conceptos se generalizan a R3 usando productos punto y cruz."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Teorema de Pitágoras",
+      "Trigonometría básica (tangente)",
+      "Valor absoluto"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo de Videojuegos",
+        "descripcion": "Física del juego y detección de impactos.",
+        "ejemplos": [
+          "Raycasting (motores FPS)",
+          "Colisiones 2D"
+        ]
+      },
+      {
+        "nombre": "Sistemas de Información Geográfica (GIS)",
+        "descripcion": "Análisis espacial y cartografía.",
+        "ejemplos": [
+          "Proximidad de parcelas a carreteras",
+          "Cálculo de áreas de influencia"
+        ]
+      },
+      {
+        "nombre": "Robótica y Automatización",
+        "descripcion": "Navegación autónoma.",
+        "ejemplos": [
+          "Robot aspiradora siguiendo una pared",
+          "Brazos robóticos industriales"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Unity Technologies (Motor de videojuegos)",
+      "Uber (Geolocalización y rutas)",
+      "Autodesk (Software CAD como AutoCAD)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Programador de Gráficos / Gameplay",
+        "importancia": "Crítica",
+        "uso": "Matemáticas para renderizado y lógica de juego."
+      },
+      {
+        "nombre": "Ingeniero Civil / Topógrafo",
+        "importancia": "Alta",
+        "uso": "Diseño de planos y carreteras."
+      },
+      {
+        "nombre": "Analista GIS",
+        "importancia": "Alta",
+        "uso": "Análisis de datos espaciales y mapas."
+      }
+    ],
+    "salario_promedio_mx": "$20,000 - $55,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Detector de Proximidad (Distancia Punto-Recta)",
+    "descripcion": "Escribe una función que calcule la distancia mínima entre un punto (el jugador) y una recta (una pared), dada la ecuación general de la recta Ax + By + C = 0.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "import math\n\ndef distancia_punto_recta(A, B, C, x, y):\n    \"\"\"\n    Calcula la distancia de un punto (x,y) a una recta Ax + By + C = 0\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Recta: 3x + 4y - 12 = 0 (Una pared)\n# Punto: (2, 4) (El jugador)\nprint(f\"Distancia: {distancia_punto_recta(3, 4, -12, 2, 4)}\")",
+    "solucion_referencia": "import math\n\ndef distancia_punto_recta(A, B, C, x, y):\n    # Numerador: Valor absoluto de Ax + By + C\n    numerador = abs(A * x + B * y + C)\n    \n    # Denominador: Raíz cuadrada de A^2 + B^2\n    denominador = math.sqrt(A**2 + B**2)\n    \n    # Manejo de error por división entre cero (si A y B son 0 no es una recta)\n    if denominador == 0:\n        return 0.0\n        \n    return numerador / denominador",
+    "pistas": [
+      "La fórmula de la distancia es: d = |Ax + By + C| / sqrt(A^2 + B^2).",
+      "Debes importar la librería 'math' para usar la raíz cuadrada (math.sqrt).",
+      "La función recibirá los coeficientes de la recta (A, B, C) y las coordenadas del punto (x, y).",
+      "Devuelve el resultado como un número flotante."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "A=3, B=4, C=-12, x=0, y=3",
+        "salida_esperada": 0.0,
+        "explicacion": "El punto está sobre la recta (distancia 0)"
+      },
+      {
+        "entrada": "A=1, B=0, C=-5, x=10, y=5",
+        "salida_esperada": 5.0,
+        "explicacion": "Recta vertical x=5. Punto en x=10. Distancia simple."
+      },
+      {
+        "entrada": "A=0, B=1, C=0, x=3, y=4",
+        "salida_esperada": 4.0,
+        "explicacion": "Recta horizontal y=0 (Eje X). Distancia es la coordenada Y."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Detección de colisiones en 2D",
+        "url": "https://developer.mozilla.org/es/docs/Games/Techniques/2D_collision_detection"
+      }
+    ]
   }
 }

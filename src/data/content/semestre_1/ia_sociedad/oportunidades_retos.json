@@ -1,138 +1,140 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "oportunidades_retos",
-      "titulo": "Fronteras de Investigación: Oportunidades y Desafíos",
-      "materia": "Inteligencia Artificial y Sociedad",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "3-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "La IA como Motor de Descubrimiento Científico",
-        "definicion": "Análisis del potencial de la IA para acelerar el método científico y resolver problemas complejos intratables para los humanos, frente a los desafíos técnicos y éticos que limitan su avance.",
-        "puntos_clave": [
-          "AI for Science: El uso de Deep Learning para simular fenómenos físicos, biológicos y químicos (ej. predicción de estructuras de proteínas).",
-          "El Problema de la Alineación: El desafío de investigación de garantizar que los objetivos de una IA superinteligente (AGI) coincidan con los valores humanos.",
-          "Sostenibilidad Computacional (Green AI): El reto de reducir la huella de carbono masiva necesaria para entrenar modelos grandes (LLMs).",
-          "Cajas Negras en Ciencia: La tensión entre la capacidad predictiva de la IA y la necesidad científica de entender la causalidad ('explicabilidad')."
-        ],
-        "formulas": []
-      },
-      "utilidad_practica": {
-        "titulo": "¿Por qué investigar esto?",
-        "descripcion": "Identificar dónde la IA puede romper barreras del conocimiento humano y dónde existen riesgos existenciales o técnicos que requieren solución.",
-        "aplicaciones_comunes": [
-          "Biomedicina: Descubrimiento acelerado de fármacos y plegamiento de proteínas (AlphaFold).",
-          "Física de Plasmas: Control de reactores de fusión nuclear mediante aprendizaje por refuerzo.",
-          "Ciencia de Materiales: Descubrimiento de nuevos materiales para baterías más eficientes.",
-          "Climatología: Modelado hiper-local de patrones climáticos extremos."
-        ],
-        "ejemplos_vida_real": [
-          "AlphaFold de DeepMind resolviendo en meses el problema del plegamiento de proteínas que llevó 50 años a la biología.",
-          "Uso de IA para descifrar textos antiguos en lenguas perdidas o papiros carbonizados.",
-          "Modelos de IA detectando exoplanetas en datos ruidosos de telescopios espaciales."
-        ]
-      },
-      "mapa_conocimiento": {
-        "titulo": "Mapa de Investigación",
-        "prerequisitos": [
-          {
-            "id": "penetracion_ia",
-            "nombre": "Estado actual de la IA",
-            "razon": "Conocer el 'State of the Art' (SOTA) actual."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "aprendizaje_automatico",
-            "nombre": "Aprendizaje Automático (Semestre 4)",
-            "razon": "Las herramientas técnicas para realizar estos descubrimientos."
-          },
-          {
-            "id": "etica_ia",
-            "nombre": "Ética y Seguridad en IA",
-            "razon": "Investigación sobre cómo prevenir el uso dual (dañino) de descubrimientos poderosos."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Singularidad Tecnológica",
-          "Investigación de Doble Uso (Dual-Use Research)",
-          "AGI (Inteligencia Artificial General)",
-          "Simulación vs. Experimentación"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Quién lidera la investigación?",
-          "sectores": [
-            {
-              "nombre": "Laboratorios de IA de Vanguardia",
-              "descripcion": "Investigación fundamental hacia la AGI.",
-              "ejemplos": ["Google DeepMind", "OpenAI", "Anthropic"]
-            },
-            {
-              "nombre": "Biotecnología y Farmacéutica",
-              "descripcion": "I+D impulsado por datos.",
-              "ejemplos": ["Isomorphic Labs", "Moderna (diseño de ARNm)"]
-            },
-            {
-              "nombre": "Academia y Consorcios",
-              "descripcion": "Democratización del acceso a modelos grandes.",
-              "ejemplos": ["Hugging Face (BigScience)", "Universidades (MIT, Stanford)"]
-            }
-          ],
-          "empresas_referencia": [
-            "DeepMind (Pioneros en IA para ciencias)",
-            "NASA (IA para exploración espacial)",
-            "CERN (IA en física de partículas)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles de I+D",
-          "salario_promedio_mx": "$50,000 - $120,000+ MXN/mes",
-          "roles": [
-            {
-              "nombre": "Research Scientist (Científico Investigador)",
-              "importancia": "Crítica",
-              "uso": "Publicar avances en conferencias como NeurIPS o ICML."
-            },
-            {
-              "nombre": "Ingeniero de Investigación (Research Engineer)",
-              "importancia": "Alta",
-              "uso": "Implementar y escalar los experimentos diseñados por los científicos."
-            },
-            {
-              "nombre": "Especialista en Dominio (Bioinformático, Astrofísico)",
-              "importancia": "Alta",
-              "uso": "Expertos en una ciencia que aplican IA como herramienta."
-            }
-          ]
-        }
+  "metadata": {
+    "id": "oportunidades_retos",
+    "titulo": "Fronteras de Investigación: Oportunidades y Desafíos",
+    "materia": "Inteligencia Artificial y Sociedad",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "3-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "La IA como Motor de Descubrimiento Científico",
+    "contenido": "Análisis del potencial de la IA para acelerar el método científico y resolver problemas complejos intratables para los humanos, frente a los desafíos técnicos y éticos que limitan su avance.",
+    "puntos_clave": [
+      "AI for Science: El uso de Deep Learning para simular fenómenos físicos, biológicos y químicos (ej. predicción de estructuras de proteínas).",
+      "El Problema de la Alineación: El desafío de investigación de garantizar que los objetivos de una IA superinteligente (AGI) coincidan con los valores humanos.",
+      "Sostenibilidad Computacional (Green AI): El reto de reducir la huella de carbono masiva necesaria para entrenar modelos grandes (LLMs).",
+      "Cajas Negras en Ciencia: La tensión entre la capacidad predictiva de la IA y la necesidad científica de entender la causalidad ('explicabilidad')."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué investigar esto?",
+    "contenido": "Identificar dónde la IA puede romper barreras del conocimiento humano y dónde existen riesgos existenciales o técnicos que requieren solución.",
+    "aplicaciones": [
+      "Biomedicina: Descubrimiento acelerado de fármacos y plegamiento de proteínas (AlphaFold).",
+      "Física de Plasmas: Control de reactores de fusión nuclear mediante aprendizaje por refuerzo.",
+      "Ciencia de Materiales: Descubrimiento de nuevos materiales para baterías más eficientes.",
+      "Climatología: Modelado hiper-local de patrones climáticos extremos."
+    ],
+    "ejemplos_vida_real": [
+      "AlphaFold de DeepMind resolviendo en meses el problema del plegamiento de proteínas que llevó 50 años a la biología.",
+      "Uso de IA para descifrar textos antiguos en lenguas perdidas o papiros carbonizados.",
+      "Modelos de IA detectando exoplanetas en datos ruidosos de telescopios espaciales."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Mapa de Investigación",
+    "prerequisitos": [
+      {
+        "id": "penetracion_ia",
+        "nombre": "Estado actual de la IA",
+        "razon": "Conocer el 'State of the Art' (SOTA) actual."
       }
-    },
-    "actividad_practica": {
-      "tipo": "NO_APLICA",
-      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
-      "descripcion": "El análisis de oportunidades y retos en la frontera de la ciencia requiere pensamiento crítico y prospectiva, no código. La actividad adecuada sería analizar un 'paper' científico reciente (ej. AlphaFold) y discutir sus implicaciones, o redactar una propuesta de investigación sobre cómo la IA podría ayudar a resolver un problema específico (ej. gestión de residuos).",
-      "dificultad": "N/A",
-      "instrucciones": [],
-      "codigo_plantilla": "N/A",
-      "solucion_referencia": "N/A",
-      "casos_prueba": [],
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "AlphaFold: Una solución al desafío de 50 años en biología",
-          "url": "https://www.deepmind.com/research/highlighted-research/alphafold"
-        },
-        {
-          "tipo": "video",
-          "titulo": "Demis Hassabis: Usando IA para acelerar el descubrimiento científico",
-          "url": "https://www.youtube.com/watch?v=..."
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "aprendizaje_automatico",
+        "nombre": "Aprendizaje Automático (Semestre 4)",
+        "razon": "Las herramientas técnicas para realizar estos descubrimientos."
+      },
+      {
+        "id": "etica_ia",
+        "nombre": "Ética y Seguridad en IA",
+        "razon": "Investigación sobre cómo prevenir el uso dual (dañino) de descubrimientos poderosos."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Singularidad Tecnológica",
+      "Investigación de Doble Uso (Dual-Use Research)",
+      "AGI (Inteligencia Artificial General)",
+      "Simulación vs. Experimentación"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Quién lidera la investigación?",
+    "sectores": [
+      {
+        "nombre": "Laboratorios de IA de Vanguardia",
+        "descripcion": "Investigación fundamental hacia la AGI.",
+        "ejemplos": [
+          "Google DeepMind",
+          "OpenAI",
+          "Anthropic"
+        ]
+      },
+      {
+        "nombre": "Biotecnología y Farmacéutica",
+        "descripcion": "I+D impulsado por datos.",
+        "ejemplos": [
+          "Isomorphic Labs",
+          "Moderna (diseño de ARNm)"
+        ]
+      },
+      {
+        "nombre": "Academia y Consorcios",
+        "descripcion": "Democratización del acceso a modelos grandes.",
+        "ejemplos": [
+          "Hugging Face (BigScience)",
+          "Universidades (MIT, Stanford)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "DeepMind (Pioneros en IA para ciencias)",
+      "NASA (IA para exploración espacial)",
+      "CERN (IA en física de partículas)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles de I+D",
+    "roles": [
+      {
+        "nombre": "Research Scientist (Científico Investigador)",
+        "importancia": "Crítica",
+        "uso": "Publicar avances en conferencias como NeurIPS o ICML."
+      },
+      {
+        "nombre": "Ingeniero de Investigación (Research Engineer)",
+        "importancia": "Alta",
+        "uso": "Implementar y escalar los experimentos diseñados por los científicos."
+      },
+      {
+        "nombre": "Especialista en Dominio (Bioinformático, Astrofísico)",
+        "importancia": "Alta",
+        "uso": "Expertos en una ciencia que aplican IA como herramienta."
+      }
+    ],
+    "salario_promedio_mx": "$50,000 - $120,000+ MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "conceptual",
+    "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+    "descripcion": "El análisis de oportunidades y retos en la frontera de la ciencia requiere pensamiento crítico y prospectiva, no código. La actividad adecuada sería analizar un 'paper' científico reciente (ej. AlphaFold) y discutir sus implicaciones, o redactar una propuesta de investigación sobre cómo la IA podría ayudar a resolver un problema específico (ej. gestión de residuos).",
+    "dificultad": "N/A",
+    "objetivos": [],
+    "pasos_sugeridos": [],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "AlphaFold: Una solución al desafío de 50 años en biología",
+        "url": "https://www.deepmind.com/research/highlighted-research/alphafold"
+      },
+      {
+        "tipo": "video",
+        "titulo": "Demis Hassabis: Usando IA para acelerar el descubrimiento científico",
+        "url": "https://www.youtube.com/watch?v=..."
+      }
+    ]
   }
 }

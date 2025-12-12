@@ -1,207 +1,203 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "poo",
-      "titulo": "Programación Orientada a Objetos (POO)",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "intermedio-avanzado",
-      "tiempo_estudio": "6-8 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la Programación Orientada a Objetos?",
-        "definicion": "La Programación Orientada a Objetos (POO) es un paradigma basado en la abstracción del mundo real mediante entidades llamadas objetos, los cuales poseen atributos (estado) y métodos (comportamiento). Permite modelar sistemas complejos de forma modular, extensible y mantenible.",
-        "puntos_clave": [
-          "Un objeto es una unidad que encapsula datos y comportamiento.",
-          "Una clase es el plano o molde que define cómo se crean los objetos.",
-          "La POO utiliza conceptos como encapsulamiento, herencia, polimorfismo y abstracción.",
-          "Facilita la reutilización de código mediante jerarquías y composición.",
-          "Los lenguajes modernos combinan POO con otros paradigmas (Python, Scala, Rust con traits)."
-        ],
-        "formulas": []
+  "metadata": {
+    "id": "poo",
+    "titulo": "Programación Orientada a Objetos (POO)",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "intermedio-avanzado",
+    "tiempo_estudio": "6-8 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la Programación Orientada a Objetos?",
+    "contenido": "La Programación Orientada a Objetos (POO) es un paradigma basado en la abstracción del mundo real mediante entidades llamadas objetos, los cuales poseen atributos (estado) y métodos (comportamiento). Permite modelar sistemas complejos de forma modular, extensible y mantenible.",
+    "puntos_clave": [
+      "Un objeto es una unidad que encapsula datos y comportamiento.",
+      "Una clase es el plano o molde que define cómo se crean los objetos.",
+      "La POO utiliza conceptos como encapsulamiento, herencia, polimorfismo y abstracción.",
+      "Facilita la reutilización de código mediante jerarquías y composición.",
+      "Los lenguajes modernos combinan POO con otros paradigmas (Python, Scala, Rust con traits)."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve la POO?",
+    "contenido": "La POO permite diseñar software modular, escalable y fácil de mantener mediante una estructura que refleja modelos conceptuales del sistema.",
+    "aplicaciones": [
+      "Diseño de sistemas de gran escala (ERP, CRM, microservicios).",
+      "Simulación de entidades del mundo real (juegos, simuladores).",
+      "Frameworks de GUI (interfaces gráficas) basados en jerarquías de objetos.",
+      "APIs orientadas a servicios implementadas como objetos estructurados.",
+      "Mantenimiento y evolución de proyectos a largo plazo mediante patrones de diseño."
+    ],
+    "ejemplos_vida_real": [
+      "Modelar usuarios, productos y pedidos en un e-commerce.",
+      "Gestionar personajes, inventarios y físicas en videojuegos.",
+      "Implementar controladores y modelos en frameworks web (Django, Laravel, Spring).",
+      "Sistemas financieros que representan cuentas, transacciones y contratos."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "funciones",
+        "nombre": "Funciones y Procedimientos",
+        "razon": "La POO utiliza el concepto de métodos como funciones asociadas a un objeto."
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve la POO?",
-        "descripcion": "La POO permite diseñar software modular, escalable y fácil de mantener mediante una estructura que refleja modelos conceptuales del sistema.",
-        "aplicaciones_comunes": [
-          "Diseño de sistemas de gran escala (ERP, CRM, microservicios).",
-          "Simulación de entidades del mundo real (juegos, simuladores).",
-          "Frameworks de GUI (interfaces gráficas) basados en jerarquías de objetos.",
-          "APIs orientadas a servicios implementadas como objetos estructurados.",
-          "Mantenimiento y evolución de proyectos a largo plazo mediante patrones de diseño."
-        ],
-        "ejemplos_vida_real": [
-          "Modelar usuarios, productos y pedidos en un e-commerce.",
-          "Gestionar personajes, inventarios y físicas en videojuegos.",
-          "Implementar controladores y modelos en frameworks web (Django, Laravel, Spring).",
-          "Sistemas financieros que representan cuentas, transacciones y contratos."
-        ]
+      {
+        "id": "tipos_de_datos",
+        "nombre": "Tipos de Datos",
+        "razon": "Las clases definen nuevos tipos de datos complejos."
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "funciones",
-            "nombre": "Funciones y Procedimientos",
-            "razon": "La POO utiliza el concepto de métodos como funciones asociadas a un objeto."
-          },
-          {
-            "id": "tipos_de_datos",
-            "nombre": "Tipos de Datos",
-            "razon": "Las clases definen nuevos tipos de datos complejos."
-          },
-          {
-            "id": "modularidad",
-            "nombre": "Modularidad",
-            "razon": "Las clases y módulos forman parte del diseño estructurado."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "patrones_diseno",
-            "nombre": "Patrones de Diseño",
-            "razon": "Aprovechan las propiedades de la POO para resolver problemas recurrentes."
-          },
-          {
-            "id": "arquitecturas_sistema",
-            "nombre": "Arquitecturas de Software",
-            "razon": "Modelan sistemas grandes mediante objetos cooperativos."
-          },
-          {
-            "id": "interfaces_abstractas",
-            "nombre": "Interfaces y Clases Abstractas",
-            "razon": "Permiten diseñar sistemas extensibles y polimórficos."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Encapsulamiento",
-          "Herencia",
-          "Polimorfismo",
-          "Abstracción",
-          "Composición vs. Herencia",
-          "Sobrecarga y sobrescritura",
-          "Interfaces",
-          "Clases abstractas"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa la POO en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo de Software Empresarial",
-              "descripcion": "Sistemas complejos que requieren modularidad y escalabilidad.",
-              "ejemplos": ["ERP SAP", "Sistemas bancarios Java-Spring"]
-            },
-            {
-              "nombre": "Desarrollo Web",
-              "descripcion": "Frameworks MVC basados en objetos.",
-              "ejemplos": ["Django (Python)", "Ruby on Rails", "Laravel (PHP)"]
-            },
-            {
-              "nombre": "Videojuegos",
-              "descripcion": "Motores basados en componentes y objetos.",
-              "ejemplos": ["Unity C#", "Unreal Engine C++"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Estructuración de modelos, datasets y pipelines como objetos.",
-              "ejemplos": ["PyTorch (clases Module)", "scikit-learn (modelos como objetos)"]
-            }
-          ],
-          "empresas_referencia": [
-            "Microsoft",
-            "Oracle",
-            "Electronic Arts",
-            "Google",
-            "Nvidia"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que utilizan POO",
-          "salario_promedio_mx": "$30,000 - $90,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Construcción de servicios y APIs escalables basados en clases."
-            },
-            {
-              "nombre": "Ingeniero de Software",
-              "importancia": "Crítica",
-              "uso": "Diseño modular y uso de patrones de diseño."
-            },
-            {
-              "nombre": "Desarrollador de Videojuegos",
-              "importancia": "Alta",
-              "uso": "Implementación de entidades, físicas y lógica de juego."
-            },
-            {
-              "nombre": "Ingeniero en Datos",
-              "importancia": "Media",
-              "uso": "Modelos de ML como clases, pipelines modulares y serialización."
-            }
-          ]
-        }
+      {
+        "id": "modularidad",
+        "nombre": "Modularidad",
+        "razon": "Las clases y módulos forman parte del diseño estructurado."
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Sistema de Gestión de Biblioteca con POO",
-      "descripcion": "Diseña un sistema orientado a objetos que modele libros, usuarios y préstamos. El reto se centra en la correcta aplicación de encapsulamiento, composición y polimorfismo.",
-      "dificultad": "intermedio-alto",
-
-      "instrucciones": [
-        "Define una clase Libro con atributos: título, autor y disponible (bool).",
-        "Define una clase Usuario con nombre y una lista de libros prestados.",
-        "Define una clase Biblioteca con una colección de libros y métodos para prestar y devolver.",
-        "Implementa validaciones: no permitir prestar libros no disponibles.",
-        "Usa polimorfismo creando dos tipos de usuarios: Estudiante y Profesor, donde:",
-        "  - Estudiante solo puede prestar hasta 3 libros.",
-        "  - Profesor puede prestar hasta 10."
-      ],
-
-      "codigo_plantilla": "class Libro:\n    def __init__(self, titulo, autor):\n        self.titulo = titulo\n        self.autor = autor\n        self.disponible = True\n\nclass Usuario:\n    def __init__(self, nombre):\n        self.nombre = nombre\n        self.libros = []\n\n    def limite_prestamos(self):\n        # Sobrescribir en subclases\n        pass\n\nclass Estudiante(Usuario):\n    pass\n\nclass Profesor(Usuario):\n    pass\n\nclass Biblioteca:\n    def __init__(self):\n        self.catalogo = []\n\n    def prestar(self, libro, usuario):\n        # TODO: implementación\n        pass\n\n    def devolver(self, libro, usuario):\n        # TODO: implementación\n        pass\n\n# Pruebas esperadas\nb = Biblioteca()\n# Añade libros y usuarios y prueba el sistema.\n",
-
-      "solucion_referencia": "class Libro:\n    def __init__(self, titulo, autor):\n        self.titulo = titulo\n        self.autor = autor\n        self.disponible = True\n\nclass Usuario:\n    def __init__(self, nombre):\n        self.nombre = nombre\n        self.libros = []\n\n    def limite_prestamos(self):\n        raise NotImplementedError\n\nclass Estudiante(Usuario):\n    def limite_prestamos(self):\n        return 3\n\nclass Profesor(Usuario):\n    def limite_prestamos(self):\n        return 10\n\nclass Biblioteca:\n    def __init__(self):\n        self.catalogo = []\n\n    def prestar(self, libro, usuario):\n        if not libro.disponible:\n            return f\"El libro '{libro.titulo}' no está disponible.\"\n        if len(usuario.libros) >= usuario.limite_prestamos():\n            return f\"{usuario.nombre} alcanzó su límite de préstamos.\"\n        libro.disponible = False\n        usuario.libros.append(libro)\n        return f\"Libro '{libro.titulo}' prestado a {usuario.nombre}.\"\n\n    def devolver(self, libro, usuario):\n        if libro not in usuario.libros:\n            return f\"{usuario.nombre} no tiene este libro.\"\n        libro.disponible = True\n        usuario.libros.remove(libro)\n        return f\"Libro '{libro.titulo}' devuelto por {usuario.nombre}.\"",
-
-      "casos_prueba": [
-        {
-          "entrada": "Estudiante con 3 libros intenta pedir otro",
-          "salida_esperada": "Límite de préstamos alcanzado",
-          "nota": "Validación correcta"
-        },
-        {
-          "entrada": "Profesor pide 5 libros",
-          "salida_esperada": "Todos aprobados",
-          "nota": "Comprobación de polimorfismo"
-        },
-        {
-          "entrada": "Libro no disponible",
-          "salida_esperada": "Mensaje de error",
-          "nota": "Control de disponibilidad"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Gamma et al. — Design Patterns: Elements of Reusable Object-Oriented Software",
-          "url": "https://en.wikipedia.org/wiki/Design_Patterns"
-        },
-        {
-          "tipo": "curso",
-          "titulo": "MIT — 6.0001: Introduction to Computer Science and Programming",
-          "url": "https://ocw.mit.edu"
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "patrones_diseno",
+        "nombre": "Patrones de Diseño",
+        "razon": "Aprovechan las propiedades de la POO para resolver problemas recurrentes."
+      },
+      {
+        "id": "arquitecturas_sistema",
+        "nombre": "Arquitecturas de Software",
+        "razon": "Modelan sistemas grandes mediante objetos cooperativos."
+      },
+      {
+        "id": "interfaces_abstractas",
+        "nombre": "Interfaces y Clases Abstractas",
+        "razon": "Permiten diseñar sistemas extensibles y polimórficos."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Encapsulamiento",
+      "Herencia",
+      "Polimorfismo",
+      "Abstracción",
+      "Composición vs. Herencia",
+      "Sobrecarga y sobrescritura",
+      "Interfaces",
+      "Clases abstractas"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa la POO en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo de Software Empresarial",
+        "descripcion": "Sistemas complejos que requieren modularidad y escalabilidad.",
+        "ejemplos": [
+          "ERP SAP",
+          "Sistemas bancarios Java-Spring"
+        ]
+      },
+      {
+        "nombre": "Desarrollo Web",
+        "descripcion": "Frameworks MVC basados en objetos.",
+        "ejemplos": [
+          "Django (Python)",
+          "Ruby on Rails",
+          "Laravel (PHP)"
+        ]
+      },
+      {
+        "nombre": "Videojuegos",
+        "descripcion": "Motores basados en componentes y objetos.",
+        "ejemplos": [
+          "Unity C#",
+          "Unreal Engine C++"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Estructuración de modelos, datasets y pipelines como objetos.",
+        "ejemplos": [
+          "PyTorch (clases Module)",
+          "scikit-learn (modelos como objetos)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Microsoft",
+      "Oracle",
+      "Electronic Arts",
+      "Google",
+      "Nvidia"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que utilizan POO",
+    "roles": [
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Construcción de servicios y APIs escalables basados en clases."
+      },
+      {
+        "nombre": "Ingeniero de Software",
+        "importancia": "Crítica",
+        "uso": "Diseño modular y uso de patrones de diseño."
+      },
+      {
+        "nombre": "Desarrollador de Videojuegos",
+        "importancia": "Alta",
+        "uso": "Implementación de entidades, físicas y lógica de juego."
+      },
+      {
+        "nombre": "Ingeniero en Datos",
+        "importancia": "Media",
+        "uso": "Modelos de ML como clases, pipelines modulares y serialización."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $90,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Sistema de Gestión de Biblioteca con POO",
+    "descripcion": "Diseña un sistema orientado a objetos que modele libros, usuarios y préstamos. El reto se centra en la correcta aplicación de encapsulamiento, composición y polimorfismo.",
+    "dificultad": "intermedio-alto",
+    "codigo_inicial": "class Libro:\n    def __init__(self, titulo, autor):\n        self.titulo = titulo\n        self.autor = autor\n        self.disponible = True\n\nclass Usuario:\n    def __init__(self, nombre):\n        self.nombre = nombre\n        self.libros = []\n\n    def limite_prestamos(self):\n        # Sobrescribir en subclases\n        pass\n\nclass Estudiante(Usuario):\n    pass\n\nclass Profesor(Usuario):\n    pass\n\nclass Biblioteca:\n    def __init__(self):\n        self.catalogo = []\n\n    def prestar(self, libro, usuario):\n        # TODO: implementación\n        pass\n\n    def devolver(self, libro, usuario):\n        # TODO: implementación\n        pass\n\n# Pruebas esperadas\nb = Biblioteca()\n# Añade libros y usuarios y prueba el sistema.\n",
+    "solucion_referencia": "class Libro:\n    def __init__(self, titulo, autor):\n        self.titulo = titulo\n        self.autor = autor\n        self.disponible = True\n\nclass Usuario:\n    def __init__(self, nombre):\n        self.nombre = nombre\n        self.libros = []\n\n    def limite_prestamos(self):\n        raise NotImplementedError\n\nclass Estudiante(Usuario):\n    def limite_prestamos(self):\n        return 3\n\nclass Profesor(Usuario):\n    def limite_prestamos(self):\n        return 10\n\nclass Biblioteca:\n    def __init__(self):\n        self.catalogo = []\n\n    def prestar(self, libro, usuario):\n        if not libro.disponible:\n            return f\"El libro '{libro.titulo}' no está disponible.\"\n        if len(usuario.libros) >= usuario.limite_prestamos():\n            return f\"{usuario.nombre} alcanzó su límite de préstamos.\"\n        libro.disponible = False\n        usuario.libros.append(libro)\n        return f\"Libro '{libro.titulo}' prestado a {usuario.nombre}.\"\n\n    def devolver(self, libro, usuario):\n        if libro not in usuario.libros:\n            return f\"{usuario.nombre} no tiene este libro.\"\n        libro.disponible = True\n        usuario.libros.remove(libro)\n        return f\"Libro '{libro.titulo}' devuelto por {usuario.nombre}.\"",
+    "pistas": [
+      "Define una clase Libro con atributos: título, autor y disponible (bool).",
+      "Define una clase Usuario con nombre y una lista de libros prestados.",
+      "Define una clase Biblioteca con una colección de libros y métodos para prestar y devolver.",
+      "Implementa validaciones: no permitir prestar libros no disponibles.",
+      "Usa polimorfismo creando dos tipos de usuarios: Estudiante y Profesor, donde:",
+      "  - Estudiante solo puede prestar hasta 3 libros.",
+      "  - Profesor puede prestar hasta 10."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Estudiante con 3 libros intenta pedir otro",
+        "salida_esperada": "Límite de préstamos alcanzado",
+        "explicacion": "Validación correcta"
+      },
+      {
+        "entrada": "Profesor pide 5 libros",
+        "salida_esperada": "Todos aprobados",
+        "explicacion": "Comprobación de polimorfismo"
+      },
+      {
+        "entrada": "Libro no disponible",
+        "salida_esperada": "Mensaje de error",
+        "explicacion": "Control de disponibilidad"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Gamma et al. — Design Patterns: Elements of Reusable Object-Oriented Software",
+        "url": "https://en.wikipedia.org/wiki/Design_Patterns"
+      },
+      {
+        "tipo": "curso",
+        "titulo": "MIT — 6.0001: Introduction to Computer Science and Programming",
+        "url": "https://ocw.mit.edu"
+      }
+    ]
   }
 }

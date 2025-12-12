@@ -1,197 +1,192 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "integracion_paradigmas",
-      "titulo": "Integración de Paradigmas de Programación",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "alto",
-      "tiempo_estudio": "4-6 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué significa integrar paradigmas de programación?",
-        "definicion": "La integración de paradigmas consiste en combinar principios de diferentes estilos de programación (imperativo, funcional, orientado a objetos, lógico, reactivo, entre otros) dentro de un mismo lenguaje o sistema, con el fin de aprovechar las fortalezas de cada paradigma.",
-        "puntos_clave": [
-          "Los paradigmas no son excluyentes; muchos lenguajes modernos son multiparadigma.",
-          "Permite elegir la técnica adecuada según el problema.",
-          "Facilita la creación de sistemas más expresivos, modulares y mantenibles.",
-          "Los compiladores modernos incorporan optimizaciones inspiradas en varios paradigmas.",
-          "Lenguajes como Python, Scala, Rust o JavaScript integran múltiples estilos."
-        ],
-        "formulas": []
+  "metadata": {
+    "id": "integracion_paradigmas",
+    "titulo": "Integración de Paradigmas de Programación",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "alto",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué significa integrar paradigmas de programación?",
+    "contenido": "La integración de paradigmas consiste en combinar principios de diferentes estilos de programación (imperativo, funcional, orientado a objetos, lógico, reactivo, entre otros) dentro de un mismo lenguaje o sistema, con el fin de aprovechar las fortalezas de cada paradigma.",
+    "puntos_clave": [
+      "Los paradigmas no son excluyentes; muchos lenguajes modernos son multiparadigma.",
+      "Permite elegir la técnica adecuada según el problema.",
+      "Facilita la creación de sistemas más expresivos, modulares y mantenibles.",
+      "Los compiladores modernos incorporan optimizaciones inspiradas en varios paradigmas.",
+      "Lenguajes como Python, Scala, Rust o JavaScript integran múltiples estilos."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve integrar paradigmas?",
+    "contenido": "La integración permite diseñar software más flexible aprovechando distintos modelos de abstracción y resolución de problemas.",
+    "aplicaciones": [
+      "Uso de objetos junto con programación funcional (p. ej., lambdas en Java).",
+      "Optimización algorítmica mediante funciones puras y estructuras mutables.",
+      "Resolución declarativa de reglas dentro de sistemas orientados a objetos.",
+      "Paralelismo seguro mediante funciones sin efectos secundarios.",
+      "Desarrollo web reactivo combinando eventos, objetos y funciones puras."
+    ],
+    "ejemplos_vida_real": [
+      "JavaScript: mezcla objetos prototípicos, funcional y programación reactiva.",
+      "Python: objetos, funciones lambda, comprensión de listas (funcional).",
+      "Scala: integración profunda entre programación funcional y objetos.",
+      "Rust: estilo imperativo, tipado algebraico y funciones puras."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "paradigma_imperativo",
+        "nombre": "Paradigma Imperativo",
+        "razon": "Es la base histórica de la programación estructurada."
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve integrar paradigmas?",
-        "descripcion": "La integración permite diseñar software más flexible aprovechando distintos modelos de abstracción y resolución de problemas.",
-        "aplicaciones_comunes": [
-          "Uso de objetos junto con programación funcional (p. ej., lambdas en Java).",
-          "Optimización algorítmica mediante funciones puras y estructuras mutables.",
-          "Resolución declarativa de reglas dentro de sistemas orientados a objetos.",
-          "Paralelismo seguro mediante funciones sin efectos secundarios.",
-          "Desarrollo web reactivo combinando eventos, objetos y funciones puras."
-        ],
-        "ejemplos_vida_real": [
-          "JavaScript: mezcla objetos prototípicos, funcional y programación reactiva.",
-          "Python: objetos, funciones lambda, comprensión de listas (funcional).",
-          "Scala: integración profunda entre programación funcional y objetos.",
-          "Rust: estilo imperativo, tipado algebraico y funciones puras."
-        ]
+      {
+        "id": "programacion_funcional",
+        "nombre": "Programación Funcional",
+        "razon": "La integración requiere comprender la organización funcional moderna."
       },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "paradigma_imperativo",
-            "nombre": "Paradigma Imperativo",
-            "razon": "Es la base histórica de la programación estructurada."
-          },
-          {
-            "id": "programacion_funcional",
-            "nombre": "Programación Funcional",
-            "razon": "La integración requiere comprender la organización funcional moderna."
-          },
-          {
-            "id": "paradigma_objetos",
-            "nombre": "Orientación a Objetos",
-            "razon": "Muchos lenguajes combinan objetos y funciones."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "diseño_lenguajes",
-            "nombre": "Diseño de Lenguajes de Programación",
-            "razon": "La integración de paradigmas influye en la semántica y sintaxis de los lenguajes."
-          },
-          {
-            "id": "arquitecturas_software",
-            "nombre": "Arquitecturas de Software",
-            "razon": "Los estilos arquitectónicos se benefician de distintos paradigmas."
-          },
-          {
-            "id": "programacion_concurrente",
-            "nombre": "Programación Concurrente",
-            "razon": "Combina paradigmas para evitar condiciones de carrera."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Multiparadigma",
-          "Efectos laterales",
-          "Inmutabilidad",
-          "Tipado estático y dinámico",
-          "Funciones de orden superior",
-          "Clausuras"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa la integración de paradigmas?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Web",
-              "descripcion": "Programación reactiva (eventos), objetos y funciones puras.",
-              "ejemplos": ["Frontend Reactivo", "Node.js funcional con objetos"]
-            },
-            {
-              "nombre": "Sistemas Distribuidos",
-              "descripcion": "El paradigma funcional reduce efectos colaterales y facilita el paralelismo.",
-              "ejemplos": ["Akka (Scala)", "Erlang/Elixir para sistemas tolerantes a fallos"]
-            },
-            {
-              "nombre": "Ciencia de Datos",
-              "descripcion": "Uso de objetos (modelos), funciones (transformaciones) y scripts imperativos.",
-              "ejemplos": ["PySpark", "TensorFlow como grafo funcional"]
-            },
-            {
-              "nombre": "Desarrollo de Lenguajes",
-              "descripcion": "Integración en máquinas virtuales y compiladores modernos.",
-              "ejemplos": ["JVM multiparadigma", "LLVM para lenguajes funcionales e imperativos"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (Go, Dart)",
-            "Microsoft (F#, C#, .NET)",
-            "Meta (Hack, PyTorch)",
-            "Twitter (Scala para backend distribuido)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que utilizan integración de paradigmas",
-          "salario_promedio_mx": "$35,000 - $95,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero Full-Stack",
-              "importancia": "Alta",
-              "uso": "Mezcla programación reactiva, funcional y orientada a objetos."
-            },
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Escoge paradigmas según rendimiento, concurrencia y escalabilidad."
-            },
-            {
-              "nombre": "Ingeniero de Datos",
-              "importancia": "Media",
-              "uso": "Transformaciones funcionales con estructuras mutables eficientes."
-            },
-            {
-              "nombre": "Ingeniero de Lenguajes",
-              "importancia": "Crítica",
-              "uso": "Diseña características multiparadigma para nuevos lenguajes."
-            }
-          ]
-        }
+      {
+        "id": "paradigma_objetos",
+        "nombre": "Orientación a Objetos",
+        "razon": "Muchos lenguajes combinan objetos y funciones."
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Combinar programación orientada a objetos y programación funcional",
-      "descripcion": "Implementa un sistema sencillo donde definas una clase que contenga métodos que utilicen funciones lambda para transformar datos.",
-      "dificultad": "intermedio",
-
-      "instrucciones": [
-        "Crea una clase llamada ProcesadorLista.",
-        "La clase debe recibir una lista en su constructor.",
-        "Implementa un método mapear(funcion) que aplique una lambda a todos los elementos.",
-        "Implementa un método filtrar(funcion) que conserve elementos según un predicado.",
-        "No uses librerías externas; solo programación funcional + objetos."
-      ],
-
-      "codigo_plantilla": "class ProcesadorLista:\n    def __init__(self, datos):\n        self.datos = datos\n\n    def mapear(self, funcion):\n        # TODO: aplicar la función a cada elemento\n        pass\n\n    def filtrar(self, funcion):\n        # TODO: filtrar elementos según la función\n        pass\n\n# Pruebas esperadas\np = ProcesadorLista([1,2,3,4,5])\nprint(p.mapear(lambda x: x * 2))      # [2,4,6,8,10]\nprint(p.filtrar(lambda x: x % 2 == 0)) # [2,4]",
-
-      "solucion_referencia": "class ProcesadorLista:\n    def __init__(self, datos):\n        self.datos = datos\n\n    def mapear(self, funcion):\n        return [funcion(x) for x in self.datos]\n\n    def filtrar(self, funcion):\n        return [x for x in self.datos if funcion(x)]\n\np = ProcesadorLista([1, 2, 3, 4, 5])\nprint(p.mapear(lambda x: x * 2))       # [2, 4, 6, 8, 10]\nprint(p.filtrar(lambda x: x % 2 == 0)) # [2, 4]",
-
-      "casos_prueba": [
-        {
-          "entrada": "mapear(lambda x: x+1) con [1,2,3]",
-          "salida_esperada": "[2,3,4]",
-          "nota": "Transformación funcional"
-        },
-        {
-          "entrada": "filtrar(lambda x: x>3) con [1,2,3,4,5]",
-          "salida_esperada": "[4,5]",
-          "nota": "Predicado simple"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "Peter Van Roy — Concepts, Techniques, and Models of Computer Programming",
-          "url": "https://mitpress.mit.edu/9780262220699"
-        },
-        {
-          "tipo": "curso",
-          "titulo": "Coursera — Programming Languages, Part A (University of Washington)",
-          "url": "https://www.coursera.org"
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "diseño_lenguajes",
+        "nombre": "Diseño de Lenguajes de Programación",
+        "razon": "La integración de paradigmas influye en la semántica y sintaxis de los lenguajes."
+      },
+      {
+        "id": "arquitecturas_software",
+        "nombre": "Arquitecturas de Software",
+        "razon": "Los estilos arquitectónicos se benefician de distintos paradigmas."
+      },
+      {
+        "id": "programacion_concurrente",
+        "nombre": "Programación Concurrente",
+        "razon": "Combina paradigmas para evitar condiciones de carrera."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Multiparadigma",
+      "Efectos laterales",
+      "Inmutabilidad",
+      "Tipado estático y dinámico",
+      "Funciones de orden superior",
+      "Clausuras"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa la integración de paradigmas?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Web",
+        "descripcion": "Programación reactiva (eventos), objetos y funciones puras.",
+        "ejemplos": [
+          "Frontend Reactivo",
+          "Node.js funcional con objetos"
+        ]
+      },
+      {
+        "nombre": "Sistemas Distribuidos",
+        "descripcion": "El paradigma funcional reduce efectos colaterales y facilita el paralelismo.",
+        "ejemplos": [
+          "Akka (Scala)",
+          "Erlang/Elixir para sistemas tolerantes a fallos"
+        ]
+      },
+      {
+        "nombre": "Ciencia de Datos",
+        "descripcion": "Uso de objetos (modelos), funciones (transformaciones) y scripts imperativos.",
+        "ejemplos": [
+          "PySpark",
+          "TensorFlow como grafo funcional"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Lenguajes",
+        "descripcion": "Integración en máquinas virtuales y compiladores modernos.",
+        "ejemplos": [
+          "JVM multiparadigma",
+          "LLVM para lenguajes funcionales e imperativos"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (Go, Dart)",
+      "Microsoft (F#, C#, .NET)",
+      "Meta (Hack, PyTorch)",
+      "Twitter (Scala para backend distribuido)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que utilizan integración de paradigmas",
+    "roles": [
+      {
+        "nombre": "Ingeniero Full-Stack",
+        "importancia": "Alta",
+        "uso": "Mezcla programación reactiva, funcional y orientada a objetos."
+      },
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Escoge paradigmas según rendimiento, concurrencia y escalabilidad."
+      },
+      {
+        "nombre": "Ingeniero de Datos",
+        "importancia": "Media",
+        "uso": "Transformaciones funcionales con estructuras mutables eficientes."
+      },
+      {
+        "nombre": "Ingeniero de Lenguajes",
+        "importancia": "Crítica",
+        "uso": "Diseña características multiparadigma para nuevos lenguajes."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $95,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Combinar programación orientada a objetos y programación funcional",
+    "descripcion": "Implementa un sistema sencillo donde definas una clase que contenga métodos que utilicen funciones lambda para transformar datos.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "class ProcesadorLista:\n    def __init__(self, datos):\n        self.datos = datos\n\n    def mapear(self, funcion):\n        # TODO: aplicar la función a cada elemento\n        pass\n\n    def filtrar(self, funcion):\n        # TODO: filtrar elementos según la función\n        pass\n\n# Pruebas esperadas\np = ProcesadorLista([1,2,3,4,5])\nprint(p.mapear(lambda x: x * 2))      # [2,4,6,8,10]\nprint(p.filtrar(lambda x: x % 2 == 0)) # [2,4]",
+    "solucion_referencia": "class ProcesadorLista:\n    def __init__(self, datos):\n        self.datos = datos\n\n    def mapear(self, funcion):\n        return [funcion(x) for x in self.datos]\n\n    def filtrar(self, funcion):\n        return [x for x in self.datos if funcion(x)]\n\np = ProcesadorLista([1, 2, 3, 4, 5])\nprint(p.mapear(lambda x: x * 2))       # [2, 4, 6, 8, 10]\nprint(p.filtrar(lambda x: x % 2 == 0)) # [2, 4]",
+    "pistas": [
+      "Crea una clase llamada ProcesadorLista.",
+      "La clase debe recibir una lista en su constructor.",
+      "Implementa un método mapear(funcion) que aplique una lambda a todos los elementos.",
+      "Implementa un método filtrar(funcion) que conserve elementos según un predicado.",
+      "No uses librerías externas; solo programación funcional + objetos."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "mapear(lambda x: x+1) con [1,2,3]",
+        "salida_esperada": "[2,3,4]",
+        "explicacion": "Transformación funcional"
+      },
+      {
+        "entrada": "filtrar(lambda x: x>3) con [1,2,3,4,5]",
+        "salida_esperada": "[4,5]",
+        "explicacion": "Predicado simple"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "Peter Van Roy — Concepts, Techniques, and Models of Computer Programming",
+        "url": "https://mitpress.mit.edu/9780262220699"
+      },
+      {
+        "tipo": "curso",
+        "titulo": "Coursera — Programming Languages, Part A (University of Washington)",
+        "url": "https://www.coursera.org"
+      }
+    ]
   }
 }

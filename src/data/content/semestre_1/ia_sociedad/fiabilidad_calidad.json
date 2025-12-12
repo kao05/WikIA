@@ -1,138 +1,139 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "fiabilidad_calidad",
-      "titulo": "Fiabilidad, Validez y Reproducibilidad en IA",
-      "materia": "Inteligencia Artificial y Sociedad",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-6 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la Fiabilidad en la Investigación de IA?",
-        "definicion": "En el contexto científico, se refiere a la capacidad de un sistema o modelo de IA para producir resultados consistentes, precisos y reproducibles bajo las mismas condiciones experimentales, evitando hallazgos espurios.",
-        "puntos_clave": [
-          "Crisis de Reproducibilidad: La dificultad actual para replicar los resultados de muchos 'papers' científicos de IA debido a código cerrado o falta de detalles.",
-          "Generalización (Validez Externa): ¿El modelo funciona solo con los datos de laboratorio o también en el mundo real?",
-          "Fuga de Datos (Data Leakage): Error metodológico donde datos de prueba se mezclan con los de entrenamiento, inflando falsamente la calidad (resultados inválidos).",
-          "Cherry-picking: La mala práctica de seleccionar solo los mejores resultados para publicar, ignorando los fallos."
-        ],
-        "formulas": []
-      },
-      "utilidad_practica": {
-        "titulo": "¿Por qué es crucial en la ciencia?",
-        "descripcion": "Sin fiabilidad y rigor metodológico, la investigación en IA se convierte en pseudociencia. Es fundamental para asegurar que los avances sean reales y seguros.",
-        "aplicaciones_comunes": [
-          "Peer Review (Revisión por pares): Evaluación crítica de artículos antes de su publicación.",
-          "Benchmarks Estandarizados: Uso de conjuntos de datos comunes (ej. ImageNet, GLUE) para comparar modelos objetivamente.",
-          "Auditoría Algorítmica: Verificación independiente del rendimiento y sesgos de un modelo.",
-          "Documentación de Datasheets: Estandarización del origen y características de los datos (Datasheets for Datasets)."
-        ],
-        "ejemplos_vida_real": [
-          "El caso de modelos de COVID-19 que fallaron en hospitales reales por haber sido entrenados con radiografías de mala calidad (sesgo de origen).",
-          "Investigadores que no pueden replicar el rendimiento prometido por un modelo de Google o Meta.",
-          "Retractación de artículos científicos por errores en el preprocesamiento de datos."
-        ]
-      },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones Académicas",
-        "prerequisitos": [
-          {
-            "id": "oportunidades_retos",
-            "nombre": "Oportunidades y retos de la IA",
-            "razon": "Comprender que la IA no es infalible."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "probabilidad_estadistica",
-            "nombre": "Probabilidad y estadística (Semestre 3)",
-            "razon": "Base matemática para medir la incertidumbre y la significancia estadística (p-values)."
-          },
-          {
-            "id": "aprendizaje_automatico",
-            "nombre": "Aprendizaje automático (Semestre 4)",
-            "razon": "Donde se aplican técnicamente las métricas de evaluación (Accuracy, F1-Score, ROC)."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Ley de Goodhart (cuando una medida se convierte en objetivo, deja de ser una buena medida)",
-          "Sobreajuste (Overfitting)",
-          "Ciencia Abierta (Open Science)",
-          "Docker / Contenedores (para reproducibilidad técnica)"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se aplica en I+D?",
-          "sectores": [
-            {
-              "nombre": "Investigación Académica y Labs",
-              "descripcion": "Publicación de papers en conferencias top (NeurIPS, ICML).",
-              "ejemplos": ["DeepMind", "OpenAI Research", "Laboratorios Universitarios"]
-            },
-            {
-              "nombre": "Medicina y Farmacología",
-              "descripcion": "Validación crítica de modelos para diagnóstico donde el error es fatal.",
-              "ejemplos": ["Descubrimiento de fármacos con IA", "Diagnóstico por imagen"]
-            },
-            {
-              "nombre": "Sector Financiero",
-              "descripcion": "Backtesting riguroso de algoritmos de trading.",
-              "ejemplos": ["Validación de modelos de riesgo crediticio"]
-            }
-          ],
-          "empresas_referencia": [
-            "Hugging Face (Fomento de modelos abiertos y reproducibles)",
-            "Papers with Code (Plataforma que vincula papers con su código)",
-            "NVIDIA (Investigación en hardware para reproducibilidad)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles de Investigación",
-          "salario_promedio_mx": "$40,000 - $90,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Científico de Datos de Investigación (Research Scientist)",
-              "importancia": "Crítica",
-              "uso": "Diseño de experimentos y metodologías robustas."
-            },
-            {
-              "nombre": "Ingeniero de MLOps",
-              "importancia": "Alta",
-              "uso": "Garantizar que el entorno de entrenamiento sea reproducible (versionado de datos y código)."
-            },
-            {
-              "nombre": "Auditor de IA",
-              "importancia": "Media (Emergente)",
-              "uso": "Evaluar externamente la calidad y seguridad de modelos de terceros."
-            }
-          ]
-        }
+  "metadata": {
+    "id": "fiabilidad_calidad",
+    "titulo": "Fiabilidad, Validez y Reproducibilidad en IA",
+    "materia": "Inteligencia Artificial y Sociedad",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la Fiabilidad en la Investigación de IA?",
+    "contenido": "En el contexto científico, se refiere a la capacidad de un sistema o modelo de IA para producir resultados consistentes, precisos y reproducibles bajo las mismas condiciones experimentales, evitando hallazgos espurios.",
+    "puntos_clave": [
+      "Crisis de Reproducibilidad: La dificultad actual para replicar los resultados de muchos 'papers' científicos de IA debido a código cerrado o falta de detalles.",
+      "Generalización (Validez Externa): ¿El modelo funciona solo con los datos de laboratorio o también en el mundo real?",
+      "Fuga de Datos (Data Leakage): Error metodológico donde datos de prueba se mezclan con los de entrenamiento, inflando falsamente la calidad (resultados inválidos).",
+      "Cherry-picking: La mala práctica de seleccionar solo los mejores resultados para publicar, ignorando los fallos."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Por qué es crucial en la ciencia?",
+    "contenido": "Sin fiabilidad y rigor metodológico, la investigación en IA se convierte en pseudociencia. Es fundamental para asegurar que los avances sean reales y seguros.",
+    "aplicaciones": [
+      "Peer Review (Revisión por pares): Evaluación crítica de artículos antes de su publicación.",
+      "Benchmarks Estandarizados: Uso de conjuntos de datos comunes (ej. ImageNet, GLUE) para comparar modelos objetivamente.",
+      "Auditoría Algorítmica: Verificación independiente del rendimiento y sesgos de un modelo.",
+      "Documentación de Datasheets: Estandarización del origen y características de los datos (Datasheets for Datasets)."
+    ],
+    "ejemplos_vida_real": [
+      "El caso de modelos de COVID-19 que fallaron en hospitales reales por haber sido entrenados con radiografías de mala calidad (sesgo de origen).",
+      "Investigadores que no pueden replicar el rendimiento prometido por un modelo de Google o Meta.",
+      "Retractación de artículos científicos por errores en el preprocesamiento de datos."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones Académicas",
+    "prerequisitos": [
+      {
+        "id": "oportunidades_retos",
+        "nombre": "Oportunidades y retos de la IA",
+        "razon": "Comprender que la IA no es infalible."
       }
-    },
-    "actividad_practica": {
-      "tipo": "NO_APLICA",
-      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
-      "descripcion": "La fiabilidad y calidad en la investigación son competencias metodológicas y de pensamiento crítico. No se validan escribiendo un algoritmo simple, sino diseñando experimentos rigurosos, analizando papers para encontrar fallos lógicos o auditando la procedencia de los datos. Un script de 'Hola Mundo' no puede medir la validez científica.",
-      "dificultad": "N/A",
-      "instrucciones": [],
-      "codigo_plantilla": "N/A",
-      "solucion_referencia": "N/A",
-      "casos_prueba": [],
-      "recursos_adicionales": [
-        {
-          "tipo": "sitio_web",
-          "titulo": "Papers with Code - Estado del Arte (SOTA)",
-          "url": "https://paperswithcode.com/"
-        },
-        {
-          "tipo": "articulo",
-          "titulo": "La crisis de reproducibilidad en ML",
-          "url": "https://www.nature.com/articles/d41586-020-03187-3"
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "probabilidad_estadistica",
+        "nombre": "Probabilidad y estadística (Semestre 3)",
+        "razon": "Base matemática para medir la incertidumbre y la significancia estadística (p-values)."
+      },
+      {
+        "id": "aprendizaje_automatico",
+        "nombre": "Aprendizaje automático (Semestre 4)",
+        "razon": "Donde se aplican técnicamente las métricas de evaluación (Accuracy, F1-Score, ROC)."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Ley de Goodhart (cuando una medida se convierte en objetivo, deja de ser una buena medida)",
+      "Sobreajuste (Overfitting)",
+      "Ciencia Abierta (Open Science)",
+      "Docker / Contenedores (para reproducibilidad técnica)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se aplica en I+D?",
+    "sectores": [
+      {
+        "nombre": "Investigación Académica y Labs",
+        "descripcion": "Publicación de papers en conferencias top (NeurIPS, ICML).",
+        "ejemplos": [
+          "DeepMind",
+          "OpenAI Research",
+          "Laboratorios Universitarios"
+        ]
+      },
+      {
+        "nombre": "Medicina y Farmacología",
+        "descripcion": "Validación crítica de modelos para diagnóstico donde el error es fatal.",
+        "ejemplos": [
+          "Descubrimiento de fármacos con IA",
+          "Diagnóstico por imagen"
+        ]
+      },
+      {
+        "nombre": "Sector Financiero",
+        "descripcion": "Backtesting riguroso de algoritmos de trading.",
+        "ejemplos": [
+          "Validación de modelos de riesgo crediticio"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Hugging Face (Fomento de modelos abiertos y reproducibles)",
+      "Papers with Code (Plataforma que vincula papers con su código)",
+      "NVIDIA (Investigación en hardware para reproducibilidad)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles de Investigación",
+    "roles": [
+      {
+        "nombre": "Científico de Datos de Investigación (Research Scientist)",
+        "importancia": "Crítica",
+        "uso": "Diseño de experimentos y metodologías robustas."
+      },
+      {
+        "nombre": "Ingeniero de MLOps",
+        "importancia": "Alta",
+        "uso": "Garantizar que el entorno de entrenamiento sea reproducible (versionado de datos y código)."
+      },
+      {
+        "nombre": "Auditor de IA",
+        "importancia": "Media (Emergente)",
+        "uso": "Evaluar externamente la calidad y seguridad de modelos de terceros."
+      }
+    ],
+    "salario_promedio_mx": "$40,000 - $90,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "conceptual",
+    "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+    "descripcion": "La fiabilidad y calidad en la investigación son competencias metodológicas y de pensamiento crítico. No se validan escribiendo un algoritmo simple, sino diseñando experimentos rigurosos, analizando papers para encontrar fallos lógicos o auditando la procedencia de los datos. Un script de 'Hola Mundo' no puede medir la validez científica.",
+    "dificultad": "N/A",
+    "objetivos": [],
+    "pasos_sugeridos": [],
+    "recursos_adicionales": [
+      {
+        "tipo": "sitio_web",
+        "titulo": "Papers with Code - Estado del Arte (SOTA)",
+        "url": "https://paperswithcode.com/"
+      },
+      {
+        "tipo": "articulo",
+        "titulo": "La crisis de reproducibilidad en ML",
+        "url": "https://www.nature.com/articles/d41586-020-03187-3"
+      }
+    ]
   }
 }

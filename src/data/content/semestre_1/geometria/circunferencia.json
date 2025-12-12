@@ -1,162 +1,174 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "circunferencia",
-      "titulo": "La Circunferencia",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "Geometría del Círculo en el Plano",
-        "definicion": "Lugar geométrico de los puntos del plano que equidistan de un punto fijo llamado centro. La distancia constante se denomina radio.",
-        "puntos_clave": [
-          "Se define por dos elementos: Centro (h, k) y Radio (r).",
-          "Ecuación Canónica (Ordinaria): (x - h)² + (y - k)² = r².",
-          "Ecuación General: Ax² + Cy² + Dx + Ey + F = 0 (donde A = C).",
-          "Para pasar de General a Canónica se utiliza la técnica de 'completar el trinomio cuadrado perfecto'."
-        ],
-        "formulas": [
-          "Canónica: (x - h)² + (y - k)² = r²",
-          "Radio dado el centro y un punto P(x,y): r = √((x - h)² + (y - k)²)",
-          "Centro desde General: h = -D/2A, k = -E/2A"
-        ]
+  "metadata": {
+    "id": "circunferencia",
+    "titulo": "La Circunferencia",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "Geometría del Círculo en el Plano",
+    "contenido": "Lugar geométrico de los puntos del plano que equidistan de un punto fijo llamado centro. La distancia constante se denomina radio.",
+    "puntos_clave": [
+      "Se define por dos elementos: Centro (h, k) y Radio (r).",
+      "Ecuación Canónica (Ordinaria): (x - h)² + (y - k)² = r².",
+      "Ecuación General: Ax² + Cy² + Dx + Ey + F = 0 (donde A = C).",
+      "Para pasar de General a Canónica se utiliza la técnica de 'completar el trinomio cuadrado perfecto'."
+    ],
+    "formulas": [
+      {
+        "latex": "Canónica: (x - h)² + (y - k)² = r²",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "La circunferencia es la forma más eficiente computacionalmente para detectar colisiones y definir áreas de influencia, ya que no depende de la rotación del objeto.",
-        "aplicaciones_comunes": [
-          "Hitboxes (cajas de colisión) en videojuegos 2D.",
-          "Geofencing (notificaciones cuando entras a un área circular geográfica).",
-          "Diseño de interfaces (botones redondos, avatares de perfil).",
-          "Robótica (área de alcance de un brazo robótico).",
-          "Gráficos por computadora (Algoritmo de Bresenham para dibujar círculos)."
-        ],
-        "ejemplos_vida_real": [
-          "El rango de alcance de tu señal Wi-Fi.",
-          "Buscar conductores de Uber dentro de un radio de 2km.",
-          "Engranajes y sistemas mecánicos."
-        ]
+      {
+        "latex": "Radio dado el centro y un punto P(x,y): r = √((x - h)² + (y - k)²)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "distancia_entre_puntos",
-            "nombre": "Distancia entre dos puntos",
-            "razon": "La definición de circunferencia es literalmente la distancia constante a un centro."
-          },
-          {
-            "id": "algebra_elemental",
-            "nombre": "Factorización",
-            "razon": "Necesario para completar cuadrados y encontrar el centro/radio."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "elipse",
-            "nombre": "La Elipse",
-            "razon": "Es una circunferencia 'estirada'. Si los coeficientes de x² e y² son distintos, tienes una elipse."
-          },
-          {
-            "id": "coordenadas_polares",
-            "nombre": "Coordenadas Polares",
-            "razon": "Las circunferencias se simplifican enormemente en polares (r = constante)."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Teorema de Pitágoras",
-          "Trinomio Cuadrado Perfecto",
-          "Raíz cuadrada"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo de Apps Móviles",
-              "descripcion": "Servicios basados en localización (LBS).",
-              "ejemplos": ["Tinder (búsqueda por radio)", "Pokémon GO (interacción con pokeparadas)"]
-            },
-            {
-              "nombre": "Motores de Videojuegos",
-              "descripcion": "Física y colisiones optimizadas.",
-              "ejemplos": ["Unity Physics 2D", "Box2D"]
-            },
-            {
-              "nombre": "Telecomunicaciones",
-              "descripcion": "Planificación de cobertura de antenas.",
-              "ejemplos": ["Celdas de telefonía móvil", "Cobertura de satélites"]
-            }
-          ],
-          "empresas_referencia": [
-            "Niantic (Realidad Aumentada y Geo)",
-            "Google Maps",
-            "Riot Games (Mecánicas de rango de ataque)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$25,000 - $65,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Desarrollador Backend (Geoespacial)",
-              "importancia": "Alta",
-              "uso": "Consultas espaciales en bases de datos (PostGIS)."
-            },
-            {
-              "nombre": "Desarrollador de Videojuegos",
-              "importancia": "Crítica",
-              "uso": "Programación de colisiones circulares (son más rápidas que las rectangulares)."
-            },
-            {
-              "nombre": "Ingeniero de Robótica",
-              "importancia": "Alta",
-              "uso": "Planificación de movimientos y seguridad."
-            }
-          ]
-        }
+      {
+        "latex": "Centro desde General: h = -D/2A, k = -E/2A",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Radar de Amenazas (Punto dentro de Círculo)",
-      "descripcion": "Estás programando un radar simple. Dado el centro del radar (h, k), su radio de alcance (r), y la posición de un objeto desconocido (x, y), determina si el objeto está dentro, fuera o en el borde del rango.",
-      "dificultad": "básico",
-      "instrucciones": [
-        "Utiliza la fórmula de distancia al cuadrado para optimizar el rendimiento (evita usar raíz cuadrada 'sqrt' si es posible, ya que es una operación lenta para la CPU).",
-        "Comparación: (x - h)² + (y - k)² <= r².",
-        "La función debe devolver un string: 'DENTRO', 'FUERA' o 'BORDE'."
-      ],
-      "codigo_plantilla": "def estado_radar(h, k, r, x, y):\n    \"\"\"\n    Verifica la posición de un objeto (x,y) respecto a un radar en (h,k) con radio r.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\nprint(estado_radar(0, 0, 10, 5, 5))   # Esperado: DENTRO\nprint(estado_radar(0, 0, 10, 12, 0))  # Esperado: FUERA",
-      "solucion_referencia": "def estado_radar(h, k, r, x, y):\n    # Calculamos la distancia al cuadrado para evitar la raíz cuadrada (optimización)\n    distancia_cuadrada = (x - h)**2 + (y - k)**2\n    radio_cuadrado = r**2\n    \n    if distancia_cuadrada < radio_cuadrado:\n        return \"DENTRO\"\n    elif distancia_cuadrada > radio_cuadrado:\n        return \"FUERA\"\n    else:\n        return \"BORDE\"",
-      "casos_prueba": [
-        {
-          "entrada": "h=0, k=0, r=5, x=3, y=4",
-          "salida_esperada": "BORDE",
-          "nota": "3² + 4² = 9 + 16 = 25. Es igual a 5²."
-        },
-        {
-          "entrada": "h=10, k=10, r=5, x=10, y=10",
-          "salida_esperada": "DENTRO",
-          "nota": "El punto es el mismo centro."
-        },
-        {
-          "entrada": "h=2, k=2, r=1, x=5, y=5",
-          "salida_esperada": "FUERA",
-          "nota": "Claramente fuera del rango."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Matemáticas para Videojuegos: Colisiones Circulares",
-          "url": "https://www.youtube.com/results?search_query=circle+collision+detection+math"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "La circunferencia es la forma más eficiente computacionalmente para detectar colisiones y definir áreas de influencia, ya que no depende de la rotación del objeto.",
+    "aplicaciones": [
+      "Hitboxes (cajas de colisión) en videojuegos 2D.",
+      "Geofencing (notificaciones cuando entras a un área circular geográfica).",
+      "Diseño de interfaces (botones redondos, avatares de perfil).",
+      "Robótica (área de alcance de un brazo robótico).",
+      "Gráficos por computadora (Algoritmo de Bresenham para dibujar círculos)."
+    ],
+    "ejemplos_vida_real": [
+      "El rango de alcance de tu señal Wi-Fi.",
+      "Buscar conductores de Uber dentro de un radio de 2km.",
+      "Engranajes y sistemas mecánicos."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "distancia_entre_puntos",
+        "nombre": "Distancia entre dos puntos",
+        "razon": "La definición de circunferencia es literalmente la distancia constante a un centro."
+      },
+      {
+        "id": "algebra_elemental",
+        "nombre": "Factorización",
+        "razon": "Necesario para completar cuadrados y encontrar el centro/radio."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "elipse",
+        "nombre": "La Elipse",
+        "razon": "Es una circunferencia 'estirada'. Si los coeficientes de x² e y² son distintos, tienes una elipse."
+      },
+      {
+        "id": "coordenadas_polares",
+        "nombre": "Coordenadas Polares",
+        "razon": "Las circunferencias se simplifican enormemente en polares (r = constante)."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Teorema de Pitágoras",
+      "Trinomio Cuadrado Perfecto",
+      "Raíz cuadrada"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo de Apps Móviles",
+        "descripcion": "Servicios basados en localización (LBS).",
+        "ejemplos": [
+          "Tinder (búsqueda por radio)",
+          "Pokémon GO (interacción con pokeparadas)"
+        ]
+      },
+      {
+        "nombre": "Motores de Videojuegos",
+        "descripcion": "Física y colisiones optimizadas.",
+        "ejemplos": [
+          "Unity Physics 2D",
+          "Box2D"
+        ]
+      },
+      {
+        "nombre": "Telecomunicaciones",
+        "descripcion": "Planificación de cobertura de antenas.",
+        "ejemplos": [
+          "Celdas de telefonía móvil",
+          "Cobertura de satélites"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Niantic (Realidad Aumentada y Geo)",
+      "Google Maps",
+      "Riot Games (Mecánicas de rango de ataque)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Desarrollador Backend (Geoespacial)",
+        "importancia": "Alta",
+        "uso": "Consultas espaciales en bases de datos (PostGIS)."
+      },
+      {
+        "nombre": "Desarrollador de Videojuegos",
+        "importancia": "Crítica",
+        "uso": "Programación de colisiones circulares (son más rápidas que las rectangulares)."
+      },
+      {
+        "nombre": "Ingeniero de Robótica",
+        "importancia": "Alta",
+        "uso": "Planificación de movimientos y seguridad."
+      }
+    ],
+    "salario_promedio_mx": "$25,000 - $65,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Radar de Amenazas (Punto dentro de Círculo)",
+    "descripcion": "Estás programando un radar simple. Dado el centro del radar (h, k), su radio de alcance (r), y la posición de un objeto desconocido (x, y), determina si el objeto está dentro, fuera o en el borde del rango.",
+    "dificultad": "básico",
+    "codigo_inicial": "def estado_radar(h, k, r, x, y):\n    \"\"\"\n    Verifica la posición de un objeto (x,y) respecto a un radar en (h,k) con radio r.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\nprint(estado_radar(0, 0, 10, 5, 5))   # Esperado: DENTRO\nprint(estado_radar(0, 0, 10, 12, 0))  # Esperado: FUERA",
+    "solucion_referencia": "def estado_radar(h, k, r, x, y):\n    # Calculamos la distancia al cuadrado para evitar la raíz cuadrada (optimización)\n    distancia_cuadrada = (x - h)**2 + (y - k)**2\n    radio_cuadrado = r**2\n    \n    if distancia_cuadrada < radio_cuadrado:\n        return \"DENTRO\"\n    elif distancia_cuadrada > radio_cuadrado:\n        return \"FUERA\"\n    else:\n        return \"BORDE\"",
+    "pistas": [
+      "Utiliza la fórmula de distancia al cuadrado para optimizar el rendimiento (evita usar raíz cuadrada 'sqrt' si es posible, ya que es una operación lenta para la CPU).",
+      "Comparación: (x - h)² + (y - k)² <= r².",
+      "La función debe devolver un string: 'DENTRO', 'FUERA' o 'BORDE'."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "h=0, k=0, r=5, x=3, y=4",
+        "salida_esperada": "BORDE",
+        "explicacion": "3² + 4² = 9 + 16 = 25. Es igual a 5²."
+      },
+      {
+        "entrada": "h=10, k=10, r=5, x=10, y=10",
+        "salida_esperada": "DENTRO",
+        "explicacion": "El punto es el mismo centro."
+      },
+      {
+        "entrada": "h=2, k=2, r=1, x=5, y=5",
+        "salida_esperada": "FUERA",
+        "explicacion": "Claramente fuera del rango."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Matemáticas para Videojuegos: Colisiones Circulares",
+        "url": "https://www.youtube.com/results?search_query=circle+collision+detection+math"
+      }
+    ]
   }
 }

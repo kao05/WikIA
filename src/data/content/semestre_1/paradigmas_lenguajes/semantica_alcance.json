@@ -1,208 +1,209 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "semantica_alcance",
-      "titulo": "Semántica y Alcance de Variables",
-      "materia": "Paradigmas de Programación",
-      "semestre": 2,
-      "dificultad": "avanzado",
-      "tiempo_estudio": "6-10 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué es la semántica y el alcance?",
-        "definicion": "La semántica es el significado formal de un programa, mientras que el alcance es la región del código en la cual un identificador (como una variable o función) es visible y accesible. Determina dónde una variable está definida, cómo se resuelve su valor y qué reglas usa el lenguaje para enlazar nombres con valores.",
-        "puntos_clave": [
-          "El alcance define dónde una variable es visible.",
-          "El binding asocia un nombre con un valor o dirección de memoria.",
-          "Los lenguajes usan principalmente alcance léxico o alcance dinámico.",
-          "Las closures capturan el entorno de variables visibles en su contexto.",
-          "El shadowing ocurre cuando una variable interna oculta una externa.",
-          "La semántica describe qué *significan* realmente las expresiones del programa."
-        ],
-        "formulas": [
-          "Binding: nombre → valor",
-          "Closure = función + entorno léxico capturado"
-        ]
+  "metadata": {
+    "id": "semantica_alcance",
+    "titulo": "Semántica y Alcance de Variables",
+    "materia": "Paradigmas de Programación",
+    "semestre": 2,
+    "dificultad": "avanzado",
+    "tiempo_estudio": "6-10 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué es la semántica y el alcance?",
+    "contenido": "La semántica es el significado formal de un programa, mientras que el alcance es la región del código en la cual un identificador (como una variable o función) es visible y accesible. Determina dónde una variable está definida, cómo se resuelve su valor y qué reglas usa el lenguaje para enlazar nombres con valores.",
+    "puntos_clave": [
+      "El alcance define dónde una variable es visible.",
+      "El binding asocia un nombre con un valor o dirección de memoria.",
+      "Los lenguajes usan principalmente alcance léxico o alcance dinámico.",
+      "Las closures capturan el entorno de variables visibles en su contexto.",
+      "El shadowing ocurre cuando una variable interna oculta una externa.",
+      "La semántica describe qué *significan* realmente las expresiones del programa."
+    ],
+    "formulas": [
+      {
+        "latex": "Binding: nombre → valor",
+        "descripcion": ""
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve entender la semántica y el alcance?",
-        "descripcion": "Permite escribir programas correctos, evitar errores sutiles y comprender cómo los lenguajes interpretan y manejan variables internamente.",
-        "aplicaciones_comunes": [
-          "Uso correcto de variables locales y globales.",
-          "Implementación de funciones lambda y closures.",
-          "Comprensión de errores como 'variable undefined' o shadowing.",
-          "Diseño e interpretación de lenguajes de programación.",
-          "Depuración de programas con recursión, funciones anidadas y callbacks."
-        ],
-        "ejemplos_vida_real": [
-          "Funciones en Python que capturan variables externas.",
-          "Callbacks en JavaScript que requieren comprender el entorno léxico.",
-          "Scope chain en navegadores web.",
-          "Errores en C por mal uso de variables globales."
-        ]
-      },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "funciones",
-            "nombre": "Funciones",
-            "razon": "El alcance surge principalmente en el contexto de funciones."
-          },
-          {
-            "id": "modularidad",
-            "nombre": "Modularidad",
-            "razon": "Los módulos introducen nuevos entornos y espacios de nombres."
-          },
-          {
-            "id": "tipos_de_datos",
-            "nombre": "Tipos y tiempo de vida",
-            "razon": "Las variables dependen de su ciclo de vida y almacenamiento."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "closures",
-            "nombre": "Closures",
-            "razon": "Requieren comprender alcance léxico y entornos."
-          },
-          {
-            "id": "sistemas_de_tipos",
-            "nombre": "Sistemas de Tipos",
-            "razon": "El alcance afecta la inferencia y tipado."
-          },
-          {
-            "id": "semantica_operacional",
-            "nombre": "Semántica Operacional",
-            "razon": "Permite modelar formalmente el comportamiento del programa."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Ámbito léxico",
-          "Ámbito dinámico",
-          "Shadowing",
-          "Entornos",
-          "Stack frame",
-          "Tiempo de enlace (binding time)",
-          "Captura de variables",
-          "Lifetime (tiempo de vida)"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde importa el entendimiento del alcance?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Web",
-              "descripcion": "JavaScript utiliza scope chain y closures para callbacks y eventos.",
-              "ejemplos": ["React Hooks", "Funciones anónimas en JS", "Manejo de eventos DOM"]
-            },
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Los frameworks definen grafos mediante closures y entornos.",
-              "ejemplos": ["PyTorch Autograd", "Funciones lambda en pipelines de datos"]
-            },
-            {
-              "nombre": "Sistemas Embebidos",
-              "descripcion": "Control estricto de tiempo de vida y memoria.",
-              "ejemplos": ["C y C++ con variables automáticas y estáticas"]
-            },
-            {
-              "nombre": "Compiladores e Intérpretes",
-              "descripcion": "El análisis sintáctico y semántico depende del scope.",
-              "ejemplos": ["Python compiler", "JVM bytecode verificación de alcance"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (herramientas internas de análisis semántico)",
-            "Mozilla (motor SpiderMonkey)",
-            "Microsoft (lenguajes .NET con closures y heap frames)",
-            "Meta (PyTorch y análisis estático interno)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles donde el alcance es fundamental",
-          "salario_promedio_mx": "$35,000 - $120,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Software",
-              "importancia": "Alta",
-              "uso": "Diseño de funciones, módulos y APIs."
-            },
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Control adecuado de variables y estado global."
-            },
-            {
-              "nombre": "Ingeniero en ML",
-              "importancia": "Media",
-              "uso": "Pipelines de datos con funciones anidadas."
-            },
-            {
-              "nombre": "Ingeniero de Lenguajes",
-              "importancia": "Crítica",
-              "uso": "Implementación de intérpretes y semántica operacional."
-            }
-          ]
-        }
+      {
+        "latex": "Closure = función + entorno léxico capturado",
+        "descripcion": ""
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Entender Ámbito Léxico vs Dinámico y Captura de Variables",
-      "descripcion": "Implementa ejemplos donde se compare alcance léxico y dinámico, y experimenta con closures que capturan variables externas.",
-      "dificultad": "alto",
-
-      "instrucciones": [
-        "Implementa una función externa y una función interna que capture variables.",
-        "Demuestra que Python usa alcance léxico.",
-        "Simula alcance dinámico usando diccionarios de entornos.",
-        "Crea un ejemplo de shadowing donde una variable interna oculte a una externa.",
-        "Explica por qué una closure mantiene vivo un entorno incluso cuando la función externa ya terminó."
-      ],
-
-      "codigo_plantilla": "# 1. Alcance léxico\ndef externa(a):\n    def interna(b):\n        # TODO: retornar a + b usando el entorno léxico\n        pass\n    return interna\n\n# 2. Shadowing\nx = 10\ndef ejemplo_shadowing():\n    x = 5  # Oculta variable global\n    # TODO: retornar x\n\n# 3. Simulación de alcance dinámico (conceptual)\ndef dinamico(entorno, nombre):\n    # entorno: diccionario que simula un stack de entornos\n    # TODO: resolver nombre según entorno dinámico\n    pass",
-
-      "solucion_referencia": "# 1. Alcance léxico\ndef externa(a):\n    def interna(b):\n        return a + b  # Captura 'a' del entorno léxico\n    return interna\n\nf = externa(3)\nprint(f(4))  # 7\n\n# 2. Shadowing\nx = 10\ndef ejemplo_shadowing():\n    x = 5\n    return x\n\nprint(ejemplo_shadowing())  # 5\nprint(x)  # 10 (global permanece)\n\n# 3. Simulación de alcance dinámico\ndef dinamico(entorno, nombre):\n    for frame in reversed(entorno):\n        if nombre in frame:\n            return frame[nombre]\n    raise NameError(f\"{nombre} no encontrado\")\n\nentorno = [ {\"x\": 1}, {\"x\": 20, \"y\": 5}, {\"z\": 7} ]\nprint(dinamico(entorno, \"x\"))  # 20",
-
-      "casos_prueba": [
-        {
-          "entrada": "Closure externa(5)(7)",
-          "salida_esperada": "12",
-          "nota": "Captura léxica correcta"
-        },
-        {
-          "entrada": "Shadowing con variable global",
-          "salida_esperada": "Interna ≠ Global",
-          "nota": "Demostración de ocultamiento"
-        },
-        {
-          "entrada": "Resolución dinámica",
-          "salida_esperada": "Se usa el frame más cercano",
-          "nota": "Simulación conceptual de scope dinámico"
-        }
-      ],
-
-      "recursos_adicionales": [
-        {
-          "tipo": "articulo",
-          "titulo": "The Python Reference — Execution Model",
-          "url": "https://docs.python.org/3/reference/executionmodel.html"
-        },
-        {
-          "tipo": "libro",
-          "titulo": "Types and Programming Languages (Benjamin Pierce)",
-          "url": "https://www.cis.upenn.edu/~bcpierce/tapl/"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve entender la semántica y el alcance?",
+    "contenido": "Permite escribir programas correctos, evitar errores sutiles y comprender cómo los lenguajes interpretan y manejan variables internamente.",
+    "aplicaciones": [
+      "Uso correcto de variables locales y globales.",
+      "Implementación de funciones lambda y closures.",
+      "Comprensión de errores como 'variable undefined' o shadowing.",
+      "Diseño e interpretación de lenguajes de programación.",
+      "Depuración de programas con recursión, funciones anidadas y callbacks."
+    ],
+    "ejemplos_vida_real": [
+      "Funciones en Python que capturan variables externas.",
+      "Callbacks en JavaScript que requieren comprender el entorno léxico.",
+      "Scope chain en navegadores web.",
+      "Errores en C por mal uso de variables globales."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "funciones",
+        "nombre": "Funciones",
+        "razon": "El alcance surge principalmente en el contexto de funciones."
+      },
+      {
+        "id": "modularidad",
+        "nombre": "Modularidad",
+        "razon": "Los módulos introducen nuevos entornos y espacios de nombres."
+      },
+      {
+        "id": "tipos_de_datos",
+        "nombre": "Tipos y tiempo de vida",
+        "razon": "Las variables dependen de su ciclo de vida y almacenamiento."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "closures",
+        "nombre": "Closures",
+        "razon": "Requieren comprender alcance léxico y entornos."
+      },
+      {
+        "id": "sistemas_de_tipos",
+        "nombre": "Sistemas de Tipos",
+        "razon": "El alcance afecta la inferencia y tipado."
+      },
+      {
+        "id": "semantica_operacional",
+        "nombre": "Semántica Operacional",
+        "razon": "Permite modelar formalmente el comportamiento del programa."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Ámbito léxico",
+      "Ámbito dinámico",
+      "Shadowing",
+      "Entornos",
+      "Stack frame",
+      "Tiempo de enlace (binding time)",
+      "Captura de variables",
+      "Lifetime (tiempo de vida)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde importa el entendimiento del alcance?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Web",
+        "descripcion": "JavaScript utiliza scope chain y closures para callbacks y eventos.",
+        "ejemplos": [
+          "React Hooks",
+          "Funciones anónimas en JS",
+          "Manejo de eventos DOM"
+        ]
+      },
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Los frameworks definen grafos mediante closures y entornos.",
+        "ejemplos": [
+          "PyTorch Autograd",
+          "Funciones lambda en pipelines de datos"
+        ]
+      },
+      {
+        "nombre": "Sistemas Embebidos",
+        "descripcion": "Control estricto de tiempo de vida y memoria.",
+        "ejemplos": [
+          "C y C++ con variables automáticas y estáticas"
+        ]
+      },
+      {
+        "nombre": "Compiladores e Intérpretes",
+        "descripcion": "El análisis sintáctico y semántico depende del scope.",
+        "ejemplos": [
+          "Python compiler",
+          "JVM bytecode verificación de alcance"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (herramientas internas de análisis semántico)",
+      "Mozilla (motor SpiderMonkey)",
+      "Microsoft (lenguajes .NET con closures y heap frames)",
+      "Meta (PyTorch y análisis estático interno)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles donde el alcance es fundamental",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Software",
+        "importancia": "Alta",
+        "uso": "Diseño de funciones, módulos y APIs."
+      },
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Control adecuado de variables y estado global."
+      },
+      {
+        "nombre": "Ingeniero en ML",
+        "importancia": "Media",
+        "uso": "Pipelines de datos con funciones anidadas."
+      },
+      {
+        "nombre": "Ingeniero de Lenguajes",
+        "importancia": "Crítica",
+        "uso": "Implementación de intérpretes y semántica operacional."
+      }
+    ],
+    "salario_promedio_mx": "$35,000 - $120,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Entender Ámbito Léxico vs Dinámico y Captura de Variables",
+    "descripcion": "Implementa ejemplos donde se compare alcance léxico y dinámico, y experimenta con closures que capturan variables externas.",
+    "dificultad": "alto",
+    "codigo_inicial": "# 1. Alcance léxico\ndef externa(a):\n    def interna(b):\n        # TODO: retornar a + b usando el entorno léxico\n        pass\n    return interna\n\n# 2. Shadowing\nx = 10\ndef ejemplo_shadowing():\n    x = 5  # Oculta variable global\n    # TODO: retornar x\n\n# 3. Simulación de alcance dinámico (conceptual)\ndef dinamico(entorno, nombre):\n    # entorno: diccionario que simula un stack de entornos\n    # TODO: resolver nombre según entorno dinámico\n    pass",
+    "solucion_referencia": "# 1. Alcance léxico\ndef externa(a):\n    def interna(b):\n        return a + b  # Captura 'a' del entorno léxico\n    return interna\n\nf = externa(3)\nprint(f(4))  # 7\n\n# 2. Shadowing\nx = 10\ndef ejemplo_shadowing():\n    x = 5\n    return x\n\nprint(ejemplo_shadowing())  # 5\nprint(x)  # 10 (global permanece)\n\n# 3. Simulación de alcance dinámico\ndef dinamico(entorno, nombre):\n    for frame in reversed(entorno):\n        if nombre in frame:\n            return frame[nombre]\n    raise NameError(f\"{nombre} no encontrado\")\n\nentorno = [ {\"x\": 1}, {\"x\": 20, \"y\": 5}, {\"z\": 7} ]\nprint(dinamico(entorno, \"x\"))  # 20",
+    "pistas": [
+      "Implementa una función externa y una función interna que capture variables.",
+      "Demuestra que Python usa alcance léxico.",
+      "Simula alcance dinámico usando diccionarios de entornos.",
+      "Crea un ejemplo de shadowing donde una variable interna oculte a una externa.",
+      "Explica por qué una closure mantiene vivo un entorno incluso cuando la función externa ya terminó."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Closure externa(5)(7)",
+        "salida_esperada": "12",
+        "explicacion": "Captura léxica correcta"
+      },
+      {
+        "entrada": "Shadowing con variable global",
+        "salida_esperada": "Interna ≠ Global",
+        "explicacion": "Demostración de ocultamiento"
+      },
+      {
+        "entrada": "Resolución dinámica",
+        "salida_esperada": "Se usa el frame más cercano",
+        "explicacion": "Simulación conceptual de scope dinámico"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "articulo",
+        "titulo": "The Python Reference — Execution Model",
+        "url": "https://docs.python.org/3/reference/executionmodel.html"
+      },
+      {
+        "tipo": "libro",
+        "titulo": "Types and Programming Languages (Benjamin Pierce)",
+        "url": "https://www.cis.upenn.edu/~bcpierce/tapl/"
+      }
+    ]
   }
 }

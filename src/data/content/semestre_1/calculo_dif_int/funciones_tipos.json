@@ -1,164 +1,176 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "funciones_tipos",
-      "titulo": "Funciones y Tipos de Funciones",
-      "materia": "Cálculo diferencial e integral",
-      "semestre": 1,
-      "dificultad": "básico-intermedio",
-      "tiempo_estudio": "3-4 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "Definición Formal y Clasificación",
-        "definicion": "Una función es una relación entre dos conjuntos (Dominio y Contradominio) donde a cada elemento del dominio le corresponde **exactamente un** elemento del contradominio.",
-        "puntos_clave": [
-          "Dominio (Input): El conjunto de valores para los cuales la función está definida.",
-          "Rango/Imagen (Output): El conjunto de valores que la función realmente produce.",
-          "Inyectiva (Uno a Uno): Elementos distintos del dominio van a elementos distintos del rango (prueba de la línea horizontal).",
-          "Suprayectiva (Sobre): Todo elemento del contradominio es imagen de al menos un elemento del dominio.",
-          "Biyectiva: Es inyectiva y suprayectiva a la vez (es invertible)."
-        ],
-        "formulas": [
-          "Notación: f: A -> B",
-          "y = f(x)",
-          "Inversa: f^-1(y) = x (solo si es biyectiva)"
-        ]
+  "metadata": {
+    "id": "funciones_tipos",
+    "titulo": "Funciones y Tipos de Funciones",
+    "materia": "Cálculo diferencial e integral",
+    "semestre": 1,
+    "dificultad": "básico-intermedio",
+    "tiempo_estudio": "3-4 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "Definición Formal y Clasificación",
+    "contenido": "Una función es una relación entre dos conjuntos (Dominio y Contradominio) donde a cada elemento del dominio le corresponde **exactamente un** elemento del contradominio.",
+    "puntos_clave": [
+      "Dominio (Input): El conjunto de valores para los cuales la función está definida.",
+      "Rango/Imagen (Output): El conjunto de valores que la función realmente produce.",
+      "Inyectiva (Uno a Uno): Elementos distintos del dominio van a elementos distintos del rango (prueba de la línea horizontal).",
+      "Suprayectiva (Sobre): Todo elemento del contradominio es imagen de al menos un elemento del dominio.",
+      "Biyectiva: Es inyectiva y suprayectiva a la vez (es invertible)."
+    ],
+    "formulas": [
+      {
+        "latex": "Notación: f: A -> B",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "Modelado de Sistemas",
-        "descripcion": "Las funciones nos permiten encapsular lógica y transformar datos. Todo algoritmo determinista es, en esencia, una función matemática compleja.",
-        "aplicaciones_comunes": [
-          "Bases de Datos: Las llaves primarias (Primary Keys) requieren relaciones inyectivas.",
-          "Criptografía: El cifrado debe ser una función biyectiva (para poder descifrar).",
-          "Compresión de datos: Mapeo de información redundante a representaciones más cortas.",
-          "Hash Maps: Funciones que mapean datos arbitrarios a índices fijos (y manejan colisiones cuando no son perfectamente inyectivas)."
-        ],
-        "ejemplos_vida_real": [
-          "Asignar CURP/DNI a una persona (Relación Inyectiva).",
-          "Un termostato (Input: Temperatura ambiente -> Output: Señal de encendido/apagado).",
-          "El precio de un viaje en Uber (Función multivariable dependiente de distancia, tiempo y demanda)."
-        ]
+      {
+        "latex": "y = f(x)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "teoria_conjuntos",
-            "nombre": "Teoría de Conjuntos",
-            "razon": "Las funciones son relaciones entre conjuntos."
-          },
-          {
-            "id": "algebra_superior",
-            "nombre": "Álgebra",
-            "razon": "Manipulación de expresiones algebraicas para definir reglas de correspondencia."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "limites_continuidad",
-            "nombre": "Límites",
-            "razon": "Analizar el comportamiento de la función cerca de puntos específicos."
-          },
-          {
-            "id": "derivadas_basicas",
-            "nombre": "Derivadas",
-            "razon": "Analizar cómo cambia la salida de la función respecto a la entrada."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Plano Cartesiano",
-          "Gráficas",
-          "Paridad (Funciones Pares e Impares)",
-          "Composición de Funciones (f o g)"
-        ]
-      },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "El núcleo del desarrollo de software",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Backend",
-              "descripcion": "Diseño de APIs REST.",
-              "ejemplos": ["Endpoints idempotentes (f(f(x)) = f(x))", "Validación de inputs (Dominio)"]
-            },
-            {
-              "nombre": "Ciberseguridad",
-              "descripcion": "Funciones Hash y Cifrado.",
-              "ejemplos": ["SHA-256 (Función no invertible/digest)", "RSA (Funciones trapdoor)"]
-            },
-            {
-              "nombre": "Ciencia de Datos",
-              "descripcion": "Limpieza y transformación de datos (ETL).",
-              "ejemplos": ["Normalización (mapear a [0,1])", "One-Hot Encoding"]
-            }
-          ],
-          "empresas_referencia": [
-            "Cloudflare (Criptografía y Hashing)",
-            "Amazon AWS (Lambda Functions - Serverless)",
-            "Databricks (Transformación de datos a gran escala)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Roles Fundamentales",
-          "salario_promedio_mx": "$20,000 - $50,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Software",
-              "importancia": "Crítica",
-              "uso": "Diseño de métodos limpios y predecibles (Pure Functions)."
-            },
-            {
-              "nombre": "Analista de Criptografía",
-              "importancia": "Crítica",
-              "uso": "Análisis de colisiones en funciones hash."
-            },
-            {
-              "nombre": "Arquitecto de Datos",
-              "importancia": "Alta",
-              "uso": "Mapeo de esquemas de datos."
-            }
-          ]
-        }
+      {
+        "latex": "Inversa: f^-1(y) = x (solo si es biyectiva)",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Detector de Colisiones (Inyectividad)",
-      "descripcion": "En computación, una función es inyectiva si no tiene colisiones (dos inputs distintos no generan el mismo output). Crea un script que analice si una lista de transformaciones es inyectiva.",
-      "dificultad": "básico",
-      "instrucciones": [
-        "Crea una función `es_inyectiva(lista_entradas, funcion_transformacion)`.",
-        "Aplica la función a cada entrada y guarda los resultados.",
-        "Si algún resultado se repite, la función NO es inyectiva para ese dominio (hubo colisión).",
-        "Retorna True o False y, en caso de False, muestra qué valores colisionaron."
-      ],
-      "codigo_plantilla": "def cuadrado(x):\n    return x**2\n\ndef valor_absoluto(x):\n    return abs(x)\n\ndef es_inyectiva(dominio, funcion):\n    \"\"\"\n    Determina si la funcion es inyectiva para el dominio dado.\n    \"\"\"\n    # Tu código aquí\n    # Pista: Usa un Set para detectar duplicados\n    pass\n\n# Pruebas\ndominio_a = [1, 2, 3, 4]\ndominio_b = [-2, -1, 0, 1, 2]\n\nprint(f\"Cuadrado en {dominio_a}: {es_inyectiva(dominio_a, cuadrado)}\") # True\nprint(f\"Cuadrado en {dominio_b}: {es_inyectiva(dominio_b, cuadrado)}\") # False (porque -2 y 2 dan 4)",
-      "solucion_referencia": "def es_inyectiva(dominio, funcion):\n    imagenes = []\n    for x in dominio:\n        y = funcion(x)\n        if y in imagenes:\n            return False # Colisión detectada\n        imagenes.append(y)\n    return True\n    \n    # Versión Pythonic (Set):\n    # resultados = [funcion(x) for x in dominio]\n    # return len(resultados) == len(set(resultados))",
-      "casos_prueba": [
-        {
-          "entrada": "Dominio [-2, 2], Función x^2",
-          "salida_esperada": "False",
-          "nota": "f(-2)=4 y f(2)=4. No es 1 a 1."
-        },
-        {
-          "entrada": "Dominio [1, 2, 3], Función x+1",
-          "salida_esperada": "True",
-          "nota": "Lineales siempre son inyectivas."
-        },
-        {
-          "entrada": "Dominio Strings ['a', 'b'], Función len(x)",
-          "salida_esperada": "False",
-          "nota": "len('a')=1, len('b')=1. Colisión."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "simulador",
-          "titulo": "Visualizador de Mapeos de Funciones",
-          "url": "https://www.geogebra.org/m/..."
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "Modelado de Sistemas",
+    "contenido": "Las funciones nos permiten encapsular lógica y transformar datos. Todo algoritmo determinista es, en esencia, una función matemática compleja.",
+    "aplicaciones": [
+      "Bases de Datos: Las llaves primarias (Primary Keys) requieren relaciones inyectivas.",
+      "Criptografía: El cifrado debe ser una función biyectiva (para poder descifrar).",
+      "Compresión de datos: Mapeo de información redundante a representaciones más cortas.",
+      "Hash Maps: Funciones que mapean datos arbitrarios a índices fijos (y manejan colisiones cuando no son perfectamente inyectivas)."
+    ],
+    "ejemplos_vida_real": [
+      "Asignar CURP/DNI a una persona (Relación Inyectiva).",
+      "Un termostato (Input: Temperatura ambiente -> Output: Señal de encendido/apagado).",
+      "El precio de un viaje en Uber (Función multivariable dependiente de distancia, tiempo y demanda)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "teoria_conjuntos",
+        "nombre": "Teoría de Conjuntos",
+        "razon": "Las funciones son relaciones entre conjuntos."
+      },
+      {
+        "id": "algebra_superior",
+        "nombre": "Álgebra",
+        "razon": "Manipulación de expresiones algebraicas para definir reglas de correspondencia."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "limites_continuidad",
+        "nombre": "Límites",
+        "razon": "Analizar el comportamiento de la función cerca de puntos específicos."
+      },
+      {
+        "id": "derivadas_basicas",
+        "nombre": "Derivadas",
+        "razon": "Analizar cómo cambia la salida de la función respecto a la entrada."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Plano Cartesiano",
+      "Gráficas",
+      "Paridad (Funciones Pares e Impares)",
+      "Composición de Funciones (f o g)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "El núcleo del desarrollo de software",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Backend",
+        "descripcion": "Diseño de APIs REST.",
+        "ejemplos": [
+          "Endpoints idempotentes (f(f(x)) = f(x))",
+          "Validación de inputs (Dominio)"
+        ]
+      },
+      {
+        "nombre": "Ciberseguridad",
+        "descripcion": "Funciones Hash y Cifrado.",
+        "ejemplos": [
+          "SHA-256 (Función no invertible/digest)",
+          "RSA (Funciones trapdoor)"
+        ]
+      },
+      {
+        "nombre": "Ciencia de Datos",
+        "descripcion": "Limpieza y transformación de datos (ETL).",
+        "ejemplos": [
+          "Normalización (mapear a [0,1])",
+          "One-Hot Encoding"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Cloudflare (Criptografía y Hashing)",
+      "Amazon AWS (Lambda Functions - Serverless)",
+      "Databricks (Transformación de datos a gran escala)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Roles Fundamentales",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Software",
+        "importancia": "Crítica",
+        "uso": "Diseño de métodos limpios y predecibles (Pure Functions)."
+      },
+      {
+        "nombre": "Analista de Criptografía",
+        "importancia": "Crítica",
+        "uso": "Análisis de colisiones en funciones hash."
+      },
+      {
+        "nombre": "Arquitecto de Datos",
+        "importancia": "Alta",
+        "uso": "Mapeo de esquemas de datos."
+      }
+    ],
+    "salario_promedio_mx": "$20,000 - $50,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Detector de Colisiones (Inyectividad)",
+    "descripcion": "En computación, una función es inyectiva si no tiene colisiones (dos inputs distintos no generan el mismo output). Crea un script que analice si una lista de transformaciones es inyectiva.",
+    "dificultad": "básico",
+    "codigo_inicial": "def cuadrado(x):\n    return x**2\n\ndef valor_absoluto(x):\n    return abs(x)\n\ndef es_inyectiva(dominio, funcion):\n    \"\"\"\n    Determina si la funcion es inyectiva para el dominio dado.\n    \"\"\"\n    # Tu código aquí\n    # Pista: Usa un Set para detectar duplicados\n    pass\n\n# Pruebas\ndominio_a = [1, 2, 3, 4]\ndominio_b = [-2, -1, 0, 1, 2]\n\nprint(f\"Cuadrado en {dominio_a}: {es_inyectiva(dominio_a, cuadrado)}\") # True\nprint(f\"Cuadrado en {dominio_b}: {es_inyectiva(dominio_b, cuadrado)}\") # False (porque -2 y 2 dan 4)",
+    "solucion_referencia": "def es_inyectiva(dominio, funcion):\n    imagenes = []\n    for x in dominio:\n        y = funcion(x)\n        if y in imagenes:\n            return False # Colisión detectada\n        imagenes.append(y)\n    return True\n    \n    # Versión Pythonic (Set):\n    # resultados = [funcion(x) for x in dominio]\n    # return len(resultados) == len(set(resultados))",
+    "pistas": [
+      "Crea una función `es_inyectiva(lista_entradas, funcion_transformacion)`.",
+      "Aplica la función a cada entrada y guarda los resultados.",
+      "Si algún resultado se repite, la función NO es inyectiva para ese dominio (hubo colisión).",
+      "Retorna True o False y, en caso de False, muestra qué valores colisionaron."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "Dominio [-2, 2], Función x^2",
+        "salida_esperada": "False",
+        "explicacion": "f(-2)=4 y f(2)=4. No es 1 a 1."
+      },
+      {
+        "entrada": "Dominio [1, 2, 3], Función x+1",
+        "salida_esperada": "True",
+        "explicacion": "Lineales siempre son inyectivas."
+      },
+      {
+        "entrada": "Dominio Strings ['a', 'b'], Función len(x)",
+        "salida_esperada": "False",
+        "explicacion": "len('a')=1, len('b')=1. Colisión."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "simulador",
+        "titulo": "Visualizador de Mapeos de Funciones",
+        "url": "https://www.geogebra.org/m/..."
+      }
+    ]
   }
 }

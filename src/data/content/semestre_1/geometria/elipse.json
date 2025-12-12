@@ -1,163 +1,177 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "elipse",
-      "titulo": "La Elipse",
-      "materia": "Geometría",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-5 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "Más allá del Círculo Perfecto",
-        "definicion": "Lugar geométrico de los puntos del plano tales que la suma de sus distancias a dos puntos fijos (llamados focos) es constante e igual a la longitud del eje mayor (2a).",
-        "puntos_clave": [
-          "Tiene dos ejes de simetría: Eje Mayor (2a) y Eje Menor (2b).",
-          "La relación fundamental es a² = b² + c² (donde c es la distancia del centro al foco).",
-          "La excentricidad (e = c/a) indica qué tan 'aplastada' está la elipse (0 = círculo, cerca de 1 = muy alargada).",
-          "Si a = b, la elipse se convierte en una circunferencia."
-        ],
-        "formulas": [
-          "Ecuación Ordinaria (Horiz.): (x-h)²/a² + (y-k)²/b² = 1",
-          "Ecuación Ordinaria (Vert.): (x-h)²/b² + (y-k)²/a² = 1",
-          "Focos: c = √(a² - b²) (asumiendo a > b)",
-          "Excentricidad: e = c/a"
-        ]
+  "metadata": {
+    "id": "elipse",
+    "titulo": "La Elipse",
+    "materia": "Geometría",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-5 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "Más allá del Círculo Perfecto",
+    "contenido": "Lugar geométrico de los puntos del plano tales que la suma de sus distancias a dos puntos fijos (llamados focos) es constante e igual a la longitud del eje mayor (2a).",
+    "puntos_clave": [
+      "Tiene dos ejes de simetría: Eje Mayor (2a) y Eje Menor (2b).",
+      "La relación fundamental es a² = b² + c² (donde c es la distancia del centro al foco).",
+      "La excentricidad (e = c/a) indica qué tan 'aplastada' está la elipse (0 = círculo, cerca de 1 = muy alargada).",
+      "Si a = b, la elipse se convierte en una circunferencia."
+    ],
+    "formulas": [
+      {
+        "latex": "Ecuación Ordinaria (Horiz.): (x-h)²/a² + (y-k)²/b² = 1",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirve?",
-        "descripcion": "La elipse describe orbitales naturales y áreas de incertidumbre estadística. En computación, es esencial para representar círculos vistos desde un ángulo.",
-        "aplicaciones_comunes": [
-          "Orbitales de satélites y planetas (Leyes de Kepler).",
-          "Visión Artificial: Un plato o una moneda vistos de lado son elipses.",
-          "Estadística y ML: 'Elipses de confianza' en gráficos de dispersión para detectar anomalías.",
-          "Medicina: Litotricia (usar reflectores elípticos para destruir cálculos renales).",
-          "Arquitectura: Techos con acústica reflexiva (galerías de susurros)."
-        ],
-        "ejemplos_vida_real": [
-          "La trayectoria de la Tierra alrededor del Sol.",
-          "El logo de Batman (básicamente elipses superpuestas).",
-          "Coliseos y estadios deportivos."
-        ]
+      {
+        "latex": "Ecuación Ordinaria (Vert.): (x-h)²/b² + (y-k)²/a² = 1",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "circunferencia",
-            "nombre": "La Circunferencia",
-            "razon": "La elipse es una generalización de la circunferencia (donde los dos focos se separan)."
-          },
-          {
-            "id": "distancia_entre_puntos",
-            "nombre": "Distancia entre puntos",
-            "razon": "Base de la definición geométrica (d1 + d2 = constante)."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "hiperbola",
-            "nombre": "La Hipérbola",
-            "razon": "La siguiente cónica, donde en lugar de sumar distancias, se restan."
-          },
-          {
-            "id": "algebra_lineal",
-            "nombre": "Valores Propios (Eigenvalues)",
-            "razon": "En Álgebra Lineal, los ejes de la elipse están determinados por los vectores propios de una matriz."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Teorema de Pitágoras (modificado para a, b, c)",
-          "Despeje de ecuaciones cuadráticas"
-        ]
+      {
+        "latex": "Focos: c = √(a² - b²) (asumiendo a > b)",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usa en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Ingeniería Aeroespacial",
-              "descripcion": "Cálculo de órbitas de transferencia.",
-              "ejemplos": ["Lanzamiento de satélites Starlink", "Misiones a Marte"]
-            },
-            {
-              "nombre": "Desarrollo de Videojuegos",
-              "descripcion": "Colisiones y sombras.",
-              "ejemplos": ["Sombra de un personaje bajo los pies", "Escudos de energía"]
-            },
-            {
-              "nombre": "Ciencia de Datos",
-              "descripcion": "Detección de outliers multivariables.",
-              "ejemplos": ["Detección de fraude bancario (si el comportamiento sale de la elipse de confianza)"]
-            }
-          ],
-          "empresas_referencia": [
-            "SpaceX (Mecánica orbital)",
-            "Adobe (Herramientas de vectores en Illustrator)",
-            "Bancos (Análisis de riesgo)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$30,000 - $75,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Ingeniero de Dinámica de Vuelo",
-              "importancia": "Crítica",
-              "uso": "Cálculo de trayectorias."
-            },
-            {
-              "nombre": "Científico de Datos",
-              "importancia": "Alta",
-              "uso": "Análisis de componentes principales (PCA) y visualización."
-            },
-            {
-              "nombre": "Programador de Gráficos",
-              "importancia": "Media",
-              "uso": "Algoritmos de dibujo de primitivas."
-            }
-          ]
-        }
+      {
+        "latex": "Excentricidad: e = c/a",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Escudo de Energía (Colisión Elíptica)",
-      "descripcion": "En un videojuego espacial, tu nave tiene un escudo de energía con forma elíptica (ancho y alto variables). Debes detectar si un asteroide ha impactado dentro del área del escudo.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "La nave está en el centro (h, k).",
-        "El escudo tiene un radio horizontal 'rx' (a) y un radio vertical 'ry' (b).",
-        "El asteroide está en (x, y).",
-        "La condición de impacto (estar dentro o en el borde) es: ((x-h)² / rx²) + ((y-k)² / ry²) <= 1."
-      ],
-      "codigo_plantilla": "def impacto_escudo(h, k, rx, ry, x, y):\n    \"\"\"\n    Detecta si un punto (x,y) está dentro de una elipse con centro (h,k)\n    y radios rx, ry.\n    Retorna True si impacta, False si no.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Nave en (0,0), escudo ancho (10) y bajo (5)\nprint(impacto_escudo(0, 0, 10, 5, 8, 2))  # ¿Impacta?",
-      "solucion_referencia": "def impacto_escudo(h, k, rx, ry, x, y):\n    # Normalizamos las coordenadas respecto al centro\n    dx = x - h\n    dy = y - k\n    \n    # Aplicamos la fórmula de la elipse\n    # (dx^2 / rx^2) + (dy^2 / ry^2) <= 1\n    termino_x = (dx ** 2) / (rx ** 2)\n    termino_y = (dy ** 2) / (ry ** 2)\n    \n    return (termino_x + termino_y) <= 1",
-      "casos_prueba": [
-        {
-          "entrada": "h=0, k=0, rx=10, ry=5, x=0, y=5",
-          "salida_esperada": "True",
-          "nota": "Punto en el vértice superior (borde)."
-        },
-        {
-          "entrada": "h=0, k=0, rx=10, ry=5, x=10, y=1",
-          "salida_esperada": "False",
-          "nota": "Fuera del alcance horizontal."
-        },
-        {
-          "entrada": "h=2, k=3, rx=2, ry=1, x=2, y=3",
-          "salida_esperada": "True",
-          "nota": "Impacto directo en el centro."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "video",
-          "titulo": "Leyes de Kepler y Elipses explicadas",
-          "url": "https://www.youtube.com/results?search_query=kepler+laws+ellipses"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirve?",
+    "contenido": "La elipse describe orbitales naturales y áreas de incertidumbre estadística. En computación, es esencial para representar círculos vistos desde un ángulo.",
+    "aplicaciones": [
+      "Orbitales de satélites y planetas (Leyes de Kepler).",
+      "Visión Artificial: Un plato o una moneda vistos de lado son elipses.",
+      "Estadística y ML: 'Elipses de confianza' en gráficos de dispersión para detectar anomalías.",
+      "Medicina: Litotricia (usar reflectores elípticos para destruir cálculos renales).",
+      "Arquitectura: Techos con acústica reflexiva (galerías de susurros)."
+    ],
+    "ejemplos_vida_real": [
+      "La trayectoria de la Tierra alrededor del Sol.",
+      "El logo de Batman (básicamente elipses superpuestas).",
+      "Coliseos y estadios deportivos."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "circunferencia",
+        "nombre": "La Circunferencia",
+        "razon": "La elipse es una generalización de la circunferencia (donde los dos focos se separan)."
+      },
+      {
+        "id": "distancia_entre_puntos",
+        "nombre": "Distancia entre puntos",
+        "razon": "Base de la definición geométrica (d1 + d2 = constante)."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "hiperbola",
+        "nombre": "La Hipérbola",
+        "razon": "La siguiente cónica, donde en lugar de sumar distancias, se restan."
+      },
+      {
+        "id": "algebra_lineal",
+        "nombre": "Valores Propios (Eigenvalues)",
+        "razon": "En Álgebra Lineal, los ejes de la elipse están determinados por los vectores propios de una matriz."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Teorema de Pitágoras (modificado para a, b, c)",
+      "Despeje de ecuaciones cuadráticas"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usa en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Ingeniería Aeroespacial",
+        "descripcion": "Cálculo de órbitas de transferencia.",
+        "ejemplos": [
+          "Lanzamiento de satélites Starlink",
+          "Misiones a Marte"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Videojuegos",
+        "descripcion": "Colisiones y sombras.",
+        "ejemplos": [
+          "Sombra de un personaje bajo los pies",
+          "Escudos de energía"
+        ]
+      },
+      {
+        "nombre": "Ciencia de Datos",
+        "descripcion": "Detección de outliers multivariables.",
+        "ejemplos": [
+          "Detección de fraude bancario (si el comportamiento sale de la elipse de confianza)"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "SpaceX (Mecánica orbital)",
+      "Adobe (Herramientas de vectores en Illustrator)",
+      "Bancos (Análisis de riesgo)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Ingeniero de Dinámica de Vuelo",
+        "importancia": "Crítica",
+        "uso": "Cálculo de trayectorias."
+      },
+      {
+        "nombre": "Científico de Datos",
+        "importancia": "Alta",
+        "uso": "Análisis de componentes principales (PCA) y visualización."
+      },
+      {
+        "nombre": "Programador de Gráficos",
+        "importancia": "Media",
+        "uso": "Algoritmos de dibujo de primitivas."
+      }
+    ],
+    "salario_promedio_mx": "$30,000 - $75,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Escudo de Energía (Colisión Elíptica)",
+    "descripcion": "En un videojuego espacial, tu nave tiene un escudo de energía con forma elíptica (ancho y alto variables). Debes detectar si un asteroide ha impactado dentro del área del escudo.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "def impacto_escudo(h, k, rx, ry, x, y):\n    \"\"\"\n    Detecta si un punto (x,y) está dentro de una elipse con centro (h,k)\n    y radios rx, ry.\n    Retorna True si impacta, False si no.\n    \"\"\"\n    # Tu código aquí\n    pass\n\n# Pruebas\n# Nave en (0,0), escudo ancho (10) y bajo (5)\nprint(impacto_escudo(0, 0, 10, 5, 8, 2))  # ¿Impacta?",
+    "solucion_referencia": "def impacto_escudo(h, k, rx, ry, x, y):\n    # Normalizamos las coordenadas respecto al centro\n    dx = x - h\n    dy = y - k\n    \n    # Aplicamos la fórmula de la elipse\n    # (dx^2 / rx^2) + (dy^2 / ry^2) <= 1\n    termino_x = (dx ** 2) / (rx ** 2)\n    termino_y = (dy ** 2) / (ry ** 2)\n    \n    return (termino_x + termino_y) <= 1",
+    "pistas": [
+      "La nave está en el centro (h, k).",
+      "El escudo tiene un radio horizontal 'rx' (a) y un radio vertical 'ry' (b).",
+      "El asteroide está en (x, y).",
+      "La condición de impacto (estar dentro o en el borde) es: ((x-h)² / rx²) + ((y-k)² / ry²) <= 1."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "h=0, k=0, rx=10, ry=5, x=0, y=5",
+        "salida_esperada": "True",
+        "explicacion": "Punto en el vértice superior (borde)."
+      },
+      {
+        "entrada": "h=0, k=0, rx=10, ry=5, x=10, y=1",
+        "salida_esperada": "False",
+        "explicacion": "Fuera del alcance horizontal."
+      },
+      {
+        "entrada": "h=2, k=3, rx=2, ry=1, x=2, y=3",
+        "salida_esperada": "True",
+        "explicacion": "Impacto directo en el centro."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "video",
+        "titulo": "Leyes de Kepler y Elipses explicadas",
+        "url": "https://www.youtube.com/results?search_query=kepler+laws+ellipses"
+      }
+    ]
   }
 }

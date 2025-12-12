@@ -84,12 +84,18 @@
       {
         "nombre": "Data Science & Analytics",
         "descripcion": "Limpieza de datos y segmentación de audiencias",
-        "ejemplos": ["Filtrado de datasets", "Análisis de cohortes"]
+        "ejemplos": [
+          "Filtrado de datasets",
+          "Análisis de cohortes"
+        ]
       },
       {
         "nombre": "Desarrollo Backend",
         "descripcion": "Gestión eficiente de colecciones de datos en memoria y bases de datos",
-        "ejemplos": ["Consultas complejas en SQL", "Optimización de búsquedas"]
+        "ejemplos": [
+          "Consultas complejas en SQL",
+          "Optimización de búsquedas"
+        ]
       }
     ],
     "empresas_que_lo_usan": [
@@ -134,13 +140,27 @@
     "casos_prueba_visibles": [
       {
         "entrada": {
-          "black_friday_ids": [1, 2],
-          "cyber_monday_ids": [2, 3]
+          "black_friday_ids": [
+            1,
+            2
+          ],
+          "cyber_monday_ids": [
+            2,
+            3
+          ]
         },
         "salida_esperada": {
-          "total_unicos": [1, 2, 3],
-          "clientes_leales": [2],
-          "solo_black_friday": [1]
+          "total_unicos": [
+            1,
+            2,
+            3
+          ],
+          "clientes_leales": [
+            2
+          ],
+          "solo_black_friday": [
+            1
+          ]
         },
         "explicacion": "Intersección simple"
       }

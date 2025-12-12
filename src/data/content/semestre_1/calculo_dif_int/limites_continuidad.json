@@ -1,160 +1,174 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "limites_continuidad",
-      "titulo": "Límites y Continuidad",
-      "materia": "Cálculo diferencial e integral",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-6 horas"
-    },
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "El Comportamiento en la Frontera",
-        "definicion": "El límite describe el valor al que se aproxima una función f(x) cuando x se acerca a un punto 'c', sin importar si la función está definida o no en ese punto exacto.",
-        "puntos_clave": [
-          "Límites Laterales: Para que un límite exista, los límites por la izquierda y por la derecha deben ser iguales.",
-          "Continuidad: Una función es continua en 'c' si el límite existe, la función está definida en 'c', y ambos valores coinciden.",
-          "Límites al Infinito: Describen el comportamiento de una función a largo plazo (asíntotas horizontales).",
-          "Indeterminaciones: Casos como 0/0 o ∞/∞ que requieren manipulación algebraica (o Regla de L'Hôpital) para resolverse."
-        ],
-        "formulas": [
-          "Notación: lim (x→c) f(x) = L",
-          "Condición de Continuidad: lim (x→c) f(x) = f(c)",
-          "Límite Notable: lim (x→0) (sen x)/x = 1",
-          "Límite Notable: lim (n→∞) (1 + 1/n)^n = e"
-        ]
+  "metadata": {
+    "id": "limites_continuidad",
+    "titulo": "Límites y Continuidad",
+    "materia": "Cálculo diferencial e integral",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "El Comportamiento en la Frontera",
+    "contenido": "El límite describe el valor al que se aproxima una función f(x) cuando x se acerca a un punto 'c', sin importar si la función está definida o no en ese punto exacto.",
+    "puntos_clave": [
+      "Límites Laterales: Para que un límite exista, los límites por la izquierda y por la derecha deben ser iguales.",
+      "Continuidad: Una función es continua en 'c' si el límite existe, la función está definida en 'c', y ambos valores coinciden.",
+      "Límites al Infinito: Describen el comportamiento de una función a largo plazo (asíntotas horizontales).",
+      "Indeterminaciones: Casos como 0/0 o ∞/∞ que requieren manipulación algebraica (o Regla de L'Hôpital) para resolverse."
+    ],
+    "formulas": [
+      {
+        "latex": "Notación: lim (x→c) f(x) = L",
+        "descripcion": ""
       },
-      "utilidad_practica": {
-        "titulo": "Predicción y Análisis de Tendencias",
-        "descripcion": "Los límites son la herramienta para manejar lo 'infinitamente pequeño' (derivadas) o lo 'infinitamente grande' (complejidad algorítmica).",
-        "aplicaciones_comunes": [
-          "Análisis de Algoritmos (Big O): Estudiar cómo se comporta el tiempo de ejecución cuando los datos (n) tienden a infinito.",
-          "Procesamiento de Señales: Reconstrucción de señales analógicas a partir de muestras digitales (Teorema de Nyquist).",
-          "Física: Velocidad instantánea (límite de la velocidad media).",
-          "Finanzas: Cálculo de interés compuesto continuo (límite cuando la frecuencia de capitalización tiende a infinito)."
-        ],
-        "ejemplos_vida_real": [
-          "La resolución de una pantalla Retina: Los píxeles son tan pequeños que el ojo percibe una imagen continua (límite visual).",
-          "Renderizado de videojuegos: Level of Detail (LOD) intenta hacer transiciones suaves (continuas) entre modelos de alta y baja calidad.",
-          "El velocímetro de tu moto R15: Mide la velocidad en un instante 'cero' (límite)."
-        ]
+      {
+        "latex": "Condición de Continuidad: lim (x→c) f(x) = f(c)",
+        "descripcion": ""
       },
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "funciones_tipos",
-            "nombre": "Funciones",
-            "razon": "Debes entender dominio y rango para saber dónde buscar límites."
-          },
-          {
-            "id": "algebra_superior",
-            "nombre": "Álgebra",
-            "razon": "Factorización y racionalización son necesarias para resolver indeterminaciones."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "derivadas_basicas",
-            "nombre": "Derivadas",
-            "razon": "La derivada ES un límite (el límite del cociente incremental)."
-          },
-          {
-            "id": "series_taylor",
-            "nombre": "Series Infinitas",
-            "razon": "Sumas de infinitos términos que convergen a un límite finito."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Asíntotas",
-          "Epsilon y Delta (Definición formal)",
-          "Teorema del Valor Intermedio",
-          "Discontinuidades (Salto, Removible, Infinita)"
-        ]
+      {
+        "latex": "Límite Notable: lim (x→0) (sen x)/x = 1",
+        "descripcion": ""
       },
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "Relevancia en Tecnología",
-          "sectores": [
-            {
-              "nombre": "Inteligencia Artificial",
-              "descripcion": "Funciones de Activación y Estabilidad.",
-              "ejemplos": ["ReLU (Continua pero no diferenciable en 0)", "Softmax (Límites de probabilidad)"]
-            },
-            {
-              "nombre": "Ingeniería de Software",
-              "descripcion": "Pruebas de estrés y escalabilidad.",
-              "ejemplos": ["Comportamiento del servidor cuando usuarios -> ∞", "Latencia de red"]
-            },
-            {
-              "nombre": "Simulación Científica",
-              "descripcion": "Modelado de fluidos y clima.",
-              "ejemplos": ["Continuidad en ecuaciones de Navier-Stokes"]
-            }
-          ],
-          "empresas_referencia": [
-            "MathWorks (MATLAB - Cálculo numérico)",
-            "Unity/Unreal Engine (Física continua en juegos)",
-            "Google DeepMind (Optimización de funciones complejas)"
-          ]
-        },
-        "roles_laborales": {
-          "titulo": "Perfiles Analíticos",
-          "salario_promedio_mx": "$25,000 - $65,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Arquitecto de Software",
-              "importancia": "Media",
-              "uso": "Entender los límites de escalabilidad de un sistema."
-            },
-            {
-              "nombre": "Ingeniero de Investigación (AI)",
-              "importancia": "Crítica",
-              "uso": "Análisis de convergencia de modelos."
-            },
-            {
-              "nombre": "Analista Cuantitativo",
-              "importancia": "Alta",
-              "uso": "Modelos estocásticos continuos."
-            }
-          ]
-        }
+      {
+        "latex": "Límite Notable: lim (n→∞) (1 + 1/n)^n = e",
+        "descripcion": ""
       }
-    },
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Aproximación Numérica de un Límite Indeterminado",
-      "descripcion": "Analíticamente sabemos que el límite de sin(x)/x cuando x tiende a 0 es 1. Sin embargo, si evalúas f(0) en la computadora, obtendrás un error (ZeroDivisionError o NaN). Tu tarea es escribir un script que se acerque a 0 sin tocarlo para 'descubrir' el límite.",
-      "dificultad": "básico",
-      "instrucciones": [
-        "Define la función f(x) = sin(x) / x.",
-        "Crea una lista de valores que se acerquen a 0 por la derecha (ej. 1, 0.1, 0.01, 0.0001).",
-        "Crea una lista de valores que se acerquen a 0 por la izquierda (ej. -1, -0.1, -0.01...).",
-        "Evalúa la función en esos puntos e imprime los resultados.",
-        "Observa cómo convergen a 1.0."
-      ],
-      "codigo_plantilla": "import math\n\ndef funcion_misteriosa(x):\n    # f(x) = sin(x) / x\n    # Nota: Si x es 0, esto tronará\n    return math.sin(x) / x\n\ndef explorar_limite(punto_objetivo):\n    \"\"\"\n    Imprime valores cercanos al punto_objetivo por izq y der.\n    \"\"\"\n    distancias = [1.0, 0.1, 0.01, 0.001, 0.000001]\n    \n    print(f\"--- Acercándose a {punto_objetivo} ---\")\n    for d in distancias:\n        # Tu código aquí: \n        # Calcula punto_izq = objetivo - d\n        # Calcula punto_der = objetivo + d\n        # Imprime f(punto_izq) y f(punto_der)\n        pass\n\nexplorar_limite(0)",
-      "solucion_referencia": "import math\n\ndef funcion_misteriosa(x):\n    if x == 0:\n        return float('nan') # O manejar el error\n    return math.sin(x) / x\n\ndef explorar_limite(punto_objetivo):\n    distancias = [1.0, 0.1, 0.01, 0.001, 0.000001]\n    print(f\"--- Acercándose a {punto_objetivo} ---\")\n    for d in distancias:\n        izq = punto_objetivo - d\n        der = punto_objetivo + d\n        val_izq = funcion_misteriosa(izq)\n        val_der = funcion_misteriosa(der)\n        print(f\"Distancia {d}: Izq={val_izq:.6f}, Der={val_der:.6f}\")",
-      "casos_prueba": [
-        {
-          "entrada": "x = 0.001",
-          "salida_esperada": "0.9999998...",
-          "nota": "Muy cerca de 1."
-        },
-        {
-          "entrada": "x = 0",
-          "salida_esperada": "Error / Indefinido",
-          "nota": "El límite existe, pero la función no está definida ahí (discontinuidad removible)."
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "graficador",
-          "titulo": "Calculadora de Límites Desmos",
-          "url": "https://www.desmos.com/calculator"
-        }
-      ]
-    }
+    ]
+  },
+  "2_utilidad_practica": {
+    "titulo": "Predicción y Análisis de Tendencias",
+    "contenido": "Los límites son la herramienta para manejar lo 'infinitamente pequeño' (derivadas) o lo 'infinitamente grande' (complejidad algorítmica).",
+    "aplicaciones": [
+      "Análisis de Algoritmos (Big O): Estudiar cómo se comporta el tiempo de ejecución cuando los datos (n) tienden a infinito.",
+      "Procesamiento de Señales: Reconstrucción de señales analógicas a partir de muestras digitales (Teorema de Nyquist).",
+      "Física: Velocidad instantánea (límite de la velocidad media).",
+      "Finanzas: Cálculo de interés compuesto continuo (límite cuando la frecuencia de capitalización tiende a infinito)."
+    ],
+    "ejemplos_vida_real": [
+      "La resolución de una pantalla Retina: Los píxeles son tan pequeños que el ojo percibe una imagen continua (límite visual).",
+      "Renderizado de videojuegos: Level of Detail (LOD) intenta hacer transiciones suaves (continuas) entre modelos de alta y baja calidad.",
+      "El velocímetro de tu moto R15: Mide la velocidad en un instante 'cero' (límite)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "funciones_tipos",
+        "nombre": "Funciones",
+        "razon": "Debes entender dominio y rango para saber dónde buscar límites."
+      },
+      {
+        "id": "algebra_superior",
+        "nombre": "Álgebra",
+        "razon": "Factorización y racionalización son necesarias para resolver indeterminaciones."
+      }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "derivadas_basicas",
+        "nombre": "Derivadas",
+        "razon": "La derivada ES un límite (el límite del cociente incremental)."
+      },
+      {
+        "id": "series_taylor",
+        "nombre": "Series Infinitas",
+        "razon": "Sumas de infinitos términos que convergen a un límite finito."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Asíntotas",
+      "Epsilon y Delta (Definición formal)",
+      "Teorema del Valor Intermedio",
+      "Discontinuidades (Salto, Removible, Infinita)"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "Relevancia en Tecnología",
+    "sectores": [
+      {
+        "nombre": "Inteligencia Artificial",
+        "descripcion": "Funciones de Activación y Estabilidad.",
+        "ejemplos": [
+          "ReLU (Continua pero no diferenciable en 0)",
+          "Softmax (Límites de probabilidad)"
+        ]
+      },
+      {
+        "nombre": "Ingeniería de Software",
+        "descripcion": "Pruebas de estrés y escalabilidad.",
+        "ejemplos": [
+          "Comportamiento del servidor cuando usuarios -> ∞",
+          "Latencia de red"
+        ]
+      },
+      {
+        "nombre": "Simulación Científica",
+        "descripcion": "Modelado de fluidos y clima.",
+        "ejemplos": [
+          "Continuidad en ecuaciones de Navier-Stokes"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "MathWorks (MATLAB - Cálculo numérico)",
+      "Unity/Unreal Engine (Física continua en juegos)",
+      "Google DeepMind (Optimización de funciones complejas)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles Analíticos",
+    "roles": [
+      {
+        "nombre": "Arquitecto de Software",
+        "importancia": "Media",
+        "uso": "Entender los límites de escalabilidad de un sistema."
+      },
+      {
+        "nombre": "Ingeniero de Investigación (AI)",
+        "importancia": "Crítica",
+        "uso": "Análisis de convergencia de modelos."
+      },
+      {
+        "nombre": "Analista Cuantitativo",
+        "importancia": "Alta",
+        "uso": "Modelos estocásticos continuos."
+      }
+    ],
+    "salario_promedio_mx": "$25,000 - $65,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Aproximación Numérica de un Límite Indeterminado",
+    "descripcion": "Analíticamente sabemos que el límite de sin(x)/x cuando x tiende a 0 es 1. Sin embargo, si evalúas f(0) en la computadora, obtendrás un error (ZeroDivisionError o NaN). Tu tarea es escribir un script que se acerque a 0 sin tocarlo para 'descubrir' el límite.",
+    "dificultad": "básico",
+    "codigo_inicial": "import math\n\ndef funcion_misteriosa(x):\n    # f(x) = sin(x) / x\n    # Nota: Si x es 0, esto tronará\n    return math.sin(x) / x\n\ndef explorar_limite(punto_objetivo):\n    \"\"\"\n    Imprime valores cercanos al punto_objetivo por izq y der.\n    \"\"\"\n    distancias = [1.0, 0.1, 0.01, 0.001, 0.000001]\n    \n    print(f\"--- Acercándose a {punto_objetivo} ---\")\n    for d in distancias:\n        # Tu código aquí: \n        # Calcula punto_izq = objetivo - d\n        # Calcula punto_der = objetivo + d\n        # Imprime f(punto_izq) y f(punto_der)\n        pass\n\nexplorar_limite(0)",
+    "solucion_referencia": "import math\n\ndef funcion_misteriosa(x):\n    if x == 0:\n        return float('nan') # O manejar el error\n    return math.sin(x) / x\n\ndef explorar_limite(punto_objetivo):\n    distancias = [1.0, 0.1, 0.01, 0.001, 0.000001]\n    print(f\"--- Acercándose a {punto_objetivo} ---\")\n    for d in distancias:\n        izq = punto_objetivo - d\n        der = punto_objetivo + d\n        val_izq = funcion_misteriosa(izq)\n        val_der = funcion_misteriosa(der)\n        print(f\"Distancia {d}: Izq={val_izq:.6f}, Der={val_der:.6f}\")",
+    "pistas": [
+      "Define la función f(x) = sin(x) / x.",
+      "Crea una lista de valores que se acerquen a 0 por la derecha (ej. 1, 0.1, 0.01, 0.0001).",
+      "Crea una lista de valores que se acerquen a 0 por la izquierda (ej. -1, -0.1, -0.01...).",
+      "Evalúa la función en esos puntos e imprime los resultados.",
+      "Observa cómo convergen a 1.0."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": "x = 0.001",
+        "salida_esperada": "0.9999998...",
+        "explicacion": "Muy cerca de 1."
+      },
+      {
+        "entrada": "x = 0",
+        "salida_esperada": "Error / Indefinido",
+        "explicacion": "El límite existe, pero la función no está definida ahí (discontinuidad removible)."
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "graficador",
+        "titulo": "Calculadora de Límites Desmos",
+        "url": "https://www.desmos.com/calculator"
+      }
+    ]
   }
 }

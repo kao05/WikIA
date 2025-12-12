@@ -1,188 +1,199 @@
 {
-  "modulo_educativo": {
-    "metadata": {
-      "id": "estructuras_datos_basicas",
-      "titulo": "Estructuras de Datos Básicas",
-      "materia": "Introducción a la Programación",
-      "semestre": 1,
-      "dificultad": "intermedio",
-      "tiempo_estudio": "4-6 horas"
-    },
-
-    "contenido": {
-      "conceptos_clave": {
-        "titulo": "¿Qué son las estructuras de datos básicas?",
-        "definicion": "Las estructuras de datos son formas organizadas de almacenar y gestionar información dentro de un programa, permitiendo un acceso y modificación eficientes según el tipo de problema que se desea resolver.",
-        "puntos_clave": [
-          "Permiten organizar datos de manera lógica y eficiente.",
-          "Cada estructura tiene operaciones fundamentales: inserción, eliminación, búsqueda y recorrido.",
-          "La eficiencia de una solución depende en gran parte de la estructura de datos elegida.",
-          "Son la base del diseño de algoritmos avanzados.",
-          "Las estructuras básicas incluyen: arreglos (listas), pilas, colas, conjuntos y diccionarios."
-        ],
-        "formulas": []
+  "metadata": {
+    "id": "estructuras_datos_basicas",
+    "titulo": "Estructuras de Datos Básicas",
+    "materia": "Introducción a la Programación",
+    "semestre": 1,
+    "dificultad": "intermedio",
+    "tiempo_estudio": "4-6 horas"
+  },
+  "1_conceptos_clave": {
+    "titulo": "¿Qué son las estructuras de datos básicas?",
+    "contenido": "Las estructuras de datos son formas organizadas de almacenar y gestionar información dentro de un programa, permitiendo un acceso y modificación eficientes según el tipo de problema que se desea resolver.",
+    "puntos_clave": [
+      "Permiten organizar datos de manera lógica y eficiente.",
+      "Cada estructura tiene operaciones fundamentales: inserción, eliminación, búsqueda y recorrido.",
+      "La eficiencia de una solución depende en gran parte de la estructura de datos elegida.",
+      "Son la base del diseño de algoritmos avanzados.",
+      "Las estructuras básicas incluyen: arreglos (listas), pilas, colas, conjuntos y diccionarios."
+    ],
+    "formulas": []
+  },
+  "2_utilidad_practica": {
+    "titulo": "¿Para qué sirven?",
+    "contenido": "El dominio de estructuras de datos es esencial para optimizar la memoria, acelerar programas y resolver problemas de forma eficiente.",
+    "aplicaciones": [
+      "Guardar colecciones de datos (listas de usuarios, productos, eventos).",
+      "Construir algoritmos eficientes de búsqueda y ordenamiento.",
+      "Gestionar flujos de tareas o procesos (colas, pilas).",
+      "Representar relaciones entre elementos (diccionarios, grafos).",
+      "Diseñar componentes base como cachés, tablas hash o colas de mensajes."
+    ],
+    "ejemplos_vida_real": [
+      "Historial de navegación (estructura tipo lista).",
+      "Deshacer/rehacer en editores (pilas).",
+      "Sistemas de impresión (colas).",
+      "Índices de bases de datos (árboles y tablas hash).",
+      "Control de usuarios logueados (sets para evitar duplicados)."
+    ]
+  },
+  "3_relaciones": {
+    "titulo": "Relaciones y Prerrequisitos",
+    "prerequisitos": [
+      {
+        "id": "variables_y_tipos",
+        "nombre": "Variables y Tipos de Datos",
+        "razon": "Las estructuras de datos agrupan tipos básicos; es necesario entenderlos primero."
       },
-
-      "utilidad_practica": {
-        "titulo": "¿Para qué sirven?",
-        "descripcion": "El dominio de estructuras de datos es esencial para optimizar la memoria, acelerar programas y resolver problemas de forma eficiente.",
-        "aplicaciones_comunes": [
-          "Guardar colecciones de datos (listas de usuarios, productos, eventos).",
-          "Construir algoritmos eficientes de búsqueda y ordenamiento.",
-          "Gestionar flujos de tareas o procesos (colas, pilas).",
-          "Representar relaciones entre elementos (diccionarios, grafos).",
-          "Diseñar componentes base como cachés, tablas hash o colas de mensajes."
-        ],
-        "ejemplos_vida_real": [
-          "Historial de navegación (estructura tipo lista).",
-          "Deshacer/rehacer en editores (pilas).",
-          "Sistemas de impresión (colas).",
-          "Índices de bases de datos (árboles y tablas hash).",
-          "Control de usuarios logueados (sets para evitar duplicados)."
-        ]
-      },
-
-      "mapa_conocimiento": {
-        "titulo": "Relaciones y Prerrequisitos",
-        "prerequisitos": [
-          {
-            "id": "variables_y_tipos",
-            "nombre": "Variables y Tipos de Datos",
-            "razon": "Las estructuras de datos agrupan tipos básicos; es necesario entenderlos primero."
-          },
-          {
-            "id": "control_flujo",
-            "nombre": "Estructuras de Control",
-            "razon": "Los recorridos y operaciones sobre estructuras requieren ciclos y condicionales."
-          }
-        ],
-        "temas_siguientes": [
-          {
-            "id": "algoritmos_ordenamiento_busqueda",
-            "nombre": "Algoritmos de Ordenamiento y Búsqueda",
-            "razon": "Estos algoritmos operan directamente sobre estructuras como listas o colas."
-          },
-          {
-            "id": "estructuras_avanzadas",
-            "nombre": "Estructuras de Datos Avanzadas",
-            "razon": "Conocimiento fundamental para árboles, grafos, montículos o tablas hash."
-          },
-          {
-            "id": "complejidad_algoritmica",
-            "nombre": "Complejidad Algorítmica (Big O)",
-            "razon": "La eficiencia depende de cómo se almacenan los datos."
-          }
-        ],
-        "conceptos_auxiliares": [
-          "Memoria estática vs dinámica",
-          "Indexación",
-          "Tablas hash",
-          "Punteros y referencias (según lenguaje)",
-          "Mutabilidad e inmutabilidad"
-        ]
-      },
-
-      "contexto_profesional": {
-        "aplicaciones_industria": {
-          "titulo": "¿Dónde se usan en el mundo real?",
-          "sectores": [
-            {
-              "nombre": "Desarrollo Backend",
-              "descripcion": "Construcción de APIs, manejo de colecciones de datos, encolado de procesos.",
-              "ejemplos": ["Listas para manejar sesiones", "Colas para gestionar peticiones HTTP"]
-            },
-            {
-              "nombre": "Bases de Datos",
-              "descripcion": "Los índices y motores de búsqueda utilizan árboles B+, tablas hash y estructuras complejas.",
-              "ejemplos": ["Índices de MySQL", "Búsqueda interna en PostgreSQL"]
-            },
-            {
-              "nombre": "Machine Learning",
-              "descripcion": "Preprocesamiento de datasets y almacenamiento temporal de muestras.",
-              "ejemplos": ["Mini-batches para entrenamiento", "Vectores de características"]
-            },
-            {
-              "nombre": "Desarrollo de Videojuegos",
-              "descripcion": "Estructuras para administrar entidades, colisiones y eventos.",
-              "ejemplos": ["Listas enlazadas para objetos dinámicos", "Colas de eventos"]
-            },
-            {
-              "nombre": "Sistemas Operativos",
-              "descripcion": "Manejo de procesos, planificación y memoria.",
-              "ejemplos": ["Listas para procesos", "Colas para scheduling"]
-            }
-          ],
-          "empresas_referencia": [
-            "Google (almacenamiento y estructuras optimizadas)",
-            "Microsoft (motores de búsqueda internos y file systems)",
-            "Amazon (procesamiento masivo de datos)",
-            "NVIDIA (representación de estructuras para simulaciones)"
-          ]
-        },
-
-        "roles_laborales": {
-          "titulo": "Perfiles que dominan este concepto",
-          "salario_promedio_mx": "$22,000 - $65,000 MXN/mes",
-          "roles": [
-            {
-              "nombre": "Desarrollador Backend",
-              "importancia": "Alta",
-              "uso": "Optimización de rutas, almacenamiento en memoria, manejo de colecciones."
-            },
-            {
-              "nombre": "Ingeniero de Software",
-              "importancia": "Crítica",
-              "uso": "Construcción de sistemas eficientes y escalables."
-            },
-            {
-              "nombre": "Ingeniero de Datos",
-              "importancia": "Alta",
-              "uso": "Procesamiento de grandes cantidades de información almacenada en estructuras."
-            },
-            {
-              "nombre": "Desarrollador de Sistemas",
-              "importancia": "Crítica",
-              "uso": "Implementación de componentes de bajo nivel donde la estructura de datos define la eficiencia total."
-            }
-          ]
-        }
+      {
+        "id": "control_flujo",
+        "nombre": "Estructuras de Control",
+        "razon": "Los recorridos y operaciones sobre estructuras requieren ciclos y condicionales."
       }
-    },
-
-    "actividad_practica": {
-      "tipo": "reto_programacion",
-      "titulo": "Reto: Implementa una Cola (Queue) Básica",
-      "descripcion": "Crea tu propia implementación de una cola (FIFO) utilizando una lista como base. La cola debe permitir encolar, desencolar y mostrar su estado.",
-      "dificultad": "intermedio",
-      "instrucciones": [
-        "Implementa una clase llamada 'Cola'.",
-        "Agrega el método enqueue(elemento): añade un elemento al final.",
-        "Agrega el método dequeue(): elimina y retorna el primer elemento.",
-        "Agrega el método is_empty(): retorna True si no hay elementos.",
-        "Agrega el método size(): retorna cuántos elementos tiene la cola.",
-        "Prueba tu estructura con varias operaciones."
-      ],
-      "codigo_plantilla": "class Cola:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, elemento):\n        # Tu código aquí\n        pass\n\n    def dequeue(self):\n        # Tu código aquí\n        pass\n\n    def is_empty(self):\n        return len(self.items) == 0\n\n    def size(self):\n        return len(self.items)\n\n# Pruebas básicas\na = Cola()\na.enqueue(10)\na.enqueue(20)\nprint(a.dequeue())  # Esperado: 10\nprint(a.size())     # Esperado: 1",
-      "solucion_referencia": "class Cola:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, elemento):\n        self.items.append(elemento)\n\n    def dequeue(self):\n        if self.is_empty():\n            return None\n        return self.items.pop(0)\n\n    def is_empty(self):\n        return len(self.items) == 0\n\n    def size(self):\n        return len(self.items)\n",
-      "casos_prueba": [
-        {
-          "entrada": ["enqueue(1)", "enqueue(2)", "dequeue()"],
-          "salida_esperada": 1,
-          "nota": "Caso básico de operación FIFO"
-        },
-        {
-          "entrada": ["enqueue('hola')", "dequeue()", "dequeue()"],
-          "salida_esperada": null,
-          "nota": "Cola vacía retorna None"
-        }
-      ],
-      "recursos_adicionales": [
-        {
-          "tipo": "documentacion",
-          "titulo": "Estructuras de Datos en Python — Documentación Oficial",
-          "url": "https://docs.python.org/3/tutorial/datastructures.html"
-        }
-      ]
-    }
+    ],
+    "temas_siguientes": [
+      {
+        "id": "algoritmos_ordenamiento_busqueda",
+        "nombre": "Algoritmos de Ordenamiento y Búsqueda",
+        "razon": "Estos algoritmos operan directamente sobre estructuras como listas o colas."
+      },
+      {
+        "id": "estructuras_avanzadas",
+        "nombre": "Estructuras de Datos Avanzadas",
+        "razon": "Conocimiento fundamental para árboles, grafos, montículos o tablas hash."
+      },
+      {
+        "id": "complejidad_algoritmica",
+        "nombre": "Complejidad Algorítmica (Big O)",
+        "razon": "La eficiencia depende de cómo se almacenan los datos."
+      }
+    ],
+    "conceptos_auxiliares": [
+      "Memoria estática vs dinámica",
+      "Indexación",
+      "Tablas hash",
+      "Punteros y referencias (según lenguaje)",
+      "Mutabilidad e inmutabilidad"
+    ]
+  },
+  "4_aplicaciones_industria": {
+    "titulo": "¿Dónde se usan en el mundo real?",
+    "sectores": [
+      {
+        "nombre": "Desarrollo Backend",
+        "descripcion": "Construcción de APIs, manejo de colecciones de datos, encolado de procesos.",
+        "ejemplos": [
+          "Listas para manejar sesiones",
+          "Colas para gestionar peticiones HTTP"
+        ]
+      },
+      {
+        "nombre": "Bases de Datos",
+        "descripcion": "Los índices y motores de búsqueda utilizan árboles B+, tablas hash y estructuras complejas.",
+        "ejemplos": [
+          "Índices de MySQL",
+          "Búsqueda interna en PostgreSQL"
+        ]
+      },
+      {
+        "nombre": "Machine Learning",
+        "descripcion": "Preprocesamiento de datasets y almacenamiento temporal de muestras.",
+        "ejemplos": [
+          "Mini-batches para entrenamiento",
+          "Vectores de características"
+        ]
+      },
+      {
+        "nombre": "Desarrollo de Videojuegos",
+        "descripcion": "Estructuras para administrar entidades, colisiones y eventos.",
+        "ejemplos": [
+          "Listas enlazadas para objetos dinámicos",
+          "Colas de eventos"
+        ]
+      },
+      {
+        "nombre": "Sistemas Operativos",
+        "descripcion": "Manejo de procesos, planificación y memoria.",
+        "ejemplos": [
+          "Listas para procesos",
+          "Colas para scheduling"
+        ]
+      }
+    ],
+    "empresas_que_lo_usan": [
+      "Google (almacenamiento y estructuras optimizadas)",
+      "Microsoft (motores de búsqueda internos y file systems)",
+      "Amazon (procesamiento masivo de datos)",
+      "NVIDIA (representación de estructuras para simulaciones)"
+    ]
+  },
+  "5_roles_laborales": {
+    "titulo": "Perfiles que dominan este concepto",
+    "roles": [
+      {
+        "nombre": "Desarrollador Backend",
+        "importancia": "Alta",
+        "uso": "Optimización de rutas, almacenamiento en memoria, manejo de colecciones."
+      },
+      {
+        "nombre": "Ingeniero de Software",
+        "importancia": "Crítica",
+        "uso": "Construcción de sistemas eficientes y escalables."
+      },
+      {
+        "nombre": "Ingeniero de Datos",
+        "importancia": "Alta",
+        "uso": "Procesamiento de grandes cantidades de información almacenada en estructuras."
+      },
+      {
+        "nombre": "Desarrollador de Sistemas",
+        "importancia": "Crítica",
+        "uso": "Implementación de componentes de bajo nivel donde la estructura de datos define la eficiencia total."
+      }
+    ],
+    "salario_promedio_mx": "$22,000 - $65,000 MXN/mes"
+  },
+  "6_reto_proyecto": {
+    "tipo": "programacion",
+    "titulo": "Reto: Implementa una Cola (Queue) Básica",
+    "descripcion": "Crea tu propia implementación de una cola (FIFO) utilizando una lista como base. La cola debe permitir encolar, desencolar y mostrar su estado.",
+    "dificultad": "intermedio",
+    "codigo_inicial": "class Cola:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, elemento):\n        # Tu código aquí\n        pass\n\n    def dequeue(self):\n        # Tu código aquí\n        pass\n\n    def is_empty(self):\n        return len(self.items) == 0\n\n    def size(self):\n        return len(self.items)\n\n# Pruebas básicas\na = Cola()\na.enqueue(10)\na.enqueue(20)\nprint(a.dequeue())  # Esperado: 10\nprint(a.size())     # Esperado: 1",
+    "solucion_referencia": "class Cola:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, elemento):\n        self.items.append(elemento)\n\n    def dequeue(self):\n        if self.is_empty():\n            return None\n        return self.items.pop(0)\n\n    def is_empty(self):\n        return len(self.items) == 0\n\n    def size(self):\n        return len(self.items)\n",
+    "pistas": [
+      "Implementa una clase llamada 'Cola'.",
+      "Agrega el método enqueue(elemento): añade un elemento al final.",
+      "Agrega el método dequeue(): elimina y retorna el primer elemento.",
+      "Agrega el método is_empty(): retorna True si no hay elementos.",
+      "Agrega el método size(): retorna cuántos elementos tiene la cola.",
+      "Prueba tu estructura con varias operaciones."
+    ],
+    "casos_prueba_visibles": [
+      {
+        "entrada": [
+          "enqueue(1)",
+          "enqueue(2)",
+          "dequeue()"
+        ],
+        "salida_esperada": 1,
+        "explicacion": "Caso básico de operación FIFO"
+      },
+      {
+        "entrada": [
+          "enqueue('hola')",
+          "dequeue()",
+          "dequeue()"
+        ],
+        "salida_esperada": null,
+        "explicacion": "Cola vacía retorna None"
+      }
+    ],
+    "recursos_adicionales": [
+      {
+        "tipo": "documentacion",
+        "titulo": "Estructuras de Datos en Python — Documentación Oficial",
+        "url": "https://docs.python.org/3/tutorial/datastructures.html"
+      }
+    ]
   }
 }
