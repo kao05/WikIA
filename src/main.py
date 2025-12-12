@@ -33,6 +33,20 @@ def setup_application():
     return app
 
 
+def load_stylesheet(app: QApplication):
+    """Carga la hoja de estilos principal si está disponible."""
+    style_path = Path(__file__).parent / "ui" / "styles" / "main.qss"
+    try:
+        if style_path.exists():
+            with open(style_path, "r", encoding="utf-8") as f:
+                app.setStyleSheet(f.read())
+            print("✓ Estilos aplicados")
+        else:
+            print("⚠️ Hoja de estilos no encontrada, se usa el tema Fusion por defecto")
+    except Exception as exc:  # pragma: no cover - logging de arranque
+        print(f"⚠️ No se pudo cargar la hoja de estilos: {exc}")
+
+
 def show_error_dialog(title: str, message: str):
     """Muestra un diálogo de error"""
     msg_box = QMessageBox()
@@ -52,6 +66,7 @@ def main():
     try:
         print("✓ Inicializando aplicación...")
         app = setup_application()
+        load_stylesheet(app)
         
         print("✓ Creando ventana principal...")
         window = MainWindow()

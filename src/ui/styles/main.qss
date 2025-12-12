@@ -1,51 +1,112 @@
-/* Estilos globales */
+/*
+ * Tema claro con alto contraste para mejorar legibilidad
+ */
+
+/* Base */
+QWidget {
+    background-color: #f5f7fa;
+    color: #0f172a;
+}
+
 QMainWindow {
-    background-color: #ecf0f1;
+    background-color: #f5f7fa;
+}
+
+QLabel {
+    color: #0f172a;
 }
 
 /* Barra de estado */
 QStatusBar {
-    background-color: #34495e;
-    color: white;
-    padding: 5px;
+    background-color: #111827;
+    color: #e5e7eb;
+    padding: 6px 10px;
+    border-top: 1px solid #1f2937;
 }
 
-/* Scroll bars */
+QStatusBar QLabel {
+    color: #e5e7eb;
+}
+
+/* Entradas de texto */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 8px;
+    selection-background-color: #2563eb;
+    selection-color: #f8fafc;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #2563eb;
+}
+
+/* Botones */
+QPushButton {
+    background-color: #2563eb;
+    color: #f8fafc;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #1d4ed8;
+}
+
+QPushButton:pressed {
+    background-color: #1e40af;
+}
+
+QPushButton:disabled {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+}
+
+/* Scrollbars */
 QScrollBar:vertical {
     border: none;
-    background: #ecf0f1;
-    width: 10px;
+    background: #e2e8f0;
+    width: 12px;
     margin: 0px;
 }
 
 QScrollBar::handle:vertical {
-    background: #95a5a6;
-    border-radius: 5px;
-    min-height: 20px;
+    background: #94a3b8;
+    border-radius: 6px;
+    min-height: 24px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: #7f8c8d;
+    background: #64748b;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
 }
 
 /* Tree Widget */
 QTreeWidget {
-    background-color: white;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 6px;
+    alternate-background-color: #f1f5f9;
 }
 
 QTreeWidget::item {
-    padding: 5px;
-    border-radius: 3px;
+    padding: 6px;
+    border-radius: 4px;
 }
 
 QTreeWidget::item:hover {
-    background-color: #ecf0f1;
+    background-color: #e2e8f0;
 }
 
 QTreeWidget::item:selected {
-    background-color: #3498db;
-    color: white;
+    background-color: #2563eb;
+    color: #f8fafc;
 }

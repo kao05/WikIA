@@ -61,13 +61,14 @@ class SearchBar(QWidget):
         self.search_input.setStyleSheet("""
             QLineEdit {
                 padding: 8px;
-                border: 2px solid #bdc3c7;
-                border-radius: 5px;
+                border: 1px solid #cbd5e1;
+                border-radius: 6px;
                 font-size: 13px;
-                background-color: white;
+                background-color: #ffffff;
+                color: #0f172a;
             }
             QLineEdit:focus {
-                border-color: #3498db;
+                border-color: #2563eb;
             }
         """)
         
@@ -81,19 +82,19 @@ class SearchBar(QWidget):
         # Estilo del botón
         self.search_button.setStyleSheet("""
             QPushButton {
-                background-color: #3498db;
-                color: white;
+                background-color: #2563eb;
+                color: #f8fafc;
                 border: none;
                 padding: 8px 20px;
-                border-radius: 5px;
+                border-radius: 6px;
                 font-size: 13px;
-                font-weight: bold;
+                font-weight: 600;
             }
             QPushButton:hover {
-                background-color: #2980b9;
+                background-color: #1d4ed8;
             }
             QPushButton:pressed {
-                background-color: #21618c;
+                background-color: #1e40af;
             }
         """)
         
@@ -107,15 +108,15 @@ class SearchBar(QWidget):
         # Estilo del botón limpiar
         self.clear_button.setStyleSheet("""
             QPushButton {
-                background-color: #95a5a6;
-                color: white;
+                background-color: #475569;
+                color: #f8fafc;
                 border: none;
                 padding: 8px 15px;
-                border-radius: 5px;
+                border-radius: 6px;
                 font-size: 12px;
             }
             QPushButton:hover {
-                background-color: #7f8c8d;
+                background-color: #334155;
             }
         """)
         
