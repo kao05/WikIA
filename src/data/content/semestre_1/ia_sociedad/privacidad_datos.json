@@ -1,0 +1,138 @@
+{
+  "modulo_educativo": {
+    "metadata": {
+      "id": "privacidad_datos",
+      "titulo": "Privacidad y Protección de Datos en la Era de la IA",
+      "materia": "Inteligencia Artificial y Sociedad",
+      "semestre": 1,
+      "dificultad": "intermedio",
+      "tiempo_estudio": "4-5 horas"
+    },
+    "contenido": {
+      "conceptos_clave": {
+        "titulo": "La Privacidad frente a la Minería de Datos",
+        "definicion": "Conjunto de prácticas, leyes y tecnologías diseñadas para proteger la información personal sensible (PII) durante su recolección, almacenamiento y uso para el entrenamiento de sistemas de Inteligencia Artificial.",
+        "puntos_clave": [
+          "Datos PII (Personally Identifiable Information): Cualquier dato que pueda identificar directa o indirectamente a una persona (nombre, IP, biometría).",
+          "Anonimización vs. Seudonimización: La diferencia crítica entre eliminar irreversiblemente la identidad y simplemente ocultarla con un código reversible.",
+          "Ataques de Re-identificación: Cómo la IA puede cruzar bases de datos 'anónimas' para descubrir la identidad de las personas.",
+          "Privacidad Diferencial: Técnica estadística que añade 'ruido' a los datos para permitir el aprendizaje de patrones grupales sin exponer datos individuales."
+        ],
+        "formulas": []
+      },
+      "utilidad_practica": {
+        "titulo": "¿Por qué es un pilar fundamental?",
+        "descripcion": "La materia prima de la IA son los datos. Sin privacidad, se pierde la confianza del usuario y se incurre en riesgos legales masivos.",
+        "aplicaciones_comunes": [
+          "Cumplimiento Normativo (GDPR en Europa, LFPDPPP en México).",
+          "Gestión del Consentimiento (Consent Management Platforms).",
+          "Borrado Seguro de Datos (Data Wiping) al entrenar modelos.",
+          "Auditoría de Datos: Rastrear qué datos se usaron para qué modelo."
+        ],
+        "ejemplos_vida_real": [
+          "El escándalo de Cambridge Analytica (uso indebido de datos de Facebook para perfiles psicológicos).",
+          "Asistentes de voz (Alexa/Siri) grabando conversaciones privadas accidentalmente.",
+          "Apps de salud que venden datos de síntomas a aseguradoras."
+        ]
+      },
+      "mapa_conocimiento": {
+        "titulo": "Conexiones Curriculares",
+        "prerequisitos": [
+          {
+            "id": "autonomia_derechos",
+            "nombre": "Autonomía y derechos individuales",
+            "razon": "La privacidad es el derecho habilitador de la autonomía."
+          }
+        ],
+        "temas_siguientes": [
+          {
+            "id": "bases_datos",
+            "nombre": "Bases de Datos (Semestre 3)",
+            "razon": "Implementación técnica de seguridad en el almacenamiento."
+          },
+          {
+            "id": "manejo_datos_masivos",
+            "nombre": "Manejo de datos masivos (Semestre 4)",
+            "razon": "Gobernanza de datos a escala Big Data."
+          }
+        ],
+        "conceptos_auxiliares": [
+          "Privacy by Design (Privacidad desde el diseño)",
+          "Aprendizaje Federado (Federated Learning)",
+          "Encriptación en reposo y en tránsito",
+          "Cookies y Huella Digital"
+        ]
+      },
+      "contexto_profesional": {
+        "aplicaciones_industria": {
+          "titulo": "¿Quién gestiona la privacidad?",
+          "sectores": [
+            {
+              "nombre": "LegalTech y Compliance",
+              "descripcion": "Software para gestión de riesgos legales.",
+              "ejemplos": ["OneTrust", "DataGrail"]
+            },
+            {
+              "nombre": "Sector Salud (HealthTech)",
+              "descripcion": "Protección crítica de expedientes clínicos.",
+              "ejemplos": ["Sistemas HIPAA compliant", "Investigación médica anonimizada"]
+            },
+            {
+              "nombre": "Publicidad Digital (AdTech)",
+              "descripcion": "Transición hacia un mundo sin cookies de terceros.",
+              "ejemplos": ["Google Privacy Sandbox", "Apple App Tracking Transparency"]
+            }
+          ],
+          "empresas_referencia": [
+            "Apple (Marketing centrado en privacidad)",
+            "Signal (Mensajería encriptada)",
+            "Proton (Servicios enfocados en privacidad)"
+          ]
+        },
+        "roles_laborales": {
+          "titulo": "Perfiles profesionales",
+          "salario_promedio_mx": "$35,000 - $85,000 MXN/mes",
+          "roles": [
+            {
+              "nombre": "Ingeniero de Privacidad (Privacy Engineer)",
+              "importancia": "Alta",
+              "uso": "Implementar técnicas como privacidad diferencial en el código."
+            },
+            {
+              "nombre": "Data Protection Officer (DPO)",
+              "importancia": "Crítica (Obligatorio en muchas leyes)",
+              "uso": "Supervisar la estrategia de datos de la empresa."
+            },
+            {
+              "nombre": "Auditor de Gobernanza de Datos",
+              "importancia": "Media",
+              "uso": "Verificar flujos de datos y permisos de acceso."
+            }
+          ]
+        }
+      }
+    },
+    "actividad_practica": {
+      "tipo": "NO_APLICA",
+      "titulo": "ESTE TEMA NO APLICA PARA RETO DE PROGRAMACIÓN",
+      "descripcion": "La privacidad y protección de datos en este nivel se evalúa mediante análisis de riesgos, redacción de políticas y auditoría de procesos, no mediante código simple. Un ejercicio adecuado sería realizar una Evaluación de Impacto a la Privacidad (PIA) sobre un supuesto producto de IA, identificando riesgos y medidas de mitigación.",
+      "dificultad": "N/A",
+      "instrucciones": [],
+      "codigo_plantilla": "N/A",
+      "solucion_referencia": "N/A",
+      "casos_prueba": [],
+      "recursos_adicionales": [
+        {
+          "tipo": "sitio_web",
+          "titulo": "Reglamento General de Protección de Datos (GDPR) - Guía",
+          "url": "https://gdpr.eu/what-is-gdpr/"
+        },
+        {
+          "tipo": "video",
+          "titulo": "Privacidad Diferencial explicada",
+          "url": "https://www.youtube.com/watch?v=..."
+        }
+      ]
+    }
+  }
+}
