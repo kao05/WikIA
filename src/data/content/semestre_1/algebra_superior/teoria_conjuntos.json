@@ -2,11 +2,11 @@
   "modulo_educativo": {
     "metadata": {
       "id": "teoria_conjuntos",
-      "titulo": "Teoría de Conjuntos y Operaciones Fundamentales",
+      "titulo": "Teoría de Conjuntos",
       "materia": "Matemáticas Discretas",
       "semestre": 1,
       "dificultad": "básico",
-      "tiempo_estudio": "3-4 horas"
+      "tiempo_estudio": "3 horas"
     },
     "contenido": {
       "conceptos_clave": {
