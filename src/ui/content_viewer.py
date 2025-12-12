@@ -73,7 +73,7 @@ class ContentViewer(QWidget):
         self.clear_content()
         
         welcome_label = QLabel(
-            "👋 Bienvenido a Wikia Cognitiva\n\n"
+            "Bienvenido a Wikia Cognitiva\n\n"
             "Selecciona un tema del panel izquierdo\n"
             "para comenzar a explorar el contenido."
         )
