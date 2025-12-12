@@ -48,3 +48,4 @@ build/exe/*
 # Temporary files
 *.tmp
 *.bak
+WikIA/
